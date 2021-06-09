@@ -1,0 +1,6 @@
+2021-06-04 17:40:13.9521 | DEBUG |  -  |  # init main #  
+2021-06-04 17:40:22.2415 | INFO |  -  |  # Promotion email status has been checked > HTTP 200 - OK #  
+2021-06-04 17:40:22.3516 | INFO |  -  |  # Application started. Press Ctrl+C to shut down. #  
+2021-06-04 17:40:22.4008 | INFO |  -  |  # Hosting environment: Development #  
+2021-06-04 17:40:22.4008 | INFO |  -  |  # Content root path: C:\Users\MIS\source\repos\Restaurant Reservation Website\RestaurantReservation.Backend\RestaurantReservation.Api #  
+2021-06-04 17:40:44.4307 | INFO | Authenticate - POST | https://localhost/api/Authenticate/Login # User refresh token has been created > HTTP 200 - OK #  

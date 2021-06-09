@@ -1,0 +1,216 @@
+﻿@page
+@using RestaurantReservation.Core.Utils;
+@model RestaurantReservation.Frontend.Pages.Admins.Reservation.DetailsModel
+@{
+    ViewData["Title"] = "Booking Details";
+}
+
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="card card-secondary">
+            <div class="card-header">
+                <h3 class="card-title">Booking Details</h3>
+
+                <div class="card-tools">
+                    <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
+                        <i class="fas fa-minus"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <form method="get" asp-page="/Admins/Reservation/Details">
+                    <div class="col-6 input-group mb-3">
+                        <input name="searchString" type="text" class="form-control" placeholder="Booking Number" value="@Model.SearchTerm">
+                        <div class="input-group-append">
+                            @if (!string.IsNullOrEmpty(Model.SearchTerm))
+                            {
+                                <a asp-page="/Admins/Reservation/Details" class="btn btn-danger">Clear</a>
+                            }
+                            <input type="submit" value="Search" class="btn btn-info" />
+                        </div>
+                    </div>
+                </form>
+
+                @if (Model.BookingDetailVM != null)
+                {
+                    <form method="post" asp-page-handler="UpdateStatus">
+                        <hr />
+                        <h2>Search Result: </h2>
+                        <br />
+                        <div class="row" style="margin-left:8px">
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label>Booking Number</label>
+                                    <p>@Model.BookingDetailVM.Booking.BookingNo</p>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Restaurant Name</label>
+                                    <p>@Model.BookingDetailVM.BookingDetail.RestaurantSchedule.Restaurant.Name</p>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Full Name</label>
+                                    <p>@Model.BookingDetailVM.Booking.FullName</p>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Phone Number</label>
+                                    <p>@Model.BookingDetailVM.Booking.PhoneNo</p>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Check In</label>
+                                    @if (Model.BookingDetailVM.Booking.CheckIn.HasValue)
+                                    {
+                                        <p>@Model.BookingDetailVM.Booking.CheckIn?.ToString("dd/MM/yyyy hh:mm tt")</p>
+                                    }
+                                    else
+                                    {
+                                        <p> &nbsp;</p>
+                                    }
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Edited By</label>
+                                    <p>@Model.BookingDetailVM.Booking.EditedBy</p>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label>Booking Date</label>
+                                    <p>@Model.BookingDetailVM.Booking.BookingDate</p>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Booking Session</label>
+                                    <p>@Model.BookingDetailVM.BookingDetail.RestaurantSchedule.ScheduleDate.ToString("dd/MM/yyyy") @Model.BookingDetailVM.BookingDetail.RestaurantSchedule.StartTime.ToString("hh:mm tt") - @Model.BookingDetailVM.BookingDetail.RestaurantSchedule.EndTime.ToString("hh:mm tt")</p>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Number of Pax</label>
+                                    <p>@Model.BookingDetailVM.BookingDetail.Pax</p>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Status</label>
+                                    @{
+                                        string bookingStatus = Model.BookingDetailVM.Booking.BookingStatus;
+                                        switch (bookingStatus)
+                                        {
+                                            case SD.BookingStatus.COMPLETE:
+                                                <p><span class="badge badge-success">Complete</span></p>
+                                                break;
+                                            case SD.BookingStatus.PENDING:
+                                                <p><span class="badge badge-primary">Pending</span></p>
+                                                break;
+                                            case SD.BookingStatus.EXPIRED:
+                                                <p><span class="badge badge-danger">Expired</span></p>
+                                                break;
+                                        }
+                                    }
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Check Out</label>
+                                    @if (Model.BookingDetailVM.Booking.CheckOut.HasValue)
+                                    {
+                                        <p>@Model.BookingDetailVM.Booking.CheckOut?.ToString("dd/MM/yyyy hh:mm tt")</p>
+                                    }
+                                    else
+                                    {
+                                        <p> &nbsp;</p>
+                                    }
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Edited Date</label>
+                                    @if (Model.BookingDetailVM.Booking.EditedDate != default(DateTime))
+                                    {
+                                        <p>@Model.BookingDetailVM.Booking.EditedDate.ToString("dd/MM/yyyy hh:mm tt")</p>
+                                    }
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <br />
+
+                        @{
+                            if (bookingStatus.Equals(SD.BookingStatus.PENDING))
+                            {
+                                <input type="hidden" asp-for="BookingDetailVM.Booking.BookingID" />
+                                <input type="hidden" asp-for="BookingDetailVM.Booking.UserID" />
+                                <input type="hidden" asp-for="BookingDetailVM.Booking.ApplicationUser" />
+                                <input type="hidden" asp-for="BookingDetailVM.Booking.BookingDate" />
+                                <input type="hidden" asp-for="BookingDetailVM.Booking.BookingNo" />
+                                <input type="hidden" asp-for="BookingDetailVM.Booking.FullName" />
+                                <input type="hidden" asp-for="BookingDetailVM.Booking.PhoneNo" />
+
+                                <button onclick="showConfirmationDialog('complete')" class="btn btn-success form-control mb-2">
+                                    Complete
+                                </button>
+                            }
+                        }
+                        <br />
+                    </form>
+                }
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @if (!string.IsNullOrEmpty(Model.Message))
+    {
+        <script>
+            $(document).ready(function() {
+                var Toast = Swal.mixin({
+                    toast: true,
+                    position: "top-end",
+                    showConfirmButton: false,
+                    timer: 7000
+                });
+
+                Toast.fire({
+                    icon: "success",
+                    title: "@Model.Message",
+                })
+            });
+        </script>
+    }
+
+    @if (!string.IsNullOrEmpty(Model.NotFoundMessage))
+    {
+        <script>
+            $(document).ready(function() {
+                var Toast = Swal.mixin({
+                    toast: true,
+                    position: "top-end",
+                    showConfirmButton: false,
+                    timer: 7000
+                });
+
+                Toast.fire({
+                    icon: "error",
+                    title: "@Model.NotFoundMessage",
+                })
+            });
+        </script>
+    }
+}
+
+@section PageHeader {
+    <div class="col-sm-6">
+        <h1 class="m-0">Booking Details</h1>
+    </div>
+    <div class="col-sm-6">
+        <ol class="breadcrumb float-sm-right">
+            <li class="breadcrumb-item"><a asp-page="/Admins/Home">Home</a></li>
+            <li class="breadcrumb-item active">Booking Details</li>
+        </ol>
+    </div>
+}

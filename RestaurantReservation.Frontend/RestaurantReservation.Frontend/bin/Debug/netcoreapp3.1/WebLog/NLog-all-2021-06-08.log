@@ -1,0 +1,288 @@
+2021-06-08 15:12:37.9900 | DEBUG |  | init main |  
+2021-06-08 15:12:44.3507 | INFO |  | Application started. Press Ctrl+C to shut down. |  
+2021-06-08 15:12:44.3649 | INFO |  | Hosting environment: Production |  
+2021-06-08 15:12:44.3711 | INFO |  | Content root path: C:\Users\MIS\source\repos\Restaurant Reservation Website\RestaurantReservation.Frontend\RestaurantReservation.Frontend |  
+2021-06-08 15:12:44.7960 | INFO | https://localhost/ | Start processing HTTP request GET https://localhost:44399/api/restaurant |  
+2021-06-08 15:12:44.8072 | INFO | https://localhost/ | Sending HTTP request GET https://localhost:44399/api/restaurant |  
+2021-06-08 15:12:45.7865 | INFO | https://localhost/ | Received HTTP response after 962.1678ms - OK |  
+2021-06-08 15:12:45.8069 | INFO | https://localhost/ | End processing HTTP request after 1007.9702ms - OK |  
+2021-06-08 15:14:05.2216 | INFO | https://localhost/Account/Login | Start processing HTTP request POST https://localhost:44399/api/authenticate/login |  
+2021-06-08 15:14:05.2216 | INFO | https://localhost/Account/Login | Sending HTTP request POST https://localhost:44399/api/authenticate/login |  
+2021-06-08 15:14:05.8710 | INFO | https://localhost/Account/Login | Received HTTP response after 646.5223ms - OK |  
+2021-06-08 15:14:05.8710 | INFO | https://localhost/Account/Login | End processing HTTP request after 652.2097ms - OK |  
+2021-06-08 15:14:05.9518 | INFO | https://localhost/Admins/Home | Start processing HTTP request GET https://localhost:44399/api/booking/Admin/ListCount |  
+2021-06-08 15:14:05.9518 | INFO | https://localhost/Admins/Home | Sending HTTP request GET https://localhost:44399/api/booking/Admin/ListCount |  
+2021-06-08 15:14:05.9870 | INFO | https://localhost/Admins/Home | Received HTTP response after 32.7317ms - OK |  
+2021-06-08 15:14:05.9870 | INFO | https://localhost/Admins/Home | End processing HTTP request after 38.1116ms - OK |  
+2021-06-08 15:14:06.0135 | INFO | https://localhost/Admins/Home | Start processing HTTP request GET https://localhost:44399/api/booking/Admin/ListCount |  
+2021-06-08 15:14:06.0135 | INFO | https://localhost/Admins/Home | Sending HTTP request GET https://localhost:44399/api/booking/Admin/ListCount |  
+2021-06-08 15:14:06.0359 | INFO | https://localhost/Admins/Home | Received HTTP response after 19.901ms - OK |  
+2021-06-08 15:14:06.0359 | INFO | https://localhost/Admins/Home | End processing HTTP request after 25.2126ms - OK |  
+2021-06-08 15:14:09.4133 | INFO | https://localhost/Admins/Restaurants/List | Start processing HTTP request POST https://localhost:44399/api/authenticate/refreshToken |  
+2021-06-08 15:14:09.4133 | INFO | https://localhost/Admins/Restaurants/List | Sending HTTP request POST https://localhost:44399/api/authenticate/refreshToken |  
+2021-06-08 15:14:09.5656 | INFO | https://localhost/Admins/Restaurants/List | Received HTTP response after 149.6593ms - OK |  
+2021-06-08 15:14:09.5656 | INFO | https://localhost/Admins/Restaurants/List | End processing HTTP request after 154.9371ms - OK |  
+2021-06-08 15:14:09.5994 | INFO | https://localhost/Admins/Restaurants/List | Start processing HTTP request GET https://localhost:44399/api/restaurant |  
+2021-06-08 15:14:09.5994 | INFO | https://localhost/Admins/Restaurants/List | Sending HTTP request GET https://localhost:44399/api/restaurant |  
+2021-06-08 15:14:09.6184 | INFO | https://localhost/Admins/Restaurants/List | Received HTTP response after 16.164ms - OK |  
+2021-06-08 15:14:09.6216 | INFO | https://localhost/Admins/Restaurants/List | End processing HTTP request after 21.8716ms - OK |  
+2021-06-08 15:14:09.6216 | INFO | https://localhost/Admins/Restaurants/List | Start processing HTTP request POST https://localhost:44399/api/authenticate/refreshToken |  
+2021-06-08 15:14:09.6216 | INFO | https://localhost/Admins/Restaurants/List | Sending HTTP request POST https://localhost:44399/api/authenticate/refreshToken |  
+2021-06-08 15:14:09.6539 | INFO | https://localhost/Admins/Restaurants/List | Received HTTP response after 21.1035ms - OK |  
+2021-06-08 15:14:09.6539 | INFO | https://localhost/Admins/Restaurants/List | End processing HTTP request after 25.742ms - OK |  
+2021-06-08 15:14:09.6673 | INFO | https://localhost/Admins/Restaurants/List | Start processing HTTP request GET https://localhost:44399/api/category |  
+2021-06-08 15:14:09.6673 | INFO | https://localhost/Admins/Restaurants/List | Sending HTTP request GET https://localhost:44399/api/category |  
+2021-06-08 15:14:09.7013 | INFO | https://localhost/Admins/Restaurants/List | Received HTTP response after 31.6753ms - OK |  
+2021-06-08 15:14:09.7013 | INFO | https://localhost/Admins/Restaurants/List | End processing HTTP request after 36.6946ms - OK |  
+2021-06-08 15:14:09.7413 | INFO | https://localhost/Admins/Restaurants/List | Start processing HTTP request GET https://localhost:44399/api/booking/Admin/ListCount |  
+2021-06-08 15:14:09.7444 | INFO | https://localhost/Admins/Restaurants/List | Sending HTTP request GET https://localhost:44399/api/booking/Admin/ListCount |  
+2021-06-08 15:14:09.7444 | INFO | https://localhost/Admins/Restaurants/List | Received HTTP response after 9.3982ms - OK |  
+2021-06-08 15:14:09.7444 | INFO | https://localhost/Admins/Restaurants/List | End processing HTTP request after 14.8872ms - OK |  
+2021-06-08 15:14:09.7609 | INFO | https://localhost/Admins/Restaurants/List | Start processing HTTP request GET https://localhost:44399/api/booking/Admin/ListCount |  
+2021-06-08 15:14:09.7609 | INFO | https://localhost/Admins/Restaurants/List | Sending HTTP request GET https://localhost:44399/api/booking/Admin/ListCount |  
+2021-06-08 15:14:09.7609 | INFO | https://localhost/Admins/Restaurants/List | Received HTTP response after 8.4018ms - OK |  
+2021-06-08 15:14:09.7609 | INFO | https://localhost/Admins/Restaurants/List | End processing HTTP request after 13.1841ms - OK |  
+2021-06-08 15:14:13.7817 | INFO | https://localhost/Restaurants/Details | Start processing HTTP request POST https://localhost:44399/api/authenticate/refreshToken |  
+2021-06-08 15:14:13.7817 | INFO | https://localhost/Restaurants/Details | Sending HTTP request POST https://localhost:44399/api/authenticate/refreshToken |  
+2021-06-08 15:14:13.8564 | INFO | https://localhost/Restaurants/Details | Received HTTP response after 69.5651ms - OK |  
+2021-06-08 15:14:13.8564 | INFO | https://localhost/Restaurants/Details | End processing HTTP request after 81.6804ms - OK |  
+2021-06-08 15:14:13.8691 | INFO | https://localhost/Restaurants/Details | Start processing HTTP request GET https://localhost:44399/api/restaurant/1/all/all |  
+2021-06-08 15:14:13.8691 | INFO | https://localhost/Restaurants/Details | Sending HTTP request GET https://localhost:44399/api/restaurant/1/all/all |  
+2021-06-08 15:14:14.0726 | INFO | https://localhost/Restaurants/Details | Received HTTP response after 200.8845ms - OK |  
+2021-06-08 15:14:14.0726 | INFO | https://localhost/Restaurants/Details | End processing HTTP request after 206.0509ms - OK |  
+2021-06-08 15:14:14.1020 | INFO | https://localhost/Restaurants/Details | Start processing HTTP request POST https://localhost:44399/api/authenticate/refreshToken |  
+2021-06-08 15:14:14.1057 | INFO | https://localhost/Restaurants/Details | Sending HTTP request POST https://localhost:44399/api/authenticate/refreshToken |  
+2021-06-08 15:14:14.1304 | INFO | https://localhost/Restaurants/Details | Received HTTP response after 25.1863ms - OK |  
+2021-06-08 15:14:14.1304 | INFO | https://localhost/Restaurants/Details | End processing HTTP request after 31.6066ms - OK |  
+2021-06-08 15:14:14.1408 | INFO | https://localhost/Restaurants/Details | Start processing HTTP request GET https://localhost:44399/api/schedule/All/1 |  
+2021-06-08 15:14:14.1408 | INFO | https://localhost/Restaurants/Details | Sending HTTP request GET https://localhost:44399/api/schedule/All/1 |  
+2021-06-08 15:14:14.1641 | INFO | https://localhost/Restaurants/Details | Received HTTP response after 19.9806ms - OK |  
+2021-06-08 15:14:14.1674 | INFO | https://localhost/Restaurants/Details | End processing HTTP request after 26.1851ms - OK |  
+2021-06-08 15:14:14.2273 | INFO | https://localhost/Restaurants/Details | Start processing HTTP request GET https://localhost:44399/api/booking/Admin/ListCount |  
+2021-06-08 15:14:14.2301 | INFO | https://localhost/Restaurants/Details | Sending HTTP request GET https://localhost:44399/api/booking/Admin/ListCount |  
+2021-06-08 15:14:14.2301 | INFO | https://localhost/Restaurants/Details | Received HTTP response after 8.9746ms - OK |  
+2021-06-08 15:14:14.2452 | INFO | https://localhost/Restaurants/Details | End processing HTTP request after 16.1279ms - OK |  
+2021-06-08 15:14:14.2452 | INFO | https://localhost/Restaurants/Details | Start processing HTTP request GET https://localhost:44399/api/booking/Admin/ListCount |  
+2021-06-08 15:14:14.2452 | INFO | https://localhost/Restaurants/Details | Sending HTTP request GET https://localhost:44399/api/booking/Admin/ListCount |  
+2021-06-08 15:14:14.2643 | INFO | https://localhost/Restaurants/Details | Received HTTP response after 10.9903ms - OK |  
+2021-06-08 15:14:14.2643 | INFO | https://localhost/Restaurants/Details | End processing HTTP request after 17.3249ms - OK |  
+2021-06-08 15:14:17.4549 | INFO | https://localhost/Admins/Schedules/Create/1 | Start processing HTTP request POST https://localhost:44399/api/authenticate/refreshToken |  
+2021-06-08 15:14:17.4549 | INFO | https://localhost/Admins/Schedules/Create/1 | Sending HTTP request POST https://localhost:44399/api/authenticate/refreshToken |  
+2021-06-08 15:14:17.5068 | INFO | https://localhost/Admins/Schedules/Create/1 | Received HTTP response after 47.1575ms - OK |  
+2021-06-08 15:14:17.5119 | INFO | https://localhost/Admins/Schedules/Create/1 | End processing HTTP request after 54.9901ms - OK |  
+2021-06-08 15:14:17.5119 | INFO | https://localhost/Admins/Schedules/Create/1 | Start processing HTTP request POST https://localhost:44399/api/authenticate/refreshToken |  
+2021-06-08 15:14:17.5291 | INFO | https://localhost/Admins/Schedules/Create/1 | Sending HTTP request POST https://localhost:44399/api/authenticate/refreshToken |  
+2021-06-08 15:14:17.5853 | INFO | https://localhost/Admins/Schedules/Create/1 | Received HTTP response after 58.5799ms - OK |  
+2021-06-08 15:14:17.5880 | INFO | https://localhost/Admins/Schedules/Create/1 | End processing HTTP request after 65.0265ms - OK |  
+2021-06-08 15:14:17.5880 | INFO | https://localhost/Admins/Schedules/Create/1 | Start processing HTTP request GET https://localhost:44399/api/restaurant/1/All/All |  
+2021-06-08 15:14:17.5880 | INFO | https://localhost/Admins/Schedules/Create/1 | Sending HTTP request GET https://localhost:44399/api/restaurant/1/All/All |  
+2021-06-08 15:14:17.6251 | INFO | https://localhost/Admins/Schedules/Create/1 | Received HTTP response after 27.0791ms - OK |  
+2021-06-08 15:14:17.6251 | INFO | https://localhost/Admins/Schedules/Create/1 | End processing HTTP request after 32.6885ms - OK |  
+2021-06-08 15:14:17.7052 | INFO | https://localhost/Admins/Schedules/Create/1 | Start processing HTTP request GET https://localhost:44399/api/booking/Admin/ListCount |  
+2021-06-08 15:14:17.7052 | INFO | https://localhost/Admins/Schedules/Create/1 | Sending HTTP request GET https://localhost:44399/api/booking/Admin/ListCount |  
+2021-06-08 15:14:17.7203 | INFO | https://localhost/Admins/Schedules/Create/1 | Received HTTP response after 12.2227ms - OK |  
+2021-06-08 15:14:17.7203 | INFO | https://localhost/Admins/Schedules/Create/1 | End processing HTTP request after 17.8826ms - OK |  
+2021-06-08 15:14:17.7203 | INFO | https://localhost/Admins/Schedules/Create/1 | Start processing HTTP request GET https://localhost:44399/api/booking/Admin/ListCount |  
+2021-06-08 15:14:17.7303 | INFO | https://localhost/Admins/Schedules/Create/1 | Sending HTTP request GET https://localhost:44399/api/booking/Admin/ListCount |  
+2021-06-08 15:14:17.7303 | INFO | https://localhost/Admins/Schedules/Create/1 | Received HTTP response after 11.2058ms - OK |  
+2021-06-08 15:14:17.7463 | INFO | https://localhost/Admins/Schedules/Create/1 | End processing HTTP request after 17.9315ms - OK |  
+2021-06-08 15:14:38.5284 | INFO | https://localhost/Admins/Schedules/Create/1 | Start processing HTTP request POST https://localhost:44399/api/authenticate/refreshToken |  
+2021-06-08 15:14:38.5284 | INFO | https://localhost/Admins/Schedules/Create/1 | Sending HTTP request POST https://localhost:44399/api/authenticate/refreshToken |  
+2021-06-08 15:14:38.5875 | INFO | https://localhost/Admins/Schedules/Create/1 | Received HTTP response after 54.0363ms - OK |  
+2021-06-08 15:14:38.5911 | INFO | https://localhost/Admins/Schedules/Create/1 | End processing HTTP request after 63.6908ms - OK |  
+2021-06-08 15:14:38.6344 | INFO | https://localhost/Admins/Schedules/Create/1 | Start processing HTTP request POST https://localhost:44399/api/schedule |  
+2021-06-08 15:14:38.6569 | INFO | https://localhost/Admins/Schedules/Create/1 | Sending HTTP request POST https://localhost:44399/api/schedule |  
+2021-06-08 15:14:38.7701 | INFO | https://localhost/Admins/Schedules/Create/1 | Received HTTP response after 132.5293ms - OK |  
+2021-06-08 15:14:38.7701 | INFO | https://localhost/Admins/Schedules/Create/1 | End processing HTTP request after 138.909ms - OK |  
+2021-06-08 15:14:38.7967 | INFO | https://localhost/Restaurants/Details | Start processing HTTP request POST https://localhost:44399/api/authenticate/refreshToken |  
+2021-06-08 15:14:38.7967 | INFO | https://localhost/Restaurants/Details | Sending HTTP request POST https://localhost:44399/api/authenticate/refreshToken |  
+2021-06-08 15:14:38.8181 | INFO | https://localhost/Restaurants/Details | Received HTTP response after 18.6578ms - OK |  
+2021-06-08 15:14:38.8181 | INFO | https://localhost/Restaurants/Details | End processing HTTP request after 24.0722ms - OK |  
+2021-06-08 15:14:38.8259 | INFO | https://localhost/Restaurants/Details | Start processing HTTP request GET https://localhost:44399/api/restaurant/1/all/all |  
+2021-06-08 15:14:38.8259 | INFO | https://localhost/Restaurants/Details | Sending HTTP request GET https://localhost:44399/api/restaurant/1/all/all |  
+2021-06-08 15:14:38.8519 | INFO | https://localhost/Restaurants/Details | Received HTTP response after 23.2948ms - OK |  
+2021-06-08 15:14:38.8546 | INFO | https://localhost/Restaurants/Details | End processing HTTP request after 28.6733ms - OK |  
+2021-06-08 15:14:38.8546 | INFO | https://localhost/Restaurants/Details | Start processing HTTP request POST https://localhost:44399/api/authenticate/refreshToken |  
+2021-06-08 15:14:38.8701 | INFO | https://localhost/Restaurants/Details | Sending HTTP request POST https://localhost:44399/api/authenticate/refreshToken |  
+2021-06-08 15:14:38.8895 | INFO | https://localhost/Restaurants/Details | Received HTTP response after 19.2571ms - OK |  
+2021-06-08 15:14:38.8895 | INFO | https://localhost/Restaurants/Details | End processing HTTP request after 24.258ms - OK |  
+2021-06-08 15:14:38.8895 | INFO | https://localhost/Restaurants/Details | Start processing HTTP request GET https://localhost:44399/api/schedule/All/1 |  
+2021-06-08 15:14:38.9016 | INFO | https://localhost/Restaurants/Details | Sending HTTP request GET https://localhost:44399/api/schedule/All/1 |  
+2021-06-08 15:14:38.9016 | INFO | https://localhost/Restaurants/Details | Received HTTP response after 10.7838ms - OK |  
+2021-06-08 15:14:38.9016 | INFO | https://localhost/Restaurants/Details | End processing HTTP request after 15.3299ms - OK |  
+2021-06-08 15:14:38.9248 | INFO | https://localhost/Restaurants/Details | Start processing HTTP request GET https://localhost:44399/api/booking/Admin/ListCount |  
+2021-06-08 15:14:38.9248 | INFO | https://localhost/Restaurants/Details | Sending HTTP request GET https://localhost:44399/api/booking/Admin/ListCount |  
+2021-06-08 15:14:38.9339 | INFO | https://localhost/Restaurants/Details | Received HTTP response after 6.8319ms - OK |  
+2021-06-08 15:14:38.9339 | INFO | https://localhost/Restaurants/Details | End processing HTTP request after 11.2178ms - OK |  
+2021-06-08 15:14:38.9339 | INFO | https://localhost/Restaurants/Details | Start processing HTTP request GET https://localhost:44399/api/booking/Admin/ListCount |  
+2021-06-08 15:14:38.9339 | INFO | https://localhost/Restaurants/Details | Sending HTTP request GET https://localhost:44399/api/booking/Admin/ListCount |  
+2021-06-08 15:14:38.9479 | INFO | https://localhost/Restaurants/Details | Received HTTP response after 6.9999ms - OK |  
+2021-06-08 15:14:38.9479 | INFO | https://localhost/Restaurants/Details | End processing HTTP request after 11.1916ms - OK |  
+2021-06-08 15:14:41.1512 | INFO | https://localhost/Admins/Schedules/Create/1 | Start processing HTTP request POST https://localhost:44399/api/authenticate/refreshToken |  
+2021-06-08 15:14:41.1512 | INFO | https://localhost/Admins/Schedules/Create/1 | Sending HTTP request POST https://localhost:44399/api/authenticate/refreshToken |  
+2021-06-08 15:14:41.2239 | INFO | https://localhost/Admins/Schedules/Create/1 | Received HTTP response after 67.6454ms - OK |  
+2021-06-08 15:14:41.2287 | INFO | https://localhost/Admins/Schedules/Create/1 | End processing HTTP request after 76.9025ms - OK |  
+2021-06-08 15:14:41.2287 | INFO | https://localhost/Admins/Schedules/Create/1 | Start processing HTTP request POST https://localhost:44399/api/authenticate/refreshToken |  
+2021-06-08 15:14:41.2287 | INFO | https://localhost/Admins/Schedules/Create/1 | Sending HTTP request POST https://localhost:44399/api/authenticate/refreshToken |  
+2021-06-08 15:14:41.2914 | INFO | https://localhost/Admins/Schedules/Create/1 | Received HTTP response after 50.8114ms - OK |  
+2021-06-08 15:14:41.2914 | INFO | https://localhost/Admins/Schedules/Create/1 | End processing HTTP request after 56.4745ms - OK |  
+2021-06-08 15:14:41.2914 | INFO | https://localhost/Admins/Schedules/Create/1 | Start processing HTTP request GET https://localhost:44399/api/restaurant/1/All/All |  
+2021-06-08 15:14:41.2914 | INFO | https://localhost/Admins/Schedules/Create/1 | Sending HTTP request GET https://localhost:44399/api/restaurant/1/All/All |  
+2021-06-08 15:14:41.3174 | INFO | https://localhost/Admins/Schedules/Create/1 | Received HTTP response after 15.4794ms - OK |  
+2021-06-08 15:14:41.3174 | INFO | https://localhost/Admins/Schedules/Create/1 | End processing HTTP request after 19.9437ms - OK |  
+2021-06-08 15:14:41.3342 | INFO | https://localhost/Admins/Schedules/Create/1 | Start processing HTTP request GET https://localhost:44399/api/booking/Admin/ListCount |  
+2021-06-08 15:14:41.3342 | INFO | https://localhost/Admins/Schedules/Create/1 | Sending HTTP request GET https://localhost:44399/api/booking/Admin/ListCount |  
+2021-06-08 15:14:41.3469 | INFO | https://localhost/Admins/Schedules/Create/1 | Received HTTP response after 9.9261ms - OK |  
+2021-06-08 15:14:41.3469 | INFO | https://localhost/Admins/Schedules/Create/1 | End processing HTTP request after 15.0011ms - OK |  
+2021-06-08 15:14:41.3469 | INFO | https://localhost/Admins/Schedules/Create/1 | Start processing HTTP request GET https://localhost:44399/api/booking/Admin/ListCount |  
+2021-06-08 15:14:41.3560 | INFO | https://localhost/Admins/Schedules/Create/1 | Sending HTTP request GET https://localhost:44399/api/booking/Admin/ListCount |  
+2021-06-08 15:14:41.3560 | INFO | https://localhost/Admins/Schedules/Create/1 | Received HTTP response after 11.4989ms - OK |  
+2021-06-08 15:14:41.3712 | INFO | https://localhost/Admins/Schedules/Create/1 | End processing HTTP request after 17.2914ms - OK |  
+2021-06-08 15:14:58.4935 | INFO | https://localhost/Admins/Schedules/Create/1 | Start processing HTTP request POST https://localhost:44399/api/authenticate/refreshToken |  
+2021-06-08 15:14:58.5003 | INFO | https://localhost/Admins/Schedules/Create/1 | Sending HTTP request POST https://localhost:44399/api/authenticate/refreshToken |  
+2021-06-08 15:14:58.5553 | INFO | https://localhost/Admins/Schedules/Create/1 | Received HTTP response after 56.0904ms - OK |  
+2021-06-08 15:14:58.5642 | INFO | https://localhost/Admins/Schedules/Create/1 | End processing HTTP request after 65.2178ms - OK |  
+2021-06-08 15:14:58.5797 | INFO | https://localhost/Admins/Schedules/Create/1 | Start processing HTTP request POST https://localhost:44399/api/schedule |  
+2021-06-08 15:14:58.5797 | INFO | https://localhost/Admins/Schedules/Create/1 | Sending HTTP request POST https://localhost:44399/api/schedule |  
+2021-06-08 15:14:58.6323 | INFO | https://localhost/Admins/Schedules/Create/1 | Received HTTP response after 49.592ms - OK |  
+2021-06-08 15:14:58.6352 | INFO | https://localhost/Admins/Schedules/Create/1 | End processing HTTP request after 55.5916ms - OK |  
+2021-06-08 15:14:58.6352 | INFO | https://localhost/Restaurants/Details | Start processing HTTP request POST https://localhost:44399/api/authenticate/refreshToken |  
+2021-06-08 15:14:58.6517 | INFO | https://localhost/Restaurants/Details | Sending HTTP request POST https://localhost:44399/api/authenticate/refreshToken |  
+2021-06-08 15:14:58.6914 | INFO | https://localhost/Restaurants/Details | Received HTTP response after 36.9116ms - OK |  
+2021-06-08 15:14:58.6984 | INFO | https://localhost/Restaurants/Details | End processing HTTP request after 46.0531ms - OK |  
+2021-06-08 15:14:58.7124 | INFO | https://localhost/Restaurants/Details | Start processing HTTP request GET https://localhost:44399/api/restaurant/1/all/all |  
+2021-06-08 15:14:58.7124 | INFO | https://localhost/Restaurants/Details | Sending HTTP request GET https://localhost:44399/api/restaurant/1/all/all |  
+2021-06-08 15:14:58.7348 | INFO | https://localhost/Restaurants/Details | Received HTTP response after 19.035ms - OK |  
+2021-06-08 15:14:58.7348 | INFO | https://localhost/Restaurants/Details | End processing HTTP request after 25.6703ms - OK |  
+2021-06-08 15:14:58.7551 | INFO | https://localhost/Restaurants/Details | Start processing HTTP request POST https://localhost:44399/api/authenticate/refreshToken |  
+2021-06-08 15:14:58.7551 | INFO | https://localhost/Restaurants/Details | Sending HTTP request POST https://localhost:44399/api/authenticate/refreshToken |  
+2021-06-08 15:14:58.7785 | INFO | https://localhost/Restaurants/Details | Received HTTP response after 20.73ms - OK |  
+2021-06-08 15:14:58.7785 | INFO | https://localhost/Restaurants/Details | End processing HTTP request after 26.8509ms - OK |  
+2021-06-08 15:14:58.7785 | INFO | https://localhost/Restaurants/Details | Start processing HTTP request GET https://localhost:44399/api/schedule/All/1 |  
+2021-06-08 15:14:58.7785 | INFO | https://localhost/Restaurants/Details | Sending HTTP request GET https://localhost:44399/api/schedule/All/1 |  
+2021-06-08 15:14:58.7983 | INFO | https://localhost/Restaurants/Details | Received HTTP response after 9.2167ms - OK |  
+2021-06-08 15:14:58.7983 | INFO | https://localhost/Restaurants/Details | End processing HTTP request after 13.6388ms - OK |  
+2021-06-08 15:14:58.8072 | INFO | https://localhost/Restaurants/Details | Start processing HTTP request GET https://localhost:44399/api/booking/Admin/ListCount |  
+2021-06-08 15:14:58.8072 | INFO | https://localhost/Restaurants/Details | Sending HTTP request GET https://localhost:44399/api/booking/Admin/ListCount |  
+2021-06-08 15:14:58.8072 | INFO | https://localhost/Restaurants/Details | Received HTTP response after 8.7372ms - OK |  
+2021-06-08 15:14:58.8072 | INFO | https://localhost/Restaurants/Details | End processing HTTP request after 13.3857ms - OK |  
+2021-06-08 15:14:58.8239 | INFO | https://localhost/Restaurants/Details | Start processing HTTP request GET https://localhost:44399/api/booking/Admin/ListCount |  
+2021-06-08 15:14:58.8239 | INFO | https://localhost/Restaurants/Details | Sending HTTP request GET https://localhost:44399/api/booking/Admin/ListCount |  
+2021-06-08 15:14:58.8239 | INFO | https://localhost/Restaurants/Details | Received HTTP response after 10.6713ms - OK |  
+2021-06-08 15:14:58.8395 | INFO | https://localhost/Restaurants/Details | End processing HTTP request after 15.5198ms - OK |  
+2021-06-08 15:15:02.7228 | INFO | https://localhost/Admins/Promotions/Create/1 | Start processing HTTP request POST https://localhost:44399/api/authenticate/refreshToken |  
+2021-06-08 15:15:02.7228 | INFO | https://localhost/Admins/Promotions/Create/1 | Sending HTTP request POST https://localhost:44399/api/authenticate/refreshToken |  
+2021-06-08 15:15:02.7684 | INFO | https://localhost/Admins/Promotions/Create/1 | Received HTTP response after 42.3432ms - OK |  
+2021-06-08 15:15:02.7684 | INFO | https://localhost/Admins/Promotions/Create/1 | End processing HTTP request after 48.7567ms - OK |  
+2021-06-08 15:15:02.7835 | INFO | https://localhost/Admins/Promotions/Create/1 | Start processing HTTP request POST https://localhost:44399/api/authenticate/refreshToken |  
+2021-06-08 15:15:02.7835 | INFO | https://localhost/Admins/Promotions/Create/1 | Sending HTTP request POST https://localhost:44399/api/authenticate/refreshToken |  
+2021-06-08 15:15:02.8484 | INFO | https://localhost/Admins/Promotions/Create/1 | Received HTTP response after 60.3728ms - OK |  
+2021-06-08 15:15:02.8484 | INFO | https://localhost/Admins/Promotions/Create/1 | End processing HTTP request after 68.3798ms - OK |  
+2021-06-08 15:15:02.8590 | INFO | https://localhost/Admins/Promotions/Create/1 | Start processing HTTP request GET https://localhost:44399/api/restaurant/1/All/All |  
+2021-06-08 15:15:02.8590 | INFO | https://localhost/Admins/Promotions/Create/1 | Sending HTTP request GET https://localhost:44399/api/restaurant/1/All/All |  
+2021-06-08 15:15:02.8839 | INFO | https://localhost/Admins/Promotions/Create/1 | Received HTTP response after 21.7392ms - OK |  
+2021-06-08 15:15:02.8874 | INFO | https://localhost/Admins/Promotions/Create/1 | End processing HTTP request after 27.9833ms - OK |  
+2021-06-08 15:15:02.9473 | INFO | https://localhost/Admins/Promotions/Create/1 | Start processing HTTP request GET https://localhost:44399/api/booking/Admin/ListCount |  
+2021-06-08 15:15:02.9473 | INFO | https://localhost/Admins/Promotions/Create/1 | Sending HTTP request GET https://localhost:44399/api/booking/Admin/ListCount |  
+2021-06-08 15:15:02.9473 | INFO | https://localhost/Admins/Promotions/Create/1 | Received HTTP response after 7.1554ms - OK |  
+2021-06-08 15:15:02.9473 | INFO | https://localhost/Admins/Promotions/Create/1 | End processing HTTP request after 11.3747ms - OK |  
+2021-06-08 15:15:02.9473 | INFO | https://localhost/Admins/Promotions/Create/1 | Start processing HTTP request GET https://localhost:44399/api/booking/Admin/ListCount |  
+2021-06-08 15:15:02.9640 | INFO | https://localhost/Admins/Promotions/Create/1 | Sending HTTP request GET https://localhost:44399/api/booking/Admin/ListCount |  
+2021-06-08 15:15:02.9640 | INFO | https://localhost/Admins/Promotions/Create/1 | Received HTTP response after 6.2805ms - OK |  
+2021-06-08 15:15:02.9640 | INFO | https://localhost/Admins/Promotions/Create/1 | End processing HTTP request after 11.0314ms - OK |  
+2021-06-08 15:16:09.3717 | INFO | https://localhost/Admins/Promotions/Create/1 | Start processing HTTP request POST https://localhost:44399/api/authenticate/refreshToken |  
+2021-06-08 15:16:09.3717 | INFO | https://localhost/Admins/Promotions/Create/1 | Sending HTTP request POST https://localhost:44399/api/authenticate/refreshToken |  
+2021-06-08 15:16:09.4720 | INFO | https://localhost/Admins/Promotions/Create/1 | Received HTTP response after 96.3053ms - OK |  
+2021-06-08 15:16:09.4720 | INFO | https://localhost/Admins/Promotions/Create/1 | End processing HTTP request after 103.3596ms - OK |  
+2021-06-08 15:16:09.5329 | INFO | https://localhost/Admins/Promotions/Create/1 | Start processing HTTP request POST https://localhost:44399/api/promotion |  
+2021-06-08 15:16:09.5329 | INFO | https://localhost/Admins/Promotions/Create/1 | Sending HTTP request POST https://localhost:44399/api/promotion |  
+2021-06-08 15:16:09.7056 | INFO | https://localhost/Admins/Promotions/Create/1 | Received HTTP response after 168.5075ms - OK |  
+2021-06-08 15:16:09.7056 | INFO | https://localhost/Admins/Promotions/Create/1 | End processing HTTP request after 203.2159ms - OK |  
+2021-06-08 15:16:09.7274 | INFO | https://localhost/Restaurants/Details | Start processing HTTP request POST https://localhost:44399/api/authenticate/refreshToken |  
+2021-06-08 15:16:09.7302 | INFO | https://localhost/Restaurants/Details | Sending HTTP request POST https://localhost:44399/api/authenticate/refreshToken |  
+2021-06-08 15:16:09.7557 | INFO | https://localhost/Restaurants/Details | Received HTTP response after 25.3515ms - OK |  
+2021-06-08 15:16:09.7557 | INFO | https://localhost/Restaurants/Details | End processing HTTP request after 31.1691ms - OK |  
+2021-06-08 15:16:09.7655 | INFO | https://localhost/Restaurants/Details | Start processing HTTP request GET https://localhost:44399/api/restaurant/1/all/all |  
+2021-06-08 15:16:09.7655 | INFO | https://localhost/Restaurants/Details | Sending HTTP request GET https://localhost:44399/api/restaurant/1/all/all |  
+2021-06-08 15:16:09.7887 | INFO | https://localhost/Restaurants/Details | Received HTTP response after 21.0997ms - OK |  
+2021-06-08 15:16:09.7907 | INFO | https://localhost/Restaurants/Details | End processing HTTP request after 25.4829ms - OK |  
+2021-06-08 15:16:09.7907 | INFO | https://localhost/Restaurants/Details | Start processing HTTP request POST https://localhost:44399/api/authenticate/refreshToken |  
+2021-06-08 15:16:09.7907 | INFO | https://localhost/Restaurants/Details | Sending HTTP request POST https://localhost:44399/api/authenticate/refreshToken |  
+2021-06-08 15:16:09.8210 | INFO | https://localhost/Restaurants/Details | Received HTTP response after 15.2375ms - OK |  
+2021-06-08 15:16:09.8232 | INFO | https://localhost/Restaurants/Details | End processing HTTP request after 19.4587ms - OK |  
+2021-06-08 15:16:09.8232 | INFO | https://localhost/Restaurants/Details | Start processing HTTP request GET https://localhost:44399/api/schedule/All/1 |  
+2021-06-08 15:16:09.8232 | INFO | https://localhost/Restaurants/Details | Sending HTTP request GET https://localhost:44399/api/schedule/All/1 |  
+2021-06-08 15:16:09.8398 | INFO | https://localhost/Restaurants/Details | Received HTTP response after 9.1342ms - OK |  
+2021-06-08 15:16:09.8398 | INFO | https://localhost/Restaurants/Details | End processing HTTP request after 13.625ms - OK |  
+2021-06-08 15:16:09.8670 | INFO | https://localhost/Restaurants/Details | Start processing HTTP request GET https://localhost:44399/api/booking/Admin/ListCount |  
+2021-06-08 15:16:09.8692 | INFO | https://localhost/Restaurants/Details | Sending HTTP request GET https://localhost:44399/api/booking/Admin/ListCount |  
+2021-06-08 15:16:09.8692 | INFO | https://localhost/Restaurants/Details | Received HTTP response after 8.505ms - OK |  
+2021-06-08 15:16:09.8692 | INFO | https://localhost/Restaurants/Details | End processing HTTP request after 13.3222ms - OK |  
+2021-06-08 15:16:09.8692 | INFO | https://localhost/Restaurants/Details | Start processing HTTP request GET https://localhost:44399/api/booking/Admin/ListCount |  
+2021-06-08 15:16:09.8865 | INFO | https://localhost/Restaurants/Details | Sending HTTP request GET https://localhost:44399/api/booking/Admin/ListCount |  
+2021-06-08 15:16:09.8865 | INFO | https://localhost/Restaurants/Details | Received HTTP response after 9.7191ms - OK |  
+2021-06-08 15:16:09.8865 | INFO | https://localhost/Restaurants/Details | End processing HTTP request after 14.3251ms - OK |  
+2021-06-08 22:06:22.6365 | DEBUG |  | init main |  
+2021-06-08 22:06:25.5002 | INFO |  | Application started. Press Ctrl+C to shut down. |  
+2021-06-08 22:06:25.5135 | INFO |  | Hosting environment: Production |  
+2021-06-08 22:06:25.5135 | INFO |  | Content root path: C:\Users\MIS\source\repos\Restaurant Reservation Website\RestaurantReservation.Frontend\RestaurantReservation.Frontend |  
+2021-06-08 22:06:25.9042 | INFO | https://localhost/ | Start processing HTTP request GET https://localhost:44399/api/restaurant |  
+2021-06-08 22:06:25.9164 | INFO | https://localhost/ | Sending HTTP request GET https://localhost:44399/api/restaurant |  
+2021-06-08 22:06:27.1885 | INFO | https://localhost/ | Received HTTP response after 1264.2699ms - OK |  
+2021-06-08 22:06:27.1885 | INFO | https://localhost/ | End processing HTTP request after 1300.7602ms - OK |  
+2021-06-08 22:07:24.7561 | INFO | https://localhost/Account/Login | Start processing HTTP request POST https://localhost:44399/api/authenticate/login |  
+2021-06-08 22:07:24.7561 | INFO | https://localhost/Account/Login | Sending HTTP request POST https://localhost:44399/api/authenticate/login |  
+2021-06-08 22:07:25.3527 | INFO | https://localhost/Account/Login | Received HTTP response after 593.0835ms - OK |  
+2021-06-08 22:07:25.3566 | INFO | https://localhost/Account/Login | End processing HTTP request after 601.3377ms - OK |  
+2021-06-08 22:07:25.3974 | INFO | https://localhost/ | Start processing HTTP request GET https://localhost:44399/api/restaurant |  
+2021-06-08 22:07:25.4002 | INFO | https://localhost/ | Sending HTTP request GET https://localhost:44399/api/restaurant |  
+2021-06-08 22:07:25.4168 | INFO | https://localhost/ | Received HTTP response after 16.7104ms - OK |  
+2021-06-08 22:07:25.4168 | INFO | https://localhost/ | End processing HTTP request after 21.9315ms - OK |  
+2021-06-08 22:07:29.5362 | INFO | https://localhost/Restaurants/Details | Start processing HTTP request POST https://localhost:44399/api/authenticate/refreshToken |  
+2021-06-08 22:07:29.5362 | INFO | https://localhost/Restaurants/Details | Sending HTTP request POST https://localhost:44399/api/authenticate/refreshToken |  
+2021-06-08 22:07:29.6959 | INFO | https://localhost/Restaurants/Details | Received HTTP response after 155.989ms - OK |  
+2021-06-08 22:07:29.6986 | INFO | https://localhost/Restaurants/Details | End processing HTTP request after 163.0073ms - OK |  
+2021-06-08 22:07:29.7350 | INFO | https://localhost/Restaurants/Details | Start processing HTTP request GET https://localhost:44399/api/restaurant/1/all/all |  
+2021-06-08 22:07:29.7350 | INFO | https://localhost/Restaurants/Details | Sending HTTP request GET https://localhost:44399/api/restaurant/1/all/all |  
+2021-06-08 22:07:29.8831 | INFO | https://localhost/Restaurants/Details | Received HTTP response after 145.5097ms - OK |  
+2021-06-08 22:07:29.8856 | INFO | https://localhost/Restaurants/Details | End processing HTTP request after 151.1308ms - OK |  
+2021-06-08 22:07:29.9240 | INFO | https://localhost/Restaurants/Details | Start processing HTTP request POST https://localhost:44399/api/authenticate/refreshToken |  
+2021-06-08 22:07:29.9240 | INFO | https://localhost/Restaurants/Details | Sending HTTP request POST https://localhost:44399/api/authenticate/refreshToken |  
+2021-06-08 22:07:29.9579 | INFO | https://localhost/Restaurants/Details | Received HTTP response after 31.0409ms - OK |  
+2021-06-08 22:07:29.9579 | INFO | https://localhost/Restaurants/Details | End processing HTTP request after 36.606ms - OK |  
+2021-06-08 22:07:29.9745 | INFO | https://localhost/Restaurants/Details | Start processing HTTP request GET https://localhost:44399/api/schedule/All/1 |  
+2021-06-08 22:07:29.9745 | INFO | https://localhost/Restaurants/Details | Sending HTTP request GET https://localhost:44399/api/schedule/All/1 |  
+2021-06-08 22:07:30.0149 | INFO | https://localhost/Restaurants/Details | Received HTTP response after 37.0602ms - OK |  
+2021-06-08 22:07:30.0149 | INFO | https://localhost/Restaurants/Details | End processing HTTP request after 43.9581ms - OK |  
+2021-06-08 22:08:01.3990 | INFO | https://localhost/Restaurants/Details | Start processing HTTP request POST https://localhost:44399/api/authenticate/refreshToken |  
+2021-06-08 22:08:01.4017 | INFO | https://localhost/Restaurants/Details | Sending HTTP request POST https://localhost:44399/api/authenticate/refreshToken |  
+2021-06-08 22:08:01.5332 | INFO | https://localhost/Restaurants/Details | Received HTTP response after 120.1468ms - OK |  
+2021-06-08 22:08:01.5416 | INFO | https://localhost/Restaurants/Details | End processing HTTP request after 137.178ms - OK |  
+2021-06-08 22:08:01.5416 | INFO | https://localhost/Restaurants/Details | Start processing HTTP request GET https://localhost:44399/api/schedule/1 |  
+2021-06-08 22:08:01.5416 | INFO | https://localhost/Restaurants/Details | Sending HTTP request GET https://localhost:44399/api/schedule/1 |  
+2021-06-08 22:08:01.5824 | INFO | https://localhost/Restaurants/Details | Received HTTP response after 31.0215ms - OK |  
+2021-06-08 22:08:01.5824 | INFO | https://localhost/Restaurants/Details | End processing HTTP request after 35.5123ms - OK |  
+2021-06-08 22:08:01.5971 | INFO | https://localhost/Restaurants/Details | Start processing HTTP request POST https://localhost:44399/api/authenticate/refreshToken |  
+2021-06-08 22:08:01.5971 | INFO | https://localhost/Restaurants/Details | Sending HTTP request POST https://localhost:44399/api/authenticate/refreshToken |  
+2021-06-08 22:08:01.6257 | INFO | https://localhost/Restaurants/Details | Received HTTP response after 26.0578ms - OK |  
+2021-06-08 22:08:01.6257 | INFO | https://localhost/Restaurants/Details | End processing HTTP request after 31.2805ms - OK |  
+2021-06-08 22:08:01.6431 | INFO | https://localhost/Restaurants/Details | Start processing HTTP request POST https://localhost:44399/api/booking |  
+2021-06-08 22:08:01.6431 | INFO | https://localhost/Restaurants/Details | Sending HTTP request POST https://localhost:44399/api/booking |  
+2021-06-08 22:08:01.7593 | INFO | https://localhost/Restaurants/Details | Received HTTP response after 113.4591ms - OK |  
+2021-06-08 22:08:01.7621 | INFO | https://localhost/Restaurants/Details | End processing HTTP request after 118.595ms - OK |  
+2021-06-08 22:08:01.7621 | INFO | https://localhost/Restaurants/Details | Start processing HTTP request POST https://localhost:44399/api/authenticate/refreshToken |  
+2021-06-08 22:08:01.7621 | INFO | https://localhost/Restaurants/Details | Sending HTTP request POST https://localhost:44399/api/authenticate/refreshToken |  
+2021-06-08 22:08:01.7909 | INFO | https://localhost/Restaurants/Details | Received HTTP response after 18.102ms - OK |  
+2021-06-08 22:08:01.7909 | INFO | https://localhost/Restaurants/Details | End processing HTTP request after 23.2141ms - OK |  
+2021-06-08 22:08:01.7909 | INFO | https://localhost/Restaurants/Details | Start processing HTTP request GET https://localhost:44399/api/restaurant/1/all/all |  
+2021-06-08 22:08:01.7909 | INFO | https://localhost/Restaurants/Details | Sending HTTP request GET https://localhost:44399/api/restaurant/1/all/all |  
+2021-06-08 22:08:01.8224 | INFO | https://localhost/Restaurants/Details | Received HTTP response after 20.7047ms - OK |  
+2021-06-08 22:08:01.8224 | INFO | https://localhost/Restaurants/Details | End processing HTTP request after 25.6282ms - OK |  
+2021-06-08 22:08:01.8391 | INFO | https://localhost/Restaurants/Details | Start processing HTTP request POST https://localhost:44399/api/authenticate/refreshToken |  
+2021-06-08 22:08:01.8391 | INFO | https://localhost/Restaurants/Details | Sending HTTP request POST https://localhost:44399/api/authenticate/refreshToken |  
+2021-06-08 22:08:01.8625 | INFO | https://localhost/Restaurants/Details | Received HTTP response after 20.4497ms - OK |  
+2021-06-08 22:08:01.8625 | INFO | https://localhost/Restaurants/Details | End processing HTTP request after 26.1551ms - OK |  
+2021-06-08 22:08:01.8710 | INFO | https://localhost/Restaurants/Details | Start processing HTTP request GET https://localhost:44399/api/schedule/All/1 |  
+2021-06-08 22:08:01.8710 | INFO | https://localhost/Restaurants/Details | Sending HTTP request GET https://localhost:44399/api/schedule/All/1 |  
+2021-06-08 22:08:01.8710 | INFO | https://localhost/Restaurants/Details | Received HTTP response after 9.6404ms - OK |  
+2021-06-08 22:08:01.8858 | INFO | https://localhost/Restaurants/Details | End processing HTTP request after 15.1097ms - OK |  

@@ -1,0 +1,246 @@
+﻿@page
+@model RestaurantReservation.Frontend.Pages.Admins.Restaurants.ListModel
+@{
+    ViewData["Title"] = "Restaurant Management";
+}
+
+<!-- Default box -->
+<div class="card">
+    <div class="card-header">
+        <h3 class="card-title">Restaurants</h3>
+        <form method="get" asp-page="/Admins/Restaurants/List">
+            <div class="card-tools">
+                <div class="input-group input-group-sm" style="width:250px;float:right;">
+                    <select class="form-control" name="category" selected="@Model.CategoryFilter" asp-items="Model.CategoryList"></select>
+
+                    <input type="text" name="searchString" class="form-control float-right" placeholder="Search" value="@Model.SearchTerm">
+                    <div class="input-group-append">
+                        <button type="submit" class="btn btn-default">
+                            <i class="fas fa-search"></i>
+                        </button>
+                        @if (!string.IsNullOrEmpty(Model.SearchTerm))
+                        {
+                            <a asp-page="/Admins/Restaurants/List" class="btn btn-danger">
+                                <i class="fa fa-times"></i>
+                            </a>
+                        }
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="card-body p-0">
+        <br />
+
+        <a class="btn btn-success btn-sm" style="margin-left:20px;" asp-page="/Admins/Restaurants/Create">
+            <i class="fas fa-plus">
+            </i>
+            Create
+        </a>
+
+        <hr />
+
+        <table class="table table-striped projects text-center">
+            <thead>
+                <tr>
+                    <th style="width: 1%">
+                        No
+                    </th>
+                    <th>Image</th>
+                    <th>Name</th>
+                    <th>Operating Hour</th>
+                    <th>Category</th>
+                    <th>Status</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                @if (Model.RestaurantList.Count() > 0)
+                {
+                    int count = 1;
+
+                    foreach (var restaurant in Model.RestaurantList)
+                    {
+                        <tr>
+                            <td>
+                                @count
+                            </td>
+                            <td>
+                                <img alt="Restaurant Image" width="250" height="180" src="@Url.Content(restaurant.Restaurant.ImageUrl)">
+                            </td>
+                            <td>
+                                @restaurant.Restaurant.Name
+                            </td>
+                            <td>
+                                @restaurant.Restaurant.WorkingDay @restaurant.Restaurant.StartWorkingTime.ToString("hh:mm tt") - @restaurant.Restaurant.EndWorkingTime.ToString("hh:mm tt")
+                            </td>
+                            <td width="15%">
+                                @foreach (var categoryName in restaurant.Categories)
+                                {
+                                    <span class="badge badge-secondary">@categoryName</span>
+                                }
+                            </td>
+                            <td>
+                                @{
+                                    var currentStatus = restaurant.Restaurant.IsAvailable;
+
+                                    switch (currentStatus)
+                                    {
+                                        case false:
+                                            <span class="badge badge-danger">Inactive</span>
+                                            break;
+                                        default:
+                                            <span class="badge badge-success">Active</span>
+                                            break;
+                                    }
+                                }
+                            </td>
+                            <td class="project-actions">
+                                <form id='form_@restaurant.Restaurant.RestaurantID' method="post" asp-page-handler="Delete" asp-route-id="@restaurant.Restaurant.RestaurantID" asp-route-searchString="@Model.SearchTerm" asp-route-category="@Model.CategoryFilter" asp-route-pageIndex="@Model.RestaurantList.PageIndex">
+                                    @if (currentStatus)
+                                    {
+                                        <a class="btn btn-primary btn-sm" asp-page="/Restaurants/Details" asp-route-ID="@restaurant.Restaurant.RestaurantID">
+                                            <i class="fas fa-info-circle"></i>
+                                        </a>
+                                        <a class="btn btn-info btn-sm" asp-page="/Admins/Restaurants/Edit" asp-route-ID="@restaurant.Restaurant.RestaurantID">
+                                            <i class="fas fa-pencil-alt"></i>
+                                        </a>
+                                        <button type="submit" class="btn btn-danger btn-sm" onclick="showDeleteConfirmation('@restaurant.Restaurant.RestaurantID', '@restaurant.Restaurant.Name.Replace("'", "\\'").Replace("\"", "\\\"")')">
+                                            <i class="far fa-times-circle"></i>
+                                        </button>
+                                    }
+                                    else
+                                    {
+                                        <button type="submit" class="btn btn-success btn-sm" onclick="showDeleteConfirmation('@restaurant.Restaurant.RestaurantID', '@restaurant.Restaurant.Name.Replace("'", "\\'").Replace("\"", "\\\"")">
+                                            <i class="far fa-check-circle"></i>
+                                        </button>
+                                    }
+                                </form>
+                            </td>
+                        </tr>
+                        count++;
+                    }
+                }
+                else
+                {
+                    <tr class="bg-light">
+                        <td colspan="7">
+                            No restaurant record found, click on <b>Create</b> button to add new
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+
+        <br />
+
+        <div class="row">
+            <div class="col-sm">
+                <div class="my-2" style="float:left;margin-left:20px;">
+                    @if (Model.TotalRowAfterFilter != 0 && (!string.IsNullOrEmpty(Model.SearchTerm) || !string.IsNullOrEmpty(Model.CategoryFilter)))
+                    {
+                        <p>Showing @Model.TotalRowAfterFilter of @Model.TotalRow records</p>
+                    }
+                    else
+                    {
+                        <p>Showing @Model.TotalRow records</p>
+                    }
+                </div>
+            </div>
+
+            @if (Model.RestaurantList.Count() > 0 && Model.RestaurantList.TotalPages > 1)
+            {
+                <div class="col-sm">
+                    <div class="my-2" style="float:right;margin-right:20px;">
+                        @{
+                            var prevDisabled = !Model.RestaurantList.HasPreviousPage ? "disabled" : "";
+                            var nextDisabled = !Model.RestaurantList.HasNextPage ? "disabled" : "";
+                        }
+                        <ul class="justify-content-center pagination">
+                            <li class="page-item @prevDisabled">
+                                <a asp-page="/Admins/Restaurants/List"
+                                   asp-route-pageIndex="@(Model.RestaurantList.PageIndex - 1)"
+                                   asp-route-searchString="@Model.SearchTerm"
+                                   class="page-link bg-lightblue">
+                                    <span><b>&lt;</b></span>
+                                </a>
+                            </li>
+                            <li class="page-item text-black">
+                                <span class="page-link bg-white">
+                                    @(Model.RestaurantList.PageIndex) / @(Model.RestaurantList.TotalPages)
+                                </span>
+                            </li>
+                            <li class="page-item @nextDisabled">
+                                <a asp-page="/Admins/Restaurants/List"
+                                   asp-route-pageIndex="@(Model.RestaurantList.PageIndex + 1)"
+                                   asp-route-searchString="@Model.SearchTerm"
+                                   class="page-link bg-lightblue">
+                                    <span><b>&gt;</b></span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        function showDeleteConfirmation(restaurantId, restaurantName) {
+            event.preventDefault();
+            Swal.fire({
+                icon: 'question',
+                title: 'Confirmation',
+                text: `Are you sure you want to alter ${restaurantName}'s availability?`,
+                showCancelButton: true,
+                cancelButtonColor: 'red'
+            }).then(function (confirm) {
+                if (confirm.value)
+                    document.getElementById(`form_${restaurantId}`).submit();
+            });
+        }
+    </script>
+
+    @if (TempData["Message"] != null)
+    {
+        <script async>
+            Swal.fire({
+                icon: 'info',
+                title: 'Operation @TempData["Message"]'
+            });
+        </script>
+    }
+
+    @if (TempData["ErrorConflictMessage"] != null)
+    {
+        <script>
+            $(document).ready(function() {
+                var Toast = Swal.mixin({
+                    toast: true,
+                    position: "top-end",
+                    showConfirmButton: false,
+                    timer: 7000
+                });
+
+                Toast.fire({
+                    icon: "error",
+                    title: "@TempData["ErrorConflictMessage"]",
+                })
+            });
+        </script>
+    }
+}
+
+@section PageHeader {
+    <div class="col-sm-6">
+        <h1 class="m-0">Restaurant Management</h1>
+    </div>
+    <div class="col-sm-6">
+        <ol class="breadcrumb float-sm-right">
+            <li class="breadcrumb-item"><a asp-page="/Admins/Home">Home</a></li>
+            <li class="breadcrumb-item active">Restaurants</li>
+        </ol>
+    </div>
+}

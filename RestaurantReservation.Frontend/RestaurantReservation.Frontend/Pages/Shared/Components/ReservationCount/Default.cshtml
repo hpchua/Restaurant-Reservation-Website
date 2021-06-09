@@ -1,0 +1,11 @@
+﻿@model int
+
+
+@if (Model == 0)
+{
+    <input hidden="hidden" value="@Model" />
+}
+else
+{
+    <span style="border-radius:50%;background:red;color:white;padding: 5px 10px;">@Model</span>
+}

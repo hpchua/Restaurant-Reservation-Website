@@ -1,0 +1,153 @@
+﻿@page "{ID:long}"
+@using RestaurantReservation.Core.Utils;
+@model RestaurantReservation.Frontend.Pages.Admins.Restaurants.EditModel
+@{
+    ViewData["Title"] = "Edit Restaurant";
+}
+
+<form method="post" enctype="multipart/form-data">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card card-secondary">
+                <div class="card-header">
+                    <h3 class="card-title">Restaurant Details</h3>
+
+                    <div class="card-tools">
+                        <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
+                            <i class="fas fa-minus"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="card-body">
+                    <input hidden="hidden" asp-for="RestaurantCategoryVM.Restaurant.RestaurantID" />
+                    <input hidden="hidden" asp-for="RestaurantCategoryVM.Restaurant.ImageUrl" />
+                    <input hidden="hidden" asp-for="RestaurantCategoryVM.Restaurant.IsAvailable" />
+                    <input hidden="hidden" asp-for="RestaurantCategoryVM.Restaurant.CreatedBy" />
+                    <input hidden="hidden" asp-for="RestaurantCategoryVM.Restaurant.CreatedDate" />
+                    <input hidden="hidden" asp-for="RestaurantCategoryVM.Restaurant.VersionNo" />
+
+                    <div class="row">
+                        <div class="col-12 col-sm-3">
+                            <div class="col-12">
+                                <img src="@Url.Content(Model.RestaurantCategoryVM.Restaurant.ImageUrl)" class="product-image" alt="Restaurant Image">
+                                <span asp-validation-for="RestaurantCategoryVM.Restaurant.ImageUrl" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-9">
+                            <div class="form-group">
+                                <label asp-for="RestaurantCategoryVM.Restaurant.Name">Restaurant Name</label><span class="text-danger"><b>*</b></span>
+                                <input type="text" class="form-control" asp-for="RestaurantCategoryVM.Restaurant.Name" required />
+                                <span asp-validation-for="RestaurantCategoryVM.Restaurant.Name" class="text-danger"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label asp-for="RestaurantCategoryVM.Restaurant.Address">Address</label><span class="text-danger"><b>*</b></span>
+                                <input type="text" class="form-control" asp-for="RestaurantCategoryVM.Restaurant.Address" required />
+                                <span asp-validation-for="RestaurantCategoryVM.Restaurant.Address" class="text-danger"></span>
+                            </div>
+
+                            <small><span class="text-danger">Please select time within 0800 ~ 2300</span></small>
+                            <div class="form-group">
+                                <label asp-for="RestaurantCategoryVM.Restaurant.OperatingHour">Operating Hour</label><span class="text-danger"><b>*</b></span>
+                                <span style="color:blue">Current: @Model.RestaurantCategoryVM.Restaurant.OperatingHour</span>
+                                <div class="row">
+                                    <div class="col-4">
+                                        <select id="workingDayDropDown" class="form-control" asp-for="RestaurantCategoryVM.Restaurant.SelectedWorkingDay" asp-items="Html.GetEnumSelectList<SD.WorkingDays>()" required>
+                                            <option disabled>Please choose one of them</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-4">
+                                        <input type="time" class="form-control" asp-for="RestaurantCategoryVM.Restaurant.StartWorkingTime" required min="08:00:00" />
+                                    </div>
+                                    <div class="col-4">
+                                        <input type="time" class="form-control" asp-for="RestaurantCategoryVM.Restaurant.EndWorkingTime" required max="23:00:00" />
+                                    </div>
+                                </div>
+                                <span asp-validation-for="RestaurantCategoryVM.Restaurant.OperatingHour" class="text-danger"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Categories</label><span class="text-danger"><b>*</b></span>
+                                <div class="col-5">
+                                    <select id="categoryDropDown" class="form-control" asp-for="RestaurantCategoryVM.CategoryIds" asp-items="Model.CategoryList"></select>
+                                    <span asp-validation-for="RestaurantCategoryVM.CategoryIds" class="text-danger"></span>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Image</label>
+                                <div class="col-sm-10">
+                                    <div class="custom-file">
+                                        <input class="form-control custom-file-input" type="file" name="files" id="uploadBox">
+                                        <label class="custom-file-label">Click here to upload photo</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div asp-validation-summary="All" class="text-danger"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-12">
+            <a class="btn btn-secondary" asp-page="/Admins/Restaurants/List">Cancel</a>
+            <input type="submit" value="Edit" class="btn btn-primary float-right" asp-page-handler="Submit" />
+        </div>
+    </div>
+</form>
+<br />
+<br />
+
+@section Scripts {
+    @* change the label value to name of the file *@
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('.custom-file-input').on("change", function () {
+                var fileLabel = $(this).next('.custom-file-label');
+                var files = $(this)[0].files;
+
+                if (files.length > 1)
+                    fileLabel.html(files.length + ' files selected');
+                else if (files.length == 1)
+                    fileLabel.html(files[0].name);
+            });
+        });
+    </script>
+
+    @if (!String.IsNullOrEmpty(Model.ErrorMessage))
+    {
+        <script>
+            $(document).ready(function() {
+                var Toast = Swal.mixin({
+                    toast: true,
+                    position: "top-end",
+                    showConfirmButton: false,
+                    timer: 7000
+                });
+
+                Toast.fire({
+                    icon: "error",
+                    title: "@Model.ErrorMessage",
+                })
+            });
+        </script>
+    }
+}
+
+@section PageHeader {
+    <div class="col-sm-6">
+        <h1 class="m-0">Existing Restaurant</h1>
+    </div>
+    <div class="col-sm-6">
+        <ol class="breadcrumb float-sm-right">
+            <li class="breadcrumb-item"><a asp-page="Home">Home</a></li>
+            <li class="breadcrumb-item"><a asp-page="/Admins/Restaurants/List">Restaurants</a></li>
+            <li class="breadcrumb-item active">Edit</li>
+        </ol>
+    </div>
+}

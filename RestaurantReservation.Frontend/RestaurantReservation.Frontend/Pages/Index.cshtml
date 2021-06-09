@@ -1,0 +1,62 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12">
+            <div class="card card-primary">
+                <div class="card-header">
+                    <h3 class="card-title">Restaurants</h3>
+                </div>
+                <div class="card-body">
+                    @if (Model.RestaurantList.Count() > 0)
+                    {
+                        int count = 0;
+
+                        <div class="row mt-4">
+                            @foreach (var restaurant in Model.RestaurantList)
+                            {
+                                if (count != 0 && count % 3 == 0)
+                                {
+                                @:</div>
+                                @:<div class="row mt-4">
+                                }
+
+                                <div class="col-sm-4">
+                                    <div class="position-relative p-3 bg-gray" style="height: 260px">
+                                        <a asp-page="/Restaurants/Details" asp-route-ID="@restaurant.Restaurant.RestaurantID">
+                                            <h5>@restaurant.Restaurant.Name</h5>
+                                        </a>
+
+                                        <a asp-page="/Restaurants/Details" asp-route-ID="@restaurant.Restaurant.RestaurantID">
+                                            <img src="@Url.Content(restaurant.Restaurant.ImageUrl)" alt="Restaurant Photo" style="float: right; width: 355px; height: 180px;margin: 8px 1px 0px 0px;">
+                                        </a>
+                                    </div>
+                                </div>
+                                count++;
+                            }
+                        </div>
+                    }
+                    else
+                    {
+                        <h2>No restaurant records here, please contact admin!</h2>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section PageHeader {
+    <div class="col-sm-6">
+        <h1 class="m-0">T-Cube Home Page</h1>
+    </div>
+    <div class="col-sm-6">
+        <ol class="breadcrumb float-sm-right">
+            <li class="breadcrumb-item active">Home</li>
+        </ol>
+    </div>
+}

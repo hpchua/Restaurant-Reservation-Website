@@ -1,0 +1,13 @@
+﻿@model int
+
+
+@if (Model == 0)
+{
+    <input hidden="hidden" value="@Model" />
+}
+else
+{
+    <span class="badge badge-info right">
+        @Model
+    </span>
+}

@@ -1,0 +1,53 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30907.101
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RestaurantReservation.Api", "RestaurantReservation.Api\RestaurantReservation.Api.csproj", "{D7B430B7-E760-4251-A36D-76F849CF8EFC}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RestaurantReservation.Core", "RestaurantReservation.Core\RestaurantReservation.Core.csproj", "{860F231C-F789-4B12-9D90-E9AA097C1A29}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RestaurantReservation.Infrastructure", "RestaurantReservation.Infrastructure\RestaurantReservation.Infrastructure.csproj", "{9247AD31-901A-4628-9AE0-6A4950D36D10}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{70CD5DD8-8AFB-4029-9EDC-F0CD514C72C9}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RestaurantReservation.IntegrationTests", "RestaurantReservation.IntegrationTests\RestaurantReservation.IntegrationTests.csproj", "{A92F156F-B6B0-4F53-B465-57CDF5E36802}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{AE3B39B1-D589-447B-89EE-7F15DB784ADD}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D7B430B7-E760-4251-A36D-76F849CF8EFC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D7B430B7-E760-4251-A36D-76F849CF8EFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D7B430B7-E760-4251-A36D-76F849CF8EFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D7B430B7-E760-4251-A36D-76F849CF8EFC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{860F231C-F789-4B12-9D90-E9AA097C1A29}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{860F231C-F789-4B12-9D90-E9AA097C1A29}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{860F231C-F789-4B12-9D90-E9AA097C1A29}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{860F231C-F789-4B12-9D90-E9AA097C1A29}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9247AD31-901A-4628-9AE0-6A4950D36D10}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9247AD31-901A-4628-9AE0-6A4950D36D10}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9247AD31-901A-4628-9AE0-6A4950D36D10}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9247AD31-901A-4628-9AE0-6A4950D36D10}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A92F156F-B6B0-4F53-B465-57CDF5E36802}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A92F156F-B6B0-4F53-B465-57CDF5E36802}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A92F156F-B6B0-4F53-B465-57CDF5E36802}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A92F156F-B6B0-4F53-B465-57CDF5E36802}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{A92F156F-B6B0-4F53-B465-57CDF5E36802} = {70CD5DD8-8AFB-4029-9EDC-F0CD514C72C9}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4CC8EF7F-87AA-427D-A99B-B2F5EF067824}
+	EndGlobalSection
+EndGlobal

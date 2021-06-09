@@ -1,0 +1,546 @@
+2021-06-04 09:50:26.4337 | INFO |  -  |  # Promotion email status has been checked > HTTP 200 - OK #  
+2021-06-04 09:50:26.5545 | INFO |  -  |  # Application started. Press Ctrl+C to shut down. #  
+2021-06-04 09:50:26.5621 | INFO |  -  |  # Hosting environment: Development #  
+2021-06-04 09:50:26.5621 | INFO |  -  |  # Content root path: C:\Users\MIS\source\repos\Restaurant Reservation Website\RestaurantReservation.Backend\RestaurantReservation.Api #  
+2021-06-04 09:51:00.0133 | INFO |  -  |  # Promotion email status has been checked > HTTP 200 - OK #  
+2021-06-04 09:51:00.1103 | INFO |  -  |  # Application started. Press Ctrl+C to shut down. #  
+2021-06-04 09:51:00.1217 | INFO |  -  |  # Hosting environment: Development #  
+2021-06-04 09:51:00.1217 | INFO |  -  |  # Content root path: C:\Users\MIS\source\repos\Restaurant Reservation Website\RestaurantReservation.Backend\RestaurantReservation.Api #  
+2021-06-04 09:51:45.4360 | INFO |  -  |  # Promotion email status has been checked > HTTP 200 - OK #  
+2021-06-04 09:51:45.5068 | INFO |  -  |  # Application started. Press Ctrl+C to shut down. #  
+2021-06-04 09:51:45.5162 | INFO |  -  |  # Hosting environment: Development #  
+2021-06-04 09:51:45.5162 | INFO |  -  |  # Content root path: C:\Users\MIS\source\repos\Restaurant Reservation Website\RestaurantReservation.Backend\RestaurantReservation.Api #  
+2021-06-04 09:57:16.5120 | INFO |  -  |  # Promotion email status has been checked > HTTP 200 - OK #  
+2021-06-04 09:57:16.5697 | INFO |  -  |  # Application started. Press Ctrl+C to shut down. #  
+2021-06-04 09:57:16.5752 | INFO |  -  |  # Hosting environment: Development #  
+2021-06-04 09:57:16.5752 | INFO |  -  |  # Content root path: C:\Users\MIS\source\repos\Restaurant Reservation Website\RestaurantReservation.Backend\RestaurantReservation.Api #  
+2021-06-04 10:03:01.3690 | INFO |  -  |  # Promotion email status has been checked > HTTP 200 - OK #  
+2021-06-04 10:03:01.4436 | INFO |  -  |  # Application started. Press Ctrl+C to shut down. #  
+2021-06-04 10:03:01.4520 | INFO |  -  |  # Hosting environment: Development #  
+2021-06-04 10:03:01.4520 | INFO |  -  |  # Content root path: C:\Users\MIS\source\repos\Restaurant Reservation Website\RestaurantReservation.Backend\RestaurantReservation.Api #  
+2021-06-04 10:11:30.9386 | INFO |  -  |  # Promotion email status has been checked > HTTP 200 - OK #  
+2021-06-04 10:11:31.0003 | INFO |  -  |  # Application started. Press Ctrl+C to shut down. #  
+2021-06-04 10:11:31.0003 | INFO |  -  |  # Hosting environment: Development #  
+2021-06-04 10:11:31.0003 | INFO |  -  |  # Content root path: C:\Users\MIS\source\repos\Restaurant Reservation Website\RestaurantReservation.Backend\RestaurantReservation.Api #  
+2021-06-04 10:11:31.9841 | INFO | Authenticate - POST | https://localhost/api/Authenticate/Login # User refresh token has been created > HTTP 200 - OK #  
+2021-06-04 10:11:49.4123 | INFO |  -  |  # Promotion email status has been checked > HTTP 200 - OK #  
+2021-06-04 10:11:49.5325 | INFO |  -  |  # Application started. Press Ctrl+C to shut down. #  
+2021-06-04 10:11:49.5325 | INFO |  -  |  # Hosting environment: Development #  
+2021-06-04 10:11:49.5438 | INFO |  -  |  # Content root path: C:\Users\MIS\source\repos\Restaurant Reservation Website\RestaurantReservation.Backend\RestaurantReservation.Api #  
+2021-06-04 10:11:58.1224 | INFO | Authenticate - POST | https://localhost/api/Authenticate/Login # User refresh token has been created > HTTP 200 - OK #  
+2021-06-04 10:16:56.6197 | INFO |  -  |  # Promotion email status has been checked > HTTP 200 - OK #  
+2021-06-04 10:16:56.6803 | INFO |  -  |  # Application started. Press Ctrl+C to shut down. #  
+2021-06-04 10:16:56.6871 | INFO |  -  |  # Hosting environment: Development #  
+2021-06-04 10:16:56.6871 | INFO |  -  |  # Content root path: C:\Users\MIS\source\repos\Restaurant Reservation Website\RestaurantReservation.Backend\RestaurantReservation.Api #  
+2021-06-04 10:18:29.7067 | INFO |  -  |  # Promotion email status has been checked > HTTP 200 - OK #  
+2021-06-04 10:18:29.7663 | INFO |  -  |  # Application started. Press Ctrl+C to shut down. #  
+2021-06-04 10:18:29.7663 | INFO |  -  |  # Hosting environment: Development #  
+2021-06-04 10:18:29.7663 | INFO |  -  |  # Content root path: C:\Users\MIS\source\repos\Restaurant Reservation Website\RestaurantReservation.Backend\RestaurantReservation.Api #  
+2021-06-04 10:27:11.6485 | INFO |  -  |  # Promotion email status has been checked > HTTP 200 - OK #  
+2021-06-04 10:27:11.7183 | INFO |  -  |  # Application started. Press Ctrl+C to shut down. #  
+2021-06-04 10:27:11.7183 | INFO |  -  |  # Hosting environment: Development #  
+2021-06-04 10:27:11.7314 | INFO |  -  |  # Content root path: C:\Users\MIS\source\repos\Restaurant Reservation Website\RestaurantReservation.Backend\RestaurantReservation.Api #  
+2021-06-04 10:34:39.9887 | INFO |  -  |  # Promotion email status has been checked > HTTP 200 - OK #  
+2021-06-04 10:34:40.0557 | INFO |  -  |  # Application started. Press Ctrl+C to shut down. #  
+2021-06-04 10:34:40.0620 | INFO |  -  |  # Hosting environment: Development #  
+2021-06-04 10:34:40.0620 | INFO |  -  |  # Content root path: C:\Users\MIS\source\repos\Restaurant Reservation Website\RestaurantReservation.Backend\RestaurantReservation.Api #  
+2021-06-04 10:34:40.5988 | INFO | Authenticate - GET | https://localhost/api/Authenticate/ForgotPassword/hpchua992@gmail.com # User's Email email have been sent > HTTP 200 - OK #  
+2021-06-04 10:34:51.3683 | INFO |  -  |  # Promotion email status has been checked > HTTP 200 - OK #  
+2021-06-04 10:34:51.4325 | INFO |  -  |  # Application started. Press Ctrl+C to shut down. #  
+2021-06-04 10:34:51.4412 | INFO |  -  |  # Hosting environment: Development #  
+2021-06-04 10:34:51.4412 | INFO |  -  |  # Content root path: C:\Users\MIS\source\repos\Restaurant Reservation Website\RestaurantReservation.Backend\RestaurantReservation.Api #  
+2021-06-04 10:34:51.8164 | WARN | Authenticate - GET | https://localhost/api/Authenticate/ForgotPassword/testing@gmail.com # User's Email testing@gmail.com can't found > HTTP 404 - Not Found #  
+2021-06-04 10:39:34.0667 | INFO |  -  |  # Promotion email status has been checked > HTTP 200 - OK #  
+2021-06-04 10:39:34.1258 | INFO |  -  |  # Application started. Press Ctrl+C to shut down. #  
+2021-06-04 10:39:34.1258 | INFO |  -  |  # Hosting environment: Development #  
+2021-06-04 10:39:34.1258 | INFO |  -  |  # Content root path: C:\Users\MIS\source\repos\Restaurant Reservation Website\RestaurantReservation.Backend\RestaurantReservation.Api #  
+2021-06-04 10:43:06.5062 | INFO |  -  |  # Promotion email status has been checked > HTTP 200 - OK #  
+2021-06-04 10:43:06.5633 | INFO |  -  |  # Application started. Press Ctrl+C to shut down. #  
+2021-06-04 10:43:06.5633 | INFO |  -  |  # Hosting environment: Development #  
+2021-06-04 10:43:06.5633 | INFO |  -  |  # Content root path: C:\Users\MIS\source\repos\Restaurant Reservation Website\RestaurantReservation.Backend\RestaurantReservation.Api #  
+2021-06-04 10:43:58.0842 | INFO |  -  |  # Promotion email status has been checked > HTTP 200 - OK #  
+2021-06-04 10:43:58.1423 | INFO |  -  |  # Application started. Press Ctrl+C to shut down. #  
+2021-06-04 10:43:58.1423 | INFO |  -  |  # Hosting environment: Development #  
+2021-06-04 10:43:58.1524 | INFO |  -  |  # Content root path: C:\Users\MIS\source\repos\Restaurant Reservation Website\RestaurantReservation.Backend\RestaurantReservation.Api #  
+2021-06-04 10:44:58.1926 | INFO |  -  |  # Promotion email status has been checked > HTTP 200 - OK #  
+2021-06-04 10:44:58.2380 | INFO |  -  |  # Application started. Press Ctrl+C to shut down. #  
+2021-06-04 10:44:58.2380 | INFO |  -  |  # Hosting environment: Development #  
+2021-06-04 10:44:58.2380 | INFO |  -  |  # Content root path: C:\Users\MIS\source\repos\Restaurant Reservation Website\RestaurantReservation.Backend\RestaurantReservation.Api #  
+2021-06-04 10:44:58.8844 | INFO | Authenticate - POST | https://localhost/api/Authenticate/Login # User refresh token has been created > HTTP 200 - OK #  
+2021-06-04 10:44:59.0586 | INFO |  -  |  # Promotion email status has been checked > HTTP 200 - OK #  
+2021-06-04 10:44:59.0586 | INFO |  -  |  # Application started. Press Ctrl+C to shut down. #  
+2021-06-04 10:44:59.0586 | INFO |  -  |  # Hosting environment: Development #  
+2021-06-04 10:44:59.0586 | INFO |  -  |  # Content root path: C:\Users\MIS\source\repos\Restaurant Reservation Website\RestaurantReservation.Backend\RestaurantReservation.Api #  
+2021-06-04 10:44:59.0877 | WARN | Authenticate - POST | https://localhost/api/Authenticate/Login # Invalid password for user 8448ce5f-b94a-4efa-8fb6-48c9d0611b90. #  
+2021-06-04 10:44:59.0877 | WARN | Authenticate - POST | https://localhost/api/Authenticate/Login # User 8448ce5f-b94a-4efa-8fb6-48c9d0611b90 provided the wrong password > HTTP 401 - Unauthorized #  
+2021-06-04 10:44:59.1391 | INFO |  -  |  # Promotion email status has been checked > HTTP 200 - OK #  
+2021-06-04 10:44:59.1391 | INFO |  -  |  # Application started. Press Ctrl+C to shut down. #  
+2021-06-04 10:44:59.1391 | INFO |  -  |  # Hosting environment: Development #  
+2021-06-04 10:44:59.1391 | INFO |  -  |  # Content root path: C:\Users\MIS\source\repos\Restaurant Reservation Website\RestaurantReservation.Backend\RestaurantReservation.Api #  
+2021-06-04 10:44:59.1736 | WARN | Authenticate - POST | https://localhost/api/Authenticate/Login # Attempt to login with adminn which doesn't exist > HTTP 404 - Not Found #  
+2021-06-04 10:44:59.2245 | INFO |  -  |  # Promotion email status has been checked > HTTP 200 - OK #  
+2021-06-04 10:44:59.2245 | INFO |  -  |  # Application started. Press Ctrl+C to shut down. #  
+2021-06-04 10:44:59.2245 | INFO |  -  |  # Hosting environment: Development #  
+2021-06-04 10:44:59.2299 | INFO |  -  |  # Content root path: C:\Users\MIS\source\repos\Restaurant Reservation Website\RestaurantReservation.Backend\RestaurantReservation.Api #  
+2021-06-04 10:44:59.3855 | INFO |  -  |  # Promotion email status has been checked > HTTP 200 - OK #  
+2021-06-04 10:44:59.3894 | INFO |  -  |  # Application started. Press Ctrl+C to shut down. #  
+2021-06-04 10:44:59.3894 | INFO |  -  |  # Hosting environment: Development #  
+2021-06-04 10:44:59.3894 | INFO |  -  |  # Content root path: C:\Users\MIS\source\repos\Restaurant Reservation Website\RestaurantReservation.Backend\RestaurantReservation.Api #  
+2021-06-04 10:44:59.5305 | INFO |  -  |  # Promotion email status has been checked > HTTP 200 - OK #  
+2021-06-04 10:44:59.5478 | INFO |  -  |  # Application started. Press Ctrl+C to shut down. #  
+2021-06-04 10:44:59.5478 | INFO |  -  |  # Hosting environment: Development #  
+2021-06-04 10:44:59.5478 | INFO |  -  |  # Content root path: C:\Users\MIS\source\repos\Restaurant Reservation Website\RestaurantReservation.Backend\RestaurantReservation.Api #  
+2021-06-04 10:45:00.5486 | INFO | Authenticate - GET | https://localhost/api/Authenticate/ForgotPassword/hpchua992@gmail.com # User's Email email have been sent > HTTP 200 - OK #  
+2021-06-04 10:45:00.6058 | INFO |  -  |  # Promotion email status has been checked > HTTP 200 - OK #  
+2021-06-04 10:45:00.6058 | INFO |  -  |  # Application started. Press Ctrl+C to shut down. #  
+2021-06-04 10:45:00.6058 | INFO |  -  |  # Hosting environment: Development #  
+2021-06-04 10:45:00.6058 | INFO |  -  |  # Content root path: C:\Users\MIS\source\repos\Restaurant Reservation Website\RestaurantReservation.Backend\RestaurantReservation.Api #  
+2021-06-04 10:45:00.6232 | WARN | Authenticate - GET | https://localhost/api/Authenticate/ForgotPassword/testing@gmail.com # User's Email testing@gmail.com can't found > HTTP 404 - Not Found #  
+2021-06-04 10:49:42.6944 | INFO |  -  |  # Promotion email status has been checked > HTTP 200 - OK #  
+2021-06-04 10:49:42.8103 | INFO |  -  |  # Application started. Press Ctrl+C to shut down. #  
+2021-06-04 10:49:42.8103 | INFO |  -  |  # Hosting environment: Development #  
+2021-06-04 10:49:42.8103 | INFO |  -  |  # Content root path: C:\Users\MIS\source\repos\Restaurant Reservation Website\RestaurantReservation.Backend\RestaurantReservation.Api #  
+2021-06-04 10:50:11.2689 | INFO |  -  |  # Promotion email status has been checked > HTTP 200 - OK #  
+2021-06-04 10:50:11.3491 | INFO |  -  |  # Application started. Press Ctrl+C to shut down. #  
+2021-06-04 10:50:11.3619 | INFO |  -  |  # Hosting environment: Development #  
+2021-06-04 10:50:11.3738 | INFO |  -  |  # Content root path: C:\Users\MIS\source\repos\Restaurant Reservation Website\RestaurantReservation.Backend\RestaurantReservation.Api #  
+2021-06-04 10:52:00.2162 | INFO |  -  |  # Promotion email status has been checked > HTTP 200 - OK #  
+2021-06-04 10:52:00.2805 | INFO |  -  |  # Application started. Press Ctrl+C to shut down. #  
+2021-06-04 10:52:00.2805 | INFO |  -  |  # Hosting environment: Development #  
+2021-06-04 10:52:00.2923 | INFO |  -  |  # Content root path: C:\Users\MIS\source\repos\Restaurant Reservation Website\RestaurantReservation.Backend\RestaurantReservation.Api #  
+2021-06-04 10:52:01.3059 | INFO | Authenticate - POST | https://localhost/api/Authenticate/Register # User member99 has been created with role as Member > HTTP 200 - OK #  
+2021-06-04 10:52:49.1653 | INFO |  -  |  # Promotion email status has been checked > HTTP 200 - OK #  
+2021-06-04 10:52:49.2281 | INFO |  -  |  # Application started. Press Ctrl+C to shut down. #  
+2021-06-04 10:52:49.2354 | INFO |  -  |  # Hosting environment: Development #  
+2021-06-04 10:52:49.2354 | INFO |  -  |  # Content root path: C:\Users\MIS\source\repos\Restaurant Reservation Website\RestaurantReservation.Backend\RestaurantReservation.Api #  
+2021-06-04 10:52:49.8788 | WARN | Authenticate - POST | https://localhost/api/Authenticate/Register # User e5f6e8da-c9a9-4776-b2de-22d6c9ff5ea6 validation failed: DuplicateUserName;DuplicateEmail. #  
+2021-06-04 10:52:49.8888 | WARN | Authenticate - POST | https://localhost/api/Authenticate/Register # User member1 Failed to create > HTTP 400 - Bad Request #  
+2021-06-04 13:43:09.1018 | INFO |  -  |  # Promotion email status has been checked > HTTP 200 - OK #  
+2021-06-04 13:43:09.1714 | INFO |  -  |  # Application started. Press Ctrl+C to shut down. #  
+2021-06-04 13:43:09.1714 | INFO |  -  |  # Hosting environment: Development #  
+2021-06-04 13:43:09.1714 | INFO |  -  |  # Content root path: C:\Users\MIS\source\repos\Restaurant Reservation Website\RestaurantReservation.Backend\RestaurantReservation.Api #  
+2021-06-04 13:43:10.2041 | INFO | Authenticate - POST | https://localhost/api/Authenticate/Login # User refresh token has been created > HTTP 200 - OK #  
+2021-06-04 13:43:10.4542 | INFO | User - GET | https://localhost/api/User/Member # Users have been retrieved OK #  
+2021-06-04 13:43:10.5791 | INFO | User - DELETE | https://localhost/api/User/6da72781-a4e9-4f2c-a654-6d2f8d3d53a0 # User member99 with ID 6da72781-a4e9-4f2c-a654-6d2f8d3d53a0 Data has been deleted > HTTP 200 - OK #  
+2021-06-04 14:08:40.8303 | INFO |  -  |  # Promotion email status has been checked > HTTP 200 - OK #  
+2021-06-04 14:08:40.9134 | INFO |  -  |  # Application started. Press Ctrl+C to shut down. #  
+2021-06-04 14:08:40.9225 | INFO |  -  |  # Hosting environment: Development #  
+2021-06-04 14:08:40.9225 | INFO |  -  |  # Content root path: C:\Users\MIS\source\repos\Restaurant Reservation Website\RestaurantReservation.Backend\RestaurantReservation.Api #  
+2021-06-04 14:08:42.0948 | INFO | Authenticate - POST | https://localhost/api/Authenticate/Login # User refresh token has been created > HTTP 200 - OK #  
+2021-06-04 14:08:42.5760 | INFO | Category - GET | https://localhost/api/Category/ # Categories have been retrieved OK #  
+2021-06-04 14:08:42.7382 | INFO |  -  |  # Promotion email status has been checked > HTTP 200 - OK #  
+2021-06-04 14:08:42.7382 | INFO |  -  |  # Application started. Press Ctrl+C to shut down. #  
+2021-06-04 14:08:42.7382 | INFO |  -  |  # Hosting environment: Development #  
+2021-06-04 14:08:42.7382 | INFO |  -  |  # Content root path: C:\Users\MIS\source\repos\Restaurant Reservation Website\RestaurantReservation.Backend\RestaurantReservation.Api #  
+2021-06-04 14:08:42.8349 | INFO | Authenticate - POST | https://localhost/api/Authenticate/Login # User refresh token has been created > HTTP 200 - OK #  
+2021-06-04 14:08:42.8833 | WARN | Category - GET | https://localhost/api/Category/22 # Category of ID 22 not found NotFound #  
+2021-06-04 14:08:42.9981 | INFO |  -  |  # Promotion email status has been checked > HTTP 200 - OK #  
+2021-06-04 14:08:42.9981 | INFO |  -  |  # Application started. Press Ctrl+C to shut down. #  
+2021-06-04 14:08:42.9981 | INFO |  -  |  # Hosting environment: Development #  
+2021-06-04 14:08:42.9981 | INFO |  -  |  # Content root path: C:\Users\MIS\source\repos\Restaurant Reservation Website\RestaurantReservation.Backend\RestaurantReservation.Api #  
+2021-06-04 14:08:43.0993 | INFO | Authenticate - POST | https://localhost/api/Authenticate/Login # User refresh token has been created > HTTP 200 - OK #  
+2021-06-04 14:08:43.1712 | INFO | Category - GET | https://localhost/api/Category/6 # Category of ID 6 have been retrieved OK #  
+2021-06-04 14:08:43.2946 | INFO |  -  |  # Promotion email status has been checked > HTTP 200 - OK #  
+2021-06-04 14:08:43.2946 | INFO |  -  |  # Application started. Press Ctrl+C to shut down. #  
+2021-06-04 14:08:43.2946 | INFO |  -  |  # Hosting environment: Development #  
+2021-06-04 14:08:43.2946 | INFO |  -  |  # Content root path: C:\Users\MIS\source\repos\Restaurant Reservation Website\RestaurantReservation.Backend\RestaurantReservation.Api #  
+2021-06-04 14:08:43.3583 | INFO | Authenticate - POST | https://localhost/api/Authenticate/Login # User refresh token has been created > HTTP 200 - OK #  
+2021-06-04 14:08:43.4891 | INFO | Category - POST | https://localhost/api/Category/ # Category Korean has been created with ID 10 > HTTP 200 - OK #  
+2021-06-04 14:08:43.5116 | INFO | Category - GET | https://localhost/api/Category/ # Categories have been retrieved OK #  
+2021-06-04 14:08:43.6127 | INFO |  -  |  # Promotion email status has been checked > HTTP 200 - OK #  
+2021-06-04 14:08:43.6127 | INFO |  -  |  # Application started. Press Ctrl+C to shut down. #  
+2021-06-04 14:08:43.6207 | INFO |  -  |  # Hosting environment: Development #  
+2021-06-04 14:08:43.6207 | INFO |  -  |  # Content root path: C:\Users\MIS\source\repos\Restaurant Reservation Website\RestaurantReservation.Backend\RestaurantReservation.Api #  
+2021-06-04 14:08:43.7019 | INFO | Authenticate - POST | https://localhost/api/Authenticate/Login # User refresh token has been created > HTTP 200 - OK #  
+2021-06-04 14:08:43.7340 | WARN | Category - POST | https://localhost/api/Category/ # Attempt to add duplicate category RestaurantReservation.Core.Entities.Category > HTTP 400 - Bad Request #  
+2021-06-04 14:08:43.8342 | INFO |  -  |  # Promotion email status has been checked > HTTP 200 - OK #  
+2021-06-04 14:08:43.8400 | INFO |  -  |  # Application started. Press Ctrl+C to shut down. #  
+2021-06-04 14:08:43.8400 | INFO |  -  |  # Hosting environment: Development #  
+2021-06-04 14:08:43.8400 | INFO |  -  |  # Content root path: C:\Users\MIS\source\repos\Restaurant Reservation Website\RestaurantReservation.Backend\RestaurantReservation.Api #  
+2021-06-04 14:08:44.6719 | INFO | Authenticate - POST | https://localhost/api/Authenticate/Login # User refresh token has been created > HTTP 200 - OK #  
+2021-06-04 14:08:44.6909 | INFO | Category - GET | https://localhost/api/Category/ # Categories have been retrieved OK #  
+2021-06-04 14:08:44.7685 | INFO |  -  |  # Promotion email status has been checked > HTTP 200 - OK #  
+2021-06-04 14:08:44.7685 | INFO |  -  |  # Application started. Press Ctrl+C to shut down. #  
+2021-06-04 14:08:44.7685 | INFO |  -  |  # Hosting environment: Development #  
+2021-06-04 14:08:44.7778 | INFO |  -  |  # Content root path: C:\Users\MIS\source\repos\Restaurant Reservation Website\RestaurantReservation.Backend\RestaurantReservation.Api #  
+2021-06-04 14:08:45.6379 | INFO | Authenticate - POST | https://localhost/api/Authenticate/Login # User refresh token has been created > HTTP 200 - OK #  
+2021-06-04 14:08:45.6603 | INFO | Category - GET | https://localhost/api/Category/ # Categories have been retrieved OK #  
+2021-06-04 14:08:45.7412 | INFO |  -  |  # Promotion email status has been checked > HTTP 200 - OK #  
+2021-06-04 14:08:45.7455 | INFO |  -  |  # Application started. Press Ctrl+C to shut down. #  
+2021-06-04 14:08:45.7455 | INFO |  -  |  # Hosting environment: Development #  
+2021-06-04 14:08:45.7455 | INFO |  -  |  # Content root path: C:\Users\MIS\source\repos\Restaurant Reservation Website\RestaurantReservation.Backend\RestaurantReservation.Api #  
+2021-06-04 14:08:45.7940 | INFO | Authenticate - POST | https://localhost/api/Authenticate/Login # User refresh token has been created > HTTP 200 - OK #  
+2021-06-04 14:08:45.8111 | INFO | Category - GET | https://localhost/api/Category/ # Categories have been retrieved OK #  
+2021-06-04 14:08:45.8757 | INFO |  -  |  # Promotion email status has been checked > HTTP 200 - OK #  
+2021-06-04 14:08:45.8757 | INFO |  -  |  # Application started. Press Ctrl+C to shut down. #  
+2021-06-04 14:08:45.8757 | INFO |  -  |  # Hosting environment: Development #  
+2021-06-04 14:08:45.8757 | INFO |  -  |  # Content root path: C:\Users\MIS\source\repos\Restaurant Reservation Website\RestaurantReservation.Backend\RestaurantReservation.Api #  
+2021-06-04 14:08:45.9184 | INFO | Authenticate - POST | https://localhost/api/Authenticate/Login # User refresh token has been created > HTTP 200 - OK #  
+2021-06-04 14:08:45.9487 | WARN | Category - DELETE | https://localhost/api/Category/%7BuserId%7D/22 # Attempt to delete non-existing category of ID 22 > HTTP 404 - Not Found #  
+2021-06-04 14:08:46.0147 | INFO |  -  |  # Promotion email status has been checked > HTTP 200 - OK #  
+2021-06-04 14:08:46.0147 | INFO |  -  |  # Application started. Press Ctrl+C to shut down. #  
+2021-06-04 14:08:46.0147 | INFO |  -  |  # Hosting environment: Development #  
+2021-06-04 14:08:46.0147 | INFO |  -  |  # Content root path: C:\Users\MIS\source\repos\Restaurant Reservation Website\RestaurantReservation.Backend\RestaurantReservation.Api #  
+2021-06-04 14:08:46.0594 | INFO | Authenticate - POST | https://localhost/api/Authenticate/Login # User refresh token has been created > HTTP 200 - OK #  
+2021-06-04 14:08:46.0764 | INFO | Category - GET | https://localhost/api/Category/ # Categories have been retrieved OK #  
+2021-06-04 14:09:33.8853 | INFO |  -  |  # Promotion email status has been checked > HTTP 200 - OK #  
+2021-06-04 14:09:33.9511 | INFO |  -  |  # Application started. Press Ctrl+C to shut down. #  
+2021-06-04 14:09:33.9695 | INFO |  -  |  # Hosting environment: Development #  
+2021-06-04 14:09:33.9830 | INFO |  -  |  # Content root path: C:\Users\MIS\source\repos\Restaurant Reservation Website\RestaurantReservation.Backend\RestaurantReservation.Api #  
+2021-06-04 14:09:35.0850 | INFO | Authenticate - POST | https://localhost/api/Authenticate/Login # User refresh token has been created > HTTP 200 - OK #  
+2021-06-04 14:09:35.4155 | WARN | Category - POST | https://localhost/api/Category/ # Attempt to add duplicate category RestaurantReservation.Core.Entities.Category > HTTP 400 - Bad Request #  
+2021-06-04 14:10:53.5703 | INFO |  -  |  # Promotion email status has been checked > HTTP 200 - OK #  
+2021-06-04 14:10:53.6620 | INFO |  -  |  # Application started. Press Ctrl+C to shut down. #  
+2021-06-04 14:10:53.6812 | INFO |  -  |  # Hosting environment: Development #  
+2021-06-04 14:10:53.7190 | INFO |  -  |  # Content root path: C:\Users\MIS\source\repos\Restaurant Reservation Website\RestaurantReservation.Backend\RestaurantReservation.Api #  
+2021-06-04 14:10:55.1759 | INFO | Authenticate - POST | https://localhost/api/Authenticate/Login # User refresh token has been created > HTTP 200 - OK #  
+2021-06-04 14:10:55.6882 | INFO | Category - POST | https://localhost/api/Category/ # Category Korean has been created with ID 11 > HTTP 200 - OK #  
+2021-06-04 14:11:14.0818 | INFO | Category - GET | https://localhost/api/Category/ # Categories have been retrieved OK #  
+2021-06-04 14:12:08.0580 | INFO |  -  |  # Promotion email status has been checked > HTTP 200 - OK #  
+2021-06-04 14:12:08.1906 | INFO |  -  |  # Application started. Press Ctrl+C to shut down. #  
+2021-06-04 14:12:08.2133 | INFO |  -  |  # Hosting environment: Development #  
+2021-06-04 14:12:08.2280 | INFO |  -  |  # Content root path: C:\Users\MIS\source\repos\Restaurant Reservation Website\RestaurantReservation.Backend\RestaurantReservation.Api #  
+2021-06-04 14:12:11.0790 | INFO | Authenticate - POST | https://localhost/api/Authenticate/Login # User refresh token has been created > HTTP 200 - OK #  
+2021-06-04 14:12:11.8132 | INFO | Category - POST | https://localhost/api/Category/ # Category Korean has been created with ID 12 > HTTP 200 - OK #  
+2021-06-04 14:12:43.7216 | INFO | Category - GET | https://localhost/api/Category/ # Categories have been retrieved OK #  
+2021-06-04 14:14:25.7617 | INFO |  -  |  # Promotion email status has been checked > HTTP 200 - OK #  
+2021-06-04 14:14:25.8308 | INFO |  -  |  # Application started. Press Ctrl+C to shut down. #  
+2021-06-04 14:14:25.8308 | INFO |  -  |  # Hosting environment: Development #  
+2021-06-04 14:14:25.8430 | INFO |  -  |  # Content root path: C:\Users\MIS\source\repos\Restaurant Reservation Website\RestaurantReservation.Backend\RestaurantReservation.Api #  
+2021-06-04 14:14:27.2432 | INFO | Authenticate - POST | https://localhost/api/Authenticate/Login # User refresh token has been created > HTTP 200 - OK #  
+2021-06-04 14:14:27.7186 | INFO | Category - GET | https://localhost/api/Category/ # Categories have been retrieved OK #  
+2021-06-04 14:14:27.8679 | INFO |  -  |  # Promotion email status has been checked > HTTP 200 - OK #  
+2021-06-04 14:14:27.8750 | INFO |  -  |  # Application started. Press Ctrl+C to shut down. #  
+2021-06-04 14:14:27.8750 | INFO |  -  |  # Hosting environment: Development #  
+2021-06-04 14:14:27.8750 | INFO |  -  |  # Content root path: C:\Users\MIS\source\repos\Restaurant Reservation Website\RestaurantReservation.Backend\RestaurantReservation.Api #  
+2021-06-04 14:14:27.9556 | INFO | Authenticate - POST | https://localhost/api/Authenticate/Login # User refresh token has been created > HTTP 200 - OK #  
+2021-06-04 14:14:27.9925 | WARN | Category - GET | https://localhost/api/Category/22 # Category of ID 22 not found NotFound #  
+2021-06-04 14:14:28.0811 | INFO |  -  |  # Promotion email status has been checked > HTTP 200 - OK #  
+2021-06-04 14:14:28.0811 | INFO |  -  |  # Application started. Press Ctrl+C to shut down. #  
+2021-06-04 14:14:28.0811 | INFO |  -  |  # Hosting environment: Development #  
+2021-06-04 14:14:28.0811 | INFO |  -  |  # Content root path: C:\Users\MIS\source\repos\Restaurant Reservation Website\RestaurantReservation.Backend\RestaurantReservation.Api #  
+2021-06-04 14:14:28.1425 | INFO | Authenticate - POST | https://localhost/api/Authenticate/Login # User refresh token has been created > HTTP 200 - OK #  
+2021-06-04 14:14:28.1758 | INFO | Category - GET | https://localhost/api/Category/6 # Category of ID 6 have been retrieved OK #  
+2021-06-04 14:14:28.2518 | INFO |  -  |  # Promotion email status has been checked > HTTP 200 - OK #  
+2021-06-04 14:14:28.2518 | INFO |  -  |  # Application started. Press Ctrl+C to shut down. #  
+2021-06-04 14:14:28.2518 | INFO |  -  |  # Hosting environment: Development #  
+2021-06-04 14:14:28.2518 | INFO |  -  |  # Content root path: C:\Users\MIS\source\repos\Restaurant Reservation Website\RestaurantReservation.Backend\RestaurantReservation.Api #  
+2021-06-04 14:14:28.3152 | INFO | Authenticate - POST | https://localhost/api/Authenticate/Login # User refresh token has been created > HTTP 200 - OK #  
+2021-06-04 14:14:28.3986 | INFO | Category - POST | https://localhost/api/Category/ # Category Korean has been created with ID 13 > HTTP 200 - OK #  
+2021-06-04 14:14:28.4220 | INFO | Category - GET | https://localhost/api/Category/ # Categories have been retrieved OK #  
+2021-06-04 14:14:28.5291 | INFO |  -  |  # Promotion email status has been checked > HTTP 200 - OK #  
+2021-06-04 14:14:28.5291 | INFO |  -  |  # Application started. Press Ctrl+C to shut down. #  
+2021-06-04 14:14:28.5291 | INFO |  -  |  # Hosting environment: Development #  
+2021-06-04 14:14:28.5291 | INFO |  -  |  # Content root path: C:\Users\MIS\source\repos\Restaurant Reservation Website\RestaurantReservation.Backend\RestaurantReservation.Api #  
+2021-06-04 14:14:28.5946 | INFO | Authenticate - POST | https://localhost/api/Authenticate/Login # User refresh token has been created > HTTP 200 - OK #  
+2021-06-04 14:14:28.6491 | WARN | Category - POST | https://localhost/api/Category/ # Attempt to add duplicate category RestaurantReservation.Core.Entities.Category > HTTP 400 - Bad Request #  
+2021-06-04 14:14:28.8011 | INFO |  -  |  # Promotion email status has been checked > HTTP 200 - OK #  
+2021-06-04 14:14:28.8097 | INFO |  -  |  # Application started. Press Ctrl+C to shut down. #  
+2021-06-04 14:14:28.8097 | INFO |  -  |  # Hosting environment: Development #  
+2021-06-04 14:14:28.8097 | INFO |  -  |  # Content root path: C:\Users\MIS\source\repos\Restaurant Reservation Website\RestaurantReservation.Backend\RestaurantReservation.Api #  
+2021-06-04 14:14:29.5916 | INFO | Authenticate - POST | https://localhost/api/Authenticate/Login # User refresh token has been created > HTTP 200 - OK #  
+2021-06-04 14:14:29.6079 | INFO | Category - GET | https://localhost/api/Category/ # Categories have been retrieved OK #  
+2021-06-04 14:14:29.6604 | INFO | Category - PUT | https://localhost/api/Category/13 # Category Koreann with ID 13 Data has been updated > HTTP 200 - OK #  
+2021-06-04 14:14:29.6702 | INFO | Category - GET | https://localhost/api/Category/ # Categories have been retrieved OK #  
+2021-06-04 14:14:29.7318 | INFO |  -  |  # Promotion email status has been checked > HTTP 200 - OK #  
+2021-06-04 14:14:29.7318 | INFO |  -  |  # Application started. Press Ctrl+C to shut down. #  
+2021-06-04 14:14:29.7318 | INFO |  -  |  # Hosting environment: Development #  
+2021-06-04 14:14:29.7318 | INFO |  -  |  # Content root path: C:\Users\MIS\source\repos\Restaurant Reservation Website\RestaurantReservation.Backend\RestaurantReservation.Api #  
+2021-06-04 14:14:29.7865 | INFO | Authenticate - POST | https://localhost/api/Authenticate/Login # User refresh token has been created > HTTP 200 - OK #  
+2021-06-04 14:14:29.8069 | INFO | Category - GET | https://localhost/api/Category/ # Categories have been retrieved OK #  
+2021-06-04 14:14:29.8242 | WARN | Category - PUT | https://localhost/api/Category/6 # Attempt to update category category failed due to duplicate category existingCategory > HTTP 400 - Bad Request #  
+2021-06-04 14:14:29.9080 | INFO |  -  |  # Promotion email status has been checked > HTTP 200 - OK #  
+2021-06-04 14:14:29.9080 | INFO |  -  |  # Application started. Press Ctrl+C to shut down. #  
+2021-06-04 14:14:29.9080 | INFO |  -  |  # Hosting environment: Development #  
+2021-06-04 14:14:29.9080 | INFO |  -  |  # Content root path: C:\Users\MIS\source\repos\Restaurant Reservation Website\RestaurantReservation.Backend\RestaurantReservation.Api #  
+2021-06-04 14:14:29.9591 | INFO | Authenticate - POST | https://localhost/api/Authenticate/Login # User refresh token has been created > HTTP 200 - OK #  
+2021-06-04 14:14:29.9792 | INFO | Category - GET | https://localhost/api/Category/ # Categories have been retrieved OK #  
+2021-06-04 14:14:30.0261 | WARN | Category - PUT | https://localhost/api/Category/6 # Category Koreann with ID 6 Data have some conflicts > HTTP 409 - Conflict #  
+2021-06-04 14:14:30.1690 | INFO |  -  |  # Promotion email status has been checked > HTTP 200 - OK #  
+2021-06-04 14:14:30.1690 | INFO |  -  |  # Application started. Press Ctrl+C to shut down. #  
+2021-06-04 14:14:30.1690 | INFO |  -  |  # Hosting environment: Development #  
+2021-06-04 14:14:30.1690 | INFO |  -  |  # Content root path: C:\Users\MIS\source\repos\Restaurant Reservation Website\RestaurantReservation.Backend\RestaurantReservation.Api #  
+2021-06-04 14:14:30.2688 | INFO | Authenticate - POST | https://localhost/api/Authenticate/Login # User refresh token has been created > HTTP 200 - OK #  
+2021-06-04 14:14:30.3080 | WARN | Category - DELETE | https://localhost/api/Category/%7BuserId%7D/22 # Attempt to delete non-existing category of ID 22 > HTTP 404 - Not Found #  
+2021-06-04 14:14:30.3854 | INFO |  -  |  # Promotion email status has been checked > HTTP 200 - OK #  
+2021-06-04 14:14:30.3936 | INFO |  -  |  # Application started. Press Ctrl+C to shut down. #  
+2021-06-04 14:14:30.3936 | INFO |  -  |  # Hosting environment: Development #  
+2021-06-04 14:14:30.3936 | INFO |  -  |  # Content root path: C:\Users\MIS\source\repos\Restaurant Reservation Website\RestaurantReservation.Backend\RestaurantReservation.Api #  
+2021-06-04 14:14:30.4364 | INFO | Authenticate - POST | https://localhost/api/Authenticate/Login # User refresh token has been created > HTTP 200 - OK #  
+2021-06-04 14:14:30.4748 | INFO | Category - GET | https://localhost/api/Category/ # Categories have been retrieved OK #  
+2021-06-04 14:14:30.5149 | INFO | Category - DELETE | https://localhost/api/Category/%7BuserId%7D/13 # Category Koreann with ID 13 Data has been deleted > HTTP 200 - OK #  
+2021-06-04 14:24:32.0496 | INFO |  -  |  # Promotion email status has been checked > HTTP 200 - OK #  
+2021-06-04 14:24:32.1072 | INFO |  -  |  # Application started. Press Ctrl+C to shut down. #  
+2021-06-04 14:24:32.1072 | INFO |  -  |  # Hosting environment: Development #  
+2021-06-04 14:24:32.1072 | INFO |  -  |  # Content root path: C:\Users\MIS\source\repos\Restaurant Reservation Website\RestaurantReservation.Backend\RestaurantReservation.Api #  
+2021-06-04 14:24:32.5255 | INFO | Authenticate - GET | https://localhost/api/Authenticate/ForgotPassword/hpchua992@gmail.com # User's Email email have been sent > HTTP 200 - OK #  
+2021-06-04 16:12:00.1549 | INFO |  -  |  # Promotion email status has been checked > HTTP 200 - OK #  
+2021-06-04 16:12:00.2207 | INFO |  -  |  # Application started. Press Ctrl+C to shut down. #  
+2021-06-04 16:12:00.2207 | INFO |  -  |  # Hosting environment: Development #  
+2021-06-04 16:12:00.2207 | INFO |  -  |  # Content root path: C:\Users\MIS\source\repos\Restaurant Reservation Website\RestaurantReservation.Backend\RestaurantReservation.Api #  
+2021-06-04 16:12:01.1603 | INFO | Authenticate - POST | https://localhost/api/Authenticate/Login # User refresh token has been created > HTTP 200 - OK #  
+2021-06-04 16:12:01.5891 | INFO | User - GET | https://localhost/api/User/all # Users have been retrieved OK #  
+2021-06-04 16:12:01.7921 | INFO |  -  |  # Promotion email status has been checked > HTTP 200 - OK #  
+2021-06-04 16:12:01.7921 | INFO |  -  |  # Application started. Press Ctrl+C to shut down. #  
+2021-06-04 16:12:01.7921 | INFO |  -  |  # Hosting environment: Development #  
+2021-06-04 16:12:01.7921 | INFO |  -  |  # Content root path: C:\Users\MIS\source\repos\Restaurant Reservation Website\RestaurantReservation.Backend\RestaurantReservation.Api #  
+2021-06-04 16:12:01.8917 | INFO | Authenticate - POST | https://localhost/api/Authenticate/Login # User refresh token has been created > HTTP 200 - OK #  
+2021-06-04 16:12:01.9240 | INFO | User - GET | https://localhost/api/User/all # Users have been retrieved OK #  
+2021-06-04 16:12:01.9810 | INFO | User - GET | https://localhost/api/User/Info/8448ce5f-b94a-4efa-8fb6-48c9d0611b90 # User with ID 8448ce5f-b94a-4efa-8fb6-48c9d0611b90 have been retrieved OK #  
+2021-06-04 16:12:25.7172 | INFO |  -  |  # Promotion email status has been checked > HTTP 200 - OK #  
+2021-06-04 16:12:25.8977 | INFO |  -  |  # Application started. Press Ctrl+C to shut down. #  
+2021-06-04 16:12:25.9092 | INFO |  -  |  # Hosting environment: Development #  
+2021-06-04 16:12:25.9092 | INFO |  -  |  # Content root path: C:\Users\MIS\source\repos\Restaurant Reservation Website\RestaurantReservation.Backend\RestaurantReservation.Api #  
+2021-06-04 16:13:57.6853 | INFO |  -  |  # Promotion email status has been checked > HTTP 200 - OK #  
+2021-06-04 16:13:57.7583 | INFO |  -  |  # Application started. Press Ctrl+C to shut down. #  
+2021-06-04 16:13:57.7644 | INFO |  -  |  # Hosting environment: Development #  
+2021-06-04 16:13:57.7644 | INFO |  -  |  # Content root path: C:\Users\MIS\source\repos\Restaurant Reservation Website\RestaurantReservation.Backend\RestaurantReservation.Api #  
+2021-06-04 16:13:59.0449 | INFO | Authenticate - POST | https://localhost/api/Authenticate/Login # User refresh token has been created > HTTP 200 - OK #  
+2021-06-04 16:13:59.4113 | WARN | User - GET | https://localhost/api/User/Info/TESTING123 # Couldn't find user with ID TESTING123 NotFound #  
+2021-06-04 16:53:14.3764 | INFO |  -  |  # Promotion email status has been checked > HTTP 200 - OK #  
+2021-06-04 16:53:14.4265 | INFO |  -  |  # Application started. Press Ctrl+C to shut down. #  
+2021-06-04 16:53:14.4265 | INFO |  -  |  # Hosting environment: Development #  
+2021-06-04 16:53:14.4352 | INFO |  -  |  # Content root path: C:\Users\MIS\source\repos\Restaurant Reservation Website\RestaurantReservation.Backend\RestaurantReservation.Api #  
+2021-06-04 16:53:15.5636 | INFO | Authenticate - POST | https://localhost/api/Authenticate/Login # User refresh token has been created > HTTP 200 - OK #  
+2021-06-04 16:54:10.1187 | INFO |  -  |  # Promotion email status has been checked > HTTP 200 - OK #  
+2021-06-04 16:54:10.1914 | INFO |  -  |  # Application started. Press Ctrl+C to shut down. #  
+2021-06-04 16:54:10.1914 | INFO |  -  |  # Hosting environment: Development #  
+2021-06-04 16:54:10.2005 | INFO |  -  |  # Content root path: C:\Users\MIS\source\repos\Restaurant Reservation Website\RestaurantReservation.Backend\RestaurantReservation.Api #  
+2021-06-04 16:54:11.1676 | INFO | Authenticate - POST | https://localhost/api/Authenticate/Login # User refresh token has been created > HTTP 200 - OK #  
+2021-06-04 16:55:44.6199 | INFO |  -  |  # Promotion email status has been checked > HTTP 200 - OK #  
+2021-06-04 16:55:44.7678 | INFO |  -  |  # Application started. Press Ctrl+C to shut down. #  
+2021-06-04 16:55:44.7816 | INFO |  -  |  # Hosting environment: Development #  
+2021-06-04 16:55:44.7816 | INFO |  -  |  # Content root path: C:\Users\MIS\source\repos\Restaurant Reservation Website\RestaurantReservation.Backend\RestaurantReservation.Api #  
+2021-06-04 16:55:46.1265 | INFO | Authenticate - POST | https://localhost/api/Authenticate/Login # User refresh token has been created > HTTP 200 - OK #  
+2021-06-04 17:00:20.9585 | INFO |  -  |  # Promotion email status has been checked > HTTP 200 - OK #  
+2021-06-04 17:00:21.1007 | INFO |  -  |  # Application started. Press Ctrl+C to shut down. #  
+2021-06-04 17:00:21.1130 | INFO |  -  |  # Hosting environment: Development #  
+2021-06-04 17:00:21.1130 | INFO |  -  |  # Content root path: C:\Users\MIS\source\repos\Restaurant Reservation Website\RestaurantReservation.Backend\RestaurantReservation.Api #  
+2021-06-04 17:00:23.4214 | INFO | Authenticate - POST | https://localhost/api/Authenticate/Login # User refresh token has been created > HTTP 200 - OK #  
+2021-06-04 17:08:23.8666 | INFO |  -  |  # Promotion email status has been checked > HTTP 200 - OK #  
+2021-06-04 17:08:23.9376 | INFO |  -  |  # Application started. Press Ctrl+C to shut down. #  
+2021-06-04 17:08:23.9376 | INFO |  -  |  # Hosting environment: Development #  
+2021-06-04 17:08:23.9376 | INFO |  -  |  # Content root path: C:\Users\MIS\source\repos\Restaurant Reservation Website\RestaurantReservation.Backend\RestaurantReservation.Api #  
+2021-06-04 17:08:24.9467 | INFO | Authenticate - POST | https://localhost/api/Authenticate/Login # User refresh token has been created > HTTP 200 - OK #  
+2021-06-04 17:08:25.1757 | INFO | User - GET | https://localhost/api/User/all # Users have been retrieved OK #  
+2021-06-04 17:11:10.5826 | INFO |  -  |  # Promotion email status has been checked > HTTP 200 - OK #  
+2021-06-04 17:11:10.6390 | INFO |  -  |  # Application started. Press Ctrl+C to shut down. #  
+2021-06-04 17:11:10.6390 | INFO |  -  |  # Hosting environment: Development #  
+2021-06-04 17:11:10.6390 | INFO |  -  |  # Content root path: C:\Users\MIS\source\repos\Restaurant Reservation Website\RestaurantReservation.Backend\RestaurantReservation.Api #  
+2021-06-04 17:11:11.1406 | WARN | Authenticate - POST | https://localhost/api/Authenticate/Login # Invalid password for user 8448ce5f-b94a-4efa-8fb6-48c9d0611b90. #  
+2021-06-04 17:11:11.1406 | WARN | Authenticate - POST | https://localhost/api/Authenticate/Login # User 8448ce5f-b94a-4efa-8fb6-48c9d0611b90 provided the wrong password > HTTP 401 - Unauthorized #  
+2021-06-04 17:11:25.1061 | INFO |  -  |  # Promotion email status has been checked > HTTP 200 - OK #  
+2021-06-04 17:11:25.1699 | INFO |  -  |  # Application started. Press Ctrl+C to shut down. #  
+2021-06-04 17:11:25.1699 | INFO |  -  |  # Hosting environment: Development #  
+2021-06-04 17:11:25.1699 | INFO |  -  |  # Content root path: C:\Users\MIS\source\repos\Restaurant Reservation Website\RestaurantReservation.Backend\RestaurantReservation.Api #  
+2021-06-04 17:11:25.9618 | WARN | Authenticate - POST | https://localhost/api/Authenticate/Login # Invalid password for user 8448ce5f-b94a-4efa-8fb6-48c9d0611b90. #  
+2021-06-04 17:11:25.9674 | WARN | Authenticate - POST | https://localhost/api/Authenticate/Login # User 8448ce5f-b94a-4efa-8fb6-48c9d0611b90 provided the wrong password > HTTP 401 - Unauthorized #  
+2021-06-04 17:13:04.1372 | INFO |  -  |  # Promotion email status has been checked > HTTP 200 - OK #  
+2021-06-04 17:13:04.2131 | INFO |  -  |  # Application started. Press Ctrl+C to shut down. #  
+2021-06-04 17:13:04.2131 | INFO |  -  |  # Hosting environment: Development #  
+2021-06-04 17:13:04.2131 | INFO |  -  |  # Content root path: C:\Users\MIS\source\repos\Restaurant Reservation Website\RestaurantReservation.Backend\RestaurantReservation.Api #  
+2021-06-04 17:13:05.0054 | WARN | Authenticate - POST | https://localhost/api/Authenticate/Login # Invalid password for user 8448ce5f-b94a-4efa-8fb6-48c9d0611b90. #  
+2021-06-04 17:13:05.0137 | WARN | Authenticate - POST | https://localhost/api/Authenticate/Login # User 8448ce5f-b94a-4efa-8fb6-48c9d0611b90 provided the wrong password > HTTP 401 - Unauthorized #  
+2021-06-04 17:15:35.2492 | INFO |  -  |  # Promotion email status has been checked > HTTP 200 - OK #  
+2021-06-04 17:15:35.3274 | INFO |  -  |  # Application started. Press Ctrl+C to shut down. #  
+2021-06-04 17:15:35.3274 | INFO |  -  |  # Hosting environment: Development #  
+2021-06-04 17:15:35.3411 | INFO |  -  |  # Content root path: C:\Users\MIS\source\repos\Restaurant Reservation Website\RestaurantReservation.Backend\RestaurantReservation.Api #  
+2021-06-04 17:15:36.2556 | WARN | Authenticate - POST | https://localhost/api/Authenticate/Login # Invalid password for user 8448ce5f-b94a-4efa-8fb6-48c9d0611b90. #  
+2021-06-04 17:15:36.2641 | WARN | Authenticate - POST | https://localhost/api/Authenticate/Login # User 8448ce5f-b94a-4efa-8fb6-48c9d0611b90 provided the wrong password > HTTP 401 - Unauthorized #  
+2021-06-04 17:16:43.8681 | INFO |  -  |  # Promotion email status has been checked > HTTP 200 - OK #  
+2021-06-04 17:16:43.9419 | INFO |  -  |  # Application started. Press Ctrl+C to shut down. #  
+2021-06-04 17:16:43.9508 | INFO |  -  |  # Hosting environment: Development #  
+2021-06-04 17:16:43.9508 | INFO |  -  |  # Content root path: C:\Users\MIS\source\repos\Restaurant Reservation Website\RestaurantReservation.Backend\RestaurantReservation.Api #  
+2021-06-04 17:16:44.8294 | WARN | Authenticate - POST | https://localhost/api/Authenticate/Login # Invalid password for user 8448ce5f-b94a-4efa-8fb6-48c9d0611b90. #  
+2021-06-04 17:16:44.8389 | WARN | Authenticate - POST | https://localhost/api/Authenticate/Login # User 8448ce5f-b94a-4efa-8fb6-48c9d0611b90 provided the wrong password > HTTP 401 - Unauthorized #  
+2021-06-04 17:20:51.8847 | INFO |  -  |  # Promotion email status has been checked > HTTP 200 - OK #  
+2021-06-04 17:20:51.9996 | INFO |  -  |  # Application started. Press Ctrl+C to shut down. #  
+2021-06-04 17:20:52.0135 | INFO |  -  |  # Hosting environment: Development #  
+2021-06-04 17:20:52.0135 | INFO |  -  |  # Content root path: C:\Users\MIS\source\repos\Restaurant Reservation Website\RestaurantReservation.Backend\RestaurantReservation.Api #  
+2021-06-04 17:20:52.7311 | WARN | Authenticate - POST | https://localhost/api/Authenticate/Login # Invalid password for user 8448ce5f-b94a-4efa-8fb6-48c9d0611b90. #  
+2021-06-04 17:20:52.7311 | WARN | Authenticate - POST | https://localhost/api/Authenticate/Login # User 8448ce5f-b94a-4efa-8fb6-48c9d0611b90 provided the wrong password > HTTP 401 - Unauthorized #  
+2021-06-04 17:22:30.7892 | INFO |  -  |  # Promotion email status has been checked > HTTP 200 - OK #  
+2021-06-04 17:22:30.9123 | INFO |  -  |  # Application started. Press Ctrl+C to shut down. #  
+2021-06-04 17:22:30.9226 | INFO |  -  |  # Hosting environment: Development #  
+2021-06-04 17:22:30.9226 | INFO |  -  |  # Content root path: C:\Users\MIS\source\repos\Restaurant Reservation Website\RestaurantReservation.Backend\RestaurantReservation.Api #  
+2021-06-04 17:22:38.3232 | WARN | Authenticate - POST | https://localhost/api/Authenticate/Login # Invalid password for user 8448ce5f-b94a-4efa-8fb6-48c9d0611b90. #  
+2021-06-04 17:22:38.3232 | WARN | Authenticate - POST | https://localhost/api/Authenticate/Login # User 8448ce5f-b94a-4efa-8fb6-48c9d0611b90 provided the wrong password > HTTP 401 - Unauthorized #  
+2021-06-04 17:25:36.0008 | INFO |  -  |  # Promotion email status has been checked > HTTP 200 - OK #  
+2021-06-04 17:25:36.0798 | INFO |  -  |  # Application started. Press Ctrl+C to shut down. #  
+2021-06-04 17:25:36.0798 | INFO |  -  |  # Hosting environment: Development #  
+2021-06-04 17:25:36.0902 | INFO |  -  |  # Content root path: C:\Users\MIS\source\repos\Restaurant Reservation Website\RestaurantReservation.Backend\RestaurantReservation.Api #  
+2021-06-04 17:25:37.0206 | WARN | Authenticate - POST | https://localhost/api/Authenticate/Login # Invalid password for user 8448ce5f-b94a-4efa-8fb6-48c9d0611b90. #  
+2021-06-04 17:25:37.0256 | WARN | Authenticate - POST | https://localhost/api/Authenticate/Login # User 8448ce5f-b94a-4efa-8fb6-48c9d0611b90 provided the wrong password > HTTP 401 - Unauthorized #  
+2021-06-04 17:25:37.2638 | WARN | Authenticate - POST | https://localhost/api/Authenticate/Login # Invalid password for user 8448ce5f-b94a-4efa-8fb6-48c9d0611b90. #  
+2021-06-04 17:25:37.2638 | WARN | Authenticate - POST | https://localhost/api/Authenticate/Login # User 8448ce5f-b94a-4efa-8fb6-48c9d0611b90 provided the wrong password > HTTP 401 - Unauthorized #  
+2021-06-04 17:26:40.4335 | INFO |  -  |  # Promotion email status has been checked > HTTP 200 - OK #  
+2021-06-04 17:26:40.5044 | INFO |  -  |  # Application started. Press Ctrl+C to shut down. #  
+2021-06-04 17:26:40.5143 | INFO |  -  |  # Hosting environment: Development #  
+2021-06-04 17:26:40.5143 | INFO |  -  |  # Content root path: C:\Users\MIS\source\repos\Restaurant Reservation Website\RestaurantReservation.Backend\RestaurantReservation.Api #  
+2021-06-04 17:26:41.3414 | WARN | Authenticate - POST | https://localhost/api/Authenticate/Login # Invalid password for user 8448ce5f-b94a-4efa-8fb6-48c9d0611b90. #  
+2021-06-04 17:26:41.3414 | WARN | Authenticate - POST | https://localhost/api/Authenticate/Login # User 8448ce5f-b94a-4efa-8fb6-48c9d0611b90 provided the wrong password > HTTP 401 - Unauthorized #  
+2021-06-04 17:26:41.6655 | INFO |  -  |  # Promotion email status has been checked > HTTP 200 - OK #  
+2021-06-04 17:26:41.6717 | INFO |  -  |  # Application started. Press Ctrl+C to shut down. #  
+2021-06-04 17:26:41.6717 | INFO |  -  |  # Hosting environment: Development #  
+2021-06-04 17:26:41.6717 | INFO |  -  |  # Content root path: C:\Users\MIS\source\repos\Restaurant Reservation Website\RestaurantReservation.Backend\RestaurantReservation.Api #  
+2021-06-04 17:26:41.7219 | WARN | Authenticate - POST | https://localhost/api/Authenticate/Login # Invalid password for user 8448ce5f-b94a-4efa-8fb6-48c9d0611b90. #  
+2021-06-04 17:26:41.7219 | WARN | Authenticate - POST | https://localhost/api/Authenticate/Login # User 8448ce5f-b94a-4efa-8fb6-48c9d0611b90 provided the wrong password > HTTP 401 - Unauthorized #  
+2021-06-04 17:26:41.8047 | INFO |  -  |  # Promotion email status has been checked > HTTP 200 - OK #  
+2021-06-04 17:26:41.8101 | INFO |  -  |  # Application started. Press Ctrl+C to shut down. #  
+2021-06-04 17:26:41.8101 | INFO |  -  |  # Hosting environment: Development #  
+2021-06-04 17:26:41.8101 | INFO |  -  |  # Content root path: C:\Users\MIS\source\repos\Restaurant Reservation Website\RestaurantReservation.Backend\RestaurantReservation.Api #  
+2021-06-04 17:26:41.8494 | WARN | Authenticate - POST | https://localhost/api/Authenticate/Login # Invalid password for user 8448ce5f-b94a-4efa-8fb6-48c9d0611b90. #  
+2021-06-04 17:26:41.8494 | WARN | Authenticate - POST | https://localhost/api/Authenticate/Login # User 8448ce5f-b94a-4efa-8fb6-48c9d0611b90 provided the wrong password > HTTP 401 - Unauthorized #  
+2021-06-04 17:26:42.0194 | INFO |  -  |  # Promotion email status has been checked > HTTP 200 - OK #  
+2021-06-04 17:26:42.0979 | INFO |  -  |  # Application started. Press Ctrl+C to shut down. #  
+2021-06-04 17:26:42.0979 | INFO |  -  |  # Hosting environment: Development #  
+2021-06-04 17:26:42.0979 | INFO |  -  |  # Content root path: C:\Users\MIS\source\repos\Restaurant Reservation Website\RestaurantReservation.Backend\RestaurantReservation.Api #  
+2021-06-04 17:26:42.1632 | WARN | Authenticate - POST | https://localhost/api/Authenticate/Login # Invalid password for user 8448ce5f-b94a-4efa-8fb6-48c9d0611b90. #  
+2021-06-04 17:26:42.1660 | WARN | Authenticate - POST | https://localhost/api/Authenticate/Login # User 8448ce5f-b94a-4efa-8fb6-48c9d0611b90 provided the wrong password > HTTP 401 - Unauthorized #  
+2021-06-04 17:26:42.3551 | INFO |  -  |  # Promotion email status has been checked > HTTP 200 - OK #  
+2021-06-04 17:26:42.3551 | INFO |  -  |  # Application started. Press Ctrl+C to shut down. #  
+2021-06-04 17:26:42.3551 | INFO |  -  |  # Hosting environment: Development #  
+2021-06-04 17:26:42.3551 | INFO |  -  |  # Content root path: C:\Users\MIS\source\repos\Restaurant Reservation Website\RestaurantReservation.Backend\RestaurantReservation.Api #  
+2021-06-04 17:26:42.4152 | WARN | Authenticate - POST | https://localhost/api/Authenticate/Login # Invalid password for user 8448ce5f-b94a-4efa-8fb6-48c9d0611b90. #  
+2021-06-04 17:26:42.4165 | WARN | Authenticate - POST | https://localhost/api/Authenticate/Login # User 8448ce5f-b94a-4efa-8fb6-48c9d0611b90 provided the wrong password > HTTP 401 - Unauthorized #  
+2021-06-04 17:26:42.5230 | INFO |  -  |  # Promotion email status has been checked > HTTP 200 - OK #  
+2021-06-04 17:26:42.5306 | INFO |  -  |  # Application started. Press Ctrl+C to shut down. #  
+2021-06-04 17:26:42.5306 | INFO |  -  |  # Hosting environment: Development #  
+2021-06-04 17:26:42.5306 | INFO |  -  |  # Content root path: C:\Users\MIS\source\repos\Restaurant Reservation Website\RestaurantReservation.Backend\RestaurantReservation.Api #  
+2021-06-04 17:26:42.5725 | WARN | Authenticate - POST | https://localhost/api/Authenticate/Login # Invalid password for user 8448ce5f-b94a-4efa-8fb6-48c9d0611b90. #  
+2021-06-04 17:26:42.5725 | WARN | Authenticate - POST | https://localhost/api/Authenticate/Login # User 8448ce5f-b94a-4efa-8fb6-48c9d0611b90 provided the wrong password > HTTP 401 - Unauthorized #  
+2021-06-04 17:28:48.6334 | INFO |  -  |  # Promotion email status has been checked > HTTP 200 - OK #  
+2021-06-04 17:28:48.6886 | INFO |  -  |  # Application started. Press Ctrl+C to shut down. #  
+2021-06-04 17:28:48.6886 | INFO |  -  |  # Hosting environment: Development #  
+2021-06-04 17:28:48.6968 | INFO |  -  |  # Content root path: C:\Users\MIS\source\repos\Restaurant Reservation Website\RestaurantReservation.Backend\RestaurantReservation.Api #  
+2021-06-04 17:28:49.1081 | WARN | Authenticate - POST | https://localhost/api/Authenticate/Login # Invalid password for user 8448ce5f-b94a-4efa-8fb6-48c9d0611b90. #  
+2021-06-04 17:28:49.1081 | WARN | Authenticate - POST | https://localhost/api/Authenticate/Login # User 8448ce5f-b94a-4efa-8fb6-48c9d0611b90 provided the wrong password > HTTP 401 - Unauthorized #  
+2021-06-04 17:31:04.4952 | INFO |  -  |  # Promotion email status has been checked > HTTP 200 - OK #  
+2021-06-04 17:31:04.6052 | INFO |  -  |  # Application started. Press Ctrl+C to shut down. #  
+2021-06-04 17:31:04.6254 | INFO |  -  |  # Hosting environment: Development #  
+2021-06-04 17:31:04.6349 | INFO |  -  |  # Content root path: C:\Users\MIS\source\repos\Restaurant Reservation Website\RestaurantReservation.Backend\RestaurantReservation.Api #  
+2021-06-04 17:31:05.7054 | WARN | Authenticate - POST | https://localhost/api/Authenticate/Login # Invalid password for user 8448ce5f-b94a-4efa-8fb6-48c9d0611b90. #  
+2021-06-04 17:31:05.7150 | WARN | Authenticate - POST | https://localhost/api/Authenticate/Login # User 8448ce5f-b94a-4efa-8fb6-48c9d0611b90 provided the wrong password > HTTP 401 - Unauthorized #  
+2021-06-04 17:31:50.8828 | INFO |  -  |  # Promotion email status has been checked > HTTP 200 - OK #  
+2021-06-04 17:31:50.9783 | INFO |  -  |  # Application started. Press Ctrl+C to shut down. #  
+2021-06-04 17:31:50.9783 | INFO |  -  |  # Hosting environment: Development #  
+2021-06-04 17:31:50.9970 | INFO |  -  |  # Content root path: C:\Users\MIS\source\repos\Restaurant Reservation Website\RestaurantReservation.Backend\RestaurantReservation.Api #  
+2021-06-04 17:34:05.6928 | INFO |  -  |  # Promotion email status has been checked > HTTP 200 - OK #  
+2021-06-04 17:34:05.7703 | INFO |  -  |  # Application started. Press Ctrl+C to shut down. #  
+2021-06-04 17:34:05.7703 | INFO |  -  |  # Hosting environment: Development #  
+2021-06-04 17:34:05.7780 | INFO |  -  |  # Content root path: C:\Users\MIS\source\repos\Restaurant Reservation Website\RestaurantReservation.Backend\RestaurantReservation.Api #  
+2021-06-04 17:34:06.6098 | INFO | Authenticate - POST | https://localhost/api/Authenticate/Login # User refresh token has been created > HTTP 200 - OK #  
+2021-06-04 17:34:06.8573 | INFO | User - GET | https://localhost/api/User/all # Users have been retrieved OK #  
+2021-06-04 17:34:06.9331 | INFO | User - GET | https://localhost/api/User/Info/8448ce5f-b94a-4efa-8fb6-48c9d0611b90 # User with ID 8448ce5f-b94a-4efa-8fb6-48c9d0611b90 have been retrieved OK #  
+2021-06-04 17:34:23.9120 | INFO |  -  |  # Promotion email status has been checked > HTTP 200 - OK #  
+2021-06-04 17:34:23.9665 | INFO |  -  |  # Application started. Press Ctrl+C to shut down. #  
+2021-06-04 17:34:23.9665 | INFO |  -  |  # Hosting environment: Development #  
+2021-06-04 17:34:23.9665 | INFO |  -  |  # Content root path: C:\Users\MIS\source\repos\Restaurant Reservation Website\RestaurantReservation.Backend\RestaurantReservation.Api #  
+2021-06-04 17:34:24.8991 | INFO | Authenticate - POST | https://localhost/api/Authenticate/Login # User refresh token has been created > HTTP 200 - OK #  
+2021-06-04 17:34:25.1318 | WARN | User - GET | https://localhost/api/User/Info/TESTING123 # Couldn't find user with ID TESTING123 NotFound #  
+2021-06-04 17:34:53.9659 | INFO |  -  |  # Promotion email status has been checked > HTTP 200 - OK #  
+2021-06-04 17:34:54.0366 | INFO |  -  |  # Application started. Press Ctrl+C to shut down. #  
+2021-06-04 17:34:54.0430 | INFO |  -  |  # Hosting environment: Development #  
+2021-06-04 17:34:54.0430 | INFO |  -  |  # Content root path: C:\Users\MIS\source\repos\Restaurant Reservation Website\RestaurantReservation.Backend\RestaurantReservation.Api #  
+2021-06-04 17:34:54.9860 | INFO | Authenticate - POST | https://localhost/api/Authenticate/Login # User refresh token has been created > HTTP 200 - OK #  
+2021-06-04 17:34:55.2926 | INFO | User - GET | https://localhost/api/User/all # Users have been retrieved OK #  
+2021-06-04 17:39:17.0680 | INFO |  -  |  # Promotion email status has been checked > HTTP 200 - OK #  
+2021-06-04 17:39:17.1185 | INFO |  -  |  # Application started. Press Ctrl+C to shut down. #  
+2021-06-04 17:39:17.1252 | INFO |  -  |  # Hosting environment: Development #  
+2021-06-04 17:39:17.1252 | INFO |  -  |  # Content root path: C:\Users\MIS\source\repos\Restaurant Reservation Website\RestaurantReservation.Backend\RestaurantReservation.Api #  
+2021-06-04 17:39:18.1862 | INFO | Authenticate - POST | https://localhost/api/Authenticate/Login # User refresh token has been created > HTTP 200 - OK #  
+2021-06-04 17:39:18.5045 | INFO | User - GET | https://localhost/api/User/all # Users have been retrieved OK #  
+2021-06-04 17:39:45.9554 | INFO |  -  |  # Promotion email status has been checked > HTTP 200 - OK #  
+2021-06-04 17:39:46.0345 | INFO |  -  |  # Application started. Press Ctrl+C to shut down. #  
+2021-06-04 17:39:46.0436 | INFO |  -  |  # Hosting environment: Development #  
+2021-06-04 17:39:46.0436 | INFO |  -  |  # Content root path: C:\Users\MIS\source\repos\Restaurant Reservation Website\RestaurantReservation.Backend\RestaurantReservation.Api #  
+2021-06-04 17:39:47.5036 | INFO | Authenticate - POST | https://localhost/api/Authenticate/Login # User refresh token has been created > HTTP 200 - OK #  
+2021-06-04 17:39:47.9506 | INFO | User - GET | https://localhost/api/User/all # Users have been retrieved OK #  
+2021-06-04 17:39:48.0808 | WARN | User - POST | https://localhost/api/User/ChangePassword # Change password failed for user 8448ce5f-b94a-4efa-8fb6-48c9d0611b90. #  
+2021-06-04 17:39:48.0989 | WARN | User - POST | https://localhost/api/User/ChangePassword # User with 8448ce5f-b94a-4efa-8fb6-48c9d0611b90 change password unsuccessfully BadRequest #  
+2021-06-04 17:41:34.5788 | INFO |  -  |  # Promotion email status has been checked > HTTP 200 - OK #  
+2021-06-04 17:41:34.6564 | INFO |  -  |  # Application started. Press Ctrl+C to shut down. #  
+2021-06-04 17:41:34.6564 | INFO |  -  |  # Hosting environment: Development #  
+2021-06-04 17:41:34.6694 | INFO |  -  |  # Content root path: C:\Users\MIS\source\repos\Restaurant Reservation Website\RestaurantReservation.Backend\RestaurantReservation.Api #  
+2021-06-04 17:42:52.0458 | INFO | Authenticate - POST | https://localhost/api/Authenticate/Login # User refresh token has been created > HTTP 200 - OK #  
+2021-06-04 17:42:56.1744 | INFO | User - GET | https://localhost/api/User/all # Users have been retrieved OK #  
+2021-06-04 17:42:56.2521 | WARN | User - POST | https://localhost/api/User/ChangePassword # Change password failed for user 8448ce5f-b94a-4efa-8fb6-48c9d0611b90. #  
+2021-06-04 17:42:56.2804 | WARN | User - POST | https://localhost/api/User/ChangePassword # User with 8448ce5f-b94a-4efa-8fb6-48c9d0611b90 change password unsuccessfully BadRequest #  
+2021-06-04 17:43:49.2525 | INFO |  -  |  # Promotion email status has been checked > HTTP 200 - OK #  
+2021-06-04 17:43:49.3128 | INFO |  -  |  # Application started. Press Ctrl+C to shut down. #  
+2021-06-04 17:43:49.3128 | INFO |  -  |  # Hosting environment: Development #  
+2021-06-04 17:43:49.3280 | INFO |  -  |  # Content root path: C:\Users\MIS\source\repos\Restaurant Reservation Website\RestaurantReservation.Backend\RestaurantReservation.Api #  
+2021-06-04 17:44:08.0836 | INFO | Authenticate - POST | https://localhost/api/Authenticate/Login # User refresh token has been created > HTTP 200 - OK #  
+2021-06-04 17:44:19.3877 | INFO | User - GET | https://localhost/api/User/all # Users have been retrieved OK #  
+2021-06-04 17:45:41.2338 | WARN | User - POST | https://localhost/api/User/ChangePassword # Change password failed for user 8448ce5f-b94a-4efa-8fb6-48c9d0611b90. #  
+2021-06-04 17:45:41.2527 | WARN | User - POST | https://localhost/api/User/ChangePassword # User with 8448ce5f-b94a-4efa-8fb6-48c9d0611b90 change password unsuccessfully BadRequest #  
+2021-06-04 17:47:06.8934 | INFO |  -  |  # Promotion email status has been checked > HTTP 200 - OK #  
+2021-06-04 17:47:06.9494 | INFO |  -  |  # Application started. Press Ctrl+C to shut down. #  
+2021-06-04 17:47:06.9494 | INFO |  -  |  # Hosting environment: Development #  
+2021-06-04 17:47:06.9494 | INFO |  -  |  # Content root path: C:\Users\MIS\source\repos\Restaurant Reservation Website\RestaurantReservation.Backend\RestaurantReservation.Api #  
+2021-06-04 17:47:07.9523 | INFO | Authenticate - POST | https://localhost/api/Authenticate/Login # User refresh token has been created > HTTP 200 - OK #  
+2021-06-04 17:47:08.2378 | INFO | User - GET | https://localhost/api/User/all # Users have been retrieved OK #  
+2021-06-04 17:47:08.3219 | WARN | User - POST | https://localhost/api/User/ChangePassword # Change password failed for user 8448ce5f-b94a-4efa-8fb6-48c9d0611b90. #  
+2021-06-04 17:47:08.3219 | WARN | User - POST | https://localhost/api/User/ChangePassword # User with 8448ce5f-b94a-4efa-8fb6-48c9d0611b90 change password unsuccessfully BadRequest #  
+2021-06-04 18:06:41.4466 | INFO |  -  |  # Promotion email status has been checked > HTTP 200 - OK #  
+2021-06-04 18:06:41.5623 | INFO |  -  |  # Application started. Press Ctrl+C to shut down. #  
+2021-06-04 18:06:41.5734 | INFO |  -  |  # Hosting environment: Development #  
+2021-06-04 18:06:41.5734 | INFO |  -  |  # Content root path: C:\Users\MIS\source\repos\Restaurant Reservation Website\RestaurantReservation.Backend\RestaurantReservation.Api #  
+2021-06-04 18:06:43.1474 | INFO | Authenticate - POST | https://localhost/api/Authenticate/Login # User refresh token has been created > HTTP 200 - OK #  
+2021-06-04 18:06:43.5510 | INFO | User - GET | https://localhost/api/User/all # Users have been retrieved OK #  
+2021-06-04 18:06:56.9213 | INFO |  -  |  # Promotion email status has been checked > HTTP 200 - OK #  
+2021-06-04 18:06:56.9793 | INFO |  -  |  # Application started. Press Ctrl+C to shut down. #  
+2021-06-04 18:06:56.9793 | INFO |  -  |  # Hosting environment: Development #  
+2021-06-04 18:06:56.9793 | INFO |  -  |  # Content root path: C:\Users\MIS\source\repos\Restaurant Reservation Website\RestaurantReservation.Backend\RestaurantReservation.Api #  
+2021-06-04 18:06:58.4886 | INFO | Authenticate - POST | https://localhost/api/Authenticate/Login # User refresh token has been created > HTTP 200 - OK #  
+2021-06-04 18:06:58.9135 | WARN | User - GET | https://localhost/api/User/Info/TESTING123 # Couldn't find user with ID TESTING123 NotFound #  
+2021-06-04 18:06:59.1073 | INFO |  -  |  # Promotion email status has been checked > HTTP 200 - OK #  
+2021-06-04 18:06:59.1073 | INFO |  -  |  # Application started. Press Ctrl+C to shut down. #  
+2021-06-04 18:06:59.1194 | INFO |  -  |  # Hosting environment: Development #  
+2021-06-04 18:06:59.1194 | INFO |  -  |  # Content root path: C:\Users\MIS\source\repos\Restaurant Reservation Website\RestaurantReservation.Backend\RestaurantReservation.Api #  
+2021-06-04 18:06:59.2553 | INFO | Authenticate - POST | https://localhost/api/Authenticate/Login # User refresh token has been created > HTTP 200 - OK #  
+2021-06-04 18:06:59.3904 | INFO | User - GET | https://localhost/api/User/all # Users have been retrieved OK #  
+2021-06-04 18:06:59.4635 | INFO | User - GET | https://localhost/api/User/Info/8448ce5f-b94a-4efa-8fb6-48c9d0611b90 # User with ID 8448ce5f-b94a-4efa-8fb6-48c9d0611b90 have been retrieved OK #  
+2021-06-04 18:06:59.5938 | INFO |  -  |  # Promotion email status has been checked > HTTP 200 - OK #  
+2021-06-04 18:06:59.5938 | INFO |  -  |  # Application started. Press Ctrl+C to shut down. #  
+2021-06-04 18:06:59.5938 | INFO |  -  |  # Hosting environment: Development #  
+2021-06-04 18:06:59.5938 | INFO |  -  |  # Content root path: C:\Users\MIS\source\repos\Restaurant Reservation Website\RestaurantReservation.Backend\RestaurantReservation.Api #  
+2021-06-04 18:06:59.7884 | INFO |  -  |  # Promotion email status has been checked > HTTP 200 - OK #  
+2021-06-04 18:06:59.7951 | INFO |  -  |  # Application started. Press Ctrl+C to shut down. #  
+2021-06-04 18:06:59.7951 | INFO |  -  |  # Hosting environment: Development #  
+2021-06-04 18:06:59.7951 | INFO |  -  |  # Content root path: C:\Users\MIS\source\repos\Restaurant Reservation Website\RestaurantReservation.Backend\RestaurantReservation.Api #  
+2021-06-04 18:06:59.8958 | INFO |  -  |  # Promotion email status has been checked > HTTP 200 - OK #  
+2021-06-04 18:06:59.9018 | INFO |  -  |  # Application started. Press Ctrl+C to shut down. #  
+2021-06-04 18:06:59.9018 | INFO |  -  |  # Hosting environment: Development #  
+2021-06-04 18:06:59.9018 | INFO |  -  |  # Content root path: C:\Users\MIS\source\repos\Restaurant Reservation Website\RestaurantReservation.Backend\RestaurantReservation.Api #  
+2021-06-04 18:06:59.9759 | INFO | Authenticate - POST | https://localhost/api/Authenticate/Login # User refresh token has been created > HTTP 200 - OK #  
+2021-06-04 18:07:00.0558 | INFO | User - GET | https://localhost/api/User/all # Users have been retrieved OK #  
+2021-06-04 18:07:00.3832 | INFO |  -  |  # Promotion email status has been checked > HTTP 200 - OK #  
+2021-06-04 18:07:00.3907 | INFO |  -  |  # Application started. Press Ctrl+C to shut down. #  
+2021-06-04 18:07:00.3907 | INFO |  -  |  # Hosting environment: Development #  
+2021-06-04 18:07:00.3907 | INFO |  -  |  # Content root path: C:\Users\MIS\source\repos\Restaurant Reservation Website\RestaurantReservation.Backend\RestaurantReservation.Api #  
+2021-06-04 18:07:01.2507 | INFO | Authenticate - POST | https://localhost/api/Authenticate/Login # User refresh token has been created > HTTP 200 - OK #  
+2021-06-04 18:07:01.2696 | INFO | User - GET | https://localhost/api/User/all # Users have been retrieved OK #  
+2021-06-04 18:07:01.3046 | WARN | User - POST | https://localhost/api/User/ChangePassword # Change password failed for user 8448ce5f-b94a-4efa-8fb6-48c9d0611b90. #  
+2021-06-04 18:07:01.3131 | WARN | User - POST | https://localhost/api/User/ChangePassword # User with 8448ce5f-b94a-4efa-8fb6-48c9d0611b90 change password unsuccessfully BadRequest #  
+2021-06-04 18:07:01.3747 | INFO |  -  |  # Promotion email status has been checked > HTTP 200 - OK #  
+2021-06-04 18:07:01.3747 | INFO |  -  |  # Application started. Press Ctrl+C to shut down. #  
+2021-06-04 18:07:01.3747 | INFO |  -  |  # Hosting environment: Development #  
+2021-06-04 18:07:01.3747 | INFO |  -  |  # Content root path: C:\Users\MIS\source\repos\Restaurant Reservation Website\RestaurantReservation.Backend\RestaurantReservation.Api #  
+2021-06-04 18:07:01.4183 | INFO | Authenticate - POST | https://localhost/api/Authenticate/Login # User refresh token has been created > HTTP 200 - OK #  
+2021-06-04 18:07:01.4461 | INFO | User - GET | https://localhost/api/User/all # Users have been retrieved OK #  
+2021-06-04 18:07:01.5489 | INFO |  -  |  # Promotion email status has been checked > HTTP 200 - OK #  
+2021-06-04 18:07:01.5568 | INFO |  -  |  # Application started. Press Ctrl+C to shut down. #  
+2021-06-04 18:07:01.5568 | INFO |  -  |  # Hosting environment: Development #  
+2021-06-04 18:07:01.5568 | INFO |  -  |  # Content root path: C:\Users\MIS\source\repos\Restaurant Reservation Website\RestaurantReservation.Backend\RestaurantReservation.Api #  
+2021-06-04 18:07:01.7002 | INFO | Authenticate - POST | https://localhost/api/Authenticate/Login # User refresh token has been created > HTTP 200 - OK #  
+2021-06-04 18:07:01.7344 | INFO | User - GET | https://localhost/api/User/all # Users have been retrieved OK #  
+2021-06-04 18:07:01.7867 | INFO | User - PUT | https://localhost/api/User # User with ID 8448ce5f-b94a-4efa-8fb6-48c9d0611b90 update profile successfully OK #  
+2021-06-04 18:07:01.8035 | INFO | User - PUT | https://localhost/api/User # User with ID 8448ce5f-b94a-4efa-8fb6-48c9d0611b90 update profile successfully OK #  
+2021-06-04 18:07:01.8398 | INFO |  -  |  # Promotion email status has been checked > HTTP 200 - OK #  
+2021-06-04 18:07:01.8398 | INFO |  -  |  # Application started. Press Ctrl+C to shut down. #  
+2021-06-04 18:07:01.8398 | INFO |  -  |  # Hosting environment: Development #  
+2021-06-04 18:07:01.8398 | INFO |  -  |  # Content root path: C:\Users\MIS\source\repos\Restaurant Reservation Website\RestaurantReservation.Backend\RestaurantReservation.Api #  
+2021-06-04 18:07:01.8797 | INFO | Authenticate - POST | https://localhost/api/Authenticate/Login # User refresh token has been created > HTTP 200 - OK #  
+2021-06-04 18:07:01.9080 | INFO | User - GET | https://localhost/api/User/all # Users have been retrieved OK #  
+2021-06-04 18:07:01.9353 | INFO | User - PUT | https://localhost/api/User # User with ID 8448ce5f-b94a-4efa-8fb6-48c9d0611b90 update profile successfully OK #  

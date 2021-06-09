@@ -1,0 +1,131 @@
+﻿@page  "{RestaurantID:long}"
+@using RestaurantReservation.Core.Utils;
+@model RestaurantReservation.Frontend.Pages.Admins.Promotions.CreateModel
+@{
+    ViewData["Title"] = "Create Restaurant Promotions";
+}
+
+
+<form method="post">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card card-secondary">
+                <div class="card-header">
+                    <h3 class="card-title">Promotion Details</h3>
+
+                    <div class="card-tools">
+                        <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
+                            <i class="fas fa-minus"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="card-body">
+                    <input hidden="hidden" asp-for="@Model.RestaurantPromotionVM.RestaurantID" />
+
+                    <h3 class="my-3">@Model.RestaurantPromotionVM.RestaurantName</h3>
+
+                    <hr>
+                    <h4>Operating Hour</h4>
+                    <p><span id="workingDay">@Model.RestaurantPromotionVM.RestaurantWorkingDay</span> @Model.RestaurantPromotionVM.StartWorkingTime.ToString("hh:mm tt") - @Model.RestaurantPromotionVM.EndWorkingTime.ToString("hh:mm tt")</p>
+
+                    <br />
+
+                    <div class="form-group">
+                        <label asp-for="RestaurantPromotionVM.Promotion.Name">Name</label> <span class="text-danger"><b>*</b></span>
+                        <input type="text" class="form-control" asp-for="RestaurantPromotionVM.Promotion.Name" required />
+                        <span asp-validation-for="RestaurantPromotionVM.Promotion.Name" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label asp-for="RestaurantPromotionVM.Promotion.Description">Description</label> <span class="text-danger"><b>*</b></span>
+                        <input type="text" class="form-control" asp-for="RestaurantPromotionVM.Promotion.Description" required />
+                        <span asp-validation-for="RestaurantPromotionVM.Promotion.Description" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label asp-for="RestaurantPromotionVM.Promotion.Content">Content</label> <span class="text-danger"><b>*</b></span>
+                        <textarea id="inputDescription" class="form-control" rows="3" asp-for="RestaurantPromotionVM.Promotion.Content"></textarea>
+                        <span asp-validation-for="RestaurantPromotionVM.Promotion.Content" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label asp-for="RestaurantPromotionVM.Promotion.Type">Type</label> <span class="text-danger"><b>*</b></span>
+                        <select id="typeDropDown" class="form-control" asp-for="RestaurantPromotionVM.Promotion.Type" asp-items="Html.GetEnumSelectList<SD.PromotionType>()" required>
+                            <option disabled>Please choose one of them</option>
+                        </select>
+                        <span asp-validation-for="RestaurantPromotionVM.Promotion.Type" class="text-danger"></span>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="form-group">
+                                <label asp-for="RestaurantPromotionVM.Promotion.StartDate">Start Date</label> <span class="text-danger"><b>*</b></span>
+                                <input type="date" class="form-control" id="startDate" asp-for="RestaurantPromotionVM.Promotion.StartDate" value="@DateTime.Now.ToString("dd/MM/yyyy")" required />
+                                <span asp-validation-for="RestaurantPromotionVM.Promotion.StartDate" class="text-danger"></span>
+                            </div>
+                        </div>
+
+                        <div class="col-6">
+                            <div class="form-group">
+                                <label asp-for="RestaurantPromotionVM.Promotion.EndDate">End Date</label> <span class="text-danger"><b>*</b></span>
+                                <input type="date" class="form-control" id="endDate" asp-for="RestaurantPromotionVM.Promotion.EndDate" value="@DateTime.Now.ToString("dd/MM/yyyy")" required />
+                                <span asp-validation-for="RestaurantPromotionVM.Promotion.EndDate" class="text-danger"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <br />
+                    <div asp-validation-summary="All" class="text-danger"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-12">
+            <a class="btn btn-secondary" asp-page="/Restaurants/Details" asp-route-ID="@Model.RestaurantPromotionVM.RestaurantID">Cancel</a>
+            <input type="submit" value="Create" class="btn btn-primary float-right" asp-page-handler="Submit" />
+        </div>
+    </div>
+</form>
+<br />
+<br />
+
+@section Scripts {
+    <script type="text/javascript">
+        $(function () {
+            var dtToday = new Date();
+
+            var month = dtToday.getMonth() + 1;
+            var day = dtToday.getDate();
+            var year = dtToday.getFullYear();
+            if (month < 10)
+                month = '0' + month.toString();
+            if (day < 10)
+                day = '0' + day.toString();
+
+            var maxDate = year + '-' + month + '-' + day;
+
+            // or instead:
+            // var maxDate = dtToday.toISOString().substr(0, 10);
+            $('#startDate').attr('min', maxDate);
+            $('#endDate').attr('min', maxDate);
+        });
+    </script>
+}
+
+
+@section PageHeader {
+    <div class="col-sm-6">
+        <h1 class="m-0">New Restaurant Promotions</h1>
+    </div>
+    <div class="col-sm-6">
+        <ol class="breadcrumb float-sm-right">
+            <li class="breadcrumb-item"><a asp-page="Home">Home</a></li>
+            <li class="breadcrumb-item"><a asp-page="/Admins/Restaurants/List">Restaurants</a></li>
+            <li class="breadcrumb-item"><a asp-page="/Restaurants/Details" asp-route-ID="@Model.RestaurantPromotionVM.RestaurantID">Details</a></li>
+            <li class="breadcrumb-item active">Create Promotion</li>
+        </ol>
+    </div>
+}

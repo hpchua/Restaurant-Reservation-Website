@@ -1,0 +1,146 @@
+﻿@page "{PromotionID:int}"
+@model RestaurantReservation.Frontend.Pages.Admins.Promotions.DetailsModel
+@{
+    ViewData["Title"] = "Promotion Details";
+}
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="card card-secondary">
+            <div class="card-header">
+                <h3 class="card-title">Promotion Details</h3>
+
+                <div class="card-tools">
+                    <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
+                        <i class="fas fa-minus"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <input hidden="hidden" asp-for="RestaurantPromotionVM.Promotion.PromotionID" />
+                <input hidden="hidden" asp-for="RestaurantPromotionVM.Promotion.CreatedBy" />
+                <input hidden="hidden" asp-for="RestaurantPromotionVM.Promotion.CreatedDate" />
+                <input hidden="hidden" asp-for="RestaurantPromotionVM.Promotion.isAvailable" />
+                <input hidden="hidden" asp-for="RestaurantPromotionVM.Promotion.RestaurantID" />
+                <input hidden="hidden" asp-for="RestaurantPromotionVM.Promotion.VersionNo" />
+
+                <h3 class="my-3">@Model.RestaurantPromotionVM.RestaurantName</h3>
+
+                <hr>
+                <h4>Operating Hour</h4>
+                <p><span id="workingDay">@Model.RestaurantPromotionVM.RestaurantWorkingDay</span> @Model.RestaurantPromotionVM.StartWorkingTime.ToString("hh:mm tt") - @Model.RestaurantPromotionVM.EndWorkingTime.ToString("hh:mm tt")</p>
+
+                <br />
+
+                <div class="form-group">
+                    <label asp-for="RestaurantPromotionVM.Promotion.Name">Promotion Name</label>
+                    <input type="text" class="form-control" asp-for="RestaurantPromotionVM.Promotion.Name" disabled />
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="RestaurantPromotionVM.Promotion.Description">Description</label>
+                    <input type="text" class="form-control" asp-for="RestaurantPromotionVM.Promotion.Description" disabled />
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="RestaurantPromotionVM.Promotion.Content">Content</label>
+                    <textarea id="inputDescription" class="form-control" rows="3" asp-for="RestaurantPromotionVM.Promotion.Content" disabled></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="RestaurantPromotionVM.Promotion.Type">Type</label>
+                    <input type="text" class="form-control" asp-for="RestaurantPromotionVM.Promotion.Type" disabled />
+                </div>
+
+                <div class="row">
+                    <div class="col-6">
+                        <div class="form-group">
+                            <label asp-for="RestaurantPromotionVM.Promotion.StartDate">Start Date</label>
+                            <input type="text" class="form-control" value="@Model.RestaurantPromotionVM.Promotion.StartDate.ToString("dd/MM/yyyy")" disabled />
+                        </div>
+
+                        <br /><br />
+
+                        <div class="form-group">
+                            <label asp-for="RestaurantPromotionVM.Promotion.CreatedBy">Created By</label>
+                            <input type="text" class="form-control" asp-for="RestaurantPromotionVM.Promotion.CreatedBy" disabled />
+                        </div>
+
+                        <div class="form-group">
+                            <label asp-for="RestaurantPromotionVM.Promotion.EditedBy">Edited By</label>
+                            <input type="text" class="form-control" asp-for="RestaurantPromotionVM.Promotion.EditedBy" disabled />
+                        </div>
+                    </div>
+
+                    <div class="col-6">
+                        <div class="form-group">
+                            <label asp-for="RestaurantPromotionVM.Promotion.EndDate">End Date</label>
+                            <input type="text" class="form-control" value="@Model.RestaurantPromotionVM.Promotion.EndDate.ToString("dd/MM/yyyy")" disabled />
+                        </div>
+
+                        <br /><br />
+
+                        <div class="form-group">
+                            <label asp-for="RestaurantPromotionVM.Promotion.CreatedDate">Created Date</label>
+                            <input type="text" class="form-control" value="@Model.RestaurantPromotionVM.Promotion.CreatedDate.ToString("dd/MM/yyyy")" disabled />
+                        </div>
+
+                        <div class="form-group">
+                            <label asp-for="RestaurantPromotionVM.Promotion.EditedDate">Edited Date</label>
+                            <input type="text" class="form-control" value="@Model.RestaurantPromotionVM.Promotion.EditedDate?.ToString("dd/MM/yyyy")" disabled />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-12">
+        <a class="btn btn-secondary" asp-page="/Restaurants/Details" asp-route-ID="@Model.RestaurantPromotionVM.RestaurantID">Back</a>
+        @if (!Model.RestaurantPromotionVM.Promotion.isEmailCreatedSent)
+        {
+            <a class="btn btn-primary float-right" asp-page="/Admins/Promotions/Details" asp-page-handler="PushEmail" asp-route-PromotionID="@Model.RestaurantPromotionVM.Promotion.PromotionID" asp-route-RestaurantID="@Model.RestaurantPromotionVM.Promotion.RestaurantID">
+                Push Email
+            </a>
+        }
+    </div>
+</div>
+<br />
+<br />
+
+@section Scripts {
+    @if (!String.IsNullOrEmpty(Model.Message))
+    {
+        <script>
+            $(document).ready(function() {
+                var Toast = Swal.mixin({
+                    toast: true,
+                    position: "top-end",
+                    showConfirmButton: false,
+                    timer: 7000
+                });
+                Toast.fire({
+                    icon: "success",
+                    title: "@Model.Message",
+                })
+            });
+        </script>
+    }
+}
+
+@section PageHeader {
+    <div class="col-sm-6">
+        <h1 class="m-0">Existing Announcement & Promotion</h1>
+    </div>
+    <div class="col-sm-6">
+        <ol class="breadcrumb float-sm-right">
+            <li class="breadcrumb-item"><a asp-page="Home">Home</a></li>
+            <li class="breadcrumb-item"><a asp-page="/Admins/Restaurants/List">Restaurants</a></li>
+            <li class="breadcrumb-item"><a asp-page="/Restaurants/Details" asp-route-ID="@Model.RestaurantPromotionVM.RestaurantID">Details</a></li>
+            <li class="breadcrumb-item active">Promotion Details</li>
+        </ol>
+    </div>
+}

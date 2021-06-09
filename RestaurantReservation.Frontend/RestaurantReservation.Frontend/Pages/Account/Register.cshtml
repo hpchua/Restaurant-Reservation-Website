@@ -1,0 +1,152 @@
+﻿@page
+@model RestaurantReservation.Frontend.Pages.Account.RegisterModel
+@{
+    Layout = null;
+    ViewData["Title"] = "Register";
+}
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>@ViewBag.Title - T-Cube</title>
+
+    <!-- Google Font: Source Sans Pro -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="~/theme/plugins/fontawesome-free/css/all.min.css">
+    <!-- icheck bootstrap -->
+    <link rel="stylesheet" href="~/theme/plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="~/theme/dist/css/adminlte.min.css">
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="~/favicon.ico">
+
+    <!-- SweetAlert2 -->
+    <link rel="stylesheet" href="~/theme/plugins/sweetalert2-theme-bootstrap-4/bootstrap-4.min.css">
+</head>
+
+<body class="hold-transition login-page">
+    <div class="login-box">
+        <div class="card card-outline card-primary">
+            <div class="card-header text-center">
+                <h1><b>T - Cube</b></h1>
+            </div>
+
+            <div class="card-body">
+                <p class="login-box-msg">Register a new membership</p>
+
+                <form method="post">
+                    <div asp-validation-summary="All" class="text-danger"></div>
+
+                    <span asp-validation-for="Input.Name" class="text-danger"></span>
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="Name" asp-for="Input.Name" />
+                        <div class="input-group-append">
+                            <div class="input-group-text">
+                                <span class="fas fa-id-card"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <span asp-validation-for="Input.PhoneNumber" class="text-danger"></span>
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="Phone Number" asp-for="Input.PhoneNumber" />
+                        <div class="input-group-append">
+                            <div class="input-group-text">
+                                <span class="fas fa-phone"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <span asp-validation-for="Input.Email" class="text-danger"></span>
+                    <div class="input-group mb-3">
+                        <input type="email" class="form-control" placeholder="Email" asp-for="Input.Email" />
+                        <div class="input-group-append">
+                            <div class="input-group-text">
+                                <span class="fas fa-envelope"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <span asp-validation-for="Input.Username" class="text-danger"></span>
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="Username" asp-for="Input.Username" />
+                        <div class="input-group-append">
+                            <div class="input-group-text">
+                                <span class="fas fa-user"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <span asp-validation-for="Input.Password" class="text-danger"></span>
+                    <div class="input-group mb-3">
+                        <input type="password" class="form-control" placeholder="Password" asp-for="Input.Password" />
+                        <div class="input-group-append">
+                            <div class="input-group-text">
+                                <span class="fas fa-lock"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <span asp-validation-for="Input.ConfirmPassword" class="text-danger"></span>
+                    <div class="input-group mb-3">
+                        <input type="password" class="form-control" placeholder="Confirm Password" asp-for="Input.ConfirmPassword" />
+                        <div class="input-group-append">
+                            <div class="input-group-text">
+                                <span class="fas fa-lock"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group text-center">
+                        <input type="submit" class="btn btn-primary btn-block" value="Register" />
+                    </div>
+
+                    <br />
+
+                    <div class="form-group text-center">
+                        <p>
+                            <a asp-page="Login">Already an existing user?</a>
+                        </p>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!-- /.card -->
+    </div>
+
+    <!-- jQuery -->
+    <script src="~/theme/plugins/jquery/jquery.min.js"></script>
+    <!-- Bootstrap 4 -->
+    <script src="~/theme/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- AdminLTE App -->
+    <script src="~/theme/dist/js/adminlte.min.js"></script>
+
+    <!-- SweetAlert2 -->
+    <script src="~/theme/plugins/sweetalert2/sweetalert2.min.js"></script>
+
+    <!-- jQuery Validation -->
+    <script src="~/theme/plugins/jquery-validation/jquery.validate.min.js"></script>
+    <script src="~/theme/plugins/jquery-validation/jquery.validate.unobtrusive.min.js"></script>
+
+    @if (TempData["RegisterSuccessMessage"] != null)
+    {
+        <script>
+            $(document).ready(function() {
+                var Toast = Swal.mixin({
+                    toast: true,
+                    position: "top-end",
+                    showConfirmButton: false,
+                    timer: 7000
+                });
+
+                Toast.fire({
+                    icon: "success",
+                    title: "@TempData["RegisterSuccessMessage"]",
+                })
+            });
+        </script>
+    }
+</body>
+</html>

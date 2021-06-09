@@ -1,0 +1,180 @@
+﻿@page
+@using RestaurantReservation.Core.Utils;
+@model RestaurantReservation.Frontend.Pages.Account.ProfileModel
+@{
+    ViewData["Title"] = "User Profile";
+}
+
+<form method="post">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card card-secondary">
+                <div class="card-header">
+                    <h3 class="card-title">User Details</h3>
+
+                    <div class="card-tools">
+                        <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
+                            <i class="fas fa-minus"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="card-body">
+                    <input asp-for="Input.UserID" hidden="hidden" />
+
+                    <div class="form-group">
+                        <label asp-for="Input.Username">Username</label>
+                        <input asp-for="Input.Username" type="text" disabled class="form-control" />
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label asp-for="Input.Name">Name</label> <span class="text-danger"><b>*</b></span>
+                                <input asp-for="Input.Name" type="text" required class="form-control" />
+                                <span asp-validation-for="Input.Name" class="text-danger"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label asp-for="Input.PhoneNumber">Phone Number</label> <span class="text-danger"><b>*</b></span>
+                                <input asp-for="Input.PhoneNumber" type="text" required class="form-control" />
+                                <span asp-validation-for="Input.PhoneNumber" class="text-danger"></span>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label asp-for="Input.Email">Email Address</label> <span class="text-danger"><b>*</b></span>
+                                <input asp-for="Input.Email" type="text" required class="form-control" />
+                                <span asp-validation-for="Input.Email" class="text-danger"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <br />
+
+                    <div class="row">
+                        <div class="col-sm-6">
+                            @if (User.IsInRole(SD.ROLE_MEMBER))
+                            {
+                                <div class="input-group mb-3">
+                                    <div class="custom-checkbox">
+                                        @if (Model.Input.Subscribe)
+                                        {
+                                            <input type="checkbox" asp-for="Input.Subscribe" checked />
+                                        }
+                                        else
+                                        {
+                                            <input type="checkbox" asp-for="Input.Subscribe" />
+                                        }
+                                        <label>Subscribe to Our Newsletter!</label>
+                                    </div>
+                                </div>
+                            }
+                        </div>
+
+                        <div class="col-sm-6">
+                            <a class="btn btn-secondary float-right" asp-page="/Account/ChangePassword">Change Password</a>
+                        </div>
+                    </div>
+
+                    <div asp-validation-summary="All" class="text-danger"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-12">
+            @if (User.IsInRole(SD.ROLE_ADMIN))
+            {
+                <a class="btn btn-secondary" asp-page="/Admins/Home">Cancel</a>
+            }
+            else if (User.IsInRole(SD.ROLE_MEMBER))
+            {
+                <a class="btn btn-secondary" asp-page="/Index">Cancel</a>
+            }
+            <input type="submit" value="Edit" class="btn btn-primary float-right" />
+        </div>
+    </div>
+</form>
+<br />
+<br />
+
+@section Scripts{
+    @if (TempData["ChangePasswordSuccessMessage"] != null)
+    {
+        <script>
+            $(document).ready(function() {
+                var Toast = Swal.mixin({
+                    toast: true,
+                    position: "top-end",
+                    showConfirmButton: false,
+                    timer: 7000
+                });
+
+                Toast.fire({
+                    icon: "success",
+                    title: "@TempData["ChangePasswordSuccessMessage"]",
+                })
+            });
+        </script>
+    }
+
+    @if (TempData["SuccessMessage"] != null)
+    {
+        <script>
+            $(document).ready(function() {
+                var Toast = Swal.mixin({
+                    toast: true,
+                    position: "top-end",
+                    showConfirmButton: false,
+                    timer: 7000
+                });
+
+                Toast.fire({
+                    icon: "success",
+                    title: "@TempData["SuccessMessage"]",
+                })
+            });
+        </script>
+    }
+
+    @if (!String.IsNullOrEmpty(Model.ErrorMessage))
+    {
+        <script>
+            $(document).ready(function() {
+                var Toast = Swal.mixin({
+                    toast: true,
+                    position: "top-end",
+                    showConfirmButton: false,
+                    timer: 7000
+                });
+
+                Toast.fire({
+                    icon: "error",
+                    title: "@Model.ErrorMessage",
+                })
+            });
+        </script>
+    }
+}
+
+@section PageHeader {
+    <div class="col-sm-6">
+        <h1 class="m-0">User Profile</h1>
+    </div>
+    <div class="col-sm-6">
+        <ol class="breadcrumb float-sm-right">
+            @if (User.IsInRole(SD.ROLE_ADMIN))
+            {
+                <li class="breadcrumb-item"><a asp-page="/Admins/Home">Home</a></li>
+            }
+            else if (User.IsInRole(SD.ROLE_MEMBER))
+            {
+                <li class="breadcrumb-item"><a asp-page="/Index">Home</a></li>
+            }
+            <li class="breadcrumb-item active">Profile</li>
+        </ol>
+    </div>
+}

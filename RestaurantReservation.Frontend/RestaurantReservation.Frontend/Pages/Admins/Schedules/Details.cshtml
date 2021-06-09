@@ -1,0 +1,109 @@
+﻿@page "{ScheduleID:long}"
+@model RestaurantReservation.Frontend.Pages.Admins.Schedules.DetailsModel
+@{
+    ViewData["Title"] = "Schedule Details";
+}
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="card card-secondary">
+            <div class="card-header">
+                <h3 class="card-title">Restaurant Schedule Details</h3>
+
+                <div class="card-tools">
+                    <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
+                        <i class="fas fa-minus"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <input hidden="hidden" asp-for="RestaurantScheduleVM.Schedule.ScheduleID" />
+                <input hidden="hidden" asp-for="RestaurantScheduleVM.Schedule.VersionNo" />
+                <input hidden="hidden" asp-for="RestaurantScheduleVM.Schedule.CreatedBy" />
+                <input hidden="hidden" asp-for="RestaurantScheduleVM.Schedule.CreatedDate" />
+
+                <h3 class="my-3">@Model.RestaurantScheduleVM.RestaurantName</h3>
+
+                <hr>
+                <h4>Operating Hour</h4>
+                <p><span id="workingDay">@Model.RestaurantScheduleVM.RestaurantWorkingDay</span> @Model.RestaurantScheduleVM.StartWorkingTime.ToString("hh:mm tt") - @Model.RestaurantScheduleVM.EndWorkingTime.ToString("hh:mm tt")</p>
+
+                <br />
+
+                <div class="row">
+                    <div class="col-6">
+                        <div class="form-group">
+                            <label asp-for="RestaurantScheduleVM.Schedule.ScheduleDate">Date</label>
+                            <input type="text" class="form-control" value="@Model.RestaurantScheduleVM.Schedule.ScheduleDate.ToString("dd/MM/yyyy")" disabled />
+                        </div>
+
+                        <div class="form-group">
+                            <label asp-for="RestaurantScheduleVM.Schedule.StartTime">Start Time</label>
+                            <input type="text" class="form-control" value="@Model.RestaurantScheduleVM.Schedule.StartTime.ToString("hh:mm tt")" disabled />
+                        </div>
+
+                        <br />
+
+                        <div class="form-group">
+                            <label asp-for="RestaurantScheduleVM.Schedule.CreatedBy">Created By</label>
+                            <input type="text" class="form-control" asp-for="RestaurantScheduleVM.Schedule.CreatedBy" disabled />
+                        </div>
+
+                        <div class="form-group">
+                            <label asp-for="RestaurantScheduleVM.Schedule.EditedBy">Edited By</label>
+                            <input type="text" class="form-control" asp-for="RestaurantScheduleVM.Schedule.EditedBy" disabled />
+                        </div>
+                    </div>
+
+                    <div class="col-6">
+                        <div class="form-group">
+                            <label asp-for="RestaurantScheduleVM.Schedule.Capacity">Capacity</label>
+                            <input type="text" class="form-control" asp-for="RestaurantScheduleVM.Schedule.Capacity" disabled />
+                        </div>
+
+                        <div class="form-group">
+                            <label asp-for="RestaurantScheduleVM.Schedule.EndTime">End Time</label>
+                            <input type="text" class="form-control" value="@Model.RestaurantScheduleVM.Schedule.EndTime.ToString("hh:mm tt")" disabled />
+                        </div>
+
+                        <br />
+
+                        <div class="form-group">
+                            <label asp-for="RestaurantScheduleVM.Schedule.CreatedDate">Created Date</label>
+                            <input type="text" class="form-control" value="@Model.RestaurantScheduleVM.Schedule.CreatedDate.ToString("dd/MM/yyyy")" disabled />
+                        </div>
+
+                        <div class="form-group">
+                            <label asp-for="RestaurantScheduleVM.Schedule.EditedDate">Edited Date</label>
+                            <input type="text" class="form-control" value="@Model.RestaurantScheduleVM.Schedule.EditedDate?.ToString("dd/MM/yyyy")" disabled />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-12">
+        <a class="btn btn-secondary" asp-page="/Restaurants/Details" asp-route-ID="@Model.RestaurantScheduleVM.RestaurantID">Back</a>
+        <a class="btn btn-primary float-right" asp-page="/Admins/Schedules/Edit" asp-route-ScheduleID="@Model.RestaurantScheduleVM.Schedule.ScheduleID">
+            Edit
+        </a>
+    </div>
+</div>
+
+@section PageHeader {
+    <div class="col-sm-6">
+        <h1 class="m-0">Schedule Details</h1>
+    </div>
+    <div class="col-sm-6">
+        <ol class="breadcrumb float-sm-right">
+            <li class="breadcrumb-item"><a asp-page="Home">Home</a></li>
+            <li class="breadcrumb-item"><a asp-page="/Admins/Restaurants/List">Restaurants</a></li>
+            <li class="breadcrumb-item"><a asp-page="/Restaurants/Details" asp-route-ID="@Model.RestaurantScheduleVM.RestaurantID">Details</a></li>
+            <li class="breadcrumb-item active">Schedule Details</li>
+        </ol>
+    </div>
+}

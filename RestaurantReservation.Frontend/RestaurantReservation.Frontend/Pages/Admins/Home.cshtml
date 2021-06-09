@@ -1,0 +1,77 @@
+﻿@page
+@using RestaurantReservation.Core.Utils;
+@model RestaurantReservation.Frontend.Pages.Admins.HomeModel
+@{
+    ViewData["Title"] = "Dashboard";
+}
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-3 col-6">
+            <div class="small-box bg-info">
+                <div class="inner">
+                    <h3>@*@await Component.InvokeAsync("OrdersCount")*@</h3>
+
+                    <p>Reservations</p>
+                </div>
+                <a class="small-box-footer" asp-page="/Admins/Reservation/List" asp-route-status="@SD.BookingStatus.PENDING">More info <i class="fas fa-arrow-circle-right"></i></a>
+            </div>
+        </div>
+
+        <div class="col-lg-3 col-6">
+            <div class="small-box bg-success">
+                <div class="inner">
+                    <h3>@*@await Component.InvokeAsync("ProductCount")*@</h3>
+
+                    <p>Categories</p>
+                </div>
+                <a class="small-box-footer" asp-page="/Admins/Category/List">More info <i class="fas fa-arrow-circle-right"></i></a>
+            </div>
+        </div>
+
+        <div class="col-lg-3 col-6">
+            <div class="small-box bg-gradient-navy">
+                <div class="inner">
+                    <h3>@*@await Component.InvokeAsync("AdminCount")*@</h3>
+
+                    <p>Users</p>
+                </div>
+                <a class="small-box-footer" asp-page="/Admins/Users/List">More info <i class="fas fa-arrow-circle-right"></i></a>
+            </div>
+        </div>
+
+        <div class="col-lg-3 col-6">
+            <div class="small-box bg-warning">
+                <div class="inner">
+                    <h3>@*@await Component.InvokeAsync("ProductCount")*@</h3>
+
+                    <p>Restaurants</p>
+                </div>
+                <a class="small-box-footer" asp-page="/Admins/Restaurants/List">More info <i class="fas fa-arrow-circle-right"></i></a>
+            </div>
+        </div>
+
+        <div class="col-lg-3 col-6">
+            <div class="small-box bg-fuchsia">
+                <div class="inner">
+                    <h3>@*@await Component.InvokeAsync("AdminCount")*@</h3>
+
+                    <p>Check Booking Number</p>
+                </div>
+                <a class="small-box-footer" asp-page="/Admins/Reservation/Details">More info <i class="fas fa-arrow-circle-right"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@section PageHeader {
+    <div class="col-sm-6">
+        <h1 class="m-0">Dashboard</h1>
+    </div>
+    <div class="col-sm-6">
+        <ol class="breadcrumb float-sm-right">
+            <li class="breadcrumb-item active">Dashboard</li>
+        </ol>
+    </div>
+}

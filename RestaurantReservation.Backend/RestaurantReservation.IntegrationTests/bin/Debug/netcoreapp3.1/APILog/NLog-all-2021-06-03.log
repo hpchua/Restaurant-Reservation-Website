@@ -1,0 +1,87 @@
+2021-06-03 17:32:11.7683 | INFO |  -  |  # Promotion email status has been checked > HTTP 200 - OK #  
+2021-06-03 17:32:11.8366 | INFO |  -  |  # Application started. Press Ctrl+C to shut down. #  
+2021-06-03 17:32:11.8437 | INFO |  -  |  # Hosting environment: Development #  
+2021-06-03 17:32:11.8437 | INFO |  -  |  # Content root path: C:\Users\MIS\source\repos\Restaurant Reservation Website\RestaurantReservation.Backend\RestaurantReservation.Api #  
+2021-06-03 17:32:13.0659 | INFO | Authenticate - POST | https://localhost/api/Authenticate/Login # User refresh token has been created > HTTP 200 - OK #  
+2021-06-03 17:59:24.8949 | INFO |  -  |  # Promotion email status has been checked > HTTP 200 - OK #  
+2021-06-03 17:59:24.8949 | INFO |  -  |  # Promotion email status has been checked > HTTP 200 - OK #  
+2021-06-03 17:59:24.9694 | INFO |  -  |  # Application started. Press Ctrl+C to shut down. #  
+2021-06-03 17:59:24.9694 | INFO |  -  |  # Application started. Press Ctrl+C to shut down. #  
+2021-06-03 17:59:24.9694 | INFO |  -  |  # Hosting environment: Development #  
+2021-06-03 17:59:24.9694 | INFO |  -  |  # Hosting environment: Development #  
+2021-06-03 17:59:24.9694 | INFO |  -  |  # Content root path: C:\Users\MIS\source\repos\Restaurant Reservation Website\RestaurantReservation.Backend\RestaurantReservation.Api #  
+2021-06-03 17:59:24.9694 | INFO |  -  |  # Content root path: C:\Users\MIS\source\repos\Restaurant Reservation Website\RestaurantReservation.Backend\RestaurantReservation.Api #  
+2021-06-03 17:59:26.0731 | INFO | Authenticate - POST | https://localhost/api/Authenticate/Login # User refresh token has been created > HTTP 200 - OK #  
+2021-06-03 17:59:26.0731 | INFO | Authenticate - POST | https://localhost/api/Authenticate/Login # User refresh token has been created > HTTP 200 - OK #  
+2021-06-03 17:59:26.3342 | INFO |  -  |  # Promotion email status has been checked > HTTP 200 - OK #  
+2021-06-03 17:59:26.3405 | INFO |  -  |  # Application started. Press Ctrl+C to shut down. #  
+2021-06-03 17:59:26.3405 | INFO |  -  |  # Hosting environment: Development #  
+2021-06-03 17:59:26.3405 | INFO |  -  |  # Content root path: C:\Users\MIS\source\repos\Restaurant Reservation Website\RestaurantReservation.Backend\RestaurantReservation.Api #  
+2021-06-03 17:59:26.4025 | WARN | Authenticate - POST | https://localhost/api/Authenticate/Login # Invalid password for user 8448ce5f-b94a-4efa-8fb6-48c9d0611b90. #  
+2021-06-03 17:59:26.4025 | WARN | Authenticate - POST | https://localhost/api/Authenticate/Login # User 8448ce5f-b94a-4efa-8fb6-48c9d0611b90 provided the wrong password > HTTP 401 - Unauthorized #  
+2021-06-03 17:59:26.4449 | INFO | Category - GET | https://localhost/api/Category # Categories have been retrieved OK #  
+2021-06-03 17:59:26.4920 | INFO |  -  |  # Promotion email status has been checked > HTTP 200 - OK #  
+2021-06-03 17:59:26.5008 | INFO |  -  |  # Application started. Press Ctrl+C to shut down. #  
+2021-06-03 17:59:26.5008 | INFO |  -  |  # Hosting environment: Development #  
+2021-06-03 17:59:26.5008 | INFO |  -  |  # Content root path: C:\Users\MIS\source\repos\Restaurant Reservation Website\RestaurantReservation.Backend\RestaurantReservation.Api #  
+2021-06-03 17:59:26.5282 | WARN | Authenticate - POST | https://localhost/api/Authenticate/Login # Attempt to login with adminn which doesn't exist > HTTP 404 - Not Found #  
+2021-06-03 17:59:26.5595 | INFO |  -  |  # Promotion email status has been checked > HTTP 200 - OK #  
+2021-06-03 17:59:26.5595 | INFO |  -  |  # Application started. Press Ctrl+C to shut down. #  
+2021-06-03 17:59:26.5740 | INFO |  -  |  # Hosting environment: Development #  
+2021-06-03 17:59:26.5740 | INFO |  -  |  # Content root path: C:\Users\MIS\source\repos\Restaurant Reservation Website\RestaurantReservation.Backend\RestaurantReservation.Api #  
+2021-06-03 17:59:26.6118 | INFO | Authenticate - POST | https://localhost/api/Authenticate/Login # User refresh token has been created > HTTP 200 - OK #  
+2021-06-03 17:59:26.6510 | WARN | Category - GET | https://localhost/api/Category/22 # Category of ID 22 not found NotFound #  
+2021-06-03 17:59:26.7311 | INFO |  -  |  # Promotion email status has been checked > HTTP 200 - OK #  
+2021-06-03 17:59:26.7311 | INFO |  -  |  # Application started. Press Ctrl+C to shut down. #  
+2021-06-03 17:59:26.7311 | INFO |  -  |  # Hosting environment: Development #  
+2021-06-03 17:59:26.7311 | INFO |  -  |  # Content root path: C:\Users\MIS\source\repos\Restaurant Reservation Website\RestaurantReservation.Backend\RestaurantReservation.Api #  
+2021-06-03 17:59:26.7946 | INFO | Authenticate - POST | https://localhost/api/Authenticate/Login # User refresh token has been created > HTTP 200 - OK #  
+2021-06-03 17:59:27.3944 | INFO | Category - GET | https://localhost/api/Category/6 # Category of ID 6 have been retrieved OK #  
+2021-06-03 17:59:27.4593 | INFO |  -  |  # Promotion email status has been checked > HTTP 200 - OK #  
+2021-06-03 17:59:27.4593 | INFO |  -  |  # Application started. Press Ctrl+C to shut down. #  
+2021-06-03 17:59:27.4593 | INFO |  -  |  # Hosting environment: Development #  
+2021-06-03 17:59:27.4643 | INFO |  -  |  # Content root path: C:\Users\MIS\source\repos\Restaurant Reservation Website\RestaurantReservation.Backend\RestaurantReservation.Api #  
+2021-06-03 17:59:28.3744 | INFO | Authenticate - POST | https://localhost/api/Authenticate/Login # User refresh token has been created > HTTP 200 - OK #  
+2021-06-03 17:59:28.4269 | INFO | Category - POST | https://localhost/api/Category # Category Korean has been created with ID 9 > HTTP 200 - OK #  
+2021-06-03 17:59:28.4413 | INFO | Category - GET | https://localhost/api/Category/name/Korean # Category of name Korean have been retrieved OK #  
+2021-06-03 17:59:28.4765 | INFO |  -  |  # Promotion email status has been checked > HTTP 200 - OK #  
+2021-06-03 17:59:28.4765 | INFO |  -  |  # Application started. Press Ctrl+C to shut down. #  
+2021-06-03 17:59:28.4800 | INFO |  -  |  # Hosting environment: Development #  
+2021-06-03 17:59:28.4800 | INFO |  -  |  # Content root path: C:\Users\MIS\source\repos\Restaurant Reservation Website\RestaurantReservation.Backend\RestaurantReservation.Api #  
+2021-06-03 17:59:29.3933 | INFO | Authenticate - POST | https://localhost/api/Authenticate/Login # User refresh token has been created > HTTP 200 - OK #  
+2021-06-03 17:59:29.4241 | WARN | Category - POST | https://localhost/api/Category # Attempt to add duplicate category RestaurantReservation.Core.Entities.Category > HTTP 400 - Bad Request #  
+2021-06-03 17:59:29.4655 | INFO |  -  |  # Promotion email status has been checked > HTTP 200 - OK #  
+2021-06-03 17:59:29.4655 | INFO |  -  |  # Application started. Press Ctrl+C to shut down. #  
+2021-06-03 17:59:29.4655 | INFO |  -  |  # Hosting environment: Development #  
+2021-06-03 17:59:29.4655 | INFO |  -  |  # Content root path: C:\Users\MIS\source\repos\Restaurant Reservation Website\RestaurantReservation.Backend\RestaurantReservation.Api #  
+2021-06-03 17:59:29.4971 | INFO | Authenticate - POST | https://localhost/api/Authenticate/Login # User refresh token has been created > HTTP 200 - OK #  
+2021-06-03 17:59:29.4971 | INFO | Category - GET | https://localhost/api/Category/name/Korean # Category of name Korean have been retrieved OK #  
+2021-06-03 17:59:29.5470 | INFO | Category - PUT | https://localhost/api/Category/9 # Category Koreann with ID 9 Data has been updated > HTTP 200 - OK #  
+2021-06-03 17:59:29.5703 | INFO | Category - GET | https://localhost/api/Category/name/Koreann # Category of name Koreann have been retrieved OK #  
+2021-06-03 17:59:29.6135 | INFO |  -  |  # Promotion email status has been checked > HTTP 200 - OK #  
+2021-06-03 17:59:29.6135 | INFO |  -  |  # Application started. Press Ctrl+C to shut down. #  
+2021-06-03 17:59:29.6135 | INFO |  -  |  # Hosting environment: Development #  
+2021-06-03 17:59:29.6135 | INFO |  -  |  # Content root path: C:\Users\MIS\source\repos\Restaurant Reservation Website\RestaurantReservation.Backend\RestaurantReservation.Api #  
+2021-06-03 17:59:29.6448 | INFO | Authenticate - POST | https://localhost/api/Authenticate/Login # User refresh token has been created > HTTP 200 - OK #  
+2021-06-03 17:59:29.6580 | INFO | Category - GET | https://localhost/api/Category/name/Halal # Category of name Halal have been retrieved OK #  
+2021-06-03 17:59:29.6693 | WARN | Category - PUT | https://localhost/api/Category/6 # Attempt to update category category failed due to duplicate category existingCategory > HTTP 400 - Bad Request #  
+2021-06-03 17:59:29.7188 | INFO |  -  |  # Promotion email status has been checked > HTTP 200 - OK #  
+2021-06-03 17:59:29.7188 | INFO |  -  |  # Application started. Press Ctrl+C to shut down. #  
+2021-06-03 17:59:29.7188 | INFO |  -  |  # Hosting environment: Development #  
+2021-06-03 17:59:29.7188 | INFO |  -  |  # Content root path: C:\Users\MIS\source\repos\Restaurant Reservation Website\RestaurantReservation.Backend\RestaurantReservation.Api #  
+2021-06-03 17:59:29.7555 | INFO | Authenticate - POST | https://localhost/api/Authenticate/Login # User refresh token has been created > HTTP 200 - OK #  
+2021-06-03 17:59:29.7680 | INFO | Category - GET | https://localhost/api/Category/name/Halal # Category of name Halal have been retrieved OK #  
+2021-06-03 17:59:29.7770 | WARN | Category - PUT | https://localhost/api/Category/6 # Category Koreann with ID 6 Data have some conflicts > HTTP 409 - Conflict #  
+2021-06-03 17:59:29.8174 | INFO |  -  |  # Promotion email status has been checked > HTTP 200 - OK #  
+2021-06-03 17:59:29.8174 | INFO |  -  |  # Application started. Press Ctrl+C to shut down. #  
+2021-06-03 17:59:29.8174 | INFO |  -  |  # Hosting environment: Development #  
+2021-06-03 17:59:29.8174 | INFO |  -  |  # Content root path: C:\Users\MIS\source\repos\Restaurant Reservation Website\RestaurantReservation.Backend\RestaurantReservation.Api #  
+2021-06-03 17:59:29.8562 | INFO | Authenticate - POST | https://localhost/api/Authenticate/Login # User refresh token has been created > HTTP 200 - OK #  
+2021-06-03 17:59:29.8754 | WARN | Category - DELETE | https://localhost/api/Category/%7BuserId%7D/22 # Attempt to delete non-existing category of ID 22 > HTTP 404 - Not Found #  
+2021-06-03 17:59:29.9434 | INFO |  -  |  # Promotion email status has been checked > HTTP 200 - OK #  
+2021-06-03 17:59:29.9434 | INFO |  -  |  # Application started. Press Ctrl+C to shut down. #  
+2021-06-03 17:59:29.9492 | INFO |  -  |  # Hosting environment: Development #  
+2021-06-03 17:59:29.9492 | INFO |  -  |  # Content root path: C:\Users\MIS\source\repos\Restaurant Reservation Website\RestaurantReservation.Backend\RestaurantReservation.Api #  
+2021-06-03 17:59:30.0013 | INFO | Authenticate - POST | https://localhost/api/Authenticate/Login # User refresh token has been created > HTTP 200 - OK #  
+2021-06-03 17:59:30.0199 | INFO | Category - GET | https://localhost/api/Category/name/Koreann # Category of name Koreann have been retrieved OK #  
+2021-06-03 17:59:30.8844 | INFO | Category - DELETE | https://localhost/api/Category/%7BuserId%7D/9 # Category Koreann with ID 9 Data has been deleted > HTTP 200 - OK #  

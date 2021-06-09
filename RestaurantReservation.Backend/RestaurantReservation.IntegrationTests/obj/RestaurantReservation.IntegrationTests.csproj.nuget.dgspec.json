@@ -1,0 +1,353 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\MIS\\source\\repos\\Restaurant Reservation Website\\RestaurantReservation.Backend\\RestaurantReservation.IntegrationTests\\RestaurantReservation.IntegrationTests.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\MIS\\source\\repos\\Restaurant Reservation Website\\RestaurantReservation.Backend\\RestaurantReservation.Api\\RestaurantReservation.Api.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\MIS\\source\\repos\\Restaurant Reservation Website\\RestaurantReservation.Backend\\RestaurantReservation.Api\\RestaurantReservation.Api.csproj",
+        "projectName": "RestaurantReservation.Api",
+        "projectPath": "C:\\Users\\MIS\\source\\repos\\Restaurant Reservation Website\\RestaurantReservation.Backend\\RestaurantReservation.Api\\RestaurantReservation.Api.csproj",
+        "packagesPath": "C:\\Users\\MIS\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\MIS\\source\\repos\\Restaurant Reservation Website\\RestaurantReservation.Backend\\RestaurantReservation.Api\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\MIS\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "C:\\Users\\MIS\\source\\repos\\Restaurant Reservation Website\\RestaurantReservation.Backend\\RestaurantReservation.Core\\RestaurantReservation.Core.csproj": {
+                "projectPath": "C:\\Users\\MIS\\source\\repos\\Restaurant Reservation Website\\RestaurantReservation.Backend\\RestaurantReservation.Core\\RestaurantReservation.Core.csproj"
+              },
+              "C:\\Users\\MIS\\source\\repos\\Restaurant Reservation Website\\RestaurantReservation.Backend\\RestaurantReservation.Infrastructure\\RestaurantReservation.Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\MIS\\source\\repos\\Restaurant Reservation Website\\RestaurantReservation.Backend\\RestaurantReservation.Infrastructure\\RestaurantReservation.Infrastructure.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "IdentityModel": {
+              "target": "Package",
+              "version": "[5.1.0, )"
+            },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[3.1.13, )"
+            },
+            "Microsoft.AspNetCore.Mvc.NewtonsoftJson": {
+              "target": "Package",
+              "version": "[3.1.13, )"
+            },
+            "Microsoft.AspNetCore.Mvc.Versioning": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.AspNetCore.Mvc.Versioning.ApiExplorer": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.1.13, )"
+            },
+            "NLog": {
+              "target": "Package",
+              "version": "[4.7.10, )"
+            },
+            "NLog.Web.AspNetCore": {
+              "target": "Package",
+              "version": "[4.12.0, )"
+            },
+            "Plain.RabbitMQ": {
+              "target": "Package",
+              "version": "[0.0.0.4, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[5.5.1, )"
+            },
+            "Swashbuckle.AspNetCore.Annotations": {
+              "target": "Package",
+              "version": "[5.5.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\MIS\\source\\repos\\Restaurant Reservation Website\\RestaurantReservation.Backend\\RestaurantReservation.Core\\RestaurantReservation.Core.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\MIS\\source\\repos\\Restaurant Reservation Website\\RestaurantReservation.Backend\\RestaurantReservation.Core\\RestaurantReservation.Core.csproj",
+        "projectName": "RestaurantReservation.Core",
+        "projectPath": "C:\\Users\\MIS\\source\\repos\\Restaurant Reservation Website\\RestaurantReservation.Backend\\RestaurantReservation.Core\\RestaurantReservation.Core.csproj",
+        "packagesPath": "C:\\Users\\MIS\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\MIS\\source\\repos\\Restaurant Reservation Website\\RestaurantReservation.Backend\\RestaurantReservation.Core\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\MIS\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "Microsoft.AspNetCore.Identity": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.13, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\MIS\\source\\repos\\Restaurant Reservation Website\\RestaurantReservation.Backend\\RestaurantReservation.Infrastructure\\RestaurantReservation.Infrastructure.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\MIS\\source\\repos\\Restaurant Reservation Website\\RestaurantReservation.Backend\\RestaurantReservation.Infrastructure\\RestaurantReservation.Infrastructure.csproj",
+        "projectName": "RestaurantReservation.Infrastructure",
+        "projectPath": "C:\\Users\\MIS\\source\\repos\\Restaurant Reservation Website\\RestaurantReservation.Backend\\RestaurantReservation.Infrastructure\\RestaurantReservation.Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\MIS\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\MIS\\source\\repos\\Restaurant Reservation Website\\RestaurantReservation.Backend\\RestaurantReservation.Infrastructure\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\MIS\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "C:\\Users\\MIS\\source\\repos\\Restaurant Reservation Website\\RestaurantReservation.Backend\\RestaurantReservation.Core\\RestaurantReservation.Core.csproj": {
+                "projectPath": "C:\\Users\\MIS\\source\\repos\\Restaurant Reservation Website\\RestaurantReservation.Backend\\RestaurantReservation.Core\\RestaurantReservation.Core.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[3.1.13, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.1.13, )"
+            },
+            "Plain.RabbitMQ": {
+              "target": "Package",
+              "version": "[0.0.0.4, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\MIS\\source\\repos\\Restaurant Reservation Website\\RestaurantReservation.Backend\\RestaurantReservation.IntegrationTests\\RestaurantReservation.IntegrationTests.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\MIS\\source\\repos\\Restaurant Reservation Website\\RestaurantReservation.Backend\\RestaurantReservation.IntegrationTests\\RestaurantReservation.IntegrationTests.csproj",
+        "projectName": "RestaurantReservation.IntegrationTests",
+        "projectPath": "C:\\Users\\MIS\\source\\repos\\Restaurant Reservation Website\\RestaurantReservation.Backend\\RestaurantReservation.IntegrationTests\\RestaurantReservation.IntegrationTests.csproj",
+        "packagesPath": "C:\\Users\\MIS\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\MIS\\source\\repos\\Restaurant Reservation Website\\RestaurantReservation.Backend\\RestaurantReservation.IntegrationTests\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\MIS\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "C:\\Users\\MIS\\source\\repos\\Restaurant Reservation Website\\RestaurantReservation.Backend\\RestaurantReservation.Api\\RestaurantReservation.Api.csproj": {
+                "projectPath": "C:\\Users\\MIS\\source\\repos\\Restaurant Reservation Website\\RestaurantReservation.Backend\\RestaurantReservation.Api\\RestaurantReservation.Api.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "FluentAssertions": {
+              "target": "Package",
+              "version": "[5.10.3, )"
+            },
+            "Microsoft.AspNetCore.Mvc.Testing": {
+              "target": "Package",
+              "version": "[3.1.13, )"
+            },
+            "Microsoft.EntityFrameworkCore.InMemory": {
+              "target": "Package",
+              "version": "[3.1.13, )"
+            },
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[16.5.0, )"
+            },
+            "Xunit.Priority": {
+              "target": "Package",
+              "version": "[1.1.6, )"
+            },
+            "coverlet.collector": {
+              "target": "Package",
+              "version": "[1.2.0, )"
+            },
+            "xunit": {
+              "target": "Package",
+              "version": "[2.4.0, )"
+            },
+            "xunit.runner.visualstudio": {
+              "target": "Package",
+              "version": "[2.4.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

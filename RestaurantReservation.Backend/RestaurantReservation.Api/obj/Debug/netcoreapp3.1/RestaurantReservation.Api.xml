@@ -1,0 +1,580 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>RestaurantReservation.Api</name>
+    </assembly>
+    <members>
+        <member name="M:RestaurantReservation.Api.Controllers.AuthenticateController.Login(RestaurantReservation.Core.ViewModels.Accounts.LoginVM)">
+            <summary>
+            Verify the combination of username and password to grant user access to access Restaurant Reservation System.
+            </summary>
+            <param name="loginInput">
+            Provides the necessary username and password combination for authentication
+            </param>
+            <returns>
+            An authentication result object that contains a status code. If authentication is
+            successful, a user is included for creation of claims. Otherwise, an error message
+            is included to indicate the failure reason.
+            </returns>
+            <response code="200">Returns the user account successfully login message</response>
+            <response code="500">Error Retrieving user info from database</response>   
+        </member>
+        <member name="M:RestaurantReservation.Api.Controllers.AuthenticateController.RefreshToken(RestaurantReservation.Core.DTO.RefreshRequest)">
+            <summary>
+            Refresh User JWT Access Token When accessing the resources everytime.
+            </summary>
+            <param name="refreshRequest">
+            Provides the user's current JWT access token and refresh token to compare database one
+            </param>
+            <returns>
+            An authentication result object that will contains a status code. If authentication is
+            successful, a user is included for creation of claims. Otherwise, an error message
+            is included to indicate the failure reason.
+            </returns>
+            <response code="200">Returns the user latest JWT access token</response>
+            <response code="500">Error Retrieving user refresh token from database</response>  
+        </member>
+        <member name="M:RestaurantReservation.Api.Controllers.AuthenticateController.Register(RestaurantReservation.Core.ViewModels.Accounts.RegisterVM)">
+            <summary>
+            Take user registration info input to register a new account
+            </summary>
+            <param name="registerInput">
+            Provide necessary information for registering a new user in the database
+            </param>
+            <returns>
+            Similarly return an authentication result object that contains a status 
+            code to indicate success or failure.
+            </returns>
+            <response code="200">Returns the user account successfully created message</response>
+            <response code="500">Error Adding user registration info into database</response>   
+        </member>
+        <member name="M:RestaurantReservation.Api.Controllers.AuthenticateController.ForgotPassword(System.String)">
+            <summary>
+            Accepts an email input from user to send email with URL link for change password purposes.
+            </summary>
+            <param name="email"> Email Address </param>
+            <returns>
+            A Boolean response that contains true or false. 
+            If the result if true, a reset password email with URL will be sent to the user.
+            Otherwise, sending email process unable to be conducted.
+            </returns>
+            <response code="200">A Boolean response</response>
+            <response code="500">Error sending email wiht URL to the user</response>   
+        </member>
+        <member name="M:RestaurantReservation.Api.Controllers.AuthenticateController.ResetPassword(RestaurantReservation.Core.ViewModels.Accounts.ResetPasswordVM)">
+            <summary>
+            A combination of Reset Password Token + User's Email Address and Updated Password
+            </summary>
+            <param name="input"> ResetPasswordVM </param>
+            <returns>
+            A Boolean response that contains true or false. 
+            If the result if true, the user's account password has been reset successfully.
+            Otherwise, reset password process unable to be conducted due to invalid input data.
+            </returns>
+            <response code="200">A Boolean response</response>
+            <response code="500">Error updating user's account password</response>   
+        </member>
+        <member name="M:RestaurantReservation.Api.Controllers.BookingController.AdminGetCount">
+            <summary>
+            Retrive the total number of members' pending reservation in database. 
+            </summary>
+            <returns>
+            Number of Members' Pending Reservation will be returned.       
+            </returns>
+            <response code="200">Number of members' pending reservation record</response>
+            <response code="500">Error Retrieving number of members' pending reservation record</response>   
+        </member>
+        <member name="M:RestaurantReservation.Api.Controllers.BookingController.GetAllBookingsOfStatus(System.String)">
+            <summary>
+            Get all members' bookings of a specific status.
+            </summary>
+            <param name="status">Booking status, e.g. Pending, Expired, Complete</param>
+            <returns>
+            A list of members' booking records will be returned.
+            </returns>
+            <response code="200">All members' booking records</response>
+            <response code="500">Error Retrieving members' booking records from database</response>  
+        </member>
+        <member name="M:RestaurantReservation.Api.Controllers.BookingController.GetByBookingNo(System.String)">
+            <summary>
+            Retrieve a specific booking details based on the Booking Number given.
+            </summary>
+            <param name="bookingNo">Booking Number</param>
+            <returns>
+            Relevant booking details will be returned
+            </returns>
+            <response code="200">BookingDetailVM object that contains booking details</response>
+            <response code="400">Booking Details Not Found</response>
+            <response code="500">Error Retrieving booking detail info from database</response>   
+        </member>
+        <member name="M:RestaurantReservation.Api.Controllers.BookingController.GetAllBookingsByUserID(System.String,System.String)">
+            <summary>
+            Get all bookings of a specific status for a specific user.
+            </summary>
+            <param name="userID">User ID</param>
+            <param name="status">Order Status, eg. Pending, Complete, Expired</param>
+            <returns>
+            Relevant booking details will be returned based on the user id and status given
+            </returns>
+            <response code="200">A list of BookingHistoryVM object that contains specific member's booking details</response>
+            <response code="500">Error Retrieving booking detail info from database</response>  
+        </member>
+        <member name="M:RestaurantReservation.Api.Controllers.BookingController.Add(RestaurantReservation.Core.ViewModels.Members.MakeBookingVM)">
+            <summary>
+            Add a new member booking to the database. This checks for number of seat avaiable for each session also.
+            </summary>
+            <param name="bookingVM">MakeBookingVM object</param>
+            <returns>
+            New Member Booking and the number of schedule avaialble seat will be updated from the database
+            </returns>
+            <response code="200">New Booking Object</response>
+            <response code="500">Error Adding a member booking information into database</response>   
+        </member>
+        <member name="M:RestaurantReservation.Api.Controllers.BookingController.Update(System.Int64,RestaurantReservation.Core.Entities.Booking)">
+            <summary>
+            Update an existing member's booking in the database. 
+            </summary>
+            <param name="bookingID">Booking ID</param>
+            <param name="booking">Booking Object Information</param>
+            <returns>
+            No response return back.
+            Otherwise, update member's booking status process unable to be conducted due to booking ID not found.
+            </returns>
+            <response code="204">Deleting category successfully</response>
+            <response code="400">Invalid Booking ID message</response>
+            <response code="404">No record found based on Booking ID given</response>
+            <response code="500">Error Updating a Booking object information from database</response>  
+        </member>
+        <member name="M:RestaurantReservation.Api.Controllers.BookingController.Delete(System.Int64)">
+            <summary>
+            Remove an existing booking information from database, for testing
+            </summary>
+            <param name="id">booking ID</param>
+            <returns>
+            No response return back.
+            Otherwise, deleting booking process unable to be conducted due to schedule ID not found.
+            </returns>
+            <response code="204">Updating booking successfully Result</response>
+            <response code="404">Booking record not found</response>
+            <response code="500">Error Deleting a booking object information from database</response>   
+        </member>
+        <member name="M:RestaurantReservationSystem.API.Controllers.CategoryController.GetCategoryCount">
+            <summary>
+            Retrive the total number of category in database. 
+            </summary>
+            <returns>
+            Number of category will be returned.       
+            </returns>
+            <response code="200">Number of category record</response>
+            <response code="500">Error Retrieving number of category record</response>   
+        </member>
+        <member name="M:RestaurantReservationSystem.API.Controllers.CategoryController.GetAll">
+            <summary>
+            Get all existing categories from the database.
+            </summary>
+            <returns>
+            A list of category results will be returned.
+            </returns>
+            <response code="200">A list of category</response>
+            <response code="500">Error Retrieving categories info from database</response>  
+        </member>
+        <member name="M:RestaurantReservationSystem.API.Controllers.CategoryController.Get(System.Int64)">
+            <summary>
+            Retrieve a specific category information based on the Category ID given.
+            </summary>
+            <param name="id">Category ID</param>
+            <returns>
+            A category information will be returned
+            </returns>
+            <response code="200">A category</response>
+            <response code="500">Error Retrieving a category info from database</response>   
+        </member>
+        <member name="M:RestaurantReservationSystem.API.Controllers.CategoryController.Add(RestaurantReservation.Core.Entities.Category)">
+            <summary>
+            Add a new category to the database. This checks for duplicate category name.
+            </summary>
+            <param name="category">Category object</param>
+            <returns>
+            A Boolean response that contains true or false. 
+            If the result if true, a new category object will be added to the database.
+            Otherwise, adding new category process unable to be conducted.
+            </returns>
+            <response code="200">A Boolean response</response>
+            <response code="500">Error Adding a category object information into database</response>   
+        </member>
+        <member name="M:RestaurantReservationSystem.API.Controllers.CategoryController.Update(System.Int64,RestaurantReservation.Core.Entities.Category)">
+            <summary>
+            Update an existing category in the database. This checks for duplicate category name.
+            </summary>
+            <param name="id">Category ID</param>
+            <param name="category">Category Object</param>
+            <returns>
+            An updated Category will be returned. 
+            Otherwise, here are the following why the updating existing category info process unable to be conducted :
+            If the category name change to existing data and
+            there is another conflict happens when 2 same processes conducting simultaneously.
+            </returns>
+            <response code="200">Updated Category object</response>
+            <response code="400">Invalid Category ID or Category name exists message</response>
+            <response code="409">Category Version Conflict message</response>
+            <response code="500">Error Updating a Category object information from database</response>   
+        </member>
+        <member name="M:RestaurantReservationSystem.API.Controllers.CategoryController.Delete(System.Int64,System.String)">
+            <summary>
+            Remove an existing category information from database.
+            </summary>
+            <param name="id">Category ID</param>
+            <param name="userID">User ID</param>
+            <returns>
+            No response return back.
+            Otherwise, deleting category record process unable to be conducted due to category ID not found.
+            </returns>
+            <response code="204">Deleting category successfully</response>
+            <response code="404">Category record not found</response>
+            <response code="500">Error Deleting a category object information from database</response>   
+        </member>
+        <member name="M:RestaurantReservationSystem.API.Controllers.PromotionController.Get(System.Int64)">
+            <summary>
+            Retrieve a specific restaurant Promotion information based on the Promotion ID given.
+            </summary>
+            <param name="id">Promotion ID</param>
+            <returns>
+            A restaurant Promotion information will be returned
+            </returns>
+            <response code="200">A restaurant Promotion object</response>
+            <response code="500">Error Retrieving a restaurant Promotion info from database</response>   
+        </member>
+        <member name="M:RestaurantReservationSystem.API.Controllers.PromotionController.CheckExistingByID(System.Int64)">
+            <summary>
+            Retrieve a specific restaurant Promotion information based on the Promotion ID given.
+            </summary>
+            <param name="id">Promotion ID</param>
+            <returns>
+            A restaurant Promotion information will be returned
+            </returns>
+            <response code="200">A restaurant Promotion object</response>
+            <response code="500">Error Retrieving a restaurant Promotion info from database</response>   
+        </member>
+        <member name="M:RestaurantReservationSystem.API.Controllers.PromotionController.Add(RestaurantReservation.Core.Entities.Promotion)">
+            <summary>
+            Add a new promotion for a restaurant to the database. This checks for duplicate promotions name.
+            </summary>
+            <param name="promotion">Promotion object</param>
+            <returns>
+            No content response which means that a new promotion object has been added to the database.
+            Otherwise, adding new promotion for a restaurant process unable to be conducted.
+            </returns>
+            <response code="200">A Boolean response</response>
+            <response code="500">Error Adding a promotions object information into database</response>   
+        </member>
+        <member name="M:RestaurantReservationSystem.API.Controllers.PromotionController.Update(System.Int64,RestaurantReservation.Core.Entities.Promotion)">
+            <summary>
+            Update an existing restaurant Promotion info in the database. This checks for duplicate name also.
+            </summary>
+            <param name="id">Promotion ID</param>
+            <param name="promotion">Updated Promotion Info</param>
+            <returns>
+            An updated Promotion info will be returned. 
+            Otherwise, here are the following why the updating existing Promotion info process unable to be conducted :
+            If the Promotion name change to existing data and
+            there is another conflict happens when 2 same processes conducting simultaneously.
+            </returns>
+            <response code="200">Updated Promotion object</response>
+            <response code="400">Invalid Promotion ID or Promotion Name exists message</response>
+            <response code="409">Category Version Conflict message</response>
+            <response code="500">Error Updating a Promotion object information from database</response>   
+        </member>
+        <member name="M:RestaurantReservationSystem.API.Controllers.PromotionController.Delete(System.Int64,System.String)">
+            <summary>
+            Remove an existing promotion information from database.
+            </summary>
+            <param name="id">Promotion ID</param>
+            <param name="userID">User ID</param>
+            <returns>
+            No response return back.
+            </returns>
+            <response code="204">Deleting Promotion Result</response>
+            <response code="404">Promotion record not found</response>
+            <response code="500">Error Deleting a Promotion object information from database</response>   
+        </member>
+        <member name="M:RestaurantReservationSystem.API.Controllers.PromotionController.PushEmail(System.Int64)">
+            <summary>
+            Push Email to the Member Subscriber based on Promotion ID given.
+            </summary>
+            <param name="id">Promotion ID</param>
+            <returns>
+            A Boolean response that contains true or false. 
+            If the result if true, the promotion information will be sent to customer via Email.
+            Otherwise, the promotion information valid date has been expired.
+            </returns>
+            <response code="200">A Boolean response</response>
+            <response code="404">Promotion record not found</response>
+        </member>
+        <member name="M:RestaurantReservationSystem.API.Controllers.RestaurantController.GetRestaurantCount">
+            <summary>
+            Retrive the total number of restaurant in database. 
+            </summary>
+            <returns>
+            Number of restaurant will be returned.       
+            </returns>
+            <response code="200">Number of restaurant record</response>
+            <response code="500">Error Retrieving number of restaurant record</response>   
+        </member>
+        <member name="M:RestaurantReservationSystem.API.Controllers.RestaurantController.GetAll">
+            <summary>
+            Get all existing restaurants from the database.
+            </summary>
+            <returns>
+            A list of restaurant with category results will be returned.
+            </returns>
+            <response code="200">A list of restaurant with category</response>
+            <response code="500">Error Retrieving restaurants info from database</response>  
+        </member>
+        <member name="M:RestaurantReservationSystem.API.Controllers.RestaurantController.Get(System.Int64,System.String,System.String)">
+            <summary>
+            Retrieve a specific restaurant with the categories, schedules and promotion information based on the Restaurant ID given.
+            </summary>
+            <param name="id">Restaurant ID</param>
+            <param name="ScheduleStatus">Schedule Status Filter eg: All, Full, Available</param>
+            <param name="PromotionStatus">Promotion Filter eg: All, Available, Unavailable</param>
+            <returns>
+            A restaurant with categories, schedules and promotion information will be returned
+            </returns>
+            <response code="200">A restaurant with categories, schedules and promotions</response>
+            <response code="500">Error Retrieving a restaurant info from database</response>   
+        </member>
+        <member name="M:RestaurantReservationSystem.API.Controllers.RestaurantController.GetEditInfoByID(System.Int64)">
+            <summary>
+            Retrieve a specific restaurant with the categories and schedules information based on the Restaurant ID given.
+            </summary>
+            <param name="id">Restaurant ID</param>
+            <returns>
+            A restaurant with categories selected information will be returned
+            </returns>
+            <response code="200">A restaurant with categories</response>
+            <response code="500">Error Retrieving a restaurant info from database</response>   
+        </member>
+        <member name="M:RestaurantReservationSystem.API.Controllers.RestaurantController.Add(RestaurantReservation.Core.ViewModels.Admins.RestaurantCategoryVM)">
+            <summary>
+            Add a new restaurant (under which category) to the database. This checks for duplicate category name.
+            </summary>
+            <param name="restaurantCategoryVM">RestaurantCategoryVM object</param>
+            <returns>
+            A Boolean response that contains true or false. 
+            If the result if true, a new category object will be added to the database.
+            Otherwise, adding new category process unable to be conducted.
+            </returns>
+            <response code="200">A Boolean response</response>
+            <response code="500">Error Adding a category object information into database</response>   
+        </member>
+        <member name="M:RestaurantReservationSystem.API.Controllers.RestaurantController.Update(System.Int64,RestaurantReservation.Core.ViewModels.Admins.RestaurantCategoryVM)">
+            <summary>
+            Update an existing restaurant in the database. This checks for duplicate restaurant name.
+            </summary>
+            <param name="id">Restaurant ID</param>
+            <param name="restaurantCategoryVM">RestaurantCategoryVM Object</param>
+            <returns>
+            An updated Restaurant will be returned. 
+            Otherwise, here are the following why the updating existing restaurant info process unable to be conducted :
+            If the restaurant name change to existing data and
+            there is another conflict happens when 2 same processes conducting simultaneously.
+            </returns>
+            <response code="200">Updated Restaurant object</response>
+            <response code="400">Invalid Restaurant ID or Restaurant name exists message</response>
+            <response code="409">Category Version Conflict message</response>
+            <response code="500">Error Updating a Restaurant object information from database</response>   
+        </member>
+        <member name="M:RestaurantReservationSystem.API.Controllers.RestaurantController.Delete(System.Int64,System.String)">
+            <summary>
+            Remove an existing restaurant information from database.
+            </summary>
+            <param name="id">Restaurant ID</param>
+            <param name="userID">User ID</param>
+            <returns>
+            No response return back.
+            Otherwise, deactivating Restaurant process unable to be conducted due to Restaurant ID not found.
+            </returns>
+            <response code="204">Updating Restaurant Status Result</response>
+            <response code="404">Restaurant record not found</response>
+            <response code="500">Error Deleting a Restaurant object information from database</response>   
+        </member>
+        <member name="M:RestaurantReservationSystem.API.Controllers.RestaurantController.Delete(System.Int64)">
+            <summary>
+            Remove an existing restaurant information from database, for testing
+            </summary>
+            <param name="id">Restaurant ID</param>
+            <returns>
+            No response return back.
+            Otherwise, deleting Restaurant process unable to be conducted due to Restaurant ID not found.
+            </returns>
+            <response code="204">Deleting Restaurant Success Result</response>
+            <response code="404">Restaurant record not found</response>
+            <response code="500">Error Deleting a Restaurant object information from database</response>   
+        </member>
+        <member name="M:RestaurantReservationSystem.API.Controllers.ScheduleController.GetCount(System.Int64)">
+            <summary>
+            Retrive the total number of schedule of a restaurant in database. 
+            </summary>
+            <param name="restaurantID">Restaurant ID</param>
+            <returns>
+            Number of schedule of a restaurant will be returned.       
+            </returns>
+            <response code="200">Number of schedule of a restaurant record</response>
+            <response code="500">Error Retrieving number of schedule of a restaurant record</response>   
+        </member>
+        <member name="M:RestaurantReservationSystem.API.Controllers.ScheduleController.GetAll(System.Int64)">
+            <summary>
+            Get all existing restaurant schedules from the database for populating drop down list purpose based on Restaurant ID given.
+            </summary>
+            <param name="id">Restaurant ID</param>
+            <returns>
+            A list of restaurant schedules results will be returned.
+            </returns>
+            <response code="200">A list of restaurant schedules</response>
+            <response code="500">Error Retrieving restaurant schedules from database</response>  
+        </member>
+        <member name="M:RestaurantReservationSystem.API.Controllers.ScheduleController.Get(System.Int64)">
+            <summary>
+            Retrieve a specific restaurant schedule information based on the Schedule ID given.
+            </summary>
+            <param name="id">Schedule ID</param>
+            <returns>
+            A restaurant schedule information will be returned
+            </returns>
+            <response code="200">A restaurant schedule object</response>
+            <response code="500">Error Retrieving a restaurant schedule info from database</response>   
+        </member>
+        <member name="M:RestaurantReservationSystem.API.Controllers.ScheduleController.Add(RestaurantReservation.Core.Entities.RestaurantSchedule)">
+            <summary>
+            Add a new schedule for a restaurant to the database. This also check for duplicate session start time.
+            </summary>
+            <param name="restaurantSchedule">restaurantSchedule object</param>
+            <returns>
+            No content response which means that a new schedule object has been added to the database.
+            Otherwise, adding new schedule for a restaurant process unable to be conducted.
+            </returns>
+            <response code="204">No content</response>
+            <response code="500">Error Adding a schedule object information into database</response>   
+        </member>
+        <member name="M:RestaurantReservationSystem.API.Controllers.ScheduleController.Update(System.Int64,RestaurantReservation.Core.Entities.RestaurantSchedule)">
+            <summary>
+            Update an existing restaurant schedule info in the database. This checks for duplicate start time also.
+            </summary>
+            <param name="id">Schedule ID</param>
+            <param name="restaurantSchedule">RestaurantCategoryVM Object</param>
+            <returns>
+            An updated schedule info will be returned. 
+            Otherwise, here are the following why the updating existing schedule info process unable to be conducted :
+            If the schedule name change to existing data and
+            there is another conflict happens when 2 same processes conducting simultaneously.
+            </returns>
+            <response code="200">Updated Schedule object</response>
+            <response code="400">Invalid Schedule ID or Schedule Start Time exists message</response>
+            <response code="409">Category Version Conflict message</response>
+            <response code="500">Error Updating a Schedule object information from database</response>   
+        </member>
+        <member name="M:RestaurantReservationSystem.API.Controllers.ScheduleController.Delete(System.Int64,System.String,System.Int32)">
+            <summary>
+            Remove an existing schedule information from database.
+            </summary>
+            <param name="id">Schedule ID</param>
+            <param name="userID">User ID</param>
+            <param name="status">Status Value Eg: Avaialble(1), Unavailable(4)</param>
+            <returns>
+            No response return back.
+            Otherwise, delete schedule info process unable to be conducted due to other members have been placed reservation on them.
+            </returns>
+            <response code="204">Updating Restaurant Status Result</response>
+            <response code="404">Restaurant record not found</response>
+            <response code="500">Error Deleting a Schedule object information from database</response>   
+        </member>
+        <member name="M:RestaurantReservationSystem.API.Controllers.ScheduleController.Delete(System.Int64)">
+            <summary>
+            Remove an existing restaurant schedule information from database, for testing
+            </summary>
+            <param name="id">Schedule ID</param>
+            <returns>
+            No response return back.
+            Otherwise, deleting Restaurant schedule process unable to be conducted due to schedule ID not found.
+            </returns>
+            <response code="204">Updating Restaurant schedule successfully Result</response>
+            <response code="404">Restaurant schedule record not found</response>
+            <response code="500">Error Deleting a Restaurant schedule object information from database</response>   
+        </member>
+        <member name="M:RestaurantReservationSystem.API.Controllers.UserController.GetAll(System.String)">
+            <summary>
+            Get all existing users info from the database based on the role given.
+            </summary>
+            <param name="role">User Role string, e.g. Admin and Member </param>
+            <returns>
+            A list of users results will be returned.
+            </returns>
+            <response code="200">A list of users</response>
+            <response code="500">Error Retrieving users info from database</response>
+        </member>
+        <member name="M:RestaurantReservationSystem.API.Controllers.UserController.Get(System.String)">
+            <summary>
+            Retrieve a specific user details based on the user ID given.
+            </summary>
+            <param name="userID">User ID</param>
+            <returns>
+            A user details will be returned
+            </returns>
+            <response code="200">A specific user</response>
+            <response code="500">Error Retrieving a user info from database</response> 
+        </member>
+        <member name="M:RestaurantReservationSystem.API.Controllers.UserController.CheckExistingEmail(System.String)">
+            <summary>
+            A validation of User's Email Address Exists in the database
+            </summary>
+            <param name="email"> User's Email Address </param>
+            <returns>
+            A Boolean response that contains true or false. 
+            If the result if true, the user's email address is existing in the database.
+            Otherwise, the email address is free to enter.
+            </returns>
+            <response code="200">An Application User result</response>
+            <response code="500">Error retrieving user's email address</response>   
+        </member>
+        <member name="M:RestaurantReservationSystem.API.Controllers.UserController.ChangePassword(RestaurantReservation.Core.ViewModels.Accounts.ChangePasswordVM)">
+            <summary>
+            Accepts a combination of user ID, current password and new password for password change.
+            </summary>
+            <param name="changePasswordVM"> 
+            ChangePasswordVM object
+            </param>
+            <returns>
+            Returns boolean to indicate success or failure.
+            </returns>
+            <response code="200">Returns boolean object</response>
+            <response code="500">Error Changing User's Password</response> 
+        </member>
+        <member name="M:RestaurantReservationSystem.API.Controllers.UserController.Update(RestaurantReservation.Core.ViewModels.Accounts.ProfileVM)">
+            <summary>
+            Update an existing user information in the database.
+            </summary>
+            <param name="input">ApplicationUser Object</param>
+            <returns>
+            A Boolean response that contains true or false. 
+            If the result if true, the latest user profile details will be updated successfully.
+            Otherwise, update user profile process unable to be conducted.
+            </returns>
+            <response code="200">A Boolean response</response>
+            <response code="404">Invalid user ID</response>
+            <response code="500">Error sending email wiht URL to the user</response> 
+        </member>
+        <member name="M:RestaurantReservationSystem.API.Controllers.UserController.Delete(System.String)">
+            <summary>
+            Remove an existing member registered details from database.
+            </summary>
+            <param name="userID">User ID</param>
+            <returns>
+            No response return back.
+            Otherwise, deleting member record process unable to be conducted due to User ID not found.
+            </returns>
+            <response code="204">Deleting user information successfully</response>
+            <response code="404">User record not found</response>
+            <response code="500">Error Deleting a user object information from database</response>   
+        </member>
+    </members>
+</doc>

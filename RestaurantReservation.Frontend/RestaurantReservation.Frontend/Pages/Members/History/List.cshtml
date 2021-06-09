@@ -1,0 +1,185 @@
+﻿@page
+@using RestaurantReservation.Core.Utils;
+@model RestaurantReservation.Frontend.Pages.Members.History.ListModel
+@{
+    ViewData["Title"] = "Booking History List";
+
+    var status = HttpContext.Request.Query["status"];
+
+    var all = "text-dark";
+    var expired = "text-dark";
+    var pending = "text-dark";
+    var complete = "text-dark";
+
+    switch (status)
+    {
+        case SD.BookingStatus.PENDING:
+            pending = "active";
+            break;
+        case SD.BookingStatus.EXPIRED:
+            expired = "active";
+            break;
+        case SD.BookingStatus.COMPLETE:
+            complete = "active";
+            break;
+        default:
+            all = "active";
+            break;
+    }
+}
+
+
+<div class="card">
+    <div class="card-header">
+        <h3 class="card-title">Bookings</h3>
+    </div>
+    <div class="card-body p-0">
+        <br />
+
+        <form method="post">
+            <div class="row">
+                <div class="col-6">
+                    <ul class="list-group list-group-horizontal-sm" style="margin-left:20px;">
+                        <a style="text-decoration:none;" asp-page="/Members/History/List">
+                            <li class="list-group-item rounded-0 @all">
+                                All
+                            </li>
+                        </a>
+                        <a style="text-decoration:none;" asp-page="/Members/History/List" asp-route-status="@SD.BookingStatus.PENDING">
+                            <li class="list-group-item rounded-0 @pending">
+                                Pending
+                            </li>
+                        </a>
+                        <a style="text-decoration:none;" asp-page="/Members/History/List" asp-route-status="@SD.BookingStatus.EXPIRED">
+                            <li class="list-group-item rounded-0 @expired">
+                                Expired
+                            </li>
+                        </a>
+                        <a style="text-decoration:none;" asp-page="/Members/History/List" asp-route-status="@SD.BookingStatus.COMPLETE">
+                            <li class="list-group-item rounded-0 @complete">
+                                Complete
+                            </li>
+                        </a>
+                    </ul>
+                </div>
+            </div>
+        </form>
+
+        <hr />
+
+        <br />
+        <table class="table table-striped projects text-center">
+            <thead>
+                <tr>
+                    <th style="width: 1%">
+                        No
+                    </th>
+                    <th>Booking Date</th>
+                    <th>Booking Number</th>
+                    <th>Restaurant Name</th>
+                    <th>Booking Session</th>
+                    <th>Number of Person</th>
+                    <th>Check In</th>
+                    <th>Check Out</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                @if (Model.BookingHistoryList != null)
+                {
+                    int count = 1;
+
+                    var bookings = Model.BookingHistoryList.Bookings;
+                    var bookingDetails = Model.BookingHistoryList.BookingDetails;
+
+                    var allBookingDetail = bookings.Zip(bookingDetails, (b, bd) => new { Booking = b, BookingDetail = bd });   /* Iterate 2 lists together in one foreach */
+
+                    foreach (var singleBookingDetail in allBookingDetail)
+                    {
+                        <tr>
+                            <td>
+                                @count
+                            </td>
+                            <td>
+                                @singleBookingDetail.Booking.BookingDate.ToString("dd/MM/yyyy hh:mm tt")
+                            </td>
+                            <td>
+                                @singleBookingDetail.Booking.BookingNo
+                            </td>
+                            <td>
+                                @singleBookingDetail.BookingDetail.RestaurantSchedule.Restaurant.Name
+                            </td>
+                            <td>
+                                @singleBookingDetail.BookingDetail.RestaurantSchedule.ScheduleDate.ToString("dd/MM/yyyy") @singleBookingDetail.BookingDetail.RestaurantSchedule.StartTime.ToString("hh:mm tt") - @singleBookingDetail.BookingDetail.RestaurantSchedule.EndTime.ToString("hh:mm tt")
+                            </td>
+                            <td>
+                                @singleBookingDetail.BookingDetail.Pax
+                            </td>
+                            <td>
+                                @if (singleBookingDetail.Booking.CheckIn.HasValue)
+                                {
+                                    @singleBookingDetail.Booking.CheckIn?.ToString("dd/MM/yyyy hh:mm ttt")
+                                }
+                                else
+                                {
+                                    @: &nbsp;
+                                }
+                            </td>
+                            <td>
+                                @if (singleBookingDetail.Booking.CheckOut.HasValue)
+                                {
+                                    @singleBookingDetail.Booking.CheckOut?.ToString("dd/MM/yyyy hh:mm ttt")
+                                }
+                                else
+                                {
+                                    @: &nbsp;
+                                }
+                            </td>
+                            <td>
+                                @{
+                                    switch (singleBookingDetail.Booking.BookingStatus)
+                                    {
+                                        case SD.BookingStatus.COMPLETE:
+                                            <span class="badge badge-success">Complete</span>
+                                            break;
+                                        case SD.BookingStatus.PENDING:
+                                            <span class="badge badge-primary">Pending</span>
+                                            break;
+                                        case SD.BookingStatus.EXPIRED:
+                                            <span class="badge badge-danger">Expired</span>
+                                            break;
+                                    }
+                                }
+                            </td>
+                        </tr>
+
+                        count++;
+                    }
+                }
+                else
+                {
+                    <tr class="bg-light">
+                        <td colspan="3">
+                            No booking history record found.
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+        <br />
+    </div>
+</div>
+
+
+@section PageHeader {
+    <div class="col-sm-6">
+        <h1 class="m-0">Booking History</h1>
+    </div>
+    <div class="col-sm-6">
+        <ol class="breadcrumb float-sm-right">
+            <li class="breadcrumb-item"><a asp-page="/Index">Home</a></li>
+            <li class="breadcrumb-item active">Booking History</li>
+        </ol>
+    </div>
+}
+

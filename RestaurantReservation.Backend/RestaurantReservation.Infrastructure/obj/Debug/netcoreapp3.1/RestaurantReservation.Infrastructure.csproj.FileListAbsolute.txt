@@ -1,0 +1,15 @@
+C:\Users\MIS\source\repos\Restaurant Reservation Website\RestaurantReservation.Backend\RestaurantReservation.Infrastructure\bin\Debug\netcoreapp3.1\RestaurantReservation.Infrastructure.deps.json
+C:\Users\MIS\source\repos\Restaurant Reservation Website\RestaurantReservation.Backend\RestaurantReservation.Infrastructure\bin\Debug\netcoreapp3.1\RestaurantReservation.Infrastructure.runtimeconfig.json
+C:\Users\MIS\source\repos\Restaurant Reservation Website\RestaurantReservation.Backend\RestaurantReservation.Infrastructure\bin\Debug\netcoreapp3.1\RestaurantReservation.Infrastructure.runtimeconfig.dev.json
+C:\Users\MIS\source\repos\Restaurant Reservation Website\RestaurantReservation.Backend\RestaurantReservation.Infrastructure\bin\Debug\netcoreapp3.1\RestaurantReservation.Infrastructure.dll
+C:\Users\MIS\source\repos\Restaurant Reservation Website\RestaurantReservation.Backend\RestaurantReservation.Infrastructure\bin\Debug\netcoreapp3.1\RestaurantReservation.Infrastructure.pdb
+C:\Users\MIS\source\repos\Restaurant Reservation Website\RestaurantReservation.Backend\RestaurantReservation.Infrastructure\bin\Debug\netcoreapp3.1\RestaurantReservation.Core.dll
+C:\Users\MIS\source\repos\Restaurant Reservation Website\RestaurantReservation.Backend\RestaurantReservation.Infrastructure\bin\Debug\netcoreapp3.1\RestaurantReservation.Core.pdb
+C:\Users\MIS\source\repos\Restaurant Reservation Website\RestaurantReservation.Backend\RestaurantReservation.Infrastructure\obj\Debug\netcoreapp3.1\RestaurantReservation.Infrastructure.csprojAssemblyReference.cache
+C:\Users\MIS\source\repos\Restaurant Reservation Website\RestaurantReservation.Backend\RestaurantReservation.Infrastructure\obj\Debug\netcoreapp3.1\RestaurantReservation.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\MIS\source\repos\Restaurant Reservation Website\RestaurantReservation.Backend\RestaurantReservation.Infrastructure\obj\Debug\netcoreapp3.1\RestaurantReservation.Infrastructure.AssemblyInfo.cs
+C:\Users\MIS\source\repos\Restaurant Reservation Website\RestaurantReservation.Backend\RestaurantReservation.Infrastructure\obj\Debug\netcoreapp3.1\RestaurantReservation.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\MIS\source\repos\Restaurant Reservation Website\RestaurantReservation.Backend\RestaurantReservation.Infrastructure\obj\Debug\netcoreapp3.1\RestaurantReservation.Infrastructure.csproj.CopyComplete
+C:\Users\MIS\source\repos\Restaurant Reservation Website\RestaurantReservation.Backend\RestaurantReservation.Infrastructure\obj\Debug\netcoreapp3.1\RestaurantReservation.Infrastructure.dll
+C:\Users\MIS\source\repos\Restaurant Reservation Website\RestaurantReservation.Backend\RestaurantReservation.Infrastructure\obj\Debug\netcoreapp3.1\RestaurantReservation.Infrastructure.pdb
+C:\Users\MIS\source\repos\Restaurant Reservation Website\RestaurantReservation.Backend\RestaurantReservation.Infrastructure\obj\Debug\netcoreapp3.1\RestaurantReservation.Infrastructure.genruntimeconfig.cache

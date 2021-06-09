@@ -1,0 +1,801 @@
+2021-05-31 12:04:52.6083 | DEBUG |  | init main |  
+2021-05-31 12:04:58.2913 | INFO |  | Application started. Press Ctrl+C to shut down. |  
+2021-05-31 12:04:58.3136 | INFO |  | Hosting environment: Production |  
+2021-05-31 12:04:58.3225 | INFO |  | Content root path: C:\Users\MIS\source\repos\Restaurant Reservation Website\RestaurantReservation.Frontend\RestaurantReservation.Frontend |  
+2021-05-31 12:04:58.6219 | WARN | https://localhost/ | Error unprotecting the session cookie. |  EXCEPTION OCCURRED:System.Security.Cryptography.CryptographicException: The payload was invalid.
+   at Microsoft.AspNetCore.DataProtection.Cng.CbcAuthenticatedEncryptor.DecryptImpl(Byte* pbCiphertext, UInt32 cbCiphertext, Byte* pbAdditionalAuthenticatedData, UInt32 cbAdditionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.Cng.Internal.CngAuthenticatedEncryptorBase.Decrypt(ArraySegment`1 ciphertext, ArraySegment`1 additionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.UnprotectCore(Byte[] protectedData, Boolean allowOperationsOnRevokedKeys, UnprotectStatus& status)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.DangerousUnprotect(Byte[] protectedData, Boolean ignoreRevocationErrors, Boolean& requiresMigration, Boolean& wasRevoked)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.Unprotect(Byte[] protectedData)
+   at Microsoft.AspNetCore.Session.CookieProtection.Unprotect(IDataProtector protector, String protectedText, ILogger logger)
+2021-05-31 12:04:58.8730 | INFO | https://localhost/ | Start processing HTTP request GET https://localhost:44399/api/restaurant |  
+2021-05-31 12:04:58.8821 | INFO | https://localhost/ | Sending HTTP request GET https://localhost:44399/api/restaurant |  
+2021-05-31 12:05:02.2514 | INFO | https://localhost/ | Received HTTP response after 3361.0073ms - OK |  
+2021-05-31 12:05:02.2579 | INFO | https://localhost/ | End processing HTTP request after 3399.1281ms - OK |  
+2021-05-31 12:05:09.5221 | WARN | https://localhost/Account/Login | Error unprotecting the session cookie. |  EXCEPTION OCCURRED:System.Security.Cryptography.CryptographicException: The payload was invalid.
+   at Microsoft.AspNetCore.DataProtection.Cng.CbcAuthenticatedEncryptor.DecryptImpl(Byte* pbCiphertext, UInt32 cbCiphertext, Byte* pbAdditionalAuthenticatedData, UInt32 cbAdditionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.Cng.Internal.CngAuthenticatedEncryptorBase.Decrypt(ArraySegment`1 ciphertext, ArraySegment`1 additionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.UnprotectCore(Byte[] protectedData, Boolean allowOperationsOnRevokedKeys, UnprotectStatus& status)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.DangerousUnprotect(Byte[] protectedData, Boolean ignoreRevocationErrors, Boolean& requiresMigration, Boolean& wasRevoked)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.Unprotect(Byte[] protectedData)
+   at Microsoft.AspNetCore.Session.CookieProtection.Unprotect(IDataProtector protector, String protectedText, ILogger logger)
+2021-05-31 12:05:13.9505 | WARN | https://localhost/Account/Login | Error unprotecting the session cookie. |  EXCEPTION OCCURRED:System.Security.Cryptography.CryptographicException: The payload was invalid.
+   at Microsoft.AspNetCore.DataProtection.Cng.CbcAuthenticatedEncryptor.DecryptImpl(Byte* pbCiphertext, UInt32 cbCiphertext, Byte* pbAdditionalAuthenticatedData, UInt32 cbAdditionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.Cng.Internal.CngAuthenticatedEncryptorBase.Decrypt(ArraySegment`1 ciphertext, ArraySegment`1 additionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.UnprotectCore(Byte[] protectedData, Boolean allowOperationsOnRevokedKeys, UnprotectStatus& status)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.DangerousUnprotect(Byte[] protectedData, Boolean ignoreRevocationErrors, Boolean& requiresMigration, Boolean& wasRevoked)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.Unprotect(Byte[] protectedData)
+   at Microsoft.AspNetCore.Session.CookieProtection.Unprotect(IDataProtector protector, String protectedText, ILogger logger)
+2021-05-31 12:05:14.0054 | INFO | https://localhost/Account/Login | Start processing HTTP request POST https://localhost:44399/api/authenticate/login |  
+2021-05-31 12:05:14.0054 | INFO | https://localhost/Account/Login | Sending HTTP request POST https://localhost:44399/api/authenticate/login |  
+2021-05-31 12:05:14.5631 | INFO | https://localhost/Account/Login | Received HTTP response after 554.83ms - OK |  
+2021-05-31 12:05:14.5631 | INFO | https://localhost/Account/Login | End processing HTTP request after 560.4072ms - OK |  
+2021-05-31 12:05:14.6119 | WARN | https://localhost/Admins/Home | Error unprotecting the session cookie. |  EXCEPTION OCCURRED:System.Security.Cryptography.CryptographicException: The payload was invalid.
+   at Microsoft.AspNetCore.DataProtection.Cng.CbcAuthenticatedEncryptor.DecryptImpl(Byte* pbCiphertext, UInt32 cbCiphertext, Byte* pbAdditionalAuthenticatedData, UInt32 cbAdditionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.Cng.Internal.CngAuthenticatedEncryptorBase.Decrypt(ArraySegment`1 ciphertext, ArraySegment`1 additionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.UnprotectCore(Byte[] protectedData, Boolean allowOperationsOnRevokedKeys, UnprotectStatus& status)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.DangerousUnprotect(Byte[] protectedData, Boolean ignoreRevocationErrors, Boolean& requiresMigration, Boolean& wasRevoked)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.Unprotect(Byte[] protectedData)
+   at Microsoft.AspNetCore.Session.CookieProtection.Unprotect(IDataProtector protector, String protectedText, ILogger logger)
+2021-05-31 12:05:14.6393 | INFO | https://localhost/Admins/Home | Start processing HTTP request GET https://localhost:44399/api/booking/Admin/ListCount |  
+2021-05-31 12:05:14.6393 | INFO | https://localhost/Admins/Home | Sending HTTP request GET https://localhost:44399/api/booking/Admin/ListCount |  
+2021-05-31 12:05:14.6748 | INFO | https://localhost/Admins/Home | Received HTTP response after 32.8295ms - OK |  
+2021-05-31 12:05:14.6774 | INFO | https://localhost/Admins/Home | End processing HTTP request after 38.0624ms - OK |  
+2021-05-31 12:05:14.7063 | INFO | https://localhost/Admins/Home | Start processing HTTP request GET https://localhost:44399/api/booking/Admin/ListCount |  
+2021-05-31 12:05:14.7089 | INFO | https://localhost/Admins/Home | Sending HTTP request GET https://localhost:44399/api/booking/Admin/ListCount |  
+2021-05-31 12:05:14.7292 | INFO | https://localhost/Admins/Home | Received HTTP response after 20.6088ms - OK |  
+2021-05-31 12:05:14.7292 | INFO | https://localhost/Admins/Home | End processing HTTP request after 25.2989ms - OK |  
+2021-05-31 12:05:18.2964 | WARN | https://localhost/Admins/Reservation/List | Error unprotecting the session cookie. |  EXCEPTION OCCURRED:System.Security.Cryptography.CryptographicException: The payload was invalid.
+   at Microsoft.AspNetCore.DataProtection.Cng.CbcAuthenticatedEncryptor.DecryptImpl(Byte* pbCiphertext, UInt32 cbCiphertext, Byte* pbAdditionalAuthenticatedData, UInt32 cbAdditionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.Cng.Internal.CngAuthenticatedEncryptorBase.Decrypt(ArraySegment`1 ciphertext, ArraySegment`1 additionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.UnprotectCore(Byte[] protectedData, Boolean allowOperationsOnRevokedKeys, UnprotectStatus& status)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.DangerousUnprotect(Byte[] protectedData, Boolean ignoreRevocationErrors, Boolean& requiresMigration, Boolean& wasRevoked)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.Unprotect(Byte[] protectedData)
+   at Microsoft.AspNetCore.Session.CookieProtection.Unprotect(IDataProtector protector, String protectedText, ILogger logger)
+2021-05-31 12:05:18.3218 | INFO | https://localhost/Admins/Reservation/List | Start processing HTTP request POST https://localhost:44399/api/authenticate/refreshToken |  
+2021-05-31 12:05:18.3218 | INFO | https://localhost/Admins/Reservation/List | Sending HTTP request POST https://localhost:44399/api/authenticate/refreshToken |  
+2021-05-31 12:05:18.4275 | INFO | https://localhost/Admins/Reservation/List | Received HTTP response after 103.4423ms - OK |  
+2021-05-31 12:05:18.4275 | INFO | https://localhost/Admins/Reservation/List | End processing HTTP request after 108.4121ms - OK |  
+2021-05-31 12:05:18.4571 | INFO | https://localhost/Admins/Reservation/List | Start processing HTTP request GET https://localhost:44399/api/booking/Admin/All |  
+2021-05-31 12:05:18.4594 | INFO | https://localhost/Admins/Reservation/List | Sending HTTP request GET https://localhost:44399/api/booking/Admin/All |  
+2021-05-31 12:05:18.5080 | INFO | https://localhost/Admins/Reservation/List | Received HTTP response after 47.8653ms - OK |  
+2021-05-31 12:05:18.5080 | INFO | https://localhost/Admins/Reservation/List | End processing HTTP request after 53.943ms - OK |  
+2021-05-31 12:05:18.5423 | INFO | https://localhost/Admins/Reservation/List | Start processing HTTP request GET https://localhost:44399/api/booking/Admin/ListCount |  
+2021-05-31 12:05:18.5423 | INFO | https://localhost/Admins/Reservation/List | Sending HTTP request GET https://localhost:44399/api/booking/Admin/ListCount |  
+2021-05-31 12:05:18.5423 | INFO | https://localhost/Admins/Reservation/List | Received HTTP response after 7.2464ms - OK |  
+2021-05-31 12:05:18.5539 | INFO | https://localhost/Admins/Reservation/List | End processing HTTP request after 11.7516ms - OK |  
+2021-05-31 12:05:18.5539 | INFO | https://localhost/Admins/Reservation/List | Start processing HTTP request GET https://localhost:44399/api/booking/Admin/ListCount |  
+2021-05-31 12:05:18.5539 | INFO | https://localhost/Admins/Reservation/List | Sending HTTP request GET https://localhost:44399/api/booking/Admin/ListCount |  
+2021-05-31 12:05:18.5692 | INFO | https://localhost/Admins/Reservation/List | Received HTTP response after 8.6667ms - OK |  
+2021-05-31 12:05:18.5692 | INFO | https://localhost/Admins/Reservation/List | End processing HTTP request after 14.5765ms - OK |  
+2021-05-31 12:05:22.7512 | WARN | https://localhost/Admins/Category/List | Error unprotecting the session cookie. |  EXCEPTION OCCURRED:System.Security.Cryptography.CryptographicException: The payload was invalid.
+   at Microsoft.AspNetCore.DataProtection.Cng.CbcAuthenticatedEncryptor.DecryptImpl(Byte* pbCiphertext, UInt32 cbCiphertext, Byte* pbAdditionalAuthenticatedData, UInt32 cbAdditionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.Cng.Internal.CngAuthenticatedEncryptorBase.Decrypt(ArraySegment`1 ciphertext, ArraySegment`1 additionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.UnprotectCore(Byte[] protectedData, Boolean allowOperationsOnRevokedKeys, UnprotectStatus& status)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.DangerousUnprotect(Byte[] protectedData, Boolean ignoreRevocationErrors, Boolean& requiresMigration, Boolean& wasRevoked)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.Unprotect(Byte[] protectedData)
+   at Microsoft.AspNetCore.Session.CookieProtection.Unprotect(IDataProtector protector, String protectedText, ILogger logger)
+2021-05-31 12:05:22.7715 | INFO | https://localhost/Admins/Category/List | Start processing HTTP request POST https://localhost:44399/api/authenticate/refreshToken |  
+2021-05-31 12:05:22.7715 | INFO | https://localhost/Admins/Category/List | Sending HTTP request POST https://localhost:44399/api/authenticate/refreshToken |  
+2021-05-31 12:05:22.8102 | INFO | https://localhost/Admins/Category/List | Received HTTP response after 34.9651ms - OK |  
+2021-05-31 12:05:22.8102 | INFO | https://localhost/Admins/Category/List | End processing HTTP request after 41.264ms - OK |  
+2021-05-31 12:05:22.8207 | INFO | https://localhost/Admins/Category/List | Start processing HTTP request GET https://localhost:44399/api/category |  
+2021-05-31 12:05:22.8207 | INFO | https://localhost/Admins/Category/List | Sending HTTP request GET https://localhost:44399/api/category |  
+2021-05-31 12:05:22.8447 | INFO | https://localhost/Admins/Category/List | Received HTTP response after 21.7233ms - OK |  
+2021-05-31 12:05:22.8447 | INFO | https://localhost/Admins/Category/List | End processing HTTP request after 26.908ms - OK |  
+2021-05-31 12:05:22.8725 | INFO | https://localhost/Admins/Category/List | Start processing HTTP request GET https://localhost:44399/api/booking/Admin/ListCount |  
+2021-05-31 12:05:22.8725 | INFO | https://localhost/Admins/Category/List | Sending HTTP request GET https://localhost:44399/api/booking/Admin/ListCount |  
+2021-05-31 12:05:22.8819 | INFO | https://localhost/Admins/Category/List | Received HTTP response after 7.0929ms - OK |  
+2021-05-31 12:05:22.8819 | INFO | https://localhost/Admins/Category/List | End processing HTTP request after 11.9552ms - OK |  
+2021-05-31 12:05:22.8819 | INFO | https://localhost/Admins/Category/List | Start processing HTTP request GET https://localhost:44399/api/booking/Admin/ListCount |  
+2021-05-31 12:05:22.8819 | INFO | https://localhost/Admins/Category/List | Sending HTTP request GET https://localhost:44399/api/booking/Admin/ListCount |  
+2021-05-31 12:05:22.8972 | INFO | https://localhost/Admins/Category/List | Received HTTP response after 6.8824ms - OK |  
+2021-05-31 12:05:22.8972 | INFO | https://localhost/Admins/Category/List | End processing HTTP request after 11.3227ms - OK |  
+2021-05-31 12:05:23.9807 | WARN | https://localhost/Admins/Restaurants/List | Error unprotecting the session cookie. |  EXCEPTION OCCURRED:System.Security.Cryptography.CryptographicException: The payload was invalid.
+   at Microsoft.AspNetCore.DataProtection.Cng.CbcAuthenticatedEncryptor.DecryptImpl(Byte* pbCiphertext, UInt32 cbCiphertext, Byte* pbAdditionalAuthenticatedData, UInt32 cbAdditionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.Cng.Internal.CngAuthenticatedEncryptorBase.Decrypt(ArraySegment`1 ciphertext, ArraySegment`1 additionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.UnprotectCore(Byte[] protectedData, Boolean allowOperationsOnRevokedKeys, UnprotectStatus& status)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.DangerousUnprotect(Byte[] protectedData, Boolean ignoreRevocationErrors, Boolean& requiresMigration, Boolean& wasRevoked)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.Unprotect(Byte[] protectedData)
+   at Microsoft.AspNetCore.Session.CookieProtection.Unprotect(IDataProtector protector, String protectedText, ILogger logger)
+2021-05-31 12:05:23.9983 | INFO | https://localhost/Admins/Restaurants/List | Start processing HTTP request POST https://localhost:44399/api/authenticate/refreshToken |  
+2021-05-31 12:05:23.9983 | INFO | https://localhost/Admins/Restaurants/List | Sending HTTP request POST https://localhost:44399/api/authenticate/refreshToken |  
+2021-05-31 12:05:24.0428 | INFO | https://localhost/Admins/Restaurants/List | Received HTTP response after 41.4055ms - OK |  
+2021-05-31 12:05:24.0428 | INFO | https://localhost/Admins/Restaurants/List | End processing HTTP request after 47.8956ms - OK |  
+2021-05-31 12:05:24.0428 | INFO | https://localhost/Admins/Restaurants/List | Start processing HTTP request GET https://localhost:44399/api/restaurant |  
+2021-05-31 12:05:24.0546 | INFO | https://localhost/Admins/Restaurants/List | Sending HTTP request GET https://localhost:44399/api/restaurant |  
+2021-05-31 12:05:24.0546 | INFO | https://localhost/Admins/Restaurants/List | Received HTTP response after 9.9821ms - OK |  
+2021-05-31 12:05:24.0546 | INFO | https://localhost/Admins/Restaurants/List | End processing HTTP request after 14.2749ms - OK |  
+2021-05-31 12:05:24.0741 | INFO | https://localhost/Admins/Restaurants/List | Start processing HTTP request POST https://localhost:44399/api/authenticate/refreshToken |  
+2021-05-31 12:05:24.0741 | INFO | https://localhost/Admins/Restaurants/List | Sending HTTP request POST https://localhost:44399/api/authenticate/refreshToken |  
+2021-05-31 12:05:24.0989 | INFO | https://localhost/Admins/Restaurants/List | Received HTTP response after 22.4807ms - OK |  
+2021-05-31 12:05:24.1009 | INFO | https://localhost/Admins/Restaurants/List | End processing HTTP request after 27.3579ms - OK |  
+2021-05-31 12:05:24.1009 | INFO | https://localhost/Admins/Restaurants/List | Start processing HTTP request GET https://localhost:44399/api/category |  
+2021-05-31 12:05:24.1009 | INFO | https://localhost/Admins/Restaurants/List | Sending HTTP request GET https://localhost:44399/api/category |  
+2021-05-31 12:05:24.1188 | INFO | https://localhost/Admins/Restaurants/List | Received HTTP response after 9.1137ms - OK |  
+2021-05-31 12:05:24.1188 | INFO | https://localhost/Admins/Restaurants/List | End processing HTTP request after 13.8233ms - OK |  
+2021-05-31 12:05:24.1428 | INFO | https://localhost/Admins/Restaurants/List | Start processing HTTP request GET https://localhost:44399/api/booking/Admin/ListCount |  
+2021-05-31 12:05:24.1428 | INFO | https://localhost/Admins/Restaurants/List | Sending HTTP request GET https://localhost:44399/api/booking/Admin/ListCount |  
+2021-05-31 12:05:24.1519 | INFO | https://localhost/Admins/Restaurants/List | Received HTTP response after 6.7944ms - OK |  
+2021-05-31 12:05:24.1519 | INFO | https://localhost/Admins/Restaurants/List | End processing HTTP request after 11.7369ms - OK |  
+2021-05-31 12:05:24.1519 | INFO | https://localhost/Admins/Restaurants/List | Start processing HTTP request GET https://localhost:44399/api/booking/Admin/ListCount |  
+2021-05-31 12:05:24.1519 | INFO | https://localhost/Admins/Restaurants/List | Sending HTTP request GET https://localhost:44399/api/booking/Admin/ListCount |  
+2021-05-31 12:05:24.1661 | INFO | https://localhost/Admins/Restaurants/List | Received HTTP response after 6.747ms - OK |  
+2021-05-31 12:05:24.1661 | INFO | https://localhost/Admins/Restaurants/List | End processing HTTP request after 11.4238ms - OK |  
+2021-05-31 12:05:24.9255 | WARN | https://localhost/Admins/Users/List | Error unprotecting the session cookie. |  EXCEPTION OCCURRED:System.Security.Cryptography.CryptographicException: The payload was invalid.
+   at Microsoft.AspNetCore.DataProtection.Cng.CbcAuthenticatedEncryptor.DecryptImpl(Byte* pbCiphertext, UInt32 cbCiphertext, Byte* pbAdditionalAuthenticatedData, UInt32 cbAdditionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.Cng.Internal.CngAuthenticatedEncryptorBase.Decrypt(ArraySegment`1 ciphertext, ArraySegment`1 additionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.UnprotectCore(Byte[] protectedData, Boolean allowOperationsOnRevokedKeys, UnprotectStatus& status)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.DangerousUnprotect(Byte[] protectedData, Boolean ignoreRevocationErrors, Boolean& requiresMigration, Boolean& wasRevoked)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.Unprotect(Byte[] protectedData)
+   at Microsoft.AspNetCore.Session.CookieProtection.Unprotect(IDataProtector protector, String protectedText, ILogger logger)
+2021-05-31 12:05:24.9381 | INFO | https://localhost/Admins/Users/List | Start processing HTTP request POST https://localhost:44399/api/authenticate/refreshToken |  
+2021-05-31 12:05:24.9381 | INFO | https://localhost/Admins/Users/List | Sending HTTP request POST https://localhost:44399/api/authenticate/refreshToken |  
+2021-05-31 12:05:24.9747 | INFO | https://localhost/Admins/Users/List | Received HTTP response after 33.674ms - OK |  
+2021-05-31 12:05:24.9747 | INFO | https://localhost/Admins/Users/List | End processing HTTP request after 39.6655ms - OK |  
+2021-05-31 12:05:24.9747 | INFO | https://localhost/Admins/Users/List | Start processing HTTP request GET https://localhost:44399/api/user/all |  
+2021-05-31 12:05:24.9747 | INFO | https://localhost/Admins/Users/List | Sending HTTP request GET https://localhost:44399/api/user/all |  
+2021-05-31 12:05:25.0241 | INFO | https://localhost/Admins/Users/List | Received HTTP response after 35.1426ms - OK |  
+2021-05-31 12:05:25.0241 | INFO | https://localhost/Admins/Users/List | End processing HTTP request after 40.3607ms - OK |  
+2021-05-31 12:05:25.0557 | INFO | https://localhost/Admins/Users/List | Start processing HTTP request GET https://localhost:44399/api/booking/Admin/ListCount |  
+2021-05-31 12:05:25.0557 | INFO | https://localhost/Admins/Users/List | Sending HTTP request GET https://localhost:44399/api/booking/Admin/ListCount |  
+2021-05-31 12:05:25.0684 | INFO | https://localhost/Admins/Users/List | Received HTTP response after 9.9775ms - OK |  
+2021-05-31 12:05:25.0684 | INFO | https://localhost/Admins/Users/List | End processing HTTP request after 15.5093ms - OK |  
+2021-05-31 12:05:25.0684 | INFO | https://localhost/Admins/Users/List | Start processing HTTP request GET https://localhost:44399/api/booking/Admin/ListCount |  
+2021-05-31 12:05:25.0684 | INFO | https://localhost/Admins/Users/List | Sending HTTP request GET https://localhost:44399/api/booking/Admin/ListCount |  
+2021-05-31 12:05:25.0883 | INFO | https://localhost/Admins/Users/List | Received HTTP response after 8.5495ms - OK |  
+2021-05-31 12:05:25.0883 | INFO | https://localhost/Admins/Users/List | End processing HTTP request after 16.0312ms - OK |  
+2021-05-31 12:05:27.4947 | WARN | https://localhost/Admins/Users/Create | Error unprotecting the session cookie. |  EXCEPTION OCCURRED:System.Security.Cryptography.CryptographicException: The payload was invalid.
+   at Microsoft.AspNetCore.DataProtection.Cng.CbcAuthenticatedEncryptor.DecryptImpl(Byte* pbCiphertext, UInt32 cbCiphertext, Byte* pbAdditionalAuthenticatedData, UInt32 cbAdditionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.Cng.Internal.CngAuthenticatedEncryptorBase.Decrypt(ArraySegment`1 ciphertext, ArraySegment`1 additionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.UnprotectCore(Byte[] protectedData, Boolean allowOperationsOnRevokedKeys, UnprotectStatus& status)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.DangerousUnprotect(Byte[] protectedData, Boolean ignoreRevocationErrors, Boolean& requiresMigration, Boolean& wasRevoked)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.Unprotect(Byte[] protectedData)
+   at Microsoft.AspNetCore.Session.CookieProtection.Unprotect(IDataProtector protector, String protectedText, ILogger logger)
+2021-05-31 12:05:27.5526 | INFO | https://localhost/Admins/Users/Create | Start processing HTTP request GET https://localhost:44399/api/booking/Admin/ListCount |  
+2021-05-31 12:05:27.5526 | INFO | https://localhost/Admins/Users/Create | Sending HTTP request GET https://localhost:44399/api/booking/Admin/ListCount |  
+2021-05-31 12:05:27.5718 | INFO | https://localhost/Admins/Users/Create | Received HTTP response after 16.3829ms - OK |  
+2021-05-31 12:05:27.5718 | INFO | https://localhost/Admins/Users/Create | End processing HTTP request after 22.7421ms - OK |  
+2021-05-31 12:05:27.5718 | INFO | https://localhost/Admins/Users/Create | Start processing HTTP request GET https://localhost:44399/api/booking/Admin/ListCount |  
+2021-05-31 12:05:27.5833 | INFO | https://localhost/Admins/Users/Create | Sending HTTP request GET https://localhost:44399/api/booking/Admin/ListCount |  
+2021-05-31 12:05:27.5833 | INFO | https://localhost/Admins/Users/Create | Received HTTP response after 8.3594ms - OK |  
+2021-05-31 12:05:27.5833 | INFO | https://localhost/Admins/Users/Create | End processing HTTP request after 14.0966ms - OK |  
+2021-05-31 12:05:30.7397 | WARN | https://localhost/Admins/Users/List | Error unprotecting the session cookie. |  EXCEPTION OCCURRED:System.Security.Cryptography.CryptographicException: The payload was invalid.
+   at Microsoft.AspNetCore.DataProtection.Cng.CbcAuthenticatedEncryptor.DecryptImpl(Byte* pbCiphertext, UInt32 cbCiphertext, Byte* pbAdditionalAuthenticatedData, UInt32 cbAdditionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.Cng.Internal.CngAuthenticatedEncryptorBase.Decrypt(ArraySegment`1 ciphertext, ArraySegment`1 additionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.UnprotectCore(Byte[] protectedData, Boolean allowOperationsOnRevokedKeys, UnprotectStatus& status)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.DangerousUnprotect(Byte[] protectedData, Boolean ignoreRevocationErrors, Boolean& requiresMigration, Boolean& wasRevoked)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.Unprotect(Byte[] protectedData)
+   at Microsoft.AspNetCore.Session.CookieProtection.Unprotect(IDataProtector protector, String protectedText, ILogger logger)
+2021-05-31 12:05:30.7483 | INFO | https://localhost/Admins/Users/List | Start processing HTTP request POST https://localhost:44399/api/authenticate/refreshToken |  
+2021-05-31 12:05:30.7483 | INFO | https://localhost/Admins/Users/List | Sending HTTP request POST https://localhost:44399/api/authenticate/refreshToken |  
+2021-05-31 12:05:30.8025 | INFO | https://localhost/Admins/Users/List | Received HTTP response after 50.6326ms - OK |  
+2021-05-31 12:05:30.8025 | INFO | https://localhost/Admins/Users/List | End processing HTTP request after 58.9866ms - OK |  
+2021-05-31 12:05:30.8025 | INFO | https://localhost/Admins/Users/List | Start processing HTTP request GET https://localhost:44399/api/user/all |  
+2021-05-31 12:05:30.8211 | INFO | https://localhost/Admins/Users/List | Sending HTTP request GET https://localhost:44399/api/user/all |  
+2021-05-31 12:05:30.8414 | INFO | https://localhost/Admins/Users/List | Received HTTP response after 20.6271ms - OK |  
+2021-05-31 12:05:30.8414 | INFO | https://localhost/Admins/Users/List | End processing HTTP request after 27.988ms - OK |  
+2021-05-31 12:05:30.8674 | INFO | https://localhost/Admins/Users/List | Start processing HTTP request GET https://localhost:44399/api/booking/Admin/ListCount |  
+2021-05-31 12:05:30.8674 | INFO | https://localhost/Admins/Users/List | Sending HTTP request GET https://localhost:44399/api/booking/Admin/ListCount |  
+2021-05-31 12:05:30.8832 | INFO | https://localhost/Admins/Users/List | Received HTTP response after 11.9169ms - OK |  
+2021-05-31 12:05:30.8832 | INFO | https://localhost/Admins/Users/List | End processing HTTP request after 19.4064ms - OK |  
+2021-05-31 12:05:30.8832 | INFO | https://localhost/Admins/Users/List | Start processing HTTP request GET https://localhost:44399/api/booking/Admin/ListCount |  
+2021-05-31 12:05:30.8832 | INFO | https://localhost/Admins/Users/List | Sending HTTP request GET https://localhost:44399/api/booking/Admin/ListCount |  
+2021-05-31 12:05:30.9041 | INFO | https://localhost/Admins/Users/List | Received HTTP response after 8.7749ms - OK |  
+2021-05-31 12:05:30.9041 | INFO | https://localhost/Admins/Users/List | End processing HTTP request after 15.2468ms - OK |  
+2021-05-31 12:05:32.1019 | WARN | https://localhost/Admins/Users/List | Error unprotecting the session cookie. |  EXCEPTION OCCURRED:System.Security.Cryptography.CryptographicException: The payload was invalid.
+   at Microsoft.AspNetCore.DataProtection.Cng.CbcAuthenticatedEncryptor.DecryptImpl(Byte* pbCiphertext, UInt32 cbCiphertext, Byte* pbAdditionalAuthenticatedData, UInt32 cbAdditionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.Cng.Internal.CngAuthenticatedEncryptorBase.Decrypt(ArraySegment`1 ciphertext, ArraySegment`1 additionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.UnprotectCore(Byte[] protectedData, Boolean allowOperationsOnRevokedKeys, UnprotectStatus& status)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.DangerousUnprotect(Byte[] protectedData, Boolean ignoreRevocationErrors, Boolean& requiresMigration, Boolean& wasRevoked)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.Unprotect(Byte[] protectedData)
+   at Microsoft.AspNetCore.Session.CookieProtection.Unprotect(IDataProtector protector, String protectedText, ILogger logger)
+2021-05-31 12:05:32.1019 | INFO | https://localhost/Admins/Users/List | Start processing HTTP request POST https://localhost:44399/api/authenticate/refreshToken |  
+2021-05-31 12:05:32.1152 | INFO | https://localhost/Admins/Users/List | Sending HTTP request POST https://localhost:44399/api/authenticate/refreshToken |  
+2021-05-31 12:05:32.1469 | INFO | https://localhost/Admins/Users/List | Received HTTP response after 32.6968ms - OK |  
+2021-05-31 12:05:32.1469 | INFO | https://localhost/Admins/Users/List | End processing HTTP request after 39.5739ms - OK |  
+2021-05-31 12:05:32.1469 | INFO | https://localhost/Admins/Users/List | Start processing HTTP request GET https://localhost:44399/api/user/Admin |  
+2021-05-31 12:05:32.1469 | INFO | https://localhost/Admins/Users/List | Sending HTTP request GET https://localhost:44399/api/user/Admin |  
+2021-05-31 12:05:32.1702 | INFO | https://localhost/Admins/Users/List | Received HTTP response after 13.1615ms - OK |  
+2021-05-31 12:05:32.1702 | INFO | https://localhost/Admins/Users/List | End processing HTTP request after 17.4441ms - OK |  
+2021-05-31 12:05:32.1805 | INFO | https://localhost/Admins/Users/List | Start processing HTTP request GET https://localhost:44399/api/booking/Admin/ListCount |  
+2021-05-31 12:05:32.1805 | INFO | https://localhost/Admins/Users/List | Sending HTTP request GET https://localhost:44399/api/booking/Admin/ListCount |  
+2021-05-31 12:05:32.1805 | INFO | https://localhost/Admins/Users/List | Received HTTP response after 8.1922ms - OK |  
+2021-05-31 12:05:32.1937 | INFO | https://localhost/Admins/Users/List | End processing HTTP request after 12.8707ms - OK |  
+2021-05-31 12:05:32.1937 | INFO | https://localhost/Admins/Users/List | Start processing HTTP request GET https://localhost:44399/api/booking/Admin/ListCount |  
+2021-05-31 12:05:32.1937 | INFO | https://localhost/Admins/Users/List | Sending HTTP request GET https://localhost:44399/api/booking/Admin/ListCount |  
+2021-05-31 12:05:32.1937 | INFO | https://localhost/Admins/Users/List | Received HTTP response after 6.746ms - OK |  
+2021-05-31 12:05:32.2083 | INFO | https://localhost/Admins/Users/List | End processing HTTP request after 11.4794ms - OK |  
+2021-05-31 12:05:33.0304 | WARN | https://localhost/Admins/Users/List | Error unprotecting the session cookie. |  EXCEPTION OCCURRED:System.Security.Cryptography.CryptographicException: The payload was invalid.
+   at Microsoft.AspNetCore.DataProtection.Cng.CbcAuthenticatedEncryptor.DecryptImpl(Byte* pbCiphertext, UInt32 cbCiphertext, Byte* pbAdditionalAuthenticatedData, UInt32 cbAdditionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.Cng.Internal.CngAuthenticatedEncryptorBase.Decrypt(ArraySegment`1 ciphertext, ArraySegment`1 additionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.UnprotectCore(Byte[] protectedData, Boolean allowOperationsOnRevokedKeys, UnprotectStatus& status)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.DangerousUnprotect(Byte[] protectedData, Boolean ignoreRevocationErrors, Boolean& requiresMigration, Boolean& wasRevoked)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.Unprotect(Byte[] protectedData)
+   at Microsoft.AspNetCore.Session.CookieProtection.Unprotect(IDataProtector protector, String protectedText, ILogger logger)
+2021-05-31 12:05:33.0304 | INFO | https://localhost/Admins/Users/List | Start processing HTTP request POST https://localhost:44399/api/authenticate/refreshToken |  
+2021-05-31 12:05:33.0384 | INFO | https://localhost/Admins/Users/List | Sending HTTP request POST https://localhost:44399/api/authenticate/refreshToken |  
+2021-05-31 12:05:33.0716 | INFO | https://localhost/Admins/Users/List | Received HTTP response after 32.3231ms - OK |  
+2021-05-31 12:05:33.0716 | INFO | https://localhost/Admins/Users/List | End processing HTTP request after 39.1107ms - OK |  
+2021-05-31 12:05:33.0847 | INFO | https://localhost/Admins/Users/List | Start processing HTTP request GET https://localhost:44399/api/user/Member |  
+2021-05-31 12:05:33.0847 | INFO | https://localhost/Admins/Users/List | Sending HTTP request GET https://localhost:44399/api/user/Member |  
+2021-05-31 12:05:33.1105 | INFO | https://localhost/Admins/Users/List | Received HTTP response after 22.8774ms - OK |  
+2021-05-31 12:05:33.1105 | INFO | https://localhost/Admins/Users/List | End processing HTTP request after 29.1484ms - OK |  
+2021-05-31 12:05:33.1230 | INFO | https://localhost/Admins/Users/List | Start processing HTTP request GET https://localhost:44399/api/booking/Admin/ListCount |  
+2021-05-31 12:05:33.1230 | INFO | https://localhost/Admins/Users/List | Sending HTTP request GET https://localhost:44399/api/booking/Admin/ListCount |  
+2021-05-31 12:05:33.1547 | INFO | https://localhost/Admins/Users/List | Received HTTP response after 27.9697ms - OK |  
+2021-05-31 12:05:33.1547 | INFO | https://localhost/Admins/Users/List | End processing HTTP request after 35.2359ms - OK |  
+2021-05-31 12:05:33.1618 | INFO | https://localhost/Admins/Users/List | Start processing HTTP request GET https://localhost:44399/api/booking/Admin/ListCount |  
+2021-05-31 12:05:33.1618 | INFO | https://localhost/Admins/Users/List | Sending HTTP request GET https://localhost:44399/api/booking/Admin/ListCount |  
+2021-05-31 12:05:33.1771 | INFO | https://localhost/Admins/Users/List | Received HTTP response after 11.9476ms - OK |  
+2021-05-31 12:05:33.1771 | INFO | https://localhost/Admins/Users/List | End processing HTTP request after 18.0183ms - OK |  
+2021-05-31 12:05:34.4150 | WARN | https://localhost/Admins/Restaurants/List | Error unprotecting the session cookie. |  EXCEPTION OCCURRED:System.Security.Cryptography.CryptographicException: The payload was invalid.
+   at Microsoft.AspNetCore.DataProtection.Cng.CbcAuthenticatedEncryptor.DecryptImpl(Byte* pbCiphertext, UInt32 cbCiphertext, Byte* pbAdditionalAuthenticatedData, UInt32 cbAdditionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.Cng.Internal.CngAuthenticatedEncryptorBase.Decrypt(ArraySegment`1 ciphertext, ArraySegment`1 additionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.UnprotectCore(Byte[] protectedData, Boolean allowOperationsOnRevokedKeys, UnprotectStatus& status)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.DangerousUnprotect(Byte[] protectedData, Boolean ignoreRevocationErrors, Boolean& requiresMigration, Boolean& wasRevoked)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.Unprotect(Byte[] protectedData)
+   at Microsoft.AspNetCore.Session.CookieProtection.Unprotect(IDataProtector protector, String protectedText, ILogger logger)
+2021-05-31 12:05:34.4150 | INFO | https://localhost/Admins/Restaurants/List | Start processing HTTP request POST https://localhost:44399/api/authenticate/refreshToken |  
+2021-05-31 12:05:34.4150 | INFO | https://localhost/Admins/Restaurants/List | Sending HTTP request POST https://localhost:44399/api/authenticate/refreshToken |  
+2021-05-31 12:05:34.4580 | INFO | https://localhost/Admins/Restaurants/List | Received HTTP response after 31.8986ms - OK |  
+2021-05-31 12:05:34.4580 | INFO | https://localhost/Admins/Restaurants/List | End processing HTTP request after 37.7412ms - OK |  
+2021-05-31 12:05:34.4580 | INFO | https://localhost/Admins/Restaurants/List | Start processing HTTP request GET https://localhost:44399/api/restaurant |  
+2021-05-31 12:05:34.4580 | INFO | https://localhost/Admins/Restaurants/List | Sending HTTP request GET https://localhost:44399/api/restaurant |  
+2021-05-31 12:05:34.4866 | INFO | https://localhost/Admins/Restaurants/List | Received HTTP response after 14.8275ms - OK |  
+2021-05-31 12:05:34.4866 | INFO | https://localhost/Admins/Restaurants/List | End processing HTTP request after 20.0363ms - OK |  
+2021-05-31 12:05:34.4962 | INFO | https://localhost/Admins/Restaurants/List | Start processing HTTP request POST https://localhost:44399/api/authenticate/refreshToken |  
+2021-05-31 12:05:34.4962 | INFO | https://localhost/Admins/Restaurants/List | Sending HTTP request POST https://localhost:44399/api/authenticate/refreshToken |  
+2021-05-31 12:05:34.5184 | INFO | https://localhost/Admins/Restaurants/List | Received HTTP response after 17.9971ms - OK |  
+2021-05-31 12:05:34.5184 | INFO | https://localhost/Admins/Restaurants/List | End processing HTTP request after 24.7113ms - OK |  
+2021-05-31 12:05:34.5274 | INFO | https://localhost/Admins/Restaurants/List | Start processing HTTP request GET https://localhost:44399/api/category |  
+2021-05-31 12:05:34.5274 | INFO | https://localhost/Admins/Restaurants/List | Sending HTTP request GET https://localhost:44399/api/category |  
+2021-05-31 12:05:34.5392 | INFO | https://localhost/Admins/Restaurants/List | Received HTTP response after 9.4726ms - OK |  
+2021-05-31 12:05:34.5392 | INFO | https://localhost/Admins/Restaurants/List | End processing HTTP request after 14.4464ms - OK |  
+2021-05-31 12:05:34.5392 | INFO | https://localhost/Admins/Restaurants/List | Start processing HTTP request GET https://localhost:44399/api/booking/Admin/ListCount |  
+2021-05-31 12:05:34.5539 | INFO | https://localhost/Admins/Restaurants/List | Sending HTTP request GET https://localhost:44399/api/booking/Admin/ListCount |  
+2021-05-31 12:05:34.5539 | INFO | https://localhost/Admins/Restaurants/List | Received HTTP response after 12.4472ms - OK |  
+2021-05-31 12:05:34.5692 | INFO | https://localhost/Admins/Restaurants/List | End processing HTTP request after 18.1602ms - OK |  
+2021-05-31 12:05:34.5692 | INFO | https://localhost/Admins/Restaurants/List | Start processing HTTP request GET https://localhost:44399/api/booking/Admin/ListCount |  
+2021-05-31 12:05:34.5692 | INFO | https://localhost/Admins/Restaurants/List | Sending HTTP request GET https://localhost:44399/api/booking/Admin/ListCount |  
+2021-05-31 12:05:34.5949 | INFO | https://localhost/Admins/Restaurants/List | Received HTTP response after 17.0817ms - OK |  
+2021-05-31 12:05:34.5949 | INFO | https://localhost/Admins/Restaurants/List | End processing HTTP request after 24.1434ms - OK |  
+2021-05-31 12:05:37.3179 | WARN | https://localhost/Restaurants/Details | Error unprotecting the session cookie. |  EXCEPTION OCCURRED:System.Security.Cryptography.CryptographicException: The payload was invalid.
+   at Microsoft.AspNetCore.DataProtection.Cng.CbcAuthenticatedEncryptor.DecryptImpl(Byte* pbCiphertext, UInt32 cbCiphertext, Byte* pbAdditionalAuthenticatedData, UInt32 cbAdditionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.Cng.Internal.CngAuthenticatedEncryptorBase.Decrypt(ArraySegment`1 ciphertext, ArraySegment`1 additionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.UnprotectCore(Byte[] protectedData, Boolean allowOperationsOnRevokedKeys, UnprotectStatus& status)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.DangerousUnprotect(Byte[] protectedData, Boolean ignoreRevocationErrors, Boolean& requiresMigration, Boolean& wasRevoked)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.Unprotect(Byte[] protectedData)
+   at Microsoft.AspNetCore.Session.CookieProtection.Unprotect(IDataProtector protector, String protectedText, ILogger logger)
+2021-05-31 12:05:37.3656 | INFO | https://localhost/Restaurants/Details | Start processing HTTP request POST https://localhost:44399/api/authenticate/refreshToken |  
+2021-05-31 12:05:37.3656 | INFO | https://localhost/Restaurants/Details | Sending HTTP request POST https://localhost:44399/api/authenticate/refreshToken |  
+2021-05-31 12:05:37.4037 | INFO | https://localhost/Restaurants/Details | Received HTTP response after 35.052ms - OK |  
+2021-05-31 12:05:37.4037 | INFO | https://localhost/Restaurants/Details | End processing HTTP request after 40.8462ms - OK |  
+2021-05-31 12:05:37.4178 | INFO | https://localhost/Restaurants/Details | Start processing HTTP request GET https://localhost:44399/api/restaurant/3/all/all |  
+2021-05-31 12:05:37.4178 | INFO | https://localhost/Restaurants/Details | Sending HTTP request GET https://localhost:44399/api/restaurant/3/all/all |  
+2021-05-31 12:05:37.5393 | INFO | https://localhost/Restaurants/Details | Received HTTP response after 117.9998ms - OK |  
+2021-05-31 12:05:37.5393 | INFO | https://localhost/Restaurants/Details | End processing HTTP request after 124.2673ms - OK |  
+2021-05-31 12:05:37.5833 | INFO | https://localhost/Restaurants/Details | Start processing HTTP request POST https://localhost:44399/api/authenticate/refreshToken |  
+2021-05-31 12:05:37.5876 | INFO | https://localhost/Restaurants/Details | Sending HTTP request POST https://localhost:44399/api/authenticate/refreshToken |  
+2021-05-31 12:05:37.6097 | INFO | https://localhost/Restaurants/Details | Received HTTP response after 23.2076ms - OK |  
+2021-05-31 12:05:37.6097 | INFO | https://localhost/Restaurants/Details | End processing HTTP request after 29.4366ms - OK |  
+2021-05-31 12:05:37.6195 | INFO | https://localhost/Restaurants/Details | Start processing HTTP request GET https://localhost:44399/api/schedule/All/3 |  
+2021-05-31 12:05:37.6195 | INFO | https://localhost/Restaurants/Details | Sending HTTP request GET https://localhost:44399/api/schedule/All/3 |  
+2021-05-31 12:05:37.6409 | INFO | https://localhost/Restaurants/Details | Received HTTP response after 19.3662ms - OK |  
+2021-05-31 12:05:37.6409 | INFO | https://localhost/Restaurants/Details | End processing HTTP request after 23.7153ms - OK |  
+2021-05-31 12:05:37.6888 | INFO | https://localhost/Restaurants/Details | Start processing HTTP request GET https://localhost:44399/api/booking/Admin/ListCount |  
+2021-05-31 12:05:37.6888 | INFO | https://localhost/Restaurants/Details | Sending HTTP request GET https://localhost:44399/api/booking/Admin/ListCount |  
+2021-05-31 12:05:37.7000 | INFO | https://localhost/Restaurants/Details | Received HTTP response after 8.5568ms - OK |  
+2021-05-31 12:05:37.7000 | INFO | https://localhost/Restaurants/Details | End processing HTTP request after 13.8154ms - OK |  
+2021-05-31 12:05:37.7000 | INFO | https://localhost/Restaurants/Details | Start processing HTTP request GET https://localhost:44399/api/booking/Admin/ListCount |  
+2021-05-31 12:05:37.7083 | INFO | https://localhost/Restaurants/Details | Sending HTTP request GET https://localhost:44399/api/booking/Admin/ListCount |  
+2021-05-31 12:05:37.7083 | INFO | https://localhost/Restaurants/Details | Received HTTP response after 8.708ms - OK |  
+2021-05-31 12:05:37.7083 | INFO | https://localhost/Restaurants/Details | End processing HTTP request after 13.5684ms - OK |  
+2021-05-31 12:05:40.7827 | WARN | https://localhost/Restaurants/Details | Error unprotecting the session cookie. |  EXCEPTION OCCURRED:System.Security.Cryptography.CryptographicException: The payload was invalid.
+   at Microsoft.AspNetCore.DataProtection.Cng.CbcAuthenticatedEncryptor.DecryptImpl(Byte* pbCiphertext, UInt32 cbCiphertext, Byte* pbAdditionalAuthenticatedData, UInt32 cbAdditionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.Cng.Internal.CngAuthenticatedEncryptorBase.Decrypt(ArraySegment`1 ciphertext, ArraySegment`1 additionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.UnprotectCore(Byte[] protectedData, Boolean allowOperationsOnRevokedKeys, UnprotectStatus& status)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.DangerousUnprotect(Byte[] protectedData, Boolean ignoreRevocationErrors, Boolean& requiresMigration, Boolean& wasRevoked)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.Unprotect(Byte[] protectedData)
+   at Microsoft.AspNetCore.Session.CookieProtection.Unprotect(IDataProtector protector, String protectedText, ILogger logger)
+2021-05-31 12:05:40.7882 | INFO | https://localhost/Restaurants/Details | Start processing HTTP request POST https://localhost:44399/api/authenticate/refreshToken |  
+2021-05-31 12:05:40.7882 | INFO | https://localhost/Restaurants/Details | Sending HTTP request POST https://localhost:44399/api/authenticate/refreshToken |  
+2021-05-31 12:05:40.8152 | INFO | https://localhost/Restaurants/Details | Received HTTP response after 24.7247ms - OK |  
+2021-05-31 12:05:40.8179 | INFO | https://localhost/Restaurants/Details | End processing HTTP request after 29.6237ms - OK |  
+2021-05-31 12:05:40.8179 | INFO | https://localhost/Restaurants/Details | Start processing HTTP request GET https://localhost:44399/api/restaurant/3/Available/all |  
+2021-05-31 12:05:40.8179 | INFO | https://localhost/Restaurants/Details | Sending HTTP request GET https://localhost:44399/api/restaurant/3/Available/all |  
+2021-05-31 12:05:40.8449 | INFO | https://localhost/Restaurants/Details | Received HTTP response after 17.4621ms - OK |  
+2021-05-31 12:05:40.8449 | INFO | https://localhost/Restaurants/Details | End processing HTTP request after 23.5572ms - OK |  
+2021-05-31 12:05:40.8576 | INFO | https://localhost/Restaurants/Details | Start processing HTTP request POST https://localhost:44399/api/authenticate/refreshToken |  
+2021-05-31 12:05:40.8576 | INFO | https://localhost/Restaurants/Details | Sending HTTP request POST https://localhost:44399/api/authenticate/refreshToken |  
+2021-05-31 12:05:40.8802 | INFO | https://localhost/Restaurants/Details | Received HTTP response after 20.2342ms - OK |  
+2021-05-31 12:05:40.8827 | INFO | https://localhost/Restaurants/Details | End processing HTTP request after 25.2677ms - OK |  
+2021-05-31 12:05:40.8827 | INFO | https://localhost/Restaurants/Details | Start processing HTTP request GET https://localhost:44399/api/schedule/All/3 |  
+2021-05-31 12:05:40.8827 | INFO | https://localhost/Restaurants/Details | Sending HTTP request GET https://localhost:44399/api/schedule/All/3 |  
+2021-05-31 12:05:40.9012 | INFO | https://localhost/Restaurants/Details | Received HTTP response after 10.4837ms - OK |  
+2021-05-31 12:05:40.9012 | INFO | https://localhost/Restaurants/Details | End processing HTTP request after 14.9351ms - OK |  
+2021-05-31 12:05:40.9012 | INFO | https://localhost/Restaurants/Details | Start processing HTTP request GET https://localhost:44399/api/booking/Admin/ListCount |  
+2021-05-31 12:05:40.9012 | INFO | https://localhost/Restaurants/Details | Sending HTTP request GET https://localhost:44399/api/booking/Admin/ListCount |  
+2021-05-31 12:05:40.9175 | INFO | https://localhost/Restaurants/Details | Received HTTP response after 6.8736ms - OK |  
+2021-05-31 12:05:40.9175 | INFO | https://localhost/Restaurants/Details | End processing HTTP request after 12.0207ms - OK |  
+2021-05-31 12:05:40.9175 | INFO | https://localhost/Restaurants/Details | Start processing HTTP request GET https://localhost:44399/api/booking/Admin/ListCount |  
+2021-05-31 12:05:40.9175 | INFO | https://localhost/Restaurants/Details | Sending HTTP request GET https://localhost:44399/api/booking/Admin/ListCount |  
+2021-05-31 12:05:40.9326 | INFO | https://localhost/Restaurants/Details | Received HTTP response after 7.1956ms - OK |  
+2021-05-31 12:05:40.9326 | INFO | https://localhost/Restaurants/Details | End processing HTTP request after 11.6188ms - OK |  
+2021-05-31 12:05:43.5031 | WARN | https://localhost/Restaurants/Details | Error unprotecting the session cookie. |  EXCEPTION OCCURRED:System.Security.Cryptography.CryptographicException: The payload was invalid.
+   at Microsoft.AspNetCore.DataProtection.Cng.CbcAuthenticatedEncryptor.DecryptImpl(Byte* pbCiphertext, UInt32 cbCiphertext, Byte* pbAdditionalAuthenticatedData, UInt32 cbAdditionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.Cng.Internal.CngAuthenticatedEncryptorBase.Decrypt(ArraySegment`1 ciphertext, ArraySegment`1 additionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.UnprotectCore(Byte[] protectedData, Boolean allowOperationsOnRevokedKeys, UnprotectStatus& status)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.DangerousUnprotect(Byte[] protectedData, Boolean ignoreRevocationErrors, Boolean& requiresMigration, Boolean& wasRevoked)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.Unprotect(Byte[] protectedData)
+   at Microsoft.AspNetCore.Session.CookieProtection.Unprotect(IDataProtector protector, String protectedText, ILogger logger)
+2021-05-31 12:05:43.5123 | INFO | https://localhost/Restaurants/Details | Start processing HTTP request POST https://localhost:44399/api/authenticate/refreshToken |  
+2021-05-31 12:05:43.5123 | INFO | https://localhost/Restaurants/Details | Sending HTTP request POST https://localhost:44399/api/authenticate/refreshToken |  
+2021-05-31 12:05:43.5351 | INFO | https://localhost/Restaurants/Details | Received HTTP response after 20.6241ms - OK |  
+2021-05-31 12:05:43.5376 | INFO | https://localhost/Restaurants/Details | End processing HTTP request after 26.4577ms - OK |  
+2021-05-31 12:05:43.5376 | INFO | https://localhost/Restaurants/Details | Start processing HTTP request GET https://localhost:44399/api/restaurant/3/all/all |  
+2021-05-31 12:05:43.5376 | INFO | https://localhost/Restaurants/Details | Sending HTTP request GET https://localhost:44399/api/restaurant/3/all/all |  
+2021-05-31 12:05:43.5608 | INFO | https://localhost/Restaurants/Details | Received HTTP response after 11.5137ms - OK |  
+2021-05-31 12:05:43.5608 | INFO | https://localhost/Restaurants/Details | End processing HTTP request after 19.008ms - OK |  
+2021-05-31 12:05:43.5749 | INFO | https://localhost/Restaurants/Details | Start processing HTTP request POST https://localhost:44399/api/authenticate/refreshToken |  
+2021-05-31 12:05:43.5749 | INFO | https://localhost/Restaurants/Details | Sending HTTP request POST https://localhost:44399/api/authenticate/refreshToken |  
+2021-05-31 12:05:43.5935 | INFO | https://localhost/Restaurants/Details | Received HTTP response after 15.9077ms - OK |  
+2021-05-31 12:05:43.5935 | INFO | https://localhost/Restaurants/Details | End processing HTTP request after 21.1845ms - OK |  
+2021-05-31 12:05:43.6019 | INFO | https://localhost/Restaurants/Details | Start processing HTTP request GET https://localhost:44399/api/schedule/All/3 |  
+2021-05-31 12:05:43.6019 | INFO | https://localhost/Restaurants/Details | Sending HTTP request GET https://localhost:44399/api/schedule/All/3 |  
+2021-05-31 12:05:43.6019 | INFO | https://localhost/Restaurants/Details | Received HTTP response after 7.5581ms - OK |  
+2021-05-31 12:05:43.6019 | INFO | https://localhost/Restaurants/Details | End processing HTTP request after 11.8701ms - OK |  
+2021-05-31 12:05:43.6197 | INFO | https://localhost/Restaurants/Details | Start processing HTTP request GET https://localhost:44399/api/booking/Admin/ListCount |  
+2021-05-31 12:05:43.6197 | INFO | https://localhost/Restaurants/Details | Sending HTTP request GET https://localhost:44399/api/booking/Admin/ListCount |  
+2021-05-31 12:05:43.6197 | INFO | https://localhost/Restaurants/Details | Received HTTP response after 6.4828ms - OK |  
+2021-05-31 12:05:43.6306 | INFO | https://localhost/Restaurants/Details | End processing HTTP request after 11.6152ms - OK |  
+2021-05-31 12:05:43.6306 | INFO | https://localhost/Restaurants/Details | Start processing HTTP request GET https://localhost:44399/api/booking/Admin/ListCount |  
+2021-05-31 12:05:43.6306 | INFO | https://localhost/Restaurants/Details | Sending HTTP request GET https://localhost:44399/api/booking/Admin/ListCount |  
+2021-05-31 12:05:43.6306 | INFO | https://localhost/Restaurants/Details | Received HTTP response after 7.9475ms - OK |  
+2021-05-31 12:05:43.6462 | INFO | https://localhost/Restaurants/Details | End processing HTTP request after 12.7947ms - OK |  
+2021-05-31 12:05:47.1834 | WARN | https://localhost/Admins/Restaurants/List | Error unprotecting the session cookie. |  EXCEPTION OCCURRED:System.Security.Cryptography.CryptographicException: The payload was invalid.
+   at Microsoft.AspNetCore.DataProtection.Cng.CbcAuthenticatedEncryptor.DecryptImpl(Byte* pbCiphertext, UInt32 cbCiphertext, Byte* pbAdditionalAuthenticatedData, UInt32 cbAdditionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.Cng.Internal.CngAuthenticatedEncryptorBase.Decrypt(ArraySegment`1 ciphertext, ArraySegment`1 additionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.UnprotectCore(Byte[] protectedData, Boolean allowOperationsOnRevokedKeys, UnprotectStatus& status)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.DangerousUnprotect(Byte[] protectedData, Boolean ignoreRevocationErrors, Boolean& requiresMigration, Boolean& wasRevoked)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.Unprotect(Byte[] protectedData)
+   at Microsoft.AspNetCore.Session.CookieProtection.Unprotect(IDataProtector protector, String protectedText, ILogger logger)
+2021-05-31 12:05:47.1834 | INFO | https://localhost/Admins/Restaurants/List | Start processing HTTP request POST https://localhost:44399/api/authenticate/refreshToken |  
+2021-05-31 12:05:47.1834 | INFO | https://localhost/Admins/Restaurants/List | Sending HTTP request POST https://localhost:44399/api/authenticate/refreshToken |  
+2021-05-31 12:05:47.2162 | INFO | https://localhost/Admins/Restaurants/List | Received HTTP response after 25.675ms - OK |  
+2021-05-31 12:05:47.2162 | INFO | https://localhost/Admins/Restaurants/List | End processing HTTP request after 31.1927ms - OK |  
+2021-05-31 12:05:47.2247 | INFO | https://localhost/Admins/Restaurants/List | Start processing HTTP request GET https://localhost:44399/api/restaurant |  
+2021-05-31 12:05:47.2247 | INFO | https://localhost/Admins/Restaurants/List | Sending HTTP request GET https://localhost:44399/api/restaurant |  
+2021-05-31 12:05:47.2247 | INFO | https://localhost/Admins/Restaurants/List | Received HTTP response after 11.2896ms - OK |  
+2021-05-31 12:05:47.2408 | INFO | https://localhost/Admins/Restaurants/List | End processing HTTP request after 16.1322ms - OK |  
+2021-05-31 12:05:47.2408 | INFO | https://localhost/Admins/Restaurants/List | Start processing HTTP request POST https://localhost:44399/api/authenticate/refreshToken |  
+2021-05-31 12:05:47.2408 | INFO | https://localhost/Admins/Restaurants/List | Sending HTTP request POST https://localhost:44399/api/authenticate/refreshToken |  
+2021-05-31 12:05:47.2699 | INFO | https://localhost/Admins/Restaurants/List | Received HTTP response after 19.6658ms - OK |  
+2021-05-31 12:05:47.2728 | INFO | https://localhost/Admins/Restaurants/List | End processing HTTP request after 24.7237ms - OK |  
+2021-05-31 12:05:47.2728 | INFO | https://localhost/Admins/Restaurants/List | Start processing HTTP request GET https://localhost:44399/api/category |  
+2021-05-31 12:05:47.2728 | INFO | https://localhost/Admins/Restaurants/List | Sending HTTP request GET https://localhost:44399/api/category |  
+2021-05-31 12:05:47.2975 | INFO | https://localhost/Admins/Restaurants/List | Received HTTP response after 13.9693ms - OK |  
+2021-05-31 12:05:47.2975 | INFO | https://localhost/Admins/Restaurants/List | End processing HTTP request after 19.8343ms - OK |  
+2021-05-31 12:05:47.3110 | INFO | https://localhost/Admins/Restaurants/List | Start processing HTTP request GET https://localhost:44399/api/booking/Admin/ListCount |  
+2021-05-31 12:05:47.3110 | INFO | https://localhost/Admins/Restaurants/List | Sending HTTP request GET https://localhost:44399/api/booking/Admin/ListCount |  
+2021-05-31 12:05:47.3357 | INFO | https://localhost/Admins/Restaurants/List | Received HTTP response after 20.488ms - OK |  
+2021-05-31 12:05:47.3357 | INFO | https://localhost/Admins/Restaurants/List | End processing HTTP request after 28.9965ms - OK |  
+2021-05-31 12:05:47.3357 | INFO | https://localhost/Admins/Restaurants/List | Start processing HTTP request GET https://localhost:44399/api/booking/Admin/ListCount |  
+2021-05-31 12:05:47.3510 | INFO | https://localhost/Admins/Restaurants/List | Sending HTTP request GET https://localhost:44399/api/booking/Admin/ListCount |  
+2021-05-31 12:05:47.3642 | INFO | https://localhost/Admins/Restaurants/List | Received HTTP response after 12.9983ms - OK |  
+2021-05-31 12:05:47.3642 | INFO | https://localhost/Admins/Restaurants/List | End processing HTTP request after 22.4296ms - OK |  
+2021-05-31 12:05:49.2026 | WARN | https://localhost/Admins/Restaurants/Edit/5 | Error unprotecting the session cookie. |  EXCEPTION OCCURRED:System.Security.Cryptography.CryptographicException: The payload was invalid.
+   at Microsoft.AspNetCore.DataProtection.Cng.CbcAuthenticatedEncryptor.DecryptImpl(Byte* pbCiphertext, UInt32 cbCiphertext, Byte* pbAdditionalAuthenticatedData, UInt32 cbAdditionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.Cng.Internal.CngAuthenticatedEncryptorBase.Decrypt(ArraySegment`1 ciphertext, ArraySegment`1 additionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.UnprotectCore(Byte[] protectedData, Boolean allowOperationsOnRevokedKeys, UnprotectStatus& status)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.DangerousUnprotect(Byte[] protectedData, Boolean ignoreRevocationErrors, Boolean& requiresMigration, Boolean& wasRevoked)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.Unprotect(Byte[] protectedData)
+   at Microsoft.AspNetCore.Session.CookieProtection.Unprotect(IDataProtector protector, String protectedText, ILogger logger)
+2021-05-31 12:05:49.2242 | INFO | https://localhost/Admins/Restaurants/Edit/5 | Start processing HTTP request POST https://localhost:44399/api/authenticate/refreshToken |  
+2021-05-31 12:05:49.2242 | INFO | https://localhost/Admins/Restaurants/Edit/5 | Sending HTTP request POST https://localhost:44399/api/authenticate/refreshToken |  
+2021-05-31 12:05:49.2626 | INFO | https://localhost/Admins/Restaurants/Edit/5 | Received HTTP response after 33.9868ms - OK |  
+2021-05-31 12:05:49.2626 | INFO | https://localhost/Admins/Restaurants/Edit/5 | End processing HTTP request after 42.182ms - OK |  
+2021-05-31 12:05:49.2743 | INFO | https://localhost/Admins/Restaurants/Edit/5 | Start processing HTTP request GET https://localhost:44399/api/category |  
+2021-05-31 12:05:49.2743 | INFO | https://localhost/Admins/Restaurants/Edit/5 | Sending HTTP request GET https://localhost:44399/api/category |  
+2021-05-31 12:05:49.2886 | INFO | https://localhost/Admins/Restaurants/Edit/5 | Received HTTP response after 11.6578ms - OK |  
+2021-05-31 12:05:49.2886 | INFO | https://localhost/Admins/Restaurants/Edit/5 | End processing HTTP request after 17.2141ms - OK |  
+2021-05-31 12:05:49.2886 | INFO | https://localhost/Admins/Restaurants/Edit/5 | Start processing HTTP request GET https://localhost:44399/api/restaurant/EditInfo/5 |  
+2021-05-31 12:05:49.3027 | INFO | https://localhost/Admins/Restaurants/Edit/5 | Sending HTTP request GET https://localhost:44399/api/restaurant/EditInfo/5 |  
+2021-05-31 12:05:49.3027 | INFO | https://localhost/Admins/Restaurants/Edit/5 | Received HTTP response after 15.1808ms - OK |  
+2021-05-31 12:05:49.3200 | INFO | https://localhost/Admins/Restaurants/Edit/5 | End processing HTTP request after 19.8133ms - OK |  
+2021-05-31 12:05:49.3857 | INFO | https://localhost/Admins/Restaurants/Edit/5 | Start processing HTTP request GET https://localhost:44399/api/booking/Admin/ListCount |  
+2021-05-31 12:05:49.3857 | INFO | https://localhost/Admins/Restaurants/Edit/5 | Sending HTTP request GET https://localhost:44399/api/booking/Admin/ListCount |  
+2021-05-31 12:05:49.4041 | INFO | https://localhost/Admins/Restaurants/Edit/5 | Received HTTP response after 15.36ms - OK |  
+2021-05-31 12:05:49.4041 | INFO | https://localhost/Admins/Restaurants/Edit/5 | End processing HTTP request after 20.9386ms - OK |  
+2021-05-31 12:05:49.4117 | INFO | https://localhost/Admins/Restaurants/Edit/5 | Start processing HTTP request GET https://localhost:44399/api/booking/Admin/ListCount |  
+2021-05-31 12:05:49.4117 | INFO | https://localhost/Admins/Restaurants/Edit/5 | Sending HTTP request GET https://localhost:44399/api/booking/Admin/ListCount |  
+2021-05-31 12:05:49.4265 | INFO | https://localhost/Admins/Restaurants/Edit/5 | Received HTTP response after 11.0078ms - OK |  
+2021-05-31 12:05:49.4265 | INFO | https://localhost/Admins/Restaurants/Edit/5 | End processing HTTP request after 19.3537ms - OK |  
+2021-05-31 12:05:51.2716 | WARN | https://localhost/Admins/Restaurants/List | Error unprotecting the session cookie. |  EXCEPTION OCCURRED:System.Security.Cryptography.CryptographicException: The payload was invalid.
+   at Microsoft.AspNetCore.DataProtection.Cng.CbcAuthenticatedEncryptor.DecryptImpl(Byte* pbCiphertext, UInt32 cbCiphertext, Byte* pbAdditionalAuthenticatedData, UInt32 cbAdditionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.Cng.Internal.CngAuthenticatedEncryptorBase.Decrypt(ArraySegment`1 ciphertext, ArraySegment`1 additionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.UnprotectCore(Byte[] protectedData, Boolean allowOperationsOnRevokedKeys, UnprotectStatus& status)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.DangerousUnprotect(Byte[] protectedData, Boolean ignoreRevocationErrors, Boolean& requiresMigration, Boolean& wasRevoked)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.Unprotect(Byte[] protectedData)
+   at Microsoft.AspNetCore.Session.CookieProtection.Unprotect(IDataProtector protector, String protectedText, ILogger logger)
+2021-05-31 12:05:51.2716 | INFO | https://localhost/Admins/Restaurants/List | Start processing HTTP request POST https://localhost:44399/api/authenticate/refreshToken |  
+2021-05-31 12:05:51.2874 | INFO | https://localhost/Admins/Restaurants/List | Sending HTTP request POST https://localhost:44399/api/authenticate/refreshToken |  
+2021-05-31 12:05:51.3207 | INFO | https://localhost/Admins/Restaurants/List | Received HTTP response after 33.8561ms - OK |  
+2021-05-31 12:05:51.3207 | INFO | https://localhost/Admins/Restaurants/List | End processing HTTP request after 40.9854ms - OK |  
+2021-05-31 12:05:51.3207 | INFO | https://localhost/Admins/Restaurants/List | Start processing HTTP request GET https://localhost:44399/api/restaurant |  
+2021-05-31 12:05:51.3344 | INFO | https://localhost/Admins/Restaurants/List | Sending HTTP request GET https://localhost:44399/api/restaurant |  
+2021-05-31 12:05:51.3344 | INFO | https://localhost/Admins/Restaurants/List | Received HTTP response after 9.2939ms - OK |  
+2021-05-31 12:05:51.3344 | INFO | https://localhost/Admins/Restaurants/List | End processing HTTP request after 15.6187ms - OK |  
+2021-05-31 12:05:51.3534 | INFO | https://localhost/Admins/Restaurants/List | Start processing HTTP request POST https://localhost:44399/api/authenticate/refreshToken |  
+2021-05-31 12:05:51.3534 | INFO | https://localhost/Admins/Restaurants/List | Sending HTTP request POST https://localhost:44399/api/authenticate/refreshToken |  
+2021-05-31 12:05:51.3742 | INFO | https://localhost/Admins/Restaurants/List | Received HTTP response after 18.5628ms - OK |  
+2021-05-31 12:05:51.3742 | INFO | https://localhost/Admins/Restaurants/List | End processing HTTP request after 23.1692ms - OK |  
+2021-05-31 12:05:51.3832 | INFO | https://localhost/Admins/Restaurants/List | Start processing HTTP request GET https://localhost:44399/api/category |  
+2021-05-31 12:05:51.3832 | INFO | https://localhost/Admins/Restaurants/List | Sending HTTP request GET https://localhost:44399/api/category |  
+2021-05-31 12:05:51.3963 | INFO | https://localhost/Admins/Restaurants/List | Received HTTP response after 10.391ms - OK |  
+2021-05-31 12:05:51.3963 | INFO | https://localhost/Admins/Restaurants/List | End processing HTTP request after 15.7737ms - OK |  
+2021-05-31 12:05:51.3963 | INFO | https://localhost/Admins/Restaurants/List | Start processing HTTP request GET https://localhost:44399/api/booking/Admin/ListCount |  
+2021-05-31 12:05:51.3963 | INFO | https://localhost/Admins/Restaurants/List | Sending HTTP request GET https://localhost:44399/api/booking/Admin/ListCount |  
+2021-05-31 12:05:51.4167 | INFO | https://localhost/Admins/Restaurants/List | Received HTTP response after 8.0802ms - OK |  
+2021-05-31 12:05:51.4167 | INFO | https://localhost/Admins/Restaurants/List | End processing HTTP request after 13.4297ms - OK |  
+2021-05-31 12:05:51.4167 | INFO | https://localhost/Admins/Restaurants/List | Start processing HTTP request GET https://localhost:44399/api/booking/Admin/ListCount |  
+2021-05-31 12:05:51.4167 | INFO | https://localhost/Admins/Restaurants/List | Sending HTTP request GET https://localhost:44399/api/booking/Admin/ListCount |  
+2021-05-31 12:05:51.4354 | INFO | https://localhost/Admins/Restaurants/List | Received HTTP response after 9.6145ms - OK |  
+2021-05-31 12:05:51.4354 | INFO | https://localhost/Admins/Restaurants/List | End processing HTTP request after 14.9881ms - OK |  
+2021-05-31 12:05:53.5502 | WARN | https://localhost/Admins/Category/List | Error unprotecting the session cookie. |  EXCEPTION OCCURRED:System.Security.Cryptography.CryptographicException: The payload was invalid.
+   at Microsoft.AspNetCore.DataProtection.Cng.CbcAuthenticatedEncryptor.DecryptImpl(Byte* pbCiphertext, UInt32 cbCiphertext, Byte* pbAdditionalAuthenticatedData, UInt32 cbAdditionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.Cng.Internal.CngAuthenticatedEncryptorBase.Decrypt(ArraySegment`1 ciphertext, ArraySegment`1 additionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.UnprotectCore(Byte[] protectedData, Boolean allowOperationsOnRevokedKeys, UnprotectStatus& status)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.DangerousUnprotect(Byte[] protectedData, Boolean ignoreRevocationErrors, Boolean& requiresMigration, Boolean& wasRevoked)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.Unprotect(Byte[] protectedData)
+   at Microsoft.AspNetCore.Session.CookieProtection.Unprotect(IDataProtector protector, String protectedText, ILogger logger)
+2021-05-31 12:05:53.5562 | INFO | https://localhost/Admins/Category/List | Start processing HTTP request POST https://localhost:44399/api/authenticate/refreshToken |  
+2021-05-31 12:05:53.5562 | INFO | https://localhost/Admins/Category/List | Sending HTTP request POST https://localhost:44399/api/authenticate/refreshToken |  
+2021-05-31 12:05:53.5802 | INFO | https://localhost/Admins/Category/List | Received HTTP response after 21.5409ms - OK |  
+2021-05-31 12:05:53.5802 | INFO | https://localhost/Admins/Category/List | End processing HTTP request after 26.6139ms - OK |  
+2021-05-31 12:05:53.5889 | INFO | https://localhost/Admins/Category/List | Start processing HTTP request GET https://localhost:44399/api/category |  
+2021-05-31 12:05:53.5889 | INFO | https://localhost/Admins/Category/List | Sending HTTP request GET https://localhost:44399/api/category |  
+2021-05-31 12:05:53.6047 | INFO | https://localhost/Admins/Category/List | Received HTTP response after 12.8202ms - OK |  
+2021-05-31 12:05:53.6047 | INFO | https://localhost/Admins/Category/List | End processing HTTP request after 18.762ms - OK |  
+2021-05-31 12:05:53.6160 | INFO | https://localhost/Admins/Category/List | Start processing HTTP request GET https://localhost:44399/api/booking/Admin/ListCount |  
+2021-05-31 12:05:53.6160 | INFO | https://localhost/Admins/Category/List | Sending HTTP request GET https://localhost:44399/api/booking/Admin/ListCount |  
+2021-05-31 12:05:53.6160 | INFO | https://localhost/Admins/Category/List | Received HTTP response after 10.4876ms - OK |  
+2021-05-31 12:05:53.6322 | INFO | https://localhost/Admins/Category/List | End processing HTTP request after 16.5513ms - OK |  
+2021-05-31 12:05:53.6322 | INFO | https://localhost/Admins/Category/List | Start processing HTTP request GET https://localhost:44399/api/booking/Admin/ListCount |  
+2021-05-31 12:05:53.6322 | INFO | https://localhost/Admins/Category/List | Sending HTTP request GET https://localhost:44399/api/booking/Admin/ListCount |  
+2021-05-31 12:05:53.6485 | INFO | https://localhost/Admins/Category/List | Received HTTP response after 10.2455ms - OK |  
+2021-05-31 12:05:53.6485 | INFO | https://localhost/Admins/Category/List | End processing HTTP request after 15.9931ms - OK |  
+2021-05-31 12:05:55.0751 | WARN | https://localhost/Admins/Category/Create | Error unprotecting the session cookie. |  EXCEPTION OCCURRED:System.Security.Cryptography.CryptographicException: The payload was invalid.
+   at Microsoft.AspNetCore.DataProtection.Cng.CbcAuthenticatedEncryptor.DecryptImpl(Byte* pbCiphertext, UInt32 cbCiphertext, Byte* pbAdditionalAuthenticatedData, UInt32 cbAdditionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.Cng.Internal.CngAuthenticatedEncryptorBase.Decrypt(ArraySegment`1 ciphertext, ArraySegment`1 additionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.UnprotectCore(Byte[] protectedData, Boolean allowOperationsOnRevokedKeys, UnprotectStatus& status)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.DangerousUnprotect(Byte[] protectedData, Boolean ignoreRevocationErrors, Boolean& requiresMigration, Boolean& wasRevoked)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.Unprotect(Byte[] protectedData)
+   at Microsoft.AspNetCore.Session.CookieProtection.Unprotect(IDataProtector protector, String protectedText, ILogger logger)
+2021-05-31 12:05:55.1042 | INFO | https://localhost/Admins/Category/Create | Start processing HTTP request GET https://localhost:44399/api/booking/Admin/ListCount |  
+2021-05-31 12:05:55.1042 | INFO | https://localhost/Admins/Category/Create | Sending HTTP request GET https://localhost:44399/api/booking/Admin/ListCount |  
+2021-05-31 12:05:55.1167 | INFO | https://localhost/Admins/Category/Create | Received HTTP response after 9.7104ms - OK |  
+2021-05-31 12:05:55.1167 | INFO | https://localhost/Admins/Category/Create | End processing HTTP request after 15.1915ms - OK |  
+2021-05-31 12:05:55.1167 | INFO | https://localhost/Admins/Category/Create | Start processing HTTP request GET https://localhost:44399/api/booking/Admin/ListCount |  
+2021-05-31 12:05:55.1167 | INFO | https://localhost/Admins/Category/Create | Sending HTTP request GET https://localhost:44399/api/booking/Admin/ListCount |  
+2021-05-31 12:05:55.1323 | INFO | https://localhost/Admins/Category/Create | Received HTTP response after 7.7195ms - OK |  
+2021-05-31 12:05:55.1323 | INFO | https://localhost/Admins/Category/Create | End processing HTTP request after 12.2134ms - OK |  
+2021-05-31 12:05:56.1189 | WARN | https://localhost/Admins/Category/List | Error unprotecting the session cookie. |  EXCEPTION OCCURRED:System.Security.Cryptography.CryptographicException: The payload was invalid.
+   at Microsoft.AspNetCore.DataProtection.Cng.CbcAuthenticatedEncryptor.DecryptImpl(Byte* pbCiphertext, UInt32 cbCiphertext, Byte* pbAdditionalAuthenticatedData, UInt32 cbAdditionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.Cng.Internal.CngAuthenticatedEncryptorBase.Decrypt(ArraySegment`1 ciphertext, ArraySegment`1 additionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.UnprotectCore(Byte[] protectedData, Boolean allowOperationsOnRevokedKeys, UnprotectStatus& status)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.DangerousUnprotect(Byte[] protectedData, Boolean ignoreRevocationErrors, Boolean& requiresMigration, Boolean& wasRevoked)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.Unprotect(Byte[] protectedData)
+   at Microsoft.AspNetCore.Session.CookieProtection.Unprotect(IDataProtector protector, String protectedText, ILogger logger)
+2021-05-31 12:05:56.1189 | INFO | https://localhost/Admins/Category/List | Start processing HTTP request POST https://localhost:44399/api/authenticate/refreshToken |  
+2021-05-31 12:05:56.1342 | INFO | https://localhost/Admins/Category/List | Sending HTTP request POST https://localhost:44399/api/authenticate/refreshToken |  
+2021-05-31 12:05:56.1676 | INFO | https://localhost/Admins/Category/List | Received HTTP response after 38.4653ms - OK |  
+2021-05-31 12:05:56.1676 | INFO | https://localhost/Admins/Category/List | End processing HTTP request after 45.4832ms - OK |  
+2021-05-31 12:05:56.1783 | INFO | https://localhost/Admins/Category/List | Start processing HTTP request GET https://localhost:44399/api/category |  
+2021-05-31 12:05:56.1783 | INFO | https://localhost/Admins/Category/List | Sending HTTP request GET https://localhost:44399/api/category |  
+2021-05-31 12:05:56.1783 | INFO | https://localhost/Admins/Category/List | Received HTTP response after 10.7342ms - OK |  
+2021-05-31 12:05:56.1963 | INFO | https://localhost/Admins/Category/List | End processing HTTP request after 17.4424ms - OK |  
+2021-05-31 12:05:56.1963 | INFO | https://localhost/Admins/Category/List | Start processing HTTP request GET https://localhost:44399/api/booking/Admin/ListCount |  
+2021-05-31 12:05:56.1963 | INFO | https://localhost/Admins/Category/List | Sending HTTP request GET https://localhost:44399/api/booking/Admin/ListCount |  
+2021-05-31 12:05:56.2157 | INFO | https://localhost/Admins/Category/List | Received HTTP response after 9.403ms - OK |  
+2021-05-31 12:05:56.2157 | INFO | https://localhost/Admins/Category/List | End processing HTTP request after 15.6507ms - OK |  
+2021-05-31 12:05:56.2157 | INFO | https://localhost/Admins/Category/List | Start processing HTTP request GET https://localhost:44399/api/booking/Admin/ListCount |  
+2021-05-31 12:05:56.2273 | INFO | https://localhost/Admins/Category/List | Sending HTTP request GET https://localhost:44399/api/booking/Admin/ListCount |  
+2021-05-31 12:05:56.2273 | INFO | https://localhost/Admins/Category/List | Received HTTP response after 10.0751ms - OK |  
+2021-05-31 12:05:56.2273 | INFO | https://localhost/Admins/Category/List | End processing HTTP request after 16.3616ms - OK |  
+2021-05-31 12:05:57.3890 | WARN | https://localhost/Admins/Category/Details/5 | Error unprotecting the session cookie. |  EXCEPTION OCCURRED:System.Security.Cryptography.CryptographicException: The payload was invalid.
+   at Microsoft.AspNetCore.DataProtection.Cng.CbcAuthenticatedEncryptor.DecryptImpl(Byte* pbCiphertext, UInt32 cbCiphertext, Byte* pbAdditionalAuthenticatedData, UInt32 cbAdditionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.Cng.Internal.CngAuthenticatedEncryptorBase.Decrypt(ArraySegment`1 ciphertext, ArraySegment`1 additionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.UnprotectCore(Byte[] protectedData, Boolean allowOperationsOnRevokedKeys, UnprotectStatus& status)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.DangerousUnprotect(Byte[] protectedData, Boolean ignoreRevocationErrors, Boolean& requiresMigration, Boolean& wasRevoked)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.Unprotect(Byte[] protectedData)
+   at Microsoft.AspNetCore.Session.CookieProtection.Unprotect(IDataProtector protector, String protectedText, ILogger logger)
+2021-05-31 12:05:57.4019 | INFO | https://localhost/Admins/Category/Details/5 | Start processing HTTP request POST https://localhost:44399/api/authenticate/refreshToken |  
+2021-05-31 12:05:57.4019 | INFO | https://localhost/Admins/Category/Details/5 | Sending HTTP request POST https://localhost:44399/api/authenticate/refreshToken |  
+2021-05-31 12:05:57.4334 | INFO | https://localhost/Admins/Category/Details/5 | Received HTTP response after 28.2268ms - OK |  
+2021-05-31 12:05:57.4334 | INFO | https://localhost/Admins/Category/Details/5 | End processing HTTP request after 34.6944ms - OK |  
+2021-05-31 12:05:57.4486 | INFO | https://localhost/Admins/Category/Details/5 | Start processing HTTP request GET https://localhost:44399/api/category/5 |  
+2021-05-31 12:05:57.4486 | INFO | https://localhost/Admins/Category/Details/5 | Sending HTTP request GET https://localhost:44399/api/category/5 |  
+2021-05-31 12:05:57.4782 | INFO | https://localhost/Admins/Category/Details/5 | Received HTTP response after 24.9571ms - OK |  
+2021-05-31 12:05:57.4782 | INFO | https://localhost/Admins/Category/Details/5 | End processing HTTP request after 35.006ms - OK |  
+2021-05-31 12:05:57.5061 | INFO | https://localhost/Admins/Category/Details/5 | Start processing HTTP request GET https://localhost:44399/api/booking/Admin/ListCount |  
+2021-05-31 12:05:57.5061 | INFO | https://localhost/Admins/Category/Details/5 | Sending HTTP request GET https://localhost:44399/api/booking/Admin/ListCount |  
+2021-05-31 12:05:57.5061 | INFO | https://localhost/Admins/Category/Details/5 | Received HTTP response after 10.0832ms - OK |  
+2021-05-31 12:05:57.5212 | INFO | https://localhost/Admins/Category/Details/5 | End processing HTTP request after 14.9923ms - OK |  
+2021-05-31 12:05:57.5212 | INFO | https://localhost/Admins/Category/Details/5 | Start processing HTTP request GET https://localhost:44399/api/booking/Admin/ListCount |  
+2021-05-31 12:05:57.5212 | INFO | https://localhost/Admins/Category/Details/5 | Sending HTTP request GET https://localhost:44399/api/booking/Admin/ListCount |  
+2021-05-31 12:05:57.5384 | INFO | https://localhost/Admins/Category/Details/5 | Received HTTP response after 11.3374ms - OK |  
+2021-05-31 12:05:57.5384 | INFO | https://localhost/Admins/Category/Details/5 | End processing HTTP request after 16.5461ms - OK |  
+2021-05-31 12:05:58.6691 | WARN | https://localhost/Admins/Category/List | Error unprotecting the session cookie. |  EXCEPTION OCCURRED:System.Security.Cryptography.CryptographicException: The payload was invalid.
+   at Microsoft.AspNetCore.DataProtection.Cng.CbcAuthenticatedEncryptor.DecryptImpl(Byte* pbCiphertext, UInt32 cbCiphertext, Byte* pbAdditionalAuthenticatedData, UInt32 cbAdditionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.Cng.Internal.CngAuthenticatedEncryptorBase.Decrypt(ArraySegment`1 ciphertext, ArraySegment`1 additionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.UnprotectCore(Byte[] protectedData, Boolean allowOperationsOnRevokedKeys, UnprotectStatus& status)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.DangerousUnprotect(Byte[] protectedData, Boolean ignoreRevocationErrors, Boolean& requiresMigration, Boolean& wasRevoked)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.Unprotect(Byte[] protectedData)
+   at Microsoft.AspNetCore.Session.CookieProtection.Unprotect(IDataProtector protector, String protectedText, ILogger logger)
+2021-05-31 12:05:58.6691 | INFO | https://localhost/Admins/Category/List | Start processing HTTP request POST https://localhost:44399/api/authenticate/refreshToken |  
+2021-05-31 12:05:58.6816 | INFO | https://localhost/Admins/Category/List | Sending HTTP request POST https://localhost:44399/api/authenticate/refreshToken |  
+2021-05-31 12:05:58.7063 | INFO | https://localhost/Admins/Category/List | Received HTTP response after 28.8491ms - OK |  
+2021-05-31 12:05:58.7089 | INFO | https://localhost/Admins/Category/List | End processing HTTP request after 34.6235ms - OK |  
+2021-05-31 12:05:58.7089 | INFO | https://localhost/Admins/Category/List | Start processing HTTP request GET https://localhost:44399/api/category |  
+2021-05-31 12:05:58.7089 | INFO | https://localhost/Admins/Category/List | Sending HTTP request GET https://localhost:44399/api/category |  
+2021-05-31 12:05:58.7313 | INFO | https://localhost/Admins/Category/List | Received HTTP response after 11.3716ms - OK |  
+2021-05-31 12:05:58.7313 | INFO | https://localhost/Admins/Category/List | End processing HTTP request after 16.3134ms - OK |  
+2021-05-31 12:05:58.7409 | INFO | https://localhost/Admins/Category/List | Start processing HTTP request GET https://localhost:44399/api/booking/Admin/ListCount |  
+2021-05-31 12:05:58.7409 | INFO | https://localhost/Admins/Category/List | Sending HTTP request GET https://localhost:44399/api/booking/Admin/ListCount |  
+2021-05-31 12:05:58.7409 | INFO | https://localhost/Admins/Category/List | Received HTTP response after 8.8929ms - OK |  
+2021-05-31 12:05:58.7557 | INFO | https://localhost/Admins/Category/List | End processing HTTP request after 15.3046ms - OK |  
+2021-05-31 12:05:58.7557 | INFO | https://localhost/Admins/Category/List | Start processing HTTP request GET https://localhost:44399/api/booking/Admin/ListCount |  
+2021-05-31 12:05:58.7557 | INFO | https://localhost/Admins/Category/List | Sending HTTP request GET https://localhost:44399/api/booking/Admin/ListCount |  
+2021-05-31 12:05:58.7734 | INFO | https://localhost/Admins/Category/List | Received HTTP response after 11.4265ms - OK |  
+2021-05-31 12:05:58.7734 | INFO | https://localhost/Admins/Category/List | End processing HTTP request after 16.8869ms - OK |  
+2021-05-31 12:05:59.5717 | WARN | https://localhost/Admins/Category/Edit/5 | Error unprotecting the session cookie. |  EXCEPTION OCCURRED:System.Security.Cryptography.CryptographicException: The payload was invalid.
+   at Microsoft.AspNetCore.DataProtection.Cng.CbcAuthenticatedEncryptor.DecryptImpl(Byte* pbCiphertext, UInt32 cbCiphertext, Byte* pbAdditionalAuthenticatedData, UInt32 cbAdditionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.Cng.Internal.CngAuthenticatedEncryptorBase.Decrypt(ArraySegment`1 ciphertext, ArraySegment`1 additionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.UnprotectCore(Byte[] protectedData, Boolean allowOperationsOnRevokedKeys, UnprotectStatus& status)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.DangerousUnprotect(Byte[] protectedData, Boolean ignoreRevocationErrors, Boolean& requiresMigration, Boolean& wasRevoked)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.Unprotect(Byte[] protectedData)
+   at Microsoft.AspNetCore.Session.CookieProtection.Unprotect(IDataProtector protector, String protectedText, ILogger logger)
+2021-05-31 12:05:59.5717 | INFO | https://localhost/Admins/Category/Edit/5 | Start processing HTTP request POST https://localhost:44399/api/authenticate/refreshToken |  
+2021-05-31 12:05:59.5854 | INFO | https://localhost/Admins/Category/Edit/5 | Sending HTTP request POST https://localhost:44399/api/authenticate/refreshToken |  
+2021-05-31 12:05:59.6042 | INFO | https://localhost/Admins/Category/Edit/5 | Received HTTP response after 18.777ms - OK |  
+2021-05-31 12:05:59.6042 | INFO | https://localhost/Admins/Category/Edit/5 | End processing HTTP request after 23.6145ms - OK |  
+2021-05-31 12:05:59.6147 | INFO | https://localhost/Admins/Category/Edit/5 | Start processing HTTP request GET https://localhost:44399/api/category/5 |  
+2021-05-31 12:05:59.6147 | INFO | https://localhost/Admins/Category/Edit/5 | Sending HTTP request GET https://localhost:44399/api/category/5 |  
+2021-05-31 12:05:59.6147 | INFO | https://localhost/Admins/Category/Edit/5 | Received HTTP response after 10.8305ms - OK |  
+2021-05-31 12:05:59.6343 | INFO | https://localhost/Admins/Category/Edit/5 | End processing HTTP request after 17.886ms - OK |  
+2021-05-31 12:05:59.6728 | INFO | https://localhost/Admins/Category/Edit/5 | Start processing HTTP request GET https://localhost:44399/api/booking/Admin/ListCount |  
+2021-05-31 12:05:59.6728 | INFO | https://localhost/Admins/Category/Edit/5 | Sending HTTP request GET https://localhost:44399/api/booking/Admin/ListCount |  
+2021-05-31 12:05:59.6885 | INFO | https://localhost/Admins/Category/Edit/5 | Received HTTP response after 12.6998ms - OK |  
+2021-05-31 12:05:59.6885 | INFO | https://localhost/Admins/Category/Edit/5 | End processing HTTP request after 18.4675ms - OK |  
+2021-05-31 12:05:59.6980 | INFO | https://localhost/Admins/Category/Edit/5 | Start processing HTTP request GET https://localhost:44399/api/booking/Admin/ListCount |  
+2021-05-31 12:05:59.6980 | INFO | https://localhost/Admins/Category/Edit/5 | Sending HTTP request GET https://localhost:44399/api/booking/Admin/ListCount |  
+2021-05-31 12:05:59.7088 | INFO | https://localhost/Admins/Category/Edit/5 | Received HTTP response after 8.1135ms - OK |  
+2021-05-31 12:05:59.7088 | INFO | https://localhost/Admins/Category/Edit/5 | End processing HTTP request after 15.1697ms - OK |  
+2021-05-31 12:06:01.1898 | WARN | https://localhost/Admins/Category/List | Error unprotecting the session cookie. |  EXCEPTION OCCURRED:System.Security.Cryptography.CryptographicException: The payload was invalid.
+   at Microsoft.AspNetCore.DataProtection.Cng.CbcAuthenticatedEncryptor.DecryptImpl(Byte* pbCiphertext, UInt32 cbCiphertext, Byte* pbAdditionalAuthenticatedData, UInt32 cbAdditionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.Cng.Internal.CngAuthenticatedEncryptorBase.Decrypt(ArraySegment`1 ciphertext, ArraySegment`1 additionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.UnprotectCore(Byte[] protectedData, Boolean allowOperationsOnRevokedKeys, UnprotectStatus& status)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.DangerousUnprotect(Byte[] protectedData, Boolean ignoreRevocationErrors, Boolean& requiresMigration, Boolean& wasRevoked)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.Unprotect(Byte[] protectedData)
+   at Microsoft.AspNetCore.Session.CookieProtection.Unprotect(IDataProtector protector, String protectedText, ILogger logger)
+2021-05-31 12:06:01.1948 | INFO | https://localhost/Admins/Category/List | Start processing HTTP request POST https://localhost:44399/api/authenticate/refreshToken |  
+2021-05-31 12:06:01.1948 | INFO | https://localhost/Admins/Category/List | Sending HTTP request POST https://localhost:44399/api/authenticate/refreshToken |  
+2021-05-31 12:06:01.2261 | INFO | https://localhost/Admins/Category/List | Received HTTP response after 25.7958ms - OK |  
+2021-05-31 12:06:01.2261 | INFO | https://localhost/Admins/Category/List | End processing HTTP request after 35.3618ms - OK |  
+2021-05-31 12:06:01.2261 | INFO | https://localhost/Admins/Category/List | Start processing HTTP request GET https://localhost:44399/api/category |  
+2021-05-31 12:06:01.2422 | INFO | https://localhost/Admins/Category/List | Sending HTTP request GET https://localhost:44399/api/category |  
+2021-05-31 12:06:01.2550 | INFO | https://localhost/Admins/Category/List | Received HTTP response after 13.3112ms - OK |  
+2021-05-31 12:06:01.2550 | INFO | https://localhost/Admins/Category/List | End processing HTTP request after 18.7095ms - OK |  
+2021-05-31 12:06:01.2550 | INFO | https://localhost/Admins/Category/List | Start processing HTTP request GET https://localhost:44399/api/booking/Admin/ListCount |  
+2021-05-31 12:06:01.2550 | INFO | https://localhost/Admins/Category/List | Sending HTTP request GET https://localhost:44399/api/booking/Admin/ListCount |  
+2021-05-31 12:06:01.2793 | INFO | https://localhost/Admins/Category/List | Received HTTP response after 8.393ms - OK |  
+2021-05-31 12:06:01.2793 | INFO | https://localhost/Admins/Category/List | End processing HTTP request after 14.2505ms - OK |  
+2021-05-31 12:06:01.2793 | INFO | https://localhost/Admins/Category/List | Start processing HTTP request GET https://localhost:44399/api/booking/Admin/ListCount |  
+2021-05-31 12:06:01.2876 | INFO | https://localhost/Admins/Category/List | Sending HTTP request GET https://localhost:44399/api/booking/Admin/ListCount |  
+2021-05-31 12:06:01.2876 | INFO | https://localhost/Admins/Category/List | Received HTTP response after 10.1734ms - OK |  
+2021-05-31 12:06:01.2876 | INFO | https://localhost/Admins/Category/List | End processing HTTP request after 15.9042ms - OK |  
+2021-05-31 12:06:03.9799 | WARN | https://localhost/Admins/Users/List | Error unprotecting the session cookie. |  EXCEPTION OCCURRED:System.Security.Cryptography.CryptographicException: The payload was invalid.
+   at Microsoft.AspNetCore.DataProtection.Cng.CbcAuthenticatedEncryptor.DecryptImpl(Byte* pbCiphertext, UInt32 cbCiphertext, Byte* pbAdditionalAuthenticatedData, UInt32 cbAdditionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.Cng.Internal.CngAuthenticatedEncryptorBase.Decrypt(ArraySegment`1 ciphertext, ArraySegment`1 additionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.UnprotectCore(Byte[] protectedData, Boolean allowOperationsOnRevokedKeys, UnprotectStatus& status)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.DangerousUnprotect(Byte[] protectedData, Boolean ignoreRevocationErrors, Boolean& requiresMigration, Boolean& wasRevoked)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.Unprotect(Byte[] protectedData)
+   at Microsoft.AspNetCore.Session.CookieProtection.Unprotect(IDataProtector protector, String protectedText, ILogger logger)
+2021-05-31 12:06:03.9799 | INFO | https://localhost/Admins/Users/List | Start processing HTTP request POST https://localhost:44399/api/authenticate/refreshToken |  
+2021-05-31 12:06:03.9799 | INFO | https://localhost/Admins/Users/List | Sending HTTP request POST https://localhost:44399/api/authenticate/refreshToken |  
+2021-05-31 12:06:04.0088 | INFO | https://localhost/Admins/Users/List | Received HTTP response after 20.488ms - OK |  
+2021-05-31 12:06:04.0088 | INFO | https://localhost/Admins/Users/List | End processing HTTP request after 25.7333ms - OK |  
+2021-05-31 12:06:04.0088 | INFO | https://localhost/Admins/Users/List | Start processing HTTP request GET https://localhost:44399/api/user/all |  
+2021-05-31 12:06:04.0088 | INFO | https://localhost/Admins/Users/List | Sending HTTP request GET https://localhost:44399/api/user/all |  
+2021-05-31 12:06:04.0327 | INFO | https://localhost/Admins/Users/List | Received HTTP response after 12.5177ms - OK |  
+2021-05-31 12:06:04.0327 | INFO | https://localhost/Admins/Users/List | End processing HTTP request after 17.3528ms - OK |  
+2021-05-31 12:06:04.0417 | INFO | https://localhost/Admins/Users/List | Start processing HTTP request GET https://localhost:44399/api/booking/Admin/ListCount |  
+2021-05-31 12:06:04.0417 | INFO | https://localhost/Admins/Users/List | Sending HTTP request GET https://localhost:44399/api/booking/Admin/ListCount |  
+2021-05-31 12:06:04.0544 | INFO | https://localhost/Admins/Users/List | Received HTTP response after 9.227ms - OK |  
+2021-05-31 12:06:04.0544 | INFO | https://localhost/Admins/Users/List | End processing HTTP request after 15.2132ms - OK |  
+2021-05-31 12:06:04.0544 | INFO | https://localhost/Admins/Users/List | Start processing HTTP request GET https://localhost:44399/api/booking/Admin/ListCount |  
+2021-05-31 12:06:04.0544 | INFO | https://localhost/Admins/Users/List | Sending HTTP request GET https://localhost:44399/api/booking/Admin/ListCount |  
+2021-05-31 12:06:04.0696 | INFO | https://localhost/Admins/Users/List | Received HTTP response after 6.7439ms - OK |  
+2021-05-31 12:06:04.0696 | INFO | https://localhost/Admins/Users/List | End processing HTTP request after 11.7039ms - OK |  
+2021-05-31 12:06:05.4662 | WARN | https://localhost/Admins/Users/List | Error unprotecting the session cookie. |  EXCEPTION OCCURRED:System.Security.Cryptography.CryptographicException: The payload was invalid.
+   at Microsoft.AspNetCore.DataProtection.Cng.CbcAuthenticatedEncryptor.DecryptImpl(Byte* pbCiphertext, UInt32 cbCiphertext, Byte* pbAdditionalAuthenticatedData, UInt32 cbAdditionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.Cng.Internal.CngAuthenticatedEncryptorBase.Decrypt(ArraySegment`1 ciphertext, ArraySegment`1 additionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.UnprotectCore(Byte[] protectedData, Boolean allowOperationsOnRevokedKeys, UnprotectStatus& status)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.DangerousUnprotect(Byte[] protectedData, Boolean ignoreRevocationErrors, Boolean& requiresMigration, Boolean& wasRevoked)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.Unprotect(Byte[] protectedData)
+   at Microsoft.AspNetCore.Session.CookieProtection.Unprotect(IDataProtector protector, String protectedText, ILogger logger)
+2021-05-31 12:06:05.4662 | INFO | https://localhost/Admins/Users/List | Start processing HTTP request POST https://localhost:44399/api/authenticate/refreshToken |  
+2021-05-31 12:06:05.4762 | INFO | https://localhost/Admins/Users/List | Sending HTTP request POST https://localhost:44399/api/authenticate/refreshToken |  
+2021-05-31 12:06:05.4959 | INFO | https://localhost/Admins/Users/List | Received HTTP response after 20.1575ms - OK |  
+2021-05-31 12:06:05.4959 | INFO | https://localhost/Admins/Users/List | End processing HTTP request after 25.6552ms - OK |  
+2021-05-31 12:06:05.4959 | INFO | https://localhost/Admins/Users/List | Start processing HTTP request GET https://localhost:44399/api/user/Admin |  
+2021-05-31 12:06:05.5052 | INFO | https://localhost/Admins/Users/List | Sending HTTP request GET https://localhost:44399/api/user/Admin |  
+2021-05-31 12:06:05.5052 | INFO | https://localhost/Admins/Users/List | Received HTTP response after 10.9407ms - OK |  
+2021-05-31 12:06:05.5052 | INFO | https://localhost/Admins/Users/List | End processing HTTP request after 15.0072ms - OK |  
+2021-05-31 12:06:05.5246 | INFO | https://localhost/Admins/Users/List | Start processing HTTP request GET https://localhost:44399/api/booking/Admin/ListCount |  
+2021-05-31 12:06:05.5246 | INFO | https://localhost/Admins/Users/List | Sending HTTP request GET https://localhost:44399/api/booking/Admin/ListCount |  
+2021-05-31 12:06:05.5246 | INFO | https://localhost/Admins/Users/List | Received HTTP response after 7.5861ms - OK |  
+2021-05-31 12:06:05.5379 | INFO | https://localhost/Admins/Users/List | End processing HTTP request after 12.9606ms - OK |  
+2021-05-31 12:06:05.5379 | INFO | https://localhost/Admins/Users/List | Start processing HTTP request GET https://localhost:44399/api/booking/Admin/ListCount |  
+2021-05-31 12:06:05.5379 | INFO | https://localhost/Admins/Users/List | Sending HTTP request GET https://localhost:44399/api/booking/Admin/ListCount |  
+2021-05-31 12:06:05.5546 | INFO | https://localhost/Admins/Users/List | Received HTTP response after 10.078ms - OK |  
+2021-05-31 12:06:05.5546 | INFO | https://localhost/Admins/Users/List | End processing HTTP request after 16.4546ms - OK |  
+2021-05-31 12:06:08.2915 | WARN | https://localhost/Admins/Home | Error unprotecting the session cookie. |  EXCEPTION OCCURRED:System.Security.Cryptography.CryptographicException: The payload was invalid.
+   at Microsoft.AspNetCore.DataProtection.Cng.CbcAuthenticatedEncryptor.DecryptImpl(Byte* pbCiphertext, UInt32 cbCiphertext, Byte* pbAdditionalAuthenticatedData, UInt32 cbAdditionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.Cng.Internal.CngAuthenticatedEncryptorBase.Decrypt(ArraySegment`1 ciphertext, ArraySegment`1 additionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.UnprotectCore(Byte[] protectedData, Boolean allowOperationsOnRevokedKeys, UnprotectStatus& status)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.DangerousUnprotect(Byte[] protectedData, Boolean ignoreRevocationErrors, Boolean& requiresMigration, Boolean& wasRevoked)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.Unprotect(Byte[] protectedData)
+   at Microsoft.AspNetCore.Session.CookieProtection.Unprotect(IDataProtector protector, String protectedText, ILogger logger)
+2021-05-31 12:06:08.2915 | INFO | https://localhost/Admins/Home | Start processing HTTP request GET https://localhost:44399/api/booking/Admin/ListCount |  
+2021-05-31 12:06:08.3022 | INFO | https://localhost/Admins/Home | Sending HTTP request GET https://localhost:44399/api/booking/Admin/ListCount |  
+2021-05-31 12:06:08.3022 | INFO | https://localhost/Admins/Home | Received HTTP response after 13.0311ms - OK |  
+2021-05-31 12:06:08.3022 | INFO | https://localhost/Admins/Home | End processing HTTP request after 18.5593ms - OK |  
+2021-05-31 12:06:08.3207 | INFO | https://localhost/Admins/Home | Start processing HTTP request GET https://localhost:44399/api/booking/Admin/ListCount |  
+2021-05-31 12:06:08.3207 | INFO | https://localhost/Admins/Home | Sending HTTP request GET https://localhost:44399/api/booking/Admin/ListCount |  
+2021-05-31 12:06:08.3207 | INFO | https://localhost/Admins/Home | Received HTTP response after 8.7331ms - OK |  
+2021-05-31 12:06:08.3349 | INFO | https://localhost/Admins/Home | End processing HTTP request after 14.5909ms - OK |  
+2021-05-31 12:06:09.1299 | WARN | https://localhost/Account/Profile | Error unprotecting the session cookie. |  EXCEPTION OCCURRED:System.Security.Cryptography.CryptographicException: The payload was invalid.
+   at Microsoft.AspNetCore.DataProtection.Cng.CbcAuthenticatedEncryptor.DecryptImpl(Byte* pbCiphertext, UInt32 cbCiphertext, Byte* pbAdditionalAuthenticatedData, UInt32 cbAdditionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.Cng.Internal.CngAuthenticatedEncryptorBase.Decrypt(ArraySegment`1 ciphertext, ArraySegment`1 additionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.UnprotectCore(Byte[] protectedData, Boolean allowOperationsOnRevokedKeys, UnprotectStatus& status)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.DangerousUnprotect(Byte[] protectedData, Boolean ignoreRevocationErrors, Boolean& requiresMigration, Boolean& wasRevoked)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.Unprotect(Byte[] protectedData)
+   at Microsoft.AspNetCore.Session.CookieProtection.Unprotect(IDataProtector protector, String protectedText, ILogger logger)
+2021-05-31 12:06:09.1299 | INFO | https://localhost/Account/Profile | Start processing HTTP request POST https://localhost:44399/api/authenticate/refreshToken |  
+2021-05-31 12:06:09.1299 | INFO | https://localhost/Account/Profile | Sending HTTP request POST https://localhost:44399/api/authenticate/refreshToken |  
+2021-05-31 12:06:09.1664 | INFO | https://localhost/Account/Profile | Received HTTP response after 22.8523ms - OK |  
+2021-05-31 12:06:09.1664 | INFO | https://localhost/Account/Profile | End processing HTTP request after 29.9511ms - OK |  
+2021-05-31 12:06:09.1809 | INFO | https://localhost/Account/Profile | Start processing HTTP request GET https://localhost:44399/api/user/info/15340864-a91e-460d-aa8d-92b84aee2396 |  
+2021-05-31 12:06:09.1809 | INFO | https://localhost/Account/Profile | Sending HTTP request GET https://localhost:44399/api/user/info/15340864-a91e-460d-aa8d-92b84aee2396 |  
+2021-05-31 12:06:09.2024 | INFO | https://localhost/Account/Profile | Received HTTP response after 18.708ms - OK |  
+2021-05-31 12:06:09.2024 | INFO | https://localhost/Account/Profile | End processing HTTP request after 26.2047ms - OK |  
+2021-05-31 12:06:09.2381 | INFO | https://localhost/Account/Profile | Start processing HTTP request GET https://localhost:44399/api/booking/Admin/ListCount |  
+2021-05-31 12:06:09.2408 | INFO | https://localhost/Account/Profile | Sending HTTP request GET https://localhost:44399/api/booking/Admin/ListCount |  
+2021-05-31 12:06:09.2408 | INFO | https://localhost/Account/Profile | Received HTTP response after 8.0237ms - OK |  
+2021-05-31 12:06:09.2408 | INFO | https://localhost/Account/Profile | End processing HTTP request after 12.5933ms - OK |  
+2021-05-31 12:06:09.2408 | INFO | https://localhost/Account/Profile | Start processing HTTP request GET https://localhost:44399/api/booking/Admin/ListCount |  
+2021-05-31 12:06:09.2408 | INFO | https://localhost/Account/Profile | Sending HTTP request GET https://localhost:44399/api/booking/Admin/ListCount |  
+2021-05-31 12:06:09.2616 | INFO | https://localhost/Account/Profile | Received HTTP response after 6.293ms - OK |  
+2021-05-31 12:06:09.2616 | INFO | https://localhost/Account/Profile | End processing HTTP request after 10.7343ms - OK |  
+2021-05-31 12:06:11.8429 | WARN | https://localhost/Account/Logout | Error unprotecting the session cookie. |  EXCEPTION OCCURRED:System.Security.Cryptography.CryptographicException: The payload was invalid.
+   at Microsoft.AspNetCore.DataProtection.Cng.CbcAuthenticatedEncryptor.DecryptImpl(Byte* pbCiphertext, UInt32 cbCiphertext, Byte* pbAdditionalAuthenticatedData, UInt32 cbAdditionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.Cng.Internal.CngAuthenticatedEncryptorBase.Decrypt(ArraySegment`1 ciphertext, ArraySegment`1 additionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.UnprotectCore(Byte[] protectedData, Boolean allowOperationsOnRevokedKeys, UnprotectStatus& status)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.DangerousUnprotect(Byte[] protectedData, Boolean ignoreRevocationErrors, Boolean& requiresMigration, Boolean& wasRevoked)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.Unprotect(Byte[] protectedData)
+   at Microsoft.AspNetCore.Session.CookieProtection.Unprotect(IDataProtector protector, String protectedText, ILogger logger)
+2021-05-31 12:06:11.8577 | INFO | https://localhost/ | Start processing HTTP request GET https://localhost:44399/api/restaurant |  
+2021-05-31 12:06:11.8577 | INFO | https://localhost/ | Sending HTTP request GET https://localhost:44399/api/restaurant |  
+2021-05-31 12:06:11.8706 | INFO | https://localhost/ | Received HTTP response after 10.4361ms - OK |  
+2021-05-31 12:06:11.8706 | INFO | https://localhost/ | End processing HTTP request after 15.85ms - OK |  
+2021-05-31 12:06:18.0561 | INFO | https://localhost/Account/Login | Start processing HTTP request POST https://localhost:44399/api/authenticate/login |  
+2021-05-31 12:06:18.0561 | INFO | https://localhost/Account/Login | Sending HTTP request POST https://localhost:44399/api/authenticate/login |  
+2021-05-31 12:06:18.0916 | INFO | https://localhost/Account/Login | Received HTTP response after 33.3319ms - OK |  
+2021-05-31 12:06:18.0916 | INFO | https://localhost/Account/Login | End processing HTTP request after 37.812ms - OK |  
+2021-05-31 12:06:18.1053 | INFO | https://localhost/ | Start processing HTTP request GET https://localhost:44399/api/restaurant |  
+2021-05-31 12:06:18.1053 | INFO | https://localhost/ | Sending HTTP request GET https://localhost:44399/api/restaurant |  
+2021-05-31 12:06:18.1176 | INFO | https://localhost/ | Received HTTP response after 9.6276ms - OK |  
+2021-05-31 12:06:18.1176 | INFO | https://localhost/ | End processing HTTP request after 14.5406ms - OK |  
+2021-05-31 12:06:20.5835 | INFO | https://localhost/Restaurants/Details | Start processing HTTP request POST https://localhost:44399/api/authenticate/refreshToken |  
+2021-05-31 12:06:20.5835 | INFO | https://localhost/Restaurants/Details | Sending HTTP request POST https://localhost:44399/api/authenticate/refreshToken |  
+2021-05-31 12:06:20.6137 | INFO | https://localhost/Restaurants/Details | Received HTTP response after 27.6878ms - OK |  
+2021-05-31 12:06:20.6168 | INFO | https://localhost/Restaurants/Details | End processing HTTP request after 35.1968ms - OK |  
+2021-05-31 12:06:20.6168 | INFO | https://localhost/Restaurants/Details | Start processing HTTP request GET https://localhost:44399/api/restaurant/5/all/all |  
+2021-05-31 12:06:20.6168 | INFO | https://localhost/Restaurants/Details | Sending HTTP request GET https://localhost:44399/api/restaurant/5/all/all |  
+2021-05-31 12:06:20.6394 | INFO | https://localhost/Restaurants/Details | Received HTTP response after 14.5275ms - OK |  
+2021-05-31 12:06:20.6394 | INFO | https://localhost/Restaurants/Details | End processing HTTP request after 19.6733ms - OK |  
+2021-05-31 12:06:20.6566 | INFO | https://localhost/Restaurants/Details | Start processing HTTP request POST https://localhost:44399/api/authenticate/refreshToken |  
+2021-05-31 12:06:20.6566 | INFO | https://localhost/Restaurants/Details | Sending HTTP request POST https://localhost:44399/api/authenticate/refreshToken |  
+2021-05-31 12:06:20.6774 | INFO | https://localhost/Restaurants/Details | Received HTTP response after 18.0297ms - OK |  
+2021-05-31 12:06:20.6774 | INFO | https://localhost/Restaurants/Details | End processing HTTP request after 23.3232ms - OK |  
+2021-05-31 12:06:20.6774 | INFO | https://localhost/Restaurants/Details | Start processing HTTP request GET https://localhost:44399/api/schedule/All/5 |  
+2021-05-31 12:06:20.6774 | INFO | https://localhost/Restaurants/Details | Sending HTTP request GET https://localhost:44399/api/schedule/All/5 |  
+2021-05-31 12:06:20.6976 | INFO | https://localhost/Restaurants/Details | Received HTTP response after 8.2437ms - OK |  
+2021-05-31 12:06:20.6976 | INFO | https://localhost/Restaurants/Details | End processing HTTP request after 13.1548ms - OK |  
+2021-05-31 12:06:23.0803 | INFO | https://localhost/ | Start processing HTTP request GET https://localhost:44399/api/restaurant |  
+2021-05-31 12:06:23.0862 | INFO | https://localhost/ | Sending HTTP request GET https://localhost:44399/api/restaurant |  
+2021-05-31 12:06:23.0862 | INFO | https://localhost/ | Received HTTP response after 12.5491ms - OK |  
+2021-05-31 12:06:23.0990 | INFO | https://localhost/ | End processing HTTP request after 20.4873ms - OK |  
+2021-05-31 12:06:25.6521 | INFO | https://localhost/Restaurants/Details | Start processing HTTP request POST https://localhost:44399/api/authenticate/refreshToken |  
+2021-05-31 12:06:25.6521 | INFO | https://localhost/Restaurants/Details | Sending HTTP request POST https://localhost:44399/api/authenticate/refreshToken |  
+2021-05-31 12:06:25.6750 | INFO | https://localhost/Restaurants/Details | Received HTTP response after 19.7496ms - OK |  
+2021-05-31 12:06:25.6780 | INFO | https://localhost/Restaurants/Details | End processing HTTP request after 26.0123ms - OK |  
+2021-05-31 12:06:25.6780 | INFO | https://localhost/Restaurants/Details | Start processing HTTP request GET https://localhost:44399/api/restaurant/1/all/all |  
+2021-05-31 12:06:25.6780 | INFO | https://localhost/Restaurants/Details | Sending HTTP request GET https://localhost:44399/api/restaurant/1/all/all |  
+2021-05-31 12:06:25.6985 | INFO | https://localhost/Restaurants/Details | Received HTTP response after 12.2267ms - OK |  
+2021-05-31 12:06:25.6985 | INFO | https://localhost/Restaurants/Details | End processing HTTP request after 16.4525ms - OK |  
+2021-05-31 12:06:25.7127 | INFO | https://localhost/Restaurants/Details | Start processing HTTP request POST https://localhost:44399/api/authenticate/refreshToken |  
+2021-05-31 12:06:25.7127 | INFO | https://localhost/Restaurants/Details | Sending HTTP request POST https://localhost:44399/api/authenticate/refreshToken |  
+2021-05-31 12:06:25.7292 | INFO | https://localhost/Restaurants/Details | Received HTTP response after 14.2148ms - OK |  
+2021-05-31 12:06:25.7292 | INFO | https://localhost/Restaurants/Details | End processing HTTP request after 19.2175ms - OK |  
+2021-05-31 12:06:25.7292 | INFO | https://localhost/Restaurants/Details | Start processing HTTP request GET https://localhost:44399/api/schedule/All/1 |  
+2021-05-31 12:06:25.7292 | INFO | https://localhost/Restaurants/Details | Sending HTTP request GET https://localhost:44399/api/schedule/All/1 |  
+2021-05-31 12:06:25.7476 | INFO | https://localhost/Restaurants/Details | Received HTTP response after 8.9284ms - OK |  
+2021-05-31 12:06:25.7476 | INFO | https://localhost/Restaurants/Details | End processing HTTP request after 13.502ms - OK |  
+2021-05-31 12:06:29.0999 | INFO | https://localhost/ | Start processing HTTP request GET https://localhost:44399/api/restaurant |  
+2021-05-31 12:06:29.0999 | INFO | https://localhost/ | Sending HTTP request GET https://localhost:44399/api/restaurant |  
+2021-05-31 12:06:29.1155 | INFO | https://localhost/ | Received HTTP response after 12.577ms - OK |  
+2021-05-31 12:06:29.1155 | INFO | https://localhost/ | End processing HTTP request after 18.5546ms - OK |  
+2021-05-31 12:06:35.0939 | INFO | https://localhost/Account/Login | Start processing HTTP request POST https://localhost:44399/api/authenticate/login |  
+2021-05-31 12:06:35.0939 | INFO | https://localhost/Account/Login | Sending HTTP request POST https://localhost:44399/api/authenticate/login |  
+2021-05-31 12:06:35.1334 | INFO | https://localhost/Account/Login | Received HTTP response after 36.5454ms - OK |  
+2021-05-31 12:06:35.1334 | INFO | https://localhost/Account/Login | End processing HTTP request after 41.9625ms - OK |  
+2021-05-31 12:06:35.1499 | INFO | https://localhost/Admins/Home | Start processing HTTP request GET https://localhost:44399/api/booking/Admin/ListCount |  
+2021-05-31 12:06:35.1499 | INFO | https://localhost/Admins/Home | Sending HTTP request GET https://localhost:44399/api/booking/Admin/ListCount |  
+2021-05-31 12:06:35.1628 | INFO | https://localhost/Admins/Home | Received HTTP response after 10.0944ms - OK |  
+2021-05-31 12:06:35.1628 | INFO | https://localhost/Admins/Home | End processing HTTP request after 17.1198ms - OK |  
+2021-05-31 12:06:35.1628 | INFO | https://localhost/Admins/Home | Start processing HTTP request GET https://localhost:44399/api/booking/Admin/ListCount |  
+2021-05-31 12:06:35.1628 | INFO | https://localhost/Admins/Home | Sending HTTP request GET https://localhost:44399/api/booking/Admin/ListCount |  
+2021-05-31 12:06:35.1852 | INFO | https://localhost/Admins/Home | Received HTTP response after 11.2836ms - OK |  
+2021-05-31 12:06:35.1852 | INFO | https://localhost/Admins/Home | End processing HTTP request after 17.6147ms - OK |  
+2021-05-31 12:06:38.0567 | INFO | https://localhost/Admins/Users/List | Start processing HTTP request POST https://localhost:44399/api/authenticate/refreshToken |  
+2021-05-31 12:06:38.0567 | INFO | https://localhost/Admins/Users/List | Sending HTTP request POST https://localhost:44399/api/authenticate/refreshToken |  
+2021-05-31 12:06:38.0879 | INFO | https://localhost/Admins/Users/List | Received HTTP response after 28.3146ms - OK |  
+2021-05-31 12:06:38.0879 | INFO | https://localhost/Admins/Users/List | End processing HTTP request after 37.0839ms - OK |  
+2021-05-31 12:06:38.0879 | INFO | https://localhost/Admins/Users/List | Start processing HTTP request GET https://localhost:44399/api/user/all |  
+2021-05-31 12:06:38.0994 | INFO | https://localhost/Admins/Users/List | Sending HTTP request GET https://localhost:44399/api/user/all |  
+2021-05-31 12:06:38.0994 | INFO | https://localhost/Admins/Users/List | Received HTTP response after 12.0083ms - OK |  
+2021-05-31 12:06:38.1158 | INFO | https://localhost/Admins/Users/List | End processing HTTP request after 20.2951ms - OK |  
+2021-05-31 12:06:38.1158 | INFO | https://localhost/Admins/Users/List | Start processing HTTP request GET https://localhost:44399/api/booking/Admin/ListCount |  
+2021-05-31 12:06:38.1158 | INFO | https://localhost/Admins/Users/List | Sending HTTP request GET https://localhost:44399/api/booking/Admin/ListCount |  
+2021-05-31 12:06:38.1328 | INFO | https://localhost/Admins/Users/List | Received HTTP response after 7.8891ms - OK |  
+2021-05-31 12:06:38.1328 | INFO | https://localhost/Admins/Users/List | End processing HTTP request after 12.5041ms - OK |  
+2021-05-31 12:06:38.1328 | INFO | https://localhost/Admins/Users/List | Start processing HTTP request GET https://localhost:44399/api/booking/Admin/ListCount |  
+2021-05-31 12:06:38.1328 | INFO | https://localhost/Admins/Users/List | Sending HTTP request GET https://localhost:44399/api/booking/Admin/ListCount |  
+2021-05-31 12:06:38.1486 | INFO | https://localhost/Admins/Users/List | Received HTTP response after 7.242ms - OK |  
+2021-05-31 12:06:38.1486 | INFO | https://localhost/Admins/Users/List | End processing HTTP request after 12.1077ms - OK |  
+2021-05-31 12:29:50.9492 | DEBUG |  | init main |  
+2021-05-31 12:29:53.4902 | INFO |  | Application started. Press Ctrl+C to shut down. |  
+2021-05-31 12:29:53.5060 | INFO |  | Hosting environment: Production |  
+2021-05-31 12:29:53.5060 | INFO |  | Content root path: C:\Users\MIS\source\repos\Restaurant Reservation Website\RestaurantReservation.Frontend\RestaurantReservation.Frontend |  
+2021-05-31 12:29:53.9329 | INFO | https://localhost/ | Start processing HTTP request GET https://localhost:44399/api/restaurant |  
+2021-05-31 12:29:53.9468 | INFO | https://localhost/ | Sending HTTP request GET https://localhost:44399/api/restaurant |  
+2021-05-31 12:29:55.5545 | INFO | https://localhost/ | Received HTTP response after 1597.715ms - OK |  
+2021-05-31 12:29:55.5545 | INFO | https://localhost/ | End processing HTTP request after 1641.7336ms - OK |  
+2021-05-31 12:29:55.9372 | INFO | https://localhost/ | Start processing HTTP request GET https://localhost:44399/api/booking/Admin/ListCount |  
+2021-05-31 12:29:55.9372 | INFO | https://localhost/ | Sending HTTP request GET https://localhost:44399/api/booking/Admin/ListCount |  
+2021-05-31 12:29:56.1943 | INFO | https://localhost/ | Received HTTP response after 251.8314ms - OK |  
+2021-05-31 12:29:56.1943 | INFO | https://localhost/ | End processing HTTP request after 264.8323ms - OK |  
+2021-05-31 12:29:56.2927 | INFO | https://localhost/ | Start processing HTTP request GET https://localhost:44399/api/booking/Admin/ListCount |  
+2021-05-31 12:29:56.2927 | INFO | https://localhost/ | Sending HTTP request GET https://localhost:44399/api/booking/Admin/ListCount |  
+2021-05-31 12:29:56.3545 | INFO | https://localhost/ | Received HTTP response after 56.8898ms - OK |  
+2021-05-31 12:29:56.3545 | INFO | https://localhost/ | End processing HTTP request after 65.7783ms - OK |  
+2021-05-31 12:30:01.3552 | INFO | https://localhost/Account/Profile | Start processing HTTP request POST https://localhost:44399/api/authenticate/refreshToken |  
+2021-05-31 12:30:01.3552 | INFO | https://localhost/Account/Profile | Sending HTTP request POST https://localhost:44399/api/authenticate/refreshToken |  
+2021-05-31 12:30:01.7292 | INFO | https://localhost/Account/Profile | Received HTTP response after 370.4463ms - OK |  
+2021-05-31 12:30:01.7292 | INFO | https://localhost/Account/Profile | End processing HTTP request after 377.653ms - OK |  
+2021-05-31 12:30:01.7719 | INFO | https://localhost/Account/Profile | Start processing HTTP request GET https://localhost:44399/api/user/info/15340864-a91e-460d-aa8d-92b84aee2396 |  
+2021-05-31 12:30:01.7719 | INFO | https://localhost/Account/Profile | Sending HTTP request GET https://localhost:44399/api/user/info/15340864-a91e-460d-aa8d-92b84aee2396 |  
+2021-05-31 12:30:01.8188 | INFO | https://localhost/Account/Profile | Received HTTP response after 44.3336ms - OK |  
+2021-05-31 12:30:01.8188 | INFO | https://localhost/Account/Profile | End processing HTTP request after 49.0948ms - OK |  
+2021-05-31 12:30:01.8794 | INFO | https://localhost/Account/Profile | Start processing HTTP request GET https://localhost:44399/api/booking/Admin/ListCount |  
+2021-05-31 12:30:01.8827 | INFO | https://localhost/Account/Profile | Sending HTTP request GET https://localhost:44399/api/booking/Admin/ListCount |  
+2021-05-31 12:30:01.8827 | INFO | https://localhost/Account/Profile | Received HTTP response after 11.266ms - OK |  
+2021-05-31 12:30:01.8968 | INFO | https://localhost/Account/Profile | End processing HTTP request after 17.1105ms - OK |  
+2021-05-31 12:30:01.8968 | INFO | https://localhost/Account/Profile | Start processing HTTP request GET https://localhost:44399/api/booking/Admin/ListCount |  
+2021-05-31 12:30:01.8968 | INFO | https://localhost/Account/Profile | Sending HTTP request GET https://localhost:44399/api/booking/Admin/ListCount |  
+2021-05-31 12:30:01.9172 | INFO | https://localhost/Account/Profile | Received HTTP response after 9.5246ms - OK |  
+2021-05-31 12:30:01.9172 | INFO | https://localhost/Account/Profile | End processing HTTP request after 16.9284ms - OK |  

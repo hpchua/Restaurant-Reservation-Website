@@ -1,0 +1,238 @@
+﻿@page
+@using RestaurantReservation.Core.Utils;
+@model RestaurantReservation.Frontend.Pages.Admins.Users.ListModel
+@{
+    ViewData["Title"] = "User Management";
+
+    var role = HttpContext.Request.Query["role"];
+
+    var all = "text-dark";
+    var admin = "text-dark";
+    var member = "text-dark";
+
+    switch (role)
+    {
+        case SD.ROLE_ADMIN:
+            admin = "active";
+            break;
+        case SD.ROLE_MEMBER:
+            member = "active";
+            break;
+        default:
+            all = "active";
+            break;
+    }
+}
+
+<div class="card">
+    <div class="card-header">
+        <h3 class="card-title">Users</h3>
+
+        <form method="get" asp-page="/Admins/Users/List">
+            <div class="card-tools">
+                <div class="input-group input-group-sm" style="width:250px;float:right;">
+                    <input type="text" name="searchString" class="form-control float-right" placeholder="Name / Email / Phone Number" value="@Model.SearchTerm">
+
+                    <div class="input-group-append">
+                        <button type="submit" class="btn btn-default">
+                            <i class="fas fa-search"></i>
+                        </button>
+                        @if (!string.IsNullOrEmpty(Model.SearchTerm))
+                        {
+                            <a asp-page="/Admins/Users/List" class="btn btn-danger">
+                                <i class="fa fa-times"></i>
+                            </a>
+                        }
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="card-body p-0">
+        <br />
+
+        <form method="post">
+            <div class="row">
+                <div class="col-6 float-left">
+                    <a class="btn btn-success" style="margin-left:20px;" asp-page="/Admins/Users/Create">
+                        <i class="fas fa-plus">
+                        </i>
+                        Create Admin
+                    </a>
+                </div>
+
+                <div class="col-6">
+                    <ul class="list-group list-group-horizontal-sm float-right" style="margin-right:20px;">
+                        <a style="text-decoration:none;" asp-page="/Admins/Users/List">
+                            <li class="list-group-item rounded-0 @all">
+                                All
+                            </li>
+                        </a>
+                        <a style="text-decoration:none;" asp-page="/Admins/Users/List" asp-route-role="@SD.ROLE_ADMIN">
+                            <li class="list-group-item rounded-0 @admin">
+                                Admin
+                            </li>
+                        </a>
+                        <a style="text-decoration:none;" asp-page="/Admins/Users/List" asp-route-role="@SD.ROLE_MEMBER">
+                            <li class="list-group-item rounded-0 @member">
+                                Member
+                            </li>
+                        </a>
+                    </ul>
+                </div>
+            </div>
+        </form>
+
+        <hr />
+
+        <table class="table table-striped projects text-center">
+            <thead>
+                <tr>
+                    <th style="width: 1%">
+                        No
+                    </th>
+                    <th> Name</th>
+                    <th>Email</th>
+                    <th>Phone Number</th>
+                    <th>Joined Date</th>
+                    <th>Role</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                @if (Model.UserList.Count() > 0)
+                {
+                    int count = 1;
+
+                    foreach (var user in Model.UserList)
+                    {
+                        <tr>
+                            <td>
+                                @count
+                            </td>
+                            <td>
+                                @user.Name
+                            </td>
+                            <td>
+                                @user.Email
+                            </td>
+                            <td>
+                                @user.PhoneNumber
+                            </td>
+                            <td>
+                                @user.JoinedDate.ToString("dd/MM/yyyy")
+                            </td>
+                            <td>
+                                @user.Role
+                            </td>
+                            <td class="project-actions">
+                                <a class="btn btn-primary btn-sm" asp-page="/Admins/Users/Details" asp-route-ID="@user.Id">
+                                    <i class="fas fa-info-circle"></i>
+                                </a>
+                            </td>
+                        </tr>
+                        count++;
+                    }
+                }
+                else
+                {
+                    <tr class="bg-light">
+                        <td colspan="3">
+                            No user record found
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+
+        <br />
+
+        <div class="row">
+            <div class="col-sm">
+                <div class="my-2" style="float:left;margin-left:20px;">
+                    @if (Model.TotalRowAfterFilter != 0 && !string.IsNullOrEmpty(Model.SearchTerm))
+                    {
+                        <p>Showing @Model.TotalRowAfterFilter of @Model.TotalRow records</p>
+                    }
+                    else if (Model.TotalRowAfterFilter == 0 && !string.IsNullOrEmpty(Model.SearchTerm))
+                    {
+                        <p>Showing 0 records</p>
+                    }
+                    else
+                    {
+                        <p>Showing @Model.TotalRow records</p>
+                    }
+                </div>
+            </div>
+
+            @if (Model.UserList.Count() > 0 && Model.UserList.TotalPages > 1)
+            {
+                <div class="col-sm">
+                    <div class="my-2" style="float:right;margin-right:20px;">
+                        @{
+                            var prevDisabled = !Model.UserList.HasPreviousPage ? "disabled" : "";
+                            var nextDisabled = !Model.UserList.HasNextPage ? "disabled" : "";
+                        }
+                        <ul class="justify-content-center pagination">
+                            <li class="page-item @prevDisabled">
+                                <a asp-page="/Admins/Users/List"
+                                   asp-route-pageIndex="@(Model.UserList.PageIndex - 1)"
+                                   asp-route-searchString="@Model.SearchTerm"
+                                   class="page-link bg-lightblue">
+                                    <span><b>&lt;</b></span>
+                                </a>
+                            </li>
+                            <li class="page-item text-black">
+                                <span class="page-link bg-white">
+                                    @(Model.UserList.PageIndex) / @(Model.UserList.TotalPages)
+                                </span>
+                            </li>
+                            <li class="page-item @nextDisabled">
+                                <a asp-page="/Admins/Users/List"
+                                   asp-route-pageIndex="@(Model.UserList.PageIndex + 1)"
+                                   asp-route-searchString="@Model.SearchTerm"
+                                   class="page-link bg-lightblue">
+                                    <span><b>&gt;</b></span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+
+
+@section Scripts {
+    @if (TempData["Message"] != null)
+    {
+        <script>
+            $(document).ready(function() {
+                var Toast = Swal.mixin({
+                    toast: true,
+                    position: "top-end",
+                    showConfirmButton: false,
+                    timer: 7000
+                });
+
+                Toast.fire({
+                    icon: "success",
+                    title: "@TempData["Message"]",
+                })
+            });
+        </script>
+    }
+}
+
+@section PageHeader {
+    <div class="col-sm-6">
+        <h1 class="m-0">User Management</h1>
+    </div>
+    <div class="col-sm-6">
+        <ol class="breadcrumb float-sm-right">
+            <li class="breadcrumb-item"><a asp-page="/Admins/Home">Home</a></li>
+            <li class="breadcrumb-item active">Users</li>
+        </ol>
+    </div>
+}

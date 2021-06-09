@@ -1,0 +1,244 @@
+﻿@page
+@using RestaurantReservation.Core.Utils;
+@model RestaurantReservation.Frontend.Pages.Admins.Reservation.ListModel
+@{
+    ViewData["Title"] = "Reservations";
+
+    var status = HttpContext.Request.Query["status"];
+
+    var all = "text-dark";
+    var pending = "text-dark";
+    var expired = "text-dark";
+    var complete = "text-dark";
+
+    switch (status)
+    {
+        case SD.BookingStatus.PENDING:
+            pending = "active";
+            break;
+        case SD.BookingStatus.EXPIRED:
+            expired = "active";
+            break;
+        case SD.BookingStatus.COMPLETE:
+            complete = "active";
+            break;
+        default:
+            all = "active";
+            break;
+    } }
+
+<!-- Default box -->
+<div class="card">
+    <div class="card-header">
+        <h3 class="card-title">Bookings</h3>
+
+        <form method="get" asp-page="/Admins/Reservation/List">
+            <div class="card-tools">
+                <input type="hidden" name="status" value="@Model.StatusFilter" />
+
+                <div class="input-group input-group-sm" style="width:250px;float:right;">
+                    <input type="text" name="searchString" class="form-control float-right" placeholder="Booking Number / Full Name" value="@Model.SearchTerm">
+
+                    <div class="input-group-append">
+                        <button type="submit" class="btn btn-default">
+                            <i class="fas fa-search"></i>
+                        </button>
+                        @if (!string.IsNullOrEmpty(Model.SearchTerm))
+                        {
+                            <a asp-page="/Admins/Reservation/List" class="btn btn-danger">
+                                <i class="fa fa-times"></i>
+                            </a>
+                        }
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="card-body p-0">
+        <br />
+
+        <ul class="list-group list-group-horizontal-sm float-right" style="margin-right:20px;margin-bottom:20px;">
+            <a style="text-decoration:none;" asp-page="/Admins/Reservation/List">
+                <li class="list-group-item rounded-0 @all">
+                    All
+                </li>
+            </a>
+            <a style="text-decoration:none;" asp-page="/Admins/Reservation/List" asp-route-status="@SD.BookingStatus.PENDING">
+                <li class="list-group-item rounded-0 @pending">
+                    Pending
+                </li>
+            </a>
+            <a style="text-decoration:none;" asp-page="/Admins/Reservation/List" asp-route-status="@SD.BookingStatus.EXPIRED">
+                <li class="list-group-item rounded-0 @expired">
+                    Expired
+                </li>
+            </a>
+            <a style="text-decoration:none;" asp-page="/Admins/Reservation/List" asp-route-status="@SD.BookingStatus.COMPLETE">
+                <li class="list-group-item rounded-0 @complete">
+                    Complete
+                </li>
+            </a>
+        </ul>
+
+        <table class="table table-striped projects text-center">
+            <thead>
+                <tr>
+                    <th>No.</th>
+                    <th>Booking Number</th>
+                    <th>Booking Date</th>
+                    <th>Full Name</th>
+                    <th>Phone Number</th>
+                    <th>Status</th>
+                    <th>Check In</th>
+                    <th>Check Out</th>
+                    <th>Details</th>
+                </tr>
+            </thead>
+            <tbody>
+                @if (Model.BookingList.Count() > 0)
+                {
+                    int count = 1;
+
+                    foreach (var booking in Model.BookingList)
+                    {
+                        <tr>
+                            <td>
+                                @count
+                            </td>
+                            <td>
+                                @booking.BookingNo
+                            </td>
+                            <td>
+                                @booking.BookingDate.ToString("dd/MM/yyyy")
+                            </td>
+                            <td>
+                                @booking.FullName
+                            </td>
+                            <td>
+                                @booking.PhoneNo
+                            </td>
+                            <td>
+                                @{
+                                    switch (booking.BookingStatus)
+                                    {
+                                        case SD.BookingStatus.COMPLETE:
+                                            <span class="badge badge-success">Complete</span>
+                                            break;
+                                        case SD.BookingStatus.PENDING:
+                                            <span class="badge badge-primary">Pending</span>
+                                            break;
+                                        case SD.BookingStatus.EXPIRED:
+                                            <span class="badge badge-danger">Expired</span>
+                                            break;
+                                    }
+                                }
+                            </td>
+                            <td>
+                                @if (booking.CheckIn.HasValue)
+                                {
+                                    @booking.CheckIn?.ToString("dd/MM/yyyy hh:mm ttt")
+                                }
+                                else
+                                {
+                                    @: &nbsp;
+                                }
+                            </td>
+                            <td>
+                                @if (booking.CheckOut.HasValue)
+                                {
+                                    @booking.CheckOut?.ToString("dd/MM/yyyy hh:mm ttt")
+                                }
+                                else
+                                {
+                                    @: &nbsp;
+                                }
+                            </td>
+                            <td>
+                                <a class="btn btn-primary btn-sm" asp-page="/Admins/Reservation/Details" asp-route-BookingNo="@booking.BookingNo">
+                                    <i class="fas fa-info-circle"></i>
+                                </a>
+                            </td>
+                        </tr>
+                        count++;
+                    }
+                }
+                else
+                {
+                    <tr class="bg-light">
+                        <td colspan="8">
+                            No reservation record found
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+
+        <br />
+
+        <div class="row">
+            <div class="col-sm">
+                <div class="my-2" style="float:left;margin-left:20px;">
+                    @if (Model.TotalRowAfterFilter != 0 && !string.IsNullOrEmpty(Model.SearchTerm))
+                    {
+                        <p>Showing @Model.TotalRowAfterFilter of @Model.TotalRow records</p>
+                    }
+                    else if (Model.TotalRowAfterFilter == 0 && !string.IsNullOrEmpty(Model.SearchTerm))
+                    {
+                        <p>Showing 0 records</p>
+                    }
+                    else
+                    {
+                        <p>Showing @Model.TotalRow records</p>
+                    }
+                </div>
+            </div>
+
+            @if (Model.BookingList.Count() > 0 && Model.BookingList.TotalPages > 1)
+            {
+                <div class="col-sm">
+                    <div class="my-2" style="float:right;margin-right:20px;">
+                        @{
+                            var prevDisabled = !Model.BookingList.HasPreviousPage ? "disabled" : "";
+                            var nextDisabled = !Model.BookingList.HasNextPage ? "disabled" : "";
+                        }
+                        <ul class="justify-content-center pagination">
+                            <li class="page-item @prevDisabled">
+                                <a asp-page="/Admins/Reservation/List"
+                                   asp-route-pageIndex="@(Model.BookingList.PageIndex - 1)"
+                                   asp-route-searchString="@Model.SearchTerm"
+                                   class="page-link bg-lightblue">
+                                    <span><b>&lt;</b></span>
+                                </a>
+                            </li>
+                            <li class="page-item text-black">
+                                <span class="page-link bg-white">
+                                    @(Model.BookingList.PageIndex) / @(Model.BookingList.TotalPages)
+                                </span>
+                            </li>
+                            <li class="page-item @nextDisabled">
+                                <a asp-page="/Admins/Reservation/List"
+                                   asp-route-pageIndex="@(Model.BookingList.PageIndex + 1)"
+                                   asp-route-searchString="@Model.SearchTerm"
+                                   class="page-link bg-lightblue">
+                                    <span><b>&gt;</b></span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+
+@section PageHeader {
+    <div class="col-sm-6">
+        <h1 class="m-0">Reservation List</h1>
+    </div>
+    <div class="col-sm-6">
+        <ol class="breadcrumb float-sm-right">
+            <li class="breadcrumb-item"><a asp-page="/Admins/Home">Home</a></li>
+            <li class="breadcrumb-item active">Reservations</li>
+        </ol>
+    </div>
+}

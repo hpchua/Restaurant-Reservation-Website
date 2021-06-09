@@ -1,0 +1,243 @@
+﻿@page
+@model RestaurantReservation.Frontend.Pages.Admins.Category.ListModel
+@{
+    ViewData["Title"] = "Category Management";
+}
+
+<!-- Default box -->
+<div class="card">
+    <div class="card-header">
+        <h3 class="card-title">Categories</h3>
+
+        <form method="get" asp-page="/Admins/Category/List">
+            <div class="card-tools">
+                <div class="input-group input-group-sm" style="width:250px;float:right;">
+                    <input type="text" name="searchString" class="form-control float-right" placeholder="Search" value="@Model.SearchTerm">
+
+                    <div class="input-group-append">
+                        <button type="submit" class="btn btn-default">
+                            <i class="fas fa-search"></i>
+                        </button>
+                        @if (!string.IsNullOrEmpty(Model.SearchTerm))
+                        {
+                            <a asp-page="/Admins/Category/List" class="btn btn-danger">
+                                <i class="fa fa-times"></i>
+                            </a>
+                        }
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="card-body p-0">
+        <br />
+
+        <a class="btn btn-success btn-sm" style="margin-left:20px;" asp-page="/Admins/Category/Create">
+            <i class="fas fa-plus">
+            </i>
+            Create
+        </a>
+
+        <hr />
+
+        <table class="table table-striped projects text-center">
+            <thead>
+                <tr>
+                    <th style="width: 1%">
+                        No
+                    </th>
+                    <th>
+                        Name
+                    </th>
+                    <th>
+                        Action
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                @if (Model.CategoryList.Count() > 0)
+                {
+                    int count = 1;
+
+                    foreach (var category in Model.CategoryList)
+                    {
+                        <tr>
+                            <td>
+                                @count
+                            </td>
+                            <td>
+                                @category.Name
+                            </td>
+                            <td class="project-actions">
+                                <form id='form_@category.CategoryID' method="post" asp-page-handler="Delete" asp-route-ID="@category.CategoryID" asp-route-searchString="@Model.SearchTerm" asp-route-pageIndex="@Model.CategoryList.PageIndex">
+                                    <a class="btn btn-primary btn-sm" asp-page="/Admins/Category/Details" asp-route-ID="@category.CategoryID">
+                                        <i class="fas fa-info-circle"></i>
+                                    </a>
+                                    <a class="btn btn-info btn-sm" asp-page="/Admins/Category/Edit" asp-route-ID="@category.CategoryID">
+                                        <i class="fas fa-pencil-alt"></i>
+                                    </a>
+                                    <button type="submit" class="btn btn-danger btn-sm" onclick="showDeleteConfirmation('@category.Name.Replace("'", "\\'").Replace("\"", "\\\"")')">
+                                        <i class="fas fa-trash"></i>
+                                    </button>
+                                </form>
+                            </td>
+                        </tr>
+                        count++;
+                    }
+                }
+                else
+                {
+                    <tr class="bg-light">
+                        <td colspan="3">
+                            No category record found, click on <b>Create</b> button to add new
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+
+        <br />
+
+        <div class="row">
+            <div class="col-sm">
+                <div class="my-2" style="float:left;margin-left:20px;">
+                    @if (Model.TotalRowAfterFilter != 0 && !string.IsNullOrEmpty(Model.SearchTerm))
+                    {
+                        <p>Showing @Model.TotalRowAfterFilter of @Model.TotalRow records</p>
+                    }
+                    else if (Model.TotalRowAfterFilter == 0 && !string.IsNullOrEmpty(Model.SearchTerm))
+                    {
+                        <p>Showing 0 records</p>
+                    }
+                    else
+                    {
+                        <p>Showing @Model.TotalRow records</p>
+                    }
+                </div>
+            </div>
+
+            @if (Model.CategoryList.Count() > 0 && Model.CategoryList.TotalPages > 1)
+            {
+                <div class="col-sm">
+                    <div class="my-2" style="float:right;margin-right:20px;">
+                        @{
+                            var prevDisabled = !Model.CategoryList.HasPreviousPage ? "disabled" : "";
+                            var nextDisabled = !Model.CategoryList.HasNextPage ? "disabled" : "";
+                        }
+                        <ul class="justify-content-center pagination">
+                            <li class="page-item @prevDisabled">
+                                <a asp-page="/Admins/Category/List"
+                                   asp-route-pageIndex="@(Model.CategoryList.PageIndex - 1)"
+                                   asp-route-searchString="@Model.SearchTerm"
+                                   class="page-link bg-lightblue">
+                                    <span><b>&lt;</b></span>
+                                </a>
+                            </li>
+                            <li class="page-item text-black">
+                                <span class="page-link bg-white">
+                                    @(Model.CategoryList.PageIndex) / @(Model.CategoryList.TotalPages)
+                                </span>
+                            </li>
+                            <li class="page-item @nextDisabled">
+                                <a asp-page="/Admins/Category/List"
+                                   asp-route-pageIndex="@(Model.CategoryList.PageIndex + 1)"
+                                   asp-route-searchString="@Model.SearchTerm"
+                                   class="page-link bg-lightblue">
+                                    <span><b>&gt;</b></span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        function showDeleteConfirmation(categoryName) {
+            event.preventDefault();
+            var form = event.target.form;
+            Swal.fire({
+                icon: 'question',
+                title: 'Delete Confirmation',
+                text: `Are you sure you want to delete the ${categoryName} category?`,
+                showCancelButton: true,
+                cancelButtonColor: 'red'
+            }).then(confirm => {
+                if (confirm.value)
+                    form.submit();
+            });
+        }
+    </script>
+
+    @if (!string.IsNullOrEmpty(Model.DeleteSuccessMessage))
+    {
+        <script>
+            $(document).ready(function() {
+                var Toast = Swal.mixin({
+                    toast: true,
+                    position: "top-end",
+                    showConfirmButton: false,
+                    timer: 7000
+                });
+
+                Toast.fire({
+                    icon: "success",
+                    title: "@Model.DeleteSuccessMessage",
+                })
+            });
+        </script>
+    }
+
+    @if (TempData["Message"] != null)
+    {
+        <script>
+            $(document).ready(function() {
+                var Toast = Swal.mixin({
+                    toast: true,
+                    position: "top-end",
+                    showConfirmButton: false,
+                    timer: 7000
+                });
+
+                Toast.fire({
+                    icon: "success",
+                    title: "@TempData["Message"]",
+                })
+            });
+        </script>
+    }
+
+    @if (TempData["ConflictErrorMessage"] != null)
+    {
+        <script>
+            $(document).ready(function() {
+                var Toast = Swal.mixin({
+                    toast: true,
+                    position: "top-end",
+                    showConfirmButton: false,
+                    timer: 7000
+                });
+
+                Toast.fire({
+                    icon: "error",
+                    title: "@TempData["ConflictErrorMessage"]",
+                })
+            });
+        </script>
+    }
+}
+
+@section PageHeader {
+    <div class="col-sm-6">
+        <h1 class="m-0">Category Management</h1>
+    </div>
+    <div class="col-sm-6">
+        <ol class="breadcrumb float-sm-right">
+            <li class="breadcrumb-item"><a asp-page="/Admins/Home">Home</a></li>
+            <li class="breadcrumb-item active">Categories</li>
+        </ol>
+    </div>
+}

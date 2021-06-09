@@ -1,0 +1,729 @@
+﻿@page
+@using RestaurantReservation.Core.Utils;
+@model RestaurantReservation.Frontend.Pages.Restaurants.DetailsModel
+@{
+    ViewData["Title"] = "Restaurant Details";
+
+    var scheduleStatus = HttpContext.Request.Query["ScheduleStatus"];
+    var promotionStatus = HttpContext.Request.Query["PromotionStatus"];
+
+    var all = "text-dark";
+    var available = "text-dark";
+    var unavailable = "text-dark";
+    var full = "text-dark";
+
+    switch (scheduleStatus)
+    {
+        case "Available":
+            available = "active";
+            break;
+        case "Full":
+            full = "active";
+            break;
+        case "Unavailable":
+            unavailable = "active";
+            break;
+        default:
+            all = "active";
+            break;
+    }
+
+    var allPromotion = "text-dark";
+    var availablePromotion = "text-dark";
+    var unavailablePromotion = "text-dark";
+
+    switch (promotionStatus)
+    {
+        case "Available":
+            availablePromotion = "active";
+            break;
+        case "Unavailable":
+            unavailablePromotion = "active";
+            break;
+        default:
+            allPromotion = "active";
+            break;
+    }
+    int count = 0;
+    int adminCount = 0;
+}
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="card card-primary">
+            <div class="card-header">
+                <h3 class="card-title">Restaurant Details</h3>
+
+                <div class="card-tools">
+                    <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
+                        <i class="fas fa-minus"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <input hidden="hidden" asp-for="RestaurantCategorySchedulePromtionVM.Restaurant.RestaurantID" />
+
+                <div class="row">
+                    <div class="col-12 col-sm-6">
+                        <div class="col-12">
+                            <img src="@Url.Content(Model.RestaurantCategorySchedulePromtionVM.Restaurant.ImageUrl)" class="product-image" alt="Restaurant Image">
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6">
+                        <h3 class="my-3">@Model.RestaurantCategorySchedulePromtionVM.Restaurant.Name</h3>
+
+                        <hr>
+                        <h5>Operating Hour</h5>
+                        <p>@Model.RestaurantCategorySchedulePromtionVM.Restaurant.WorkingDay @Model.RestaurantCategorySchedulePromtionVM.Restaurant.StartWorkingTime.ToString("hh:mm tt") - @Model.RestaurantCategorySchedulePromtionVM.Restaurant.EndWorkingTime.ToString("hh:mm tt")</p>
+
+                        <br />
+                        <h5>Address</h5>
+                        <p>@Model.RestaurantCategorySchedulePromtionVM.Restaurant.Address</p>
+
+                        <br />
+                        <div class="row">
+                            @foreach (var categoryName in Model.RestaurantCategorySchedulePromtionVM.Categories)
+                            {
+                                <span class="badge badge-dark">@categoryName</span> @:&nbsp;&nbsp;&nbsp;
+                            }
+                        </div>
+
+                        <br />
+
+                        @if (User.IsInRole(SD.ROLE_ADMIN))
+                        {
+                            <div class="row">
+                                <div class="col-6">
+                                    <h5>Created By</h5>
+                                    <p>@Model.RestaurantCategorySchedulePromtionVM.Restaurant.CreatedBy</p>
+                                    <br />
+
+                                    <h5>Created Date</h5>
+                                    <p>@Model.RestaurantCategorySchedulePromtionVM.Restaurant.CreatedDate.ToString("dd/MM/yyyy hh:mm tt")</p>
+                                    <br />
+                                </div>
+
+                                @if (!string.IsNullOrEmpty(Model.RestaurantCategorySchedulePromtionVM.Restaurant.EditedBy))
+                                {
+                                    <div class="col-6">
+                                        <h5>Edited By</h5>
+                                        <p>@Model.RestaurantCategorySchedulePromtionVM.Restaurant.EditedBy</p>
+                                        <br />
+
+                                        <h5>Edited Date</h5>
+                                        <p>@Model.RestaurantCategorySchedulePromtionVM.Restaurant.EditedDate?.ToString("dd/MM/yyyy hh:mm tt")</p>
+                                        <br />
+                                    </div>
+                                }
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-6">
+        <div class="card card-info">
+            <div class="card-header">
+                <h3 class="card-title">Schedules</h3>
+
+                <div class="card-tools">
+                    <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
+                        <i class="fas fa-minus"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="card-body p-0">
+                <div class="row">
+                    <div class="col-6">
+                        @if (User.IsInRole(SD.ROLE_ADMIN))
+                        {
+                            <a class="btn btn-success btn-sm" style="margin-left: 20px;margin-top:20px;margin-bottom: 20px;" asp-page="/Admins/Schedules/Create" asp-route-RestaurantID="@Model.RestaurantCategorySchedulePromtionVM.Restaurant.RestaurantID">
+                                <i class="fas fa-plus">
+                                </i>
+                                Create
+                            </a>
+                        }
+                    </div>
+                    <div class="col-6">
+                        <ul class="list-group list-group-horizontal-sm float-right" style="margin-top: 20px;margin-bottom: 20px;margin-right: 20px;">
+                            <a style="text-decoration:none;" asp-page="/Restaurants/Details" asp-route-ID="@Model.RestaurantCategorySchedulePromtionVM.Restaurant.RestaurantID">
+                                <li class="list-group-item rounded-0 @all">
+                                    All
+                                </li>
+                            </a>
+                            <a style="text-decoration:none;" asp-page="/Restaurants/Details" asp-route-ID="@Model.RestaurantCategorySchedulePromtionVM.Restaurant.RestaurantID" asp-route-ScheduleStatus="@SD.ScheduleStatus.Available" asp-route-PromotionStatus="@promotionStatus">
+                                <li class="list-group-item rounded-0 @available">
+                                    Available
+                                </li>
+                            </a>
+                            <a style="text-decoration:none;" asp-page="/Restaurants/Details" asp-route-ID="@Model.RestaurantCategorySchedulePromtionVM.Restaurant.RestaurantID" asp-route-ScheduleStatus="@SD.ScheduleStatus.Full" asp-route-PromotionStatus="@promotionStatus">
+                                <li class="list-group-item rounded-0 @full">
+                                    Full
+                                </li>
+                            </a>
+                            @if (User.IsInRole(SD.ROLE_ADMIN))
+                            {
+                                <a style="text-decoration:none;" asp-page="/Restaurants/Details" asp-route-ID="@Model.RestaurantCategorySchedulePromtionVM.Restaurant.RestaurantID" asp-route-ScheduleStatus="@SD.ScheduleStatus.Unavailable" asp-route-PromotionStatus="@promotionStatus">
+                                    <li class="list-group-item rounded-0 @unavailable">
+                                        Unavailable
+                                    </li>
+                                </a>
+                            }
+                        </ul>
+                    </div>
+                </div>
+
+                <table class="table text-center table-striped projects">
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Time</th>
+                            <th>Capacity</th>
+                            <th>Available Seat</th>
+                            <th>Status</th>
+                            @if (User.IsInRole(SD.ROLE_ADMIN))
+                            {
+                                <th></th>
+                            }
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @if (User.IsInRole(SD.ROLE_ADMIN))
+                        {
+                            @if (Model.ScheduleList.Count() > 0)
+                            {
+                                @foreach (var schedule in Model.ScheduleList)
+                                {
+
+                                    <tr>
+                                        <td>@schedule.ScheduleDate.ToString("dd/MM/yyyy")</td>
+                                        <td>@schedule.StartTime.ToString("HH:mm") - @schedule.EndTime.ToString("HH:mm")</td>
+                                        <td>@schedule.Capacity</td>
+                                        <td>@schedule.AvailableSeat</td>
+                                        <td>
+                                            @{
+                                                int scheduleStatuses = schedule.Status;
+                                                switch (scheduleStatuses)
+                                                {
+                                                    case (int)SD.ScheduleStatus.Available:
+                                                        <span class="badge badge-success">Available</span>
+                                                        break;
+                                                    case (int)SD.ScheduleStatus.Unavailable:
+                                                        <span class="badge badge-warning">Unavailable</span>
+                                                        break;
+                                                    case (int)SD.ScheduleStatus.Expired:
+                                                        <span class="badge badge-primary">Expired</span>
+                                                        break;
+                                                    default:
+                                                        <span class="badge badge-danger">Full</span>
+                                                        break;
+                                                }
+                                            }
+                                        </td>
+                                        @if (scheduleStatuses == (int)SD.ScheduleStatus.Available || scheduleStatuses == (int)SD.ScheduleStatus.Full)
+                                        {
+                                            <td class="text-right py-0 align-middle">
+                                                <form id='form_@schedule.ScheduleID' method="post" asp-page-handler="DeleteSchedule" asp-route-ScheduleID="@schedule.ScheduleID" asp-route-ID="@Model.RestaurantCategorySchedulePromtionVM.Restaurant.RestaurantID">
+                                                    <div class="btn-group btn-group-sm">
+                                                        <a asp-page="/Admins/Schedules/Details" asp-route-ScheduleID="@schedule.ScheduleID" class="btn btn-info"><i class="fas fa-eye"></i></a>
+                                                        <a asp-page="/Admins/Schedules/Edit" asp-route-ScheduleID="@schedule.ScheduleID" class="btn btn-primary"><i class="fas fa-pencil-alt"></i></a>
+                                                        <button type="submit" class="btn btn-danger" onclick="showDeleteConfirmation('@schedule.ScheduleID')">
+                                                            <i class="far fa-times-circle"></i>
+                                                        </button>
+                                                    </div>
+                                                </form>
+                                            </td>
+                                        }
+                                        else if (scheduleStatuses == (int)SD.ScheduleStatus.Unavailable)
+                                        {
+                                            <td align="center">
+                                                <form id='form_@schedule.ScheduleID' method="post" asp-page-handler="UpdateSchedule" asp-route-ScheduleID="@schedule.ScheduleID" asp-route-ID="@Model.RestaurantCategorySchedulePromtionVM.Restaurant.RestaurantID">
+                                                    <div class="btn-group btn-group-sm">
+                                                        <button type="submit" class="btn btn-success" onclick="showDeleteConfirmation('@schedule.ScheduleID')">
+                                                            <i class="far fa-check-circle"></i>
+                                                        </button>
+                                                    </div>
+                                                </form>
+                                            </td>
+                                        }
+                                        else
+                                        {
+                                            <td class="text-right py-0 align-middle">
+                                                &nbsp;
+                                            </td>
+                                        }
+                                    </tr>
+                                }
+                            }
+                            else
+                            {
+                                <tr>
+                                    <td colspan="6">
+                                        No schedules record found
+                                    </td>
+                                </tr>
+                            }
+                        }
+                        else if (User.IsInRole(SD.ROLE_MEMBER))
+                        {
+                            @if (Model.MemberScheduleList.Count() > 0)
+                            {
+                                @foreach (var schedule in Model.MemberScheduleList)
+                                {
+
+                                    <tr>
+                                        <td>@schedule.ScheduleDate.ToString("dd/MM/yyyy")</td>
+                                        <td>@schedule.StartTime.ToString("HH:mm") - @schedule.EndTime.ToString("HH:mm")</td>
+                                        <td>@schedule.Capacity</td>
+                                        <td>@schedule.AvailableSeat</td>
+                                        <td>
+                                            @{
+                                                int scheduleStatuses = schedule.Status;
+                                                switch (scheduleStatuses)
+                                                {
+                                                    case (int)SD.ScheduleStatus.Available:
+                                                        <span class="badge badge-success">Available</span>
+                                                        break;
+                                                    default:
+                                                        <span class="badge badge-danger">Full</span>
+                                                        break;
+                                                }
+                                            }
+                                        </td>
+                                    </tr>
+                                }
+                            }
+                            else
+                            {
+                                <tr>
+                                    <td colspan="5">
+                                        No schedules record found, please contact us!
+                                    </td>
+                                </tr>
+                            }
+                        }
+                    </tbody>
+                </table>
+
+                @if (User.IsInRole(SD.ROLE_ADMIN))
+                {
+                    @if (Model.ScheduleList.Count() > 0 && Model.ScheduleList.TotalPages > 1)
+                    {
+                        <div class="my-2">
+                            @{
+                                var prevDisabled = !Model.ScheduleList.HasPreviousPage ? "disabled" : "";
+                                var nextDisabled = !Model.ScheduleList.HasNextPage ? "disabled" : "";
+                            }
+                            <ul class="justify-content-center pagination">
+                                <li class="page-item @prevDisabled">
+                                    <a asp-page="/Restaurants/Details"
+                                       asp-route-ID="@Model.RestaurantCategorySchedulePromtionVM.Restaurant.RestaurantID"
+                                       asp-route-schedulePageIndex="@(Model.ScheduleList.PageIndex - 1)"
+                                       class="page-link bg-lightblue">
+                                        <span><b>&lt;</b></span>
+                                    </a>
+                                </li>
+                                <li class="page-item text-black">
+                                    <span class="page-link bg-white">
+                                        @(Model.ScheduleList.PageIndex) / @(Model.ScheduleList.TotalPages)
+                                    </span>
+                                </li>
+                                <li class="page-item @nextDisabled">
+                                    <a asp-page="/Restaurants/Details"
+                                       asp-route-ID="@Model.RestaurantCategorySchedulePromtionVM.Restaurant.RestaurantID"
+                                       asp-route-schedulePageIndex="@(Model.ScheduleList.PageIndex + 1)"
+                                       class="page-link bg-lightblue">
+                                        <span><b>&gt;</b></span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    }
+                }
+                else if (User.IsInRole(SD.ROLE_MEMBER))
+                {
+                    @if (Model.MemberScheduleList.Count() > 0 && Model.MemberScheduleList.TotalPages > 1)
+                    {
+                        <div class="my-2">
+                            @{
+                                var prevDisabled = !Model.MemberScheduleList.HasPreviousPage ? "disabled" : "";
+                                var nextDisabled = !Model.MemberScheduleList.HasNextPage ? "disabled" : "";
+                            }
+                            <ul class="justify-content-center pagination">
+                                <li class="page-item @prevDisabled">
+                                    <a asp-page="/Restaurants/Details"
+                                       asp-route-ID="@Model.RestaurantCategorySchedulePromtionVM.Restaurant.RestaurantID"
+                                       asp-route-schedulePageIndex="@(Model.MemberScheduleList.PageIndex - 1)"
+                                       class="page-link bg-lightblue">
+                                        <span><b>&lt;</b></span>
+                                    </a>
+                                </li>
+                                <li class="page-item text-black">
+                                    <span class="page-link bg-white">
+                                        @(Model.MemberScheduleList.PageIndex) / @(Model.MemberScheduleList.TotalPages)
+                                    </span>
+                                </li>
+                                <li class="page-item @nextDisabled">
+                                    <a asp-page="/Restaurants/Details"
+                                       asp-route-ID="@Model.RestaurantCategorySchedulePromtionVM.Restaurant.RestaurantID"
+                                       asp-route-schedulePageIndex="@(Model.MemberScheduleList.PageIndex + 1)"
+                                       class="page-link bg-lightblue">
+                                        <span><b>&gt;</b></span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    }
+                }
+                <br />
+            </div>
+            <!-- /.card-body -->
+        </div>
+        <!-- /.card -->
+    </div>
+
+    @if (User.IsInRole(SD.ROLE_ADMIN))
+    {
+        <div class="col-md-6">
+            <div class="card card-secondary">
+                <div class="card-header">
+                    <h3 class="card-title">Announcements & Promotions</h3>
+
+                    <div class="card-tools">
+                        <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
+                            <i class="fas fa-minus"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-6">
+                            <a class="btn btn-success btn-sm" style="margin-top: 10px;" asp-page="/Admins/Promotions/Create" asp-route-RestaurantID="@Model.RestaurantCategorySchedulePromtionVM.Restaurant.RestaurantID">
+                                <i class="fas fa-plus">
+                                </i>
+                                Create
+                            </a>
+                        </div>
+
+                        <div class="col-6">
+                            <ul class="list-group list-group-horizontal-sm float-right" style="margin-bottom:20px;">
+                                <a style="text-decoration:none;" asp-page="/Restaurants/Details" asp-route-ID="@Model.RestaurantCategorySchedulePromtionVM.Restaurant.RestaurantID">
+                                    <li class="list-group-item rounded-0 @allPromotion">
+                                        All
+                                    </li>
+                                </a>
+                                <a style="text-decoration:none;" asp-page="/Restaurants/Details" asp-route-ID="@Model.RestaurantCategorySchedulePromtionVM.Restaurant.RestaurantID" asp-route-PromotionStatus="Available" asp-route-ScheduleStatus="@scheduleStatus">
+                                    <li class="list-group-item rounded-0 @availablePromotion">
+                                        Available
+                                    </li>
+                                </a>
+                                <a style="text-decoration:none;" asp-page="/Restaurants/Details" asp-route-ID="@Model.RestaurantCategorySchedulePromtionVM.Restaurant.RestaurantID" asp-route-PromotionStatus="Unavailable" asp-route-ScheduleStatus="@scheduleStatus">
+                                    <li class="list-group-item rounded-0 @unavailablePromotion">
+                                        Unavailable
+                                    </li>
+                                </a>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <table class="table text-center table-striped projects">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Date</th>
+                                <th>Type</th>
+                                <th>Status</th>
+                                @if (User.IsInRole(SD.ROLE_ADMIN))
+                                {
+                                    <th></th>
+                                }
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @if (Model.PromotionList.Count() > 0)
+                            {
+                                @foreach (var promotion in Model.PromotionList)
+                                {
+                                    <tr>
+                                        <td>@promotion.Name</td>
+                                        <td>@promotion.StartDate.ToString("dd/MM/yyyy") - @promotion.EndDate.ToString("dd/MM/yyyy")</td>
+                                        <td>@promotion.Type</td>
+                                        @switch (promotion.isAvailable)
+                                        {
+                                            case false:
+                                                <td><span class="badge badge-danger">Not Available</span></td>
+                                                break;
+                                            default:
+                                                <td><span class="badge badge-success">Available</span></td>
+                                                break;
+                                        }
+                                        <td class="text-right py-0 align-middle">
+                                            <form id='form_@promotion.PromotionID' method="post" asp-page-handler="DeletePromotion" asp-route-PromotionID="@promotion.PromotionID" asp-route-ID="@Model.RestaurantCategorySchedulePromtionVM.Restaurant.RestaurantID">
+                                                <div class="btn-group btn-group-sm">
+                                                    <a asp-page="/Admins/Promotions/Details" asp-route-PromotionID="@promotion.PromotionID" class="btn btn-info"><i class="fas fa-eye"></i></a>
+                                                    <a asp-page="/Admins/Promotions/Edit" asp-route-PromotionID="@promotion.PromotionID" class="btn btn-primary"><i class="fas fa-pencil-alt"></i></a>
+                                                    <button type="submit" class="btn btn-danger" onclick="showDeleteConfirmation('@promotion.PromotionID')">
+                                                        <i class="fas fa-trash"></i>
+                                                    </button>
+                                                </div>
+                                            </form>
+                                        </td>
+
+                                    </tr>
+                                }
+                            }
+                            else
+                            {
+                                @if (User.IsInRole(SD.ROLE_ADMIN))
+                                {
+                                    <tr>
+                                        <td colspan="5">
+                                            No promotions record found
+                                        </td>
+                                    </tr>
+                                }
+                                else
+                                {
+                                    <tr>
+                                        <td colspan="4">
+                                            No promotions record found, please contact us!
+                                        </td>
+                                    </tr>
+                                }
+                            }
+                        </tbody>
+                    </table>
+
+                    @if (Model.PromotionList.Count() > 0 && Model.PromotionList.TotalPages > 1)
+                    {
+                        <div class="my-2">
+                            @{
+                                var prevDisabled = !Model.ScheduleList.HasPreviousPage ? "disabled" : "";
+                                var nextDisabled = !Model.ScheduleList.HasNextPage ? "disabled" : "";
+                            }
+                            <ul class="justify-content-center pagination">
+                                <li class="page-item @prevDisabled">
+                                    <a asp-page="/Restaurants/Details"
+                                       asp-route-ID="@Model.RestaurantCategorySchedulePromtionVM.Restaurant.RestaurantID"
+                                       asp-route-promotionPageIndex="@(Model.ScheduleList.PageIndex - 1)"
+                                       class="page-link bg-lightblue">
+                                        <span><b>&lt;</b></span>
+                                    </a>
+                                </li>
+                                <li class="page-item text-black">
+                                    <span class="page-link bg-white">
+                                        @(Model.ScheduleList.PageIndex) / @(Model.ScheduleList.TotalPages)
+                                    </span>
+                                </li>
+                                <li class="page-item @nextDisabled">
+                                    <a asp-page="/Restaurants/Details"
+                                       asp-route-ID="@Model.RestaurantCategorySchedulePromtionVM.Restaurant.RestaurantID"
+                                       asp-route-promotionPageIndex="@(Model.ScheduleList.PageIndex + 1)"
+                                       class="page-link bg-lightblue">
+                                        <span><b>&gt;</b></span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    }
+                </div>
+                <!-- /.card-body -->
+            </div>
+        </div>
+    }
+
+    @if (User.IsInRole(SD.ROLE_MEMBER))
+    {
+        @if (Model.MemberScheduleList.Count() > 0)
+        {
+            <div class="col-md-6">
+                <form method="post">
+                    <div class="card card-secondary">
+                        <div class="card-header">
+                            <h3 class="card-title">Booking Details</h3>
+
+                            <div class="card-tools">
+                                <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
+                                    <i class="fas fa-minus"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5>Place your booking here ya!</h5> <br />
+                            <div class="form-group">
+                                <label asp-for="MakeBookingVM.ScheduleID">Schedule</label> <span class="text-danger"><b>*</b></span>
+                                <select id="bookingSchduleDropDown" class="form-control" asp-for="MakeBookingVM.ScheduleID" asp-items="@Model.BookingScheduleList" required>
+                                    <option disabled>Please choose one of them</option>
+                                </select>
+                                <span asp-validation-for="MakeBookingVM.ScheduleID" class="text-danger"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label asp-for="MakeBookingVM.Booking.FullName">Full Name</label> <span class="text-danger"><b>*</b></span>
+                                <input type="text" class="form-control" asp-for="MakeBookingVM.Booking.FullName" required />
+                                <span asp-validation-for="MakeBookingVM.Booking.FullName" class="text-danger"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label asp-for="MakeBookingVM.Booking.PhoneNo">Phone Number</label> <span class="text-danger"><b>*</b></span>
+                                <input type="tel" class="form-control" asp-for="MakeBookingVM.Booking.PhoneNo" required />
+                                <span asp-validation-for="MakeBookingVM.Booking.PhoneNo" class="text-danger"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label asp-for="MakeBookingVM.Pax">Number of Person</label> <span class="text-danger"><b>*</b></span>
+                                <input type="number" class="form-control" asp-for="MakeBookingVM.Pax" value="1" min="1" required />
+                                <span asp-validation-for="MakeBookingVM.Pax" class="text-danger"></span>
+                            </div>
+                            <br />
+                        </div>
+                    </div>
+
+                    <div class="text-center">
+                        <input type="submit" value="Reserve" class="btn btn-primary float-right" asp-page-handler="Booking" />
+                    </div>
+                </form>
+            </div>
+        }
+    }
+</div>
+
+<div class="row">
+    <div class="col-12">
+        @if (User.IsInRole(SD.ROLE_ADMIN))
+        {
+            <a class="btn btn-secondary" asp-page="/Admins/Restaurants/List">Back</a>
+            <a class="btn btn-primary float-right" asp-page="/Admins/Restaurants/Edit" asp-route-ID="@Model.RestaurantCategorySchedulePromtionVM.Restaurant.RestaurantID">
+                Edit
+            </a>
+        }
+        else
+        {
+            <a class="btn btn-secondary" asp-page="/Index">Back</a>
+        }
+    </div>
+    <br />
+</div>
+
+@section Scripts {
+    @if (TempData["DeleteScheduleMessage"] != null)
+    {
+        <script async>
+            Swal.fire({
+                icon: 'info',
+                title: 'Operation @TempData["DeleteScheduleMessage"]'
+            });
+        </script>
+    }
+
+    @if (TempData["DeletePromotionMessage"] != null)
+    {
+        <script async>
+            Swal.fire({
+                icon: 'info',
+                title: 'Operation @TempData["DeletePromotionMessage"]'
+            });
+        </script>
+    }
+
+    @if (TempData["Message"] != null)
+    {
+        <script>
+            $(document).ready(function() {
+                var Toast = Swal.mixin({
+                    toast: true,
+                    position: "top-end",
+                    showConfirmButton: false,
+                    timer: 7000
+                });
+
+                Toast.fire({
+                    icon: "success",
+                    title: "@TempData["Message"]",
+                })
+            });
+        </script>
+    }
+
+    @if (TempData["ErrorConflictMessage"] != null)
+    {
+        <script>
+            $(document).ready(function() {
+                var Toast = Swal.mixin({
+                    toast: true,
+                    position: "top-end",
+                    showConfirmButton: false,
+                    timer: 7000
+                });
+
+                Toast.fire({
+                    icon: "error",
+                    title: "@TempData["ErrorConflictMessage"]",
+                })
+            });
+        </script>
+    }
+
+    @if (!String.IsNullOrEmpty(Model.BookSuccessMessage))
+    {
+        <script>
+            $(document).ready(function() {
+                var Toast = Swal.mixin({
+                    toast: true,
+                    position: "top-end",
+                    showConfirmButton: false,
+                    timer: 7000
+                });
+
+                Toast.fire({
+                    icon: "success",
+                    title: "@Model.BookSuccessMessage",
+                })
+            });
+        </script>
+    }
+
+    @if (!String.IsNullOrEmpty(Model.BookFailedMessage))
+    {
+        <script>
+            $(document).ready(function() {
+                var Toast = Swal.mixin({
+                    toast: true,
+                    position: "top-end",
+                    showConfirmButton: false,
+                    timer: 7000
+                });
+
+                Toast.fire({
+                    icon: "error",
+                    title: "@Model.BookFailedMessage",
+                })
+            });
+        </script>
+    }
+}
+
+@section PageHeader {
+    <div class="col-sm-6">
+        <h1 class="m-0">Restaurant Details</h1>
+    </div>
+    <div class="col-sm-6">
+        <ol class="breadcrumb float-sm-right">
+            @if (User.IsInRole(SD.ROLE_ADMIN))
+            {
+                <li class="breadcrumb-item"><a asp-page="/Admins/Home">Home</a></li>
+                <li class="breadcrumb-item"><a asp-page="/Admins/Restaurants/List">Restaurants</a></li>
+                <li class="breadcrumb-item active">Details</li>
+            }
+            else
+            {
+                <li class="breadcrumb-item"><a asp-page="/Index">Home</a></li>
+                <li class="breadcrumb-item active">Restaurants Details</li>
+            }
+        </ol>
+    </div>
+}

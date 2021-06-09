@@ -1,0 +1,760 @@
+2021-06-03 09:23:32.0587 | DEBUG |  -  |  # init main #  
+2021-06-03 09:24:01.0864 | ERROR |  -  |  # Failed executing DbCommand (40ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [AspNetRoles] (
+    [Id] nvarchar(450) NOT NULL,
+    [Name] nvarchar(256) NULL,
+    [NormalizedName] nvarchar(256) NULL,
+    [ConcurrencyStamp] nvarchar(max) NULL,
+    CONSTRAINT [PK_AspNetRoles] PRIMARY KEY ([Id])
+); # 
+ 
+2021-06-03 09:24:02.4413 | ERROR |  -  |  # Error executing database initializer. # 
+ EXCEPTION OCCURRED:Microsoft.Data.SqlClient.SqlException (0x80131904): There is already an object named 'AspNetRoles' in the database.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean isAsync, Int32 timeout, Boolean asyncWrite)
+   at Microsoft.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry, String methodName)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteNonQuery(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Migrations.MigrationCommand.ExecuteNonQuery(IRelationalConnection connection, IReadOnlyDictionary`2 parameterValues)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.MigrationCommandExecutor.ExecuteNonQuery(IEnumerable`1 migrationCommands, IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.Migrate(String targetMigration)
+   at Microsoft.EntityFrameworkCore.RelationalDatabaseFacadeExtensions.Migrate(DatabaseFacade databaseFacade)
+   at RestaurantReservation.Infrastructure.Data.DbInitializer.Initialize() in C:\Users\MIS\source\repos\Restaurant Reservation Website\RestaurantReservation.Backend\RestaurantReservation.Infrastructure\Data\DbInitializer.cs:line 35
+ClientConnectionId:f6b4d246-07ea-4a3d-b7f3-d643ace52646
+Error Number:2714,State:6,Class:16
+2021-06-03 09:24:02.7819 | INFO |  -  |  # Application started. Press Ctrl+C to shut down. #  
+2021-06-03 09:24:03.2395 | INFO |  -  |  # Hosting environment: Development #  
+2021-06-03 09:24:03.2551 | INFO |  -  |  # Content root path: C:\Users\MIS\source\repos\Restaurant Reservation Website\RestaurantReservation.Backend\RestaurantReservation.Api #  
+2021-06-03 09:27:29.1760 | INFO | Authenticate - POST | https://localhost/api/authenticate/login # User refresh token has been created > HTTP 200 - OK #  
+2021-06-03 09:27:33.8107 | INFO | Authenticate - POST | https://localhost/api/authenticate/refreshToken # User found from the valid access token given > HTTP 200 - OK #  
+2021-06-03 09:27:33.9297 | INFO | Authenticate - POST | https://localhost/api/authenticate/refreshToken # User JWT Current access token has been refreshed > HTTP 200 - OK #  
+2021-06-03 09:27:34.1591 | INFO | Booking - GET | https://localhost/api/booking/Admin/All # All the Members' Bookings System.Collections.Generic.List`1[RestaurantReservation.Core.Entities.Booking] has been retrieved successfully > HTTP 200 - OK #  
+2021-06-03 09:27:42.4508 | INFO | Authenticate - POST | https://localhost/api/authenticate/refreshToken # User found from the valid access token given > HTTP 200 - OK #  
+2021-06-03 09:27:42.5072 | INFO | Authenticate - POST | https://localhost/api/authenticate/refreshToken # User JWT Current access token has been refreshed > HTTP 200 - OK #  
+2021-06-03 09:27:42.6897 | INFO | Booking - GET | https://localhost/api/booking/Admin/Pending # All the Members' Bookings System.Linq.Enumerable+WhereListIterator`1[RestaurantReservation.Core.Entities.Booking] has been retrieved successfully > HTTP 200 - OK #  
+2021-06-03 09:32:34.1357 | DEBUG |  -  |  # init main #  
+2021-06-03 09:32:43.8105 | ERROR |  -  |  # Failed executing DbCommand (10ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [AspNetRoles] (
+    [Id] nvarchar(450) NOT NULL,
+    [Name] nvarchar(256) NULL,
+    [NormalizedName] nvarchar(256) NULL,
+    [ConcurrencyStamp] nvarchar(max) NULL,
+    CONSTRAINT [PK_AspNetRoles] PRIMARY KEY ([Id])
+); # 
+ 
+2021-06-03 09:32:44.1629 | ERROR |  -  |  # Error executing database initializer. # 
+ EXCEPTION OCCURRED:Microsoft.Data.SqlClient.SqlException (0x80131904): There is already an object named 'AspNetRoles' in the database.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean isAsync, Int32 timeout, Boolean asyncWrite)
+   at Microsoft.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry, String methodName)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteNonQuery(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Migrations.MigrationCommand.ExecuteNonQuery(IRelationalConnection connection, IReadOnlyDictionary`2 parameterValues)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.MigrationCommandExecutor.ExecuteNonQuery(IEnumerable`1 migrationCommands, IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.Migrate(String targetMigration)
+   at Microsoft.EntityFrameworkCore.RelationalDatabaseFacadeExtensions.Migrate(DatabaseFacade databaseFacade)
+   at RestaurantReservation.Infrastructure.Data.DbInitializer.Initialize() in C:\Users\MIS\source\repos\Restaurant Reservation Website\RestaurantReservation.Backend\RestaurantReservation.Infrastructure\Data\DbInitializer.cs:line 35
+ClientConnectionId:51d97c98-083a-4289-b3b3-547197221bd9
+Error Number:2714,State:6,Class:16
+2021-06-03 09:32:44.4065 | INFO |  -  |  # Application started. Press Ctrl+C to shut down. #  
+2021-06-03 09:32:44.4345 | INFO |  -  |  # Hosting environment: Development #  
+2021-06-03 09:32:44.4656 | INFO |  -  |  # Content root path: C:\Users\MIS\source\repos\Restaurant Reservation Website\RestaurantReservation.Backend\RestaurantReservation.Api #  
+2021-06-03 09:33:01.0565 | INFO | Authenticate - POST | https://localhost/api/authenticate/refreshToken # User found from the valid access token given > HTTP 200 - OK #  
+2021-06-03 09:33:01.5569 | INFO | Authenticate - POST | https://localhost/api/authenticate/refreshToken # User JWT Current access token has been refreshed > HTTP 200 - OK #  
+2021-06-03 09:33:01.7963 | INFO | Booking - GET | https://localhost/api/booking/Admin/Pending # All the Members' Bookings System.Linq.Enumerable+WhereListIterator`1[RestaurantReservation.Core.Entities.Booking] has been retrieved successfully > HTTP 200 - OK #  
+2021-06-03 09:33:03.9356 | INFO | Authenticate - POST | https://localhost/api/authenticate/refreshToken # User found from the valid access token given > HTTP 200 - OK #  
+2021-06-03 09:33:03.9779 | INFO | Authenticate - POST | https://localhost/api/authenticate/refreshToken # User JWT Current access token has been refreshed > HTTP 200 - OK #  
+2021-06-03 09:33:04.1498 | INFO | Booking - GET | https://localhost/api/booking/Admin/Pending # All the Members' Bookings System.Linq.Enumerable+WhereListIterator`1[RestaurantReservation.Core.Entities.Booking] has been retrieved successfully > HTTP 200 - OK #  
+2021-06-03 09:33:08.1692 | INFO | Authenticate - POST | https://localhost/api/authenticate/refreshToken # User found from the valid access token given > HTTP 200 - OK #  
+2021-06-03 09:33:08.1986 | INFO | Authenticate - POST | https://localhost/api/authenticate/refreshToken # User JWT Current access token has been refreshed > HTTP 200 - OK #  
+2021-06-03 09:33:08.2430 | INFO | Booking - GET | https://localhost/api/booking/Admin/Pending # All the Members' Bookings System.Linq.Enumerable+WhereListIterator`1[RestaurantReservation.Core.Entities.Booking] has been retrieved successfully > HTTP 200 - OK #  
+2021-06-03 10:49:04.3366 | DEBUG |  -  |  # init main #  
+2021-06-03 10:49:19.3738 | ERROR |  -  |  # Failed executing DbCommand (12ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [AspNetRoles] (
+    [Id] nvarchar(450) NOT NULL,
+    [Name] nvarchar(256) NULL,
+    [NormalizedName] nvarchar(256) NULL,
+    [ConcurrencyStamp] nvarchar(max) NULL,
+    CONSTRAINT [PK_AspNetRoles] PRIMARY KEY ([Id])
+); # 
+ 
+2021-06-03 10:49:20.1405 | ERROR |  -  |  # Error executing database initializer. # 
+ EXCEPTION OCCURRED:Microsoft.Data.SqlClient.SqlException (0x80131904): There is already an object named 'AspNetRoles' in the database.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean isAsync, Int32 timeout, Boolean asyncWrite)
+   at Microsoft.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry, String methodName)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteNonQuery(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Migrations.MigrationCommand.ExecuteNonQuery(IRelationalConnection connection, IReadOnlyDictionary`2 parameterValues)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.MigrationCommandExecutor.ExecuteNonQuery(IEnumerable`1 migrationCommands, IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.Migrate(String targetMigration)
+   at Microsoft.EntityFrameworkCore.RelationalDatabaseFacadeExtensions.Migrate(DatabaseFacade databaseFacade)
+   at RestaurantReservation.Infrastructure.Data.DbInitializer.Initialize() in C:\Users\MIS\source\repos\Restaurant Reservation Website\RestaurantReservation.Backend\RestaurantReservation.Infrastructure\Data\DbInitializer.cs:line 35
+ClientConnectionId:5cf95441-3921-4f2e-9a55-ceefcdee3eac
+Error Number:2714,State:6,Class:16
+2021-06-03 10:49:20.5582 | INFO |  -  |  # Application started. Press Ctrl+C to shut down. #  
+2021-06-03 10:49:20.6707 | INFO |  -  |  # Hosting environment: Development #  
+2021-06-03 10:49:20.6855 | INFO |  -  |  # Content root path: C:\Users\MIS\source\repos\Restaurant Reservation Website\RestaurantReservation.Backend\RestaurantReservation.Api #  
+2021-06-03 10:50:12.3680 | INFO | Authenticate - POST | https://localhost/api/authenticate/login # User refresh token has been created > HTTP 200 - OK #  
+2021-06-03 10:50:16.2703 | INFO | Authenticate - POST | https://localhost/api/authenticate/refreshToken # User found from the valid access token given > HTTP 200 - OK #  
+2021-06-03 10:50:16.3479 | INFO | Authenticate - POST | https://localhost/api/authenticate/refreshToken # User JWT Current access token has been refreshed > HTTP 200 - OK #  
+2021-06-03 10:50:16.5409 | INFO | User - GET | https://localhost/api/user/info/77fa9efd-0f49-4b30-aaed-7973e49cdd61 # User with ID 77fa9efd-0f49-4b30-aaed-7973e49cdd61 have been retrieved OK #  
+2021-06-03 10:58:19.9012 | INFO | Authenticate - POST | https://localhost/api/authenticate/refreshToken # User found from the valid access token given > HTTP 200 - OK #  
+2021-06-03 10:58:19.9781 | INFO | Authenticate - POST | https://localhost/api/authenticate/refreshToken # User JWT Current access token has been refreshed > HTTP 200 - OK #  
+2021-06-03 10:58:20.3316 | INFO | User - GET | https://localhost/api/user/info/77fa9efd-0f49-4b30-aaed-7973e49cdd61 # User with ID 77fa9efd-0f49-4b30-aaed-7973e49cdd61 have been retrieved OK #  
+2021-06-03 10:58:59.8175 | INFO | Authenticate - POST | https://localhost/api/authenticate/refreshToken # User found from the valid access token given > HTTP 200 - OK #  
+2021-06-03 10:58:59.8575 | INFO | Authenticate - POST | https://localhost/api/authenticate/refreshToken # User JWT Current access token has been refreshed > HTTP 200 - OK #  
+2021-06-03 10:59:56.5736 | INFO | Authenticate - POST | https://localhost/api/authenticate/refreshToken # User found from the valid access token given > HTTP 200 - OK #  
+2021-06-03 10:59:56.6226 | INFO | Authenticate - POST | https://localhost/api/authenticate/refreshToken # User JWT Current access token has been refreshed > HTTP 200 - OK #  
+2021-06-03 11:01:20.2615 | DEBUG |  -  |  # init main #  
+2021-06-03 11:01:28.5530 | ERROR |  -  |  # Failed executing DbCommand (9ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [AspNetRoles] (
+    [Id] nvarchar(450) NOT NULL,
+    [Name] nvarchar(256) NULL,
+    [NormalizedName] nvarchar(256) NULL,
+    [ConcurrencyStamp] nvarchar(max) NULL,
+    CONSTRAINT [PK_AspNetRoles] PRIMARY KEY ([Id])
+); # 
+ 
+2021-06-03 11:01:28.7697 | ERROR |  -  |  # Error executing database initializer. # 
+ EXCEPTION OCCURRED:Microsoft.Data.SqlClient.SqlException (0x80131904): There is already an object named 'AspNetRoles' in the database.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean isAsync, Int32 timeout, Boolean asyncWrite)
+   at Microsoft.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry, String methodName)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteNonQuery(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Migrations.MigrationCommand.ExecuteNonQuery(IRelationalConnection connection, IReadOnlyDictionary`2 parameterValues)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.MigrationCommandExecutor.ExecuteNonQuery(IEnumerable`1 migrationCommands, IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.Migrate(String targetMigration)
+   at Microsoft.EntityFrameworkCore.RelationalDatabaseFacadeExtensions.Migrate(DatabaseFacade databaseFacade)
+   at RestaurantReservation.Infrastructure.Data.DbInitializer.Initialize() in C:\Users\MIS\source\repos\Restaurant Reservation Website\RestaurantReservation.Backend\RestaurantReservation.Infrastructure\Data\DbInitializer.cs:line 35
+ClientConnectionId:b437c66a-3c9a-4fd1-bca0-62679c2a9916
+Error Number:2714,State:6,Class:16
+2021-06-03 11:01:28.9113 | INFO |  -  |  # Application started. Press Ctrl+C to shut down. #  
+2021-06-03 11:01:28.9734 | INFO |  -  |  # Hosting environment: Development #  
+2021-06-03 11:01:28.9734 | INFO |  -  |  # Content root path: C:\Users\MIS\source\repos\Restaurant Reservation Website\RestaurantReservation.Backend\RestaurantReservation.Api #  
+2021-06-03 11:01:43.1727 | INFO | Authenticate - POST | https://localhost/api/authenticate/refreshToken # User found from the valid access token given > HTTP 200 - OK #  
+2021-06-03 11:01:44.5218 | INFO | Authenticate - POST | https://localhost/api/authenticate/refreshToken # User JWT Current access token has been refreshed > HTTP 200 - OK #  
+2021-06-03 11:01:52.9108 | INFO | User - GET | https://localhost/api/user/info/77fa9efd-0f49-4b30-aaed-7973e49cdd61 # User with ID 77fa9efd-0f49-4b30-aaed-7973e49cdd61 have been retrieved OK #  
+2021-06-03 11:02:18.7365 | INFO | Authenticate - POST | https://localhost/api/authenticate/refreshToken # User found from the valid access token given > HTTP 200 - OK #  
+2021-06-03 11:02:18.7813 | INFO | Authenticate - POST | https://localhost/api/authenticate/refreshToken # User JWT Current access token has been refreshed > HTTP 200 - OK #  
+2021-06-03 11:04:18.2237 | DEBUG |  -  |  # init main #  
+2021-06-03 11:04:38.9203 | ERROR |  -  |  # Failed executing DbCommand (30ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [AspNetRoles] (
+    [Id] nvarchar(450) NOT NULL,
+    [Name] nvarchar(256) NULL,
+    [NormalizedName] nvarchar(256) NULL,
+    [ConcurrencyStamp] nvarchar(max) NULL,
+    CONSTRAINT [PK_AspNetRoles] PRIMARY KEY ([Id])
+); # 
+ 
+2021-06-03 11:04:39.5344 | ERROR |  -  |  # Error executing database initializer. # 
+ EXCEPTION OCCURRED:Microsoft.Data.SqlClient.SqlException (0x80131904): There is already an object named 'AspNetRoles' in the database.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean isAsync, Int32 timeout, Boolean asyncWrite)
+   at Microsoft.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry, String methodName)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteNonQuery(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Migrations.MigrationCommand.ExecuteNonQuery(IRelationalConnection connection, IReadOnlyDictionary`2 parameterValues)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.MigrationCommandExecutor.ExecuteNonQuery(IEnumerable`1 migrationCommands, IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.Migrate(String targetMigration)
+   at Microsoft.EntityFrameworkCore.RelationalDatabaseFacadeExtensions.Migrate(DatabaseFacade databaseFacade)
+   at RestaurantReservation.Infrastructure.Data.DbInitializer.Initialize() in C:\Users\MIS\source\repos\Restaurant Reservation Website\RestaurantReservation.Backend\RestaurantReservation.Infrastructure\Data\DbInitializer.cs:line 35
+ClientConnectionId:b071d600-bd71-4ec6-9425-cb15de9d8cb8
+Error Number:2714,State:6,Class:16
+2021-06-03 11:04:39.7263 | INFO |  -  |  # Application started. Press Ctrl+C to shut down. #  
+2021-06-03 11:04:39.8440 | INFO |  -  |  # Hosting environment: Development #  
+2021-06-03 11:04:39.9085 | INFO |  -  |  # Content root path: C:\Users\MIS\source\repos\Restaurant Reservation Website\RestaurantReservation.Backend\RestaurantReservation.Api #  
+2021-06-03 11:04:51.0975 | INFO | Authenticate - POST | https://localhost/api/authenticate/refreshToken # User found from the valid access token given > HTTP 200 - OK #  
+2021-06-03 11:04:51.9090 | INFO | Authenticate - POST | https://localhost/api/authenticate/refreshToken # User JWT Current access token has been refreshed > HTTP 200 - OK #  
+2021-06-03 11:04:52.4959 | INFO | User - GET | https://localhost/api/user/info/77fa9efd-0f49-4b30-aaed-7973e49cdd61 # User with ID 77fa9efd-0f49-4b30-aaed-7973e49cdd61 have been retrieved OK #  
+2021-06-03 11:05:37.2487 | INFO | Authenticate - POST | https://localhost/api/authenticate/refreshToken # User found from the valid access token given > HTTP 200 - OK #  
+2021-06-03 11:05:37.2820 | INFO | Authenticate - POST | https://localhost/api/authenticate/refreshToken # User JWT Current access token has been refreshed > HTTP 200 - OK #  
+2021-06-03 11:07:31.6356 | DEBUG |  -  |  # init main #  
+2021-06-03 11:07:43.5347 | ERROR |  -  |  # Failed executing DbCommand (8ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [AspNetRoles] (
+    [Id] nvarchar(450) NOT NULL,
+    [Name] nvarchar(256) NULL,
+    [NormalizedName] nvarchar(256) NULL,
+    [ConcurrencyStamp] nvarchar(max) NULL,
+    CONSTRAINT [PK_AspNetRoles] PRIMARY KEY ([Id])
+); # 
+ 
+2021-06-03 11:07:43.8401 | ERROR |  -  |  # Error executing database initializer. # 
+ EXCEPTION OCCURRED:Microsoft.Data.SqlClient.SqlException (0x80131904): There is already an object named 'AspNetRoles' in the database.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean isAsync, Int32 timeout, Boolean asyncWrite)
+   at Microsoft.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry, String methodName)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteNonQuery(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Migrations.MigrationCommand.ExecuteNonQuery(IRelationalConnection connection, IReadOnlyDictionary`2 parameterValues)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.MigrationCommandExecutor.ExecuteNonQuery(IEnumerable`1 migrationCommands, IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.Migrate(String targetMigration)
+   at Microsoft.EntityFrameworkCore.RelationalDatabaseFacadeExtensions.Migrate(DatabaseFacade databaseFacade)
+   at RestaurantReservation.Infrastructure.Data.DbInitializer.Initialize() in C:\Users\MIS\source\repos\Restaurant Reservation Website\RestaurantReservation.Backend\RestaurantReservation.Infrastructure\Data\DbInitializer.cs:line 35
+ClientConnectionId:9b6847ef-22f3-4965-89e6-653ad15fd618
+Error Number:2714,State:6,Class:16
+2021-06-03 11:07:44.0126 | INFO |  -  |  # Application started. Press Ctrl+C to shut down. #  
+2021-06-03 11:07:44.1574 | INFO |  -  |  # Hosting environment: Development #  
+2021-06-03 11:07:44.1781 | INFO |  -  |  # Content root path: C:\Users\MIS\source\repos\Restaurant Reservation Website\RestaurantReservation.Backend\RestaurantReservation.Api #  
+2021-06-03 11:07:53.5110 | INFO | Authenticate - POST | https://localhost/api/authenticate/refreshToken # User found from the valid access token given > HTTP 200 - OK #  
+2021-06-03 11:07:54.0728 | INFO | Authenticate - POST | https://localhost/api/authenticate/refreshToken # User JWT Current access token has been refreshed > HTTP 200 - OK #  
+2021-06-03 11:07:54.3412 | INFO | User - GET | https://localhost/api/user/info/77fa9efd-0f49-4b30-aaed-7973e49cdd61 # User with ID 77fa9efd-0f49-4b30-aaed-7973e49cdd61 have been retrieved OK #  
+2021-06-03 11:08:37.1073 | INFO | Authenticate - POST | https://localhost/api/authenticate/refreshToken # User found from the valid access token given > HTTP 200 - OK #  
+2021-06-03 11:08:37.1523 | INFO | Authenticate - POST | https://localhost/api/authenticate/refreshToken # User JWT Current access token has been refreshed > HTTP 200 - OK #  
+2021-06-03 11:09:52.8253 | DEBUG |  -  |  # init main #  
+2021-06-03 11:09:58.2560 | ERROR |  -  |  # Failed executing DbCommand (5ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [AspNetRoles] (
+    [Id] nvarchar(450) NOT NULL,
+    [Name] nvarchar(256) NULL,
+    [NormalizedName] nvarchar(256) NULL,
+    [ConcurrencyStamp] nvarchar(max) NULL,
+    CONSTRAINT [PK_AspNetRoles] PRIMARY KEY ([Id])
+); # 
+ 
+2021-06-03 11:09:58.4907 | ERROR |  -  |  # Error executing database initializer. # 
+ EXCEPTION OCCURRED:Microsoft.Data.SqlClient.SqlException (0x80131904): There is already an object named 'AspNetRoles' in the database.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean isAsync, Int32 timeout, Boolean asyncWrite)
+   at Microsoft.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry, String methodName)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteNonQuery(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Migrations.MigrationCommand.ExecuteNonQuery(IRelationalConnection connection, IReadOnlyDictionary`2 parameterValues)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.MigrationCommandExecutor.ExecuteNonQuery(IEnumerable`1 migrationCommands, IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.Migrate(String targetMigration)
+   at Microsoft.EntityFrameworkCore.RelationalDatabaseFacadeExtensions.Migrate(DatabaseFacade databaseFacade)
+   at RestaurantReservation.Infrastructure.Data.DbInitializer.Initialize() in C:\Users\MIS\source\repos\Restaurant Reservation Website\RestaurantReservation.Backend\RestaurantReservation.Infrastructure\Data\DbInitializer.cs:line 35
+ClientConnectionId:91269c40-f510-4b36-9982-203f6658bba8
+Error Number:2714,State:6,Class:16
+2021-06-03 11:09:58.5894 | INFO |  -  |  # Application started. Press Ctrl+C to shut down. #  
+2021-06-03 11:09:58.6262 | INFO |  -  |  # Hosting environment: Development #  
+2021-06-03 11:09:58.6262 | INFO |  -  |  # Content root path: C:\Users\MIS\source\repos\Restaurant Reservation Website\RestaurantReservation.Backend\RestaurantReservation.Api #  
+2021-06-03 11:22:35.8712 | DEBUG |  -  |  # init main #  
+2021-06-03 11:22:41.6075 | ERROR |  -  |  # Failed executing DbCommand (8ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [AspNetRoles] (
+    [Id] nvarchar(450) NOT NULL,
+    [Name] nvarchar(256) NULL,
+    [NormalizedName] nvarchar(256) NULL,
+    [ConcurrencyStamp] nvarchar(max) NULL,
+    CONSTRAINT [PK_AspNetRoles] PRIMARY KEY ([Id])
+); # 
+ 
+2021-06-03 11:22:41.8797 | ERROR |  -  |  # Error executing database initializer. # 
+ EXCEPTION OCCURRED:Microsoft.Data.SqlClient.SqlException (0x80131904): There is already an object named 'AspNetRoles' in the database.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean isAsync, Int32 timeout, Boolean asyncWrite)
+   at Microsoft.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry, String methodName)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteNonQuery(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Migrations.MigrationCommand.ExecuteNonQuery(IRelationalConnection connection, IReadOnlyDictionary`2 parameterValues)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.MigrationCommandExecutor.ExecuteNonQuery(IEnumerable`1 migrationCommands, IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.Migrate(String targetMigration)
+   at Microsoft.EntityFrameworkCore.RelationalDatabaseFacadeExtensions.Migrate(DatabaseFacade databaseFacade)
+   at RestaurantReservation.Infrastructure.Data.DbInitializer.Initialize() in C:\Users\MIS\source\repos\Restaurant Reservation Website\RestaurantReservation.Backend\RestaurantReservation.Infrastructure\Data\DbInitializer.cs:line 35
+ClientConnectionId:45862084-e413-4554-9e5b-112268204924
+Error Number:2714,State:6,Class:16
+2021-06-03 11:22:41.9838 | INFO |  -  |  # Application started. Press Ctrl+C to shut down. #  
+2021-06-03 11:22:42.0171 | INFO |  -  |  # Hosting environment: Development #  
+2021-06-03 11:22:42.0422 | INFO |  -  |  # Content root path: C:\Users\MIS\source\repos\Restaurant Reservation Website\RestaurantReservation.Backend\RestaurantReservation.Api #  
+2021-06-03 11:24:50.7387 | DEBUG |  -  |  # init main #  
+2021-06-03 11:24:55.5551 | ERROR |  -  |  # Failed executing DbCommand (5ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [AspNetRoles] (
+    [Id] nvarchar(450) NOT NULL,
+    [Name] nvarchar(256) NULL,
+    [NormalizedName] nvarchar(256) NULL,
+    [ConcurrencyStamp] nvarchar(max) NULL,
+    CONSTRAINT [PK_AspNetRoles] PRIMARY KEY ([Id])
+); # 
+ 
+2021-06-03 11:24:55.7866 | ERROR |  -  |  # Error executing database initializer. # 
+ EXCEPTION OCCURRED:Microsoft.Data.SqlClient.SqlException (0x80131904): There is already an object named 'AspNetRoles' in the database.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean isAsync, Int32 timeout, Boolean asyncWrite)
+   at Microsoft.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry, String methodName)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteNonQuery(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Migrations.MigrationCommand.ExecuteNonQuery(IRelationalConnection connection, IReadOnlyDictionary`2 parameterValues)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.MigrationCommandExecutor.ExecuteNonQuery(IEnumerable`1 migrationCommands, IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.Migrate(String targetMigration)
+   at Microsoft.EntityFrameworkCore.RelationalDatabaseFacadeExtensions.Migrate(DatabaseFacade databaseFacade)
+   at RestaurantReservation.Infrastructure.Data.DbInitializer.Initialize() in C:\Users\MIS\source\repos\Restaurant Reservation Website\RestaurantReservation.Backend\RestaurantReservation.Infrastructure\Data\DbInitializer.cs:line 35
+ClientConnectionId:47fe94d6-2ca9-4981-94c6-9674188b9bb6
+Error Number:2714,State:6,Class:16
+2021-06-03 11:24:55.8882 | INFO |  -  |  # Application started. Press Ctrl+C to shut down. #  
+2021-06-03 11:24:55.9244 | INFO |  -  |  # Hosting environment: Development #  
+2021-06-03 11:24:55.9244 | INFO |  -  |  # Content root path: C:\Users\MIS\source\repos\Restaurant Reservation Website\RestaurantReservation.Backend\RestaurantReservation.Api #  
+2021-06-03 11:27:38.8541 | DEBUG |  -  |  # init main #  
+2021-06-03 11:27:59.4811 | DEBUG |  -  |  # init main #  
+2021-06-03 11:28:06.5624 | ERROR |  -  |  # Failed executing DbCommand (7ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [AspNetRoles] (
+    [Id] nvarchar(450) NOT NULL,
+    [Name] nvarchar(256) NULL,
+    [NormalizedName] nvarchar(256) NULL,
+    [ConcurrencyStamp] nvarchar(max) NULL,
+    CONSTRAINT [PK_AspNetRoles] PRIMARY KEY ([Id])
+); # 
+ 
+2021-06-03 11:28:06.8560 | ERROR |  -  |  # Error executing database initializer. # 
+ EXCEPTION OCCURRED:Microsoft.Data.SqlClient.SqlException (0x80131904): There is already an object named 'AspNetRoles' in the database.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean isAsync, Int32 timeout, Boolean asyncWrite)
+   at Microsoft.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry, String methodName)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteNonQuery(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Migrations.MigrationCommand.ExecuteNonQuery(IRelationalConnection connection, IReadOnlyDictionary`2 parameterValues)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.MigrationCommandExecutor.ExecuteNonQuery(IEnumerable`1 migrationCommands, IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.Migrate(String targetMigration)
+   at Microsoft.EntityFrameworkCore.RelationalDatabaseFacadeExtensions.Migrate(DatabaseFacade databaseFacade)
+   at RestaurantReservation.Infrastructure.Data.DbInitializer.Initialize() in C:\Users\MIS\source\repos\Restaurant Reservation Website\RestaurantReservation.Backend\RestaurantReservation.Infrastructure\Data\DbInitializer.cs:line 35
+ClientConnectionId:4d286253-eea6-4f3d-a646-5f8f195adc5c
+Error Number:2714,State:6,Class:16
+2021-06-03 11:28:07.0272 | INFO |  -  |  # Application started. Press Ctrl+C to shut down. #  
+2021-06-03 11:28:07.2460 | INFO |  -  |  # Hosting environment: Development #  
+2021-06-03 11:28:07.2971 | INFO |  -  |  # Content root path: C:\Users\MIS\source\repos\Restaurant Reservation Website\RestaurantReservation.Backend\RestaurantReservation.Api #  
+2021-06-03 11:32:26.2947 | DEBUG |  -  |  # init main #  
+2021-06-03 11:33:10.6354 | DEBUG |  -  |  # init main #  
+2021-06-03 11:33:15.9194 | ERROR |  -  |  # Failed executing DbCommand (8ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [AspNetRoles] (
+    [Id] nvarchar(450) NOT NULL,
+    [Name] nvarchar(256) NULL,
+    [NormalizedName] nvarchar(256) NULL,
+    [ConcurrencyStamp] nvarchar(max) NULL,
+    CONSTRAINT [PK_AspNetRoles] PRIMARY KEY ([Id])
+); # 
+ 
+2021-06-03 11:33:16.1303 | ERROR |  -  |  # Error executing database initializer. # 
+ EXCEPTION OCCURRED:Microsoft.Data.SqlClient.SqlException (0x80131904): There is already an object named 'AspNetRoles' in the database.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean isAsync, Int32 timeout, Boolean asyncWrite)
+   at Microsoft.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry, String methodName)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteNonQuery(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Migrations.MigrationCommand.ExecuteNonQuery(IRelationalConnection connection, IReadOnlyDictionary`2 parameterValues)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.MigrationCommandExecutor.ExecuteNonQuery(IEnumerable`1 migrationCommands, IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.Migrate(String targetMigration)
+   at Microsoft.EntityFrameworkCore.RelationalDatabaseFacadeExtensions.Migrate(DatabaseFacade databaseFacade)
+   at RestaurantReservation.Infrastructure.Data.DbInitializer.Initialize() in C:\Users\MIS\source\repos\Restaurant Reservation Website\RestaurantReservation.Backend\RestaurantReservation.Infrastructure\Data\DbInitializer.cs:line 35
+ClientConnectionId:ef0eba72-1cc7-48af-b0a5-a45d4dad9de7
+Error Number:2714,State:6,Class:16
+2021-06-03 11:33:16.2262 | INFO |  -  |  # Application started. Press Ctrl+C to shut down. #  
+2021-06-03 11:33:16.2797 | INFO |  -  |  # Hosting environment: Development #  
+2021-06-03 11:33:16.2797 | INFO |  -  |  # Content root path: C:\Users\MIS\source\repos\Restaurant Reservation Website\RestaurantReservation.Backend\RestaurantReservation.Api #  
+2021-06-03 11:35:34.6719 | DEBUG |  -  |  # init main #  
+2021-06-03 11:35:40.3668 | ERROR |  -  |  # Failed executing DbCommand (11ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [AspNetRoles] (
+    [Id] nvarchar(450) NOT NULL,
+    [Name] nvarchar(256) NULL,
+    [NormalizedName] nvarchar(256) NULL,
+    [ConcurrencyStamp] nvarchar(max) NULL,
+    CONSTRAINT [PK_AspNetRoles] PRIMARY KEY ([Id])
+); # 
+ 
+2021-06-03 11:35:41.0583 | ERROR |  -  |  # Error executing database initializer. # 
+ EXCEPTION OCCURRED:Microsoft.Data.SqlClient.SqlException (0x80131904): There is already an object named 'AspNetRoles' in the database.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean isAsync, Int32 timeout, Boolean asyncWrite)
+   at Microsoft.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry, String methodName)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteNonQuery(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Migrations.MigrationCommand.ExecuteNonQuery(IRelationalConnection connection, IReadOnlyDictionary`2 parameterValues)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.MigrationCommandExecutor.ExecuteNonQuery(IEnumerable`1 migrationCommands, IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.Migrate(String targetMigration)
+   at Microsoft.EntityFrameworkCore.RelationalDatabaseFacadeExtensions.Migrate(DatabaseFacade databaseFacade)
+   at RestaurantReservation.Infrastructure.Data.DbInitializer.Initialize() in C:\Users\MIS\source\repos\Restaurant Reservation Website\RestaurantReservation.Backend\RestaurantReservation.Infrastructure\Data\DbInitializer.cs:line 35
+ClientConnectionId:a1725a83-b1ec-4d54-a9e2-762d85b69598
+Error Number:2714,State:6,Class:16
+2021-06-03 11:35:41.3336 | INFO |  -  |  # Application started. Press Ctrl+C to shut down. #  
+2021-06-03 11:35:41.3839 | INFO |  -  |  # Hosting environment: Development #  
+2021-06-03 11:35:41.3977 | INFO |  -  |  # Content root path: C:\Users\MIS\source\repos\Restaurant Reservation Website\RestaurantReservation.Backend\RestaurantReservation.Api #  
+2021-06-03 11:36:22.8482 | DEBUG |  -  |  # init main #  
+2021-06-03 11:36:39.1090 | ERROR |  -  |  # Failed executing DbCommand (13ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [AspNetRoles] (
+    [Id] nvarchar(450) NOT NULL,
+    [Name] nvarchar(256) NULL,
+    [NormalizedName] nvarchar(256) NULL,
+    [ConcurrencyStamp] nvarchar(max) NULL,
+    CONSTRAINT [PK_AspNetRoles] PRIMARY KEY ([Id])
+); # 
+ 
+2021-06-03 11:36:39.3298 | ERROR |  -  |  # Error executing database initializer. # 
+ EXCEPTION OCCURRED:Microsoft.Data.SqlClient.SqlException (0x80131904): There is already an object named 'AspNetRoles' in the database.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean isAsync, Int32 timeout, Boolean asyncWrite)
+   at Microsoft.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry, String methodName)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteNonQuery(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Migrations.MigrationCommand.ExecuteNonQuery(IRelationalConnection connection, IReadOnlyDictionary`2 parameterValues)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.MigrationCommandExecutor.ExecuteNonQuery(IEnumerable`1 migrationCommands, IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.Migrate(String targetMigration)
+   at Microsoft.EntityFrameworkCore.RelationalDatabaseFacadeExtensions.Migrate(DatabaseFacade databaseFacade)
+   at RestaurantReservation.Infrastructure.Data.DbInitializer.Initialize() in C:\Users\MIS\source\repos\Restaurant Reservation Website\RestaurantReservation.Backend\RestaurantReservation.Infrastructure\Data\DbInitializer.cs:line 35
+ClientConnectionId:216abc36-0147-4984-998d-4c3f2b65f1dc
+Error Number:2714,State:6,Class:16
+2021-06-03 11:36:39.4421 | INFO |  -  |  # Application started. Press Ctrl+C to shut down. #  
+2021-06-03 11:36:39.4697 | INFO |  -  |  # Hosting environment: Development #  
+2021-06-03 11:36:39.4820 | INFO |  -  |  # Content root path: C:\Users\MIS\source\repos\Restaurant Reservation Website\RestaurantReservation.Backend\RestaurantReservation.Api #  
+2021-06-03 11:36:57.7952 | INFO | Authenticate - POST | https://localhost/api/authenticate/login # User refresh token has been created > HTTP 200 - OK #  
+2021-06-03 11:37:01.3765 | INFO | Authenticate - POST | https://localhost/api/authenticate/refreshToken # User found from the valid access token given > HTTP 200 - OK #  
+2021-06-03 11:37:01.4545 | INFO | Authenticate - POST | https://localhost/api/authenticate/refreshToken # User JWT Current access token has been refreshed > HTTP 200 - OK #  
+2021-06-03 11:37:01.6294 | INFO | User - GET | https://localhost/api/user/info/77fa9efd-0f49-4b30-aaed-7973e49cdd61 # User with ID 77fa9efd-0f49-4b30-aaed-7973e49cdd61 have been retrieved OK #  
+2021-06-03 11:37:18.2137 | INFO | Authenticate - POST | https://localhost/api/authenticate/refreshToken # User found from the valid access token given > HTTP 200 - OK #  
+2021-06-03 11:37:18.2658 | INFO | Authenticate - POST | https://localhost/api/authenticate/refreshToken # User JWT Current access token has been refreshed > HTTP 200 - OK #  
+2021-06-03 11:37:43.8037 | INFO | Authenticate - POST | https://localhost/api/authenticate/refreshToken # User found from the valid access token given > HTTP 200 - OK #  
+2021-06-03 11:37:43.8301 | INFO | Authenticate - POST | https://localhost/api/authenticate/refreshToken # User JWT Current access token has been refreshed > HTTP 200 - OK #  
+2021-06-03 11:37:43.9650 | INFO | User - GET | https://localhost/api/user/info/77fa9efd-0f49-4b30-aaed-7973e49cdd61 # User with ID 77fa9efd-0f49-4b30-aaed-7973e49cdd61 have been retrieved OK #  
+2021-06-03 11:38:04.3004 | INFO | Authenticate - POST | https://localhost/api/authenticate/refreshToken # User found from the valid access token given > HTTP 200 - OK #  
+2021-06-03 11:38:04.3349 | INFO | Authenticate - POST | https://localhost/api/authenticate/refreshToken # User JWT Current access token has been refreshed > HTTP 200 - OK #  
+2021-06-03 11:38:04.4952 | WARN | User - POST | https://localhost/api/user/ChangePassword # Change password failed for user 77fa9efd-0f49-4b30-aaed-7973e49cdd61. #  
+2021-06-03 11:38:04.5038 | WARN | User - POST | https://localhost/api/user/ChangePassword # User with 77fa9efd-0f49-4b30-aaed-7973e49cdd61 change password unsuccessfully BadRequest #  
+2021-06-03 12:40:01.2273 | ERROR |  -  |  # Failed executing DbCommand (5ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [AspNetRoles] (
+    [Id] nvarchar(450) NOT NULL,
+    [Name] nvarchar(256) NULL,
+    [NormalizedName] nvarchar(256) NULL,
+    [ConcurrencyStamp] nvarchar(max) NULL,
+    CONSTRAINT [PK_AspNetRoles] PRIMARY KEY ([Id])
+); # 
+ 
+2021-06-03 13:11:07.9316 | DEBUG |  -  |  # init main #  
+2021-06-03 13:11:14.6356 | INFO |  -  |  # Application started. Press Ctrl+C to shut down. #  
+2021-06-03 13:11:14.6566 | INFO |  -  |  # Hosting environment: Development #  
+2021-06-03 13:11:14.6566 | INFO |  -  |  # Content root path: C:\Users\MIS\source\repos\Restaurant Reservation Website\RestaurantReservation.Backend\RestaurantReservation.Api #  
+2021-06-03 13:28:42.4461 | DEBUG |  -  |  # init main #  
+2021-06-03 13:28:56.9100 | INFO |  -  |  # Application started. Press Ctrl+C to shut down. #  
+2021-06-03 13:28:56.9381 | INFO |  -  |  # Hosting environment: Development #  
+2021-06-03 13:28:56.9534 | INFO |  -  |  # Content root path: C:\Users\MIS\source\repos\Restaurant Reservation Website\RestaurantReservation.Backend\RestaurantReservation.Api #  
+2021-06-03 13:29:49.6443 | INFO | Authenticate - POST | https://localhost/api/authenticate/login # User refresh token has been created > HTTP 200 - OK #  
+2021-06-03 13:29:57.6165 | INFO | Authenticate - POST | https://localhost/api/authenticate/refreshToken # User found from the valid access token given > HTTP 200 - OK #  
+2021-06-03 13:29:57.7278 | INFO | Authenticate - POST | https://localhost/api/authenticate/refreshToken # User JWT Current access token has been refreshed > HTTP 200 - OK #  
+2021-06-03 13:29:57.9724 | INFO | Category - GET | https://localhost/api/category # Categories have been retrieved OK #  
+2021-06-03 13:30:17.2197 | INFO | Authenticate - POST | https://localhost/api/authenticate/refreshToken # User found from the valid access token given > HTTP 200 - OK #  
+2021-06-03 13:30:17.2634 | INFO | Authenticate - POST | https://localhost/api/authenticate/refreshToken # User JWT Current access token has been refreshed > HTTP 200 - OK #  
+2021-06-03 13:30:17.5505 | INFO | Category - POST | https://localhost/api/category # Category Chinese has been created with ID 1 > HTTP 200 - OK #  
+2021-06-03 13:30:17.6297 | INFO | Authenticate - POST | https://localhost/api/authenticate/refreshToken # User found from the valid access token given > HTTP 200 - OK #  
+2021-06-03 13:30:17.6471 | INFO | Authenticate - POST | https://localhost/api/authenticate/refreshToken # User JWT Current access token has been refreshed > HTTP 200 - OK #  
+2021-06-03 13:30:17.6825 | INFO | Category - GET | https://localhost/api/category # Categories have been retrieved OK #  
+2021-06-03 13:30:23.1974 | INFO | Authenticate - POST | https://localhost/api/authenticate/refreshToken # User found from the valid access token given > HTTP 200 - OK #  
+2021-06-03 13:30:23.2547 | INFO | Authenticate - POST | https://localhost/api/authenticate/refreshToken # User JWT Current access token has been refreshed > HTTP 200 - OK #  
+2021-06-03 13:30:23.4461 | INFO | Category - POST | https://localhost/api/category # Category Malay has been created with ID 2 > HTTP 200 - OK #  
+2021-06-03 13:30:23.5328 | INFO | Authenticate - POST | https://localhost/api/authenticate/refreshToken # User found from the valid access token given > HTTP 200 - OK #  
+2021-06-03 13:30:23.5576 | INFO | Authenticate - POST | https://localhost/api/authenticate/refreshToken # User JWT Current access token has been refreshed > HTTP 200 - OK #  
+2021-06-03 13:30:23.6149 | INFO | Category - GET | https://localhost/api/category # Categories have been retrieved OK #  
+2021-06-03 13:30:29.6227 | INFO | Authenticate - POST | https://localhost/api/authenticate/refreshToken # User found from the valid access token given > HTTP 200 - OK #  
+2021-06-03 13:30:29.7001 | INFO | Authenticate - POST | https://localhost/api/authenticate/refreshToken # User JWT Current access token has been refreshed > HTTP 200 - OK #  
+2021-06-03 13:30:29.9197 | INFO | Category - POST | https://localhost/api/category # Category Indo has been created with ID 3 > HTTP 200 - OK #  
+2021-06-03 13:30:29.9873 | INFO | Authenticate - POST | https://localhost/api/authenticate/refreshToken # User found from the valid access token given > HTTP 200 - OK #  
+2021-06-03 13:30:30.0278 | INFO | Authenticate - POST | https://localhost/api/authenticate/refreshToken # User JWT Current access token has been refreshed > HTTP 200 - OK #  
+2021-06-03 13:30:30.1276 | INFO | Category - GET | https://localhost/api/category # Categories have been retrieved OK #  
+2021-06-03 13:30:37.7867 | INFO | Authenticate - POST | https://localhost/api/authenticate/refreshToken # User found from the valid access token given > HTTP 200 - OK #  
+2021-06-03 13:30:37.8419 | INFO | Authenticate - POST | https://localhost/api/authenticate/refreshToken # User JWT Current access token has been refreshed > HTTP 200 - OK #  
+2021-06-03 13:30:38.5417 | INFO | Category - POST | https://localhost/api/category # Category Chicken has been created with ID 4 > HTTP 200 - OK #  
+2021-06-03 13:30:38.7978 | INFO | Authenticate - POST | https://localhost/api/authenticate/refreshToken # User found from the valid access token given > HTTP 200 - OK #  
+2021-06-03 13:30:38.8383 | INFO | Authenticate - POST | https://localhost/api/authenticate/refreshToken # User JWT Current access token has been refreshed > HTTP 200 - OK #  
+2021-06-03 13:30:38.8978 | INFO | Category - GET | https://localhost/api/category # Categories have been retrieved OK #  
+2021-06-03 13:30:40.6734 | INFO | Authenticate - POST | https://localhost/api/authenticate/refreshToken # User found from the valid access token given > HTTP 200 - OK #  
+2021-06-03 13:30:40.7166 | INFO | Authenticate - POST | https://localhost/api/authenticate/refreshToken # User JWT Current access token has been refreshed > HTTP 200 - OK #  
+2021-06-03 13:30:40.9879 | INFO | User - GET | https://localhost/api/user/all # Users have been retrieved OK #  
+2021-06-03 13:31:06.3224 | INFO | Authenticate - POST | https://localhost/api/authenticate/refreshToken # User found from the valid access token given > HTTP 200 - OK #  
+2021-06-03 13:31:06.3603 | INFO | Authenticate - POST | https://localhost/api/authenticate/refreshToken # User JWT Current access token has been refreshed > HTTP 200 - OK #  
+2021-06-03 13:31:06.7047 | INFO | User - GET | https://localhost/api/user/info/8448ce5f-b94a-4efa-8fb6-48c9d0611b90 # User with ID 8448ce5f-b94a-4efa-8fb6-48c9d0611b90 have been retrieved OK #  
+2021-06-03 13:31:36.7649 | INFO | Authenticate - POST | https://localhost/api/authenticate/refreshToken # User found from the valid access token given > HTTP 200 - OK #  
+2021-06-03 13:31:36.8186 | INFO | Authenticate - POST | https://localhost/api/authenticate/refreshToken # User JWT Current access token has been refreshed > HTTP 200 - OK #  
+2021-06-03 13:31:37.1659 | INFO | Authenticate - POST | https://localhost/api/authenticate/register # User admin2 has been created with role as Admin > HTTP 200 - OK #  
+2021-06-03 13:31:37.1984 | INFO | Authenticate - POST | https://localhost/api/authenticate/refreshToken # User found from the valid access token given > HTTP 200 - OK #  
+2021-06-03 13:31:37.1984 | INFO | Authenticate - POST | https://localhost/api/authenticate/refreshToken # User JWT Current access token has been refreshed > HTTP 200 - OK #  
+2021-06-03 13:31:37.2428 | INFO | User - GET | https://localhost/api/user/all # Users have been retrieved OK #  
+2021-06-03 13:31:54.5315 | INFO | Authenticate - POST | https://localhost/api/authenticate/login # User refresh token has been created > HTTP 200 - OK #  
+2021-06-03 13:32:04.7429 | INFO | Authenticate - POST | https://localhost/api/authenticate/refreshToken # User found from the valid access token given > HTTP 200 - OK #  
+2021-06-03 13:32:04.7675 | INFO | Authenticate - POST | https://localhost/api/authenticate/refreshToken # User JWT Current access token has been refreshed > HTTP 200 - OK #  
+2021-06-03 13:32:04.8113 | INFO | Category - GET | https://localhost/api/category # Categories have been retrieved OK #  
+2021-06-03 13:32:15.9580 | INFO | Authenticate - POST | https://localhost/api/authenticate/refreshToken # User found from the valid access token given > HTTP 200 - OK #  
+2021-06-03 13:32:15.9905 | INFO | Authenticate - POST | https://localhost/api/authenticate/refreshToken # User JWT Current access token has been refreshed > HTTP 200 - OK #  
+2021-06-03 13:32:16.1843 | INFO | Category - POST | https://localhost/api/category # Category Beverage has been created with ID 5 > HTTP 200 - OK #  
+2021-06-03 13:32:16.2327 | INFO | Authenticate - POST | https://localhost/api/authenticate/refreshToken # User found from the valid access token given > HTTP 200 - OK #  
+2021-06-03 13:32:16.2639 | INFO | Authenticate - POST | https://localhost/api/authenticate/refreshToken # User JWT Current access token has been refreshed > HTTP 200 - OK #  
+2021-06-03 13:32:16.3363 | INFO | Category - GET | https://localhost/api/category # Categories have been retrieved OK #  
+2021-06-03 13:32:22.6201 | INFO | Authenticate - POST | https://localhost/api/authenticate/refreshToken # User found from the valid access token given > HTTP 200 - OK #  
+2021-06-03 13:32:22.6414 | INFO | Authenticate - POST | https://localhost/api/authenticate/refreshToken # User JWT Current access token has been refreshed > HTTP 200 - OK #  
+2021-06-03 13:32:22.7177 | INFO | Category - POST | https://localhost/api/category # Category Halal has been created with ID 6 > HTTP 200 - OK #  
+2021-06-03 13:32:22.8744 | INFO | Authenticate - POST | https://localhost/api/authenticate/refreshToken # User found from the valid access token given > HTTP 200 - OK #  
+2021-06-03 13:32:22.9214 | INFO | Authenticate - POST | https://localhost/api/authenticate/refreshToken # User JWT Current access token has been refreshed > HTTP 200 - OK #  
+2021-06-03 13:32:23.0213 | INFO | Category - GET | https://localhost/api/category # Categories have been retrieved OK #  
+2021-06-03 13:32:29.3076 | INFO | Authenticate - POST | https://localhost/api/authenticate/refreshToken # User found from the valid access token given > HTTP 200 - OK #  
+2021-06-03 13:32:29.3610 | INFO | Authenticate - POST | https://localhost/api/authenticate/refreshToken # User JWT Current access token has been refreshed > HTTP 200 - OK #  
+2021-06-03 13:32:29.4312 | INFO | Category - POST | https://localhost/api/category # Category Non-Halal has been created with ID 7 > HTTP 200 - OK #  
+2021-06-03 13:32:29.7681 | INFO | Authenticate - POST | https://localhost/api/authenticate/refreshToken # User found from the valid access token given > HTTP 200 - OK #  
+2021-06-03 13:32:29.9500 | INFO | Authenticate - POST | https://localhost/api/authenticate/refreshToken # User JWT Current access token has been refreshed > HTTP 200 - OK #  
+2021-06-03 13:32:30.0838 | INFO | Category - GET | https://localhost/api/category # Categories have been retrieved OK #  
+2021-06-03 13:32:35.7636 | INFO | Authenticate - POST | https://localhost/api/authenticate/refreshToken # User found from the valid access token given > HTTP 200 - OK #  
+2021-06-03 13:32:35.7872 | INFO | Authenticate - POST | https://localhost/api/authenticate/refreshToken # User JWT Current access token has been refreshed > HTTP 200 - OK #  
+2021-06-03 13:32:35.8934 | INFO | Category - POST | https://localhost/api/category # Category Noodle has been created with ID 8 > HTTP 200 - OK #  
+2021-06-03 13:32:36.1005 | INFO | Authenticate - POST | https://localhost/api/authenticate/refreshToken # User found from the valid access token given > HTTP 200 - OK #  
+2021-06-03 13:32:36.1270 | INFO | Authenticate - POST | https://localhost/api/authenticate/refreshToken # User JWT Current access token has been refreshed > HTTP 200 - OK #  
+2021-06-03 13:32:36.1836 | INFO | Category - GET | https://localhost/api/category # Categories have been retrieved OK #  
+2021-06-03 13:32:43.5654 | INFO | Authenticate - POST | https://localhost/api/authenticate/refreshToken # User found from the valid access token given > HTTP 200 - OK #  
+2021-06-03 13:32:43.5814 | INFO | Authenticate - POST | https://localhost/api/authenticate/refreshToken # User JWT Current access token has been refreshed > HTTP 200 - OK #  
+2021-06-03 13:32:43.7225 | INFO | Authenticate - POST | https://localhost/api/authenticate/refreshToken # User found from the valid access token given > HTTP 200 - OK #  
+2021-06-03 13:32:43.7354 | INFO | Authenticate - POST | https://localhost/api/authenticate/refreshToken # User JWT Current access token has been refreshed > HTTP 200 - OK #  
+2021-06-03 13:32:43.7725 | INFO | Category - GET | https://localhost/api/category # Categories have been retrieved OK #  
+2021-06-03 13:32:50.8070 | INFO | Authenticate - POST | https://localhost/api/authenticate/refreshToken # User found from the valid access token given > HTTP 200 - OK #  
+2021-06-03 13:32:50.8239 | INFO | Authenticate - POST | https://localhost/api/authenticate/refreshToken # User JWT Current access token has been refreshed > HTTP 200 - OK #  
+2021-06-03 13:32:50.9757 | INFO | Booking - GET | https://localhost/api/booking/Admin/Pending # All the Members' Bookings System.Linq.Enumerable+WhereListIterator`1[RestaurantReservation.Core.Entities.Booking] has been retrieved successfully > HTTP 200 - OK #  
+2021-06-03 13:32:52.1418 | INFO | Authenticate - POST | https://localhost/api/authenticate/refreshToken # User found from the valid access token given > HTTP 200 - OK #  
+2021-06-03 13:32:52.1629 | INFO | Authenticate - POST | https://localhost/api/authenticate/refreshToken # User JWT Current access token has been refreshed > HTTP 200 - OK #  
+2021-06-03 13:32:52.7413 | INFO | Authenticate - POST | https://localhost/api/authenticate/refreshToken # User found from the valid access token given > HTTP 200 - OK #  
+2021-06-03 13:32:52.7709 | INFO | Authenticate - POST | https://localhost/api/authenticate/refreshToken # User JWT Current access token has been refreshed > HTTP 200 - OK #  
+2021-06-03 13:32:52.8400 | INFO | Category - GET | https://localhost/api/category # Categories have been retrieved OK #  
+2021-06-03 13:33:09.0706 | INFO | Authenticate - POST | https://localhost/api/authenticate/refreshToken # User found from the valid access token given > HTTP 200 - OK #  
+2021-06-03 13:33:09.1097 | INFO | Authenticate - POST | https://localhost/api/authenticate/refreshToken # User JWT Current access token has been refreshed > HTTP 200 - OK #  
+2021-06-03 13:33:09.1681 | INFO | Category - GET | https://localhost/api/category # Categories have been retrieved OK #  
+2021-06-03 13:34:19.1727 | INFO | Authenticate - POST | https://localhost/api/authenticate/refreshToken # User found from the valid access token given > HTTP 200 - OK #  
+2021-06-03 13:34:19.2370 | INFO | Authenticate - POST | https://localhost/api/authenticate/refreshToken # User JWT Current access token has been refreshed > HTTP 200 - OK #  
+2021-06-03 13:34:19.6966 | INFO | Restaurant - POST | https://localhost/api/restaurant # Restaurant Murni Discovery Kepong has been created with category successfully > HTTP 200 - OK #  
+2021-06-03 13:34:19.7382 | INFO | Authenticate - POST | https://localhost/api/authenticate/refreshToken # User found from the valid access token given > HTTP 200 - OK #  
+2021-06-03 13:34:19.7557 | INFO | Authenticate - POST | https://localhost/api/authenticate/refreshToken # User JWT Current access token has been refreshed > HTTP 200 - OK #  
+2021-06-03 13:34:19.8882 | INFO | Authenticate - POST | https://localhost/api/authenticate/refreshToken # User found from the valid access token given > HTTP 200 - OK #  
+2021-06-03 13:34:19.9067 | INFO | Authenticate - POST | https://localhost/api/authenticate/refreshToken # User JWT Current access token has been refreshed > HTTP 200 - OK #  
+2021-06-03 13:34:19.9462 | INFO | Category - GET | https://localhost/api/category # Categories have been retrieved OK #  
+2021-06-03 13:42:30.0236 | INFO | Authenticate - POST | https://localhost/api/authenticate/refreshToken # User found from the valid access token given > HTTP 200 - OK #  
+2021-06-03 13:42:30.1285 | INFO | Authenticate - POST | https://localhost/api/authenticate/refreshToken # User JWT Current access token has been refreshed > HTTP 200 - OK #  
+2021-06-03 13:42:30.2677 | INFO | Category - GET | https://localhost/api/category # Categories have been retrieved OK #  
+2021-06-03 13:43:10.4499 | INFO | Authenticate - POST | https://localhost/api/authenticate/refreshToken # User found from the valid access token given > HTTP 200 - OK #  
+2021-06-03 13:43:10.8780 | INFO | Authenticate - POST | https://localhost/api/authenticate/refreshToken # User JWT Current access token has been refreshed > HTTP 200 - OK #  
+2021-06-03 13:43:11.0427 | INFO | Restaurant - POST | https://localhost/api/restaurant # Restaurant Super Kitchen Chili Pan Mee Kepong has been created with category successfully > HTTP 200 - OK #  
+2021-06-03 13:43:11.3140 | INFO | Authenticate - POST | https://localhost/api/authenticate/refreshToken # User found from the valid access token given > HTTP 200 - OK #  
+2021-06-03 13:43:11.3490 | INFO | Authenticate - POST | https://localhost/api/authenticate/refreshToken # User JWT Current access token has been refreshed > HTTP 200 - OK #  
+2021-06-03 13:43:11.5519 | INFO | Authenticate - POST | https://localhost/api/authenticate/refreshToken # User found from the valid access token given > HTTP 200 - OK #  
+2021-06-03 13:43:11.6191 | INFO | Authenticate - POST | https://localhost/api/authenticate/refreshToken # User JWT Current access token has been refreshed > HTTP 200 - OK #  
+2021-06-03 13:43:11.6961 | INFO | Category - GET | https://localhost/api/category # Categories have been retrieved OK #  
+2021-06-03 13:43:21.6155 | INFO | Authenticate - POST | https://localhost/api/authenticate/refreshToken # User found from the valid access token given > HTTP 200 - OK #  
+2021-06-03 13:43:21.6531 | INFO | Authenticate - POST | https://localhost/api/authenticate/refreshToken # User JWT Current access token has been refreshed > HTTP 200 - OK #  
+2021-06-03 13:43:21.9020 | INFO | Category - GET | https://localhost/api/category # Categories have been retrieved OK #  
+2021-06-03 13:43:57.8016 | INFO | Authenticate - POST | https://localhost/api/authenticate/refreshToken # User found from the valid access token given > HTTP 200 - OK #  
+2021-06-03 13:43:57.8674 | INFO | Authenticate - POST | https://localhost/api/authenticate/refreshToken # User JWT Current access token has been refreshed > HTTP 200 - OK #  
+2021-06-03 13:43:58.1829 | INFO | Restaurant - POST | https://localhost/api/restaurant # Restaurant San Ching San Hokkien Mee Kepong has been created with category successfully > HTTP 200 - OK #  
+2021-06-03 13:43:58.2816 | INFO | Authenticate - POST | https://localhost/api/authenticate/refreshToken # User found from the valid access token given > HTTP 200 - OK #  
+2021-06-03 13:43:58.3099 | INFO | Authenticate - POST | https://localhost/api/authenticate/refreshToken # User JWT Current access token has been refreshed > HTTP 200 - OK #  
+2021-06-03 13:43:58.4303 | INFO | Authenticate - POST | https://localhost/api/authenticate/refreshToken # User found from the valid access token given > HTTP 200 - OK #  
+2021-06-03 13:43:58.4505 | INFO | Authenticate - POST | https://localhost/api/authenticate/refreshToken # User JWT Current access token has been refreshed > HTTP 200 - OK #  
+2021-06-03 13:43:58.4974 | INFO | Category - GET | https://localhost/api/category # Categories have been retrieved OK #  
+2021-06-03 13:44:17.2863 | INFO | Authenticate - POST | https://localhost/api/authenticate/login # User refresh token has been created > HTTP 200 - OK #  
+2021-06-03 13:44:20.5109 | INFO | Authenticate - POST | https://localhost/api/authenticate/refreshToken # User found from the valid access token given > HTTP 200 - OK #  
+2021-06-03 13:44:20.5273 | INFO | Authenticate - POST | https://localhost/api/authenticate/refreshToken # User JWT Current access token has been refreshed > HTTP 200 - OK #  
+2021-06-03 13:44:20.7003 | INFO | Authenticate - POST | https://localhost/api/authenticate/refreshToken # User found from the valid access token given > HTTP 200 - OK #  
+2021-06-03 13:44:20.7202 | INFO | Authenticate - POST | https://localhost/api/authenticate/refreshToken # User JWT Current access token has been refreshed > HTTP 200 - OK #  
+2021-06-03 13:44:20.7709 | INFO | Category - GET | https://localhost/api/category # Categories have been retrieved OK #  
+2021-06-03 13:44:22.3168 | INFO | Authenticate - POST | https://localhost/api/authenticate/refreshToken # User found from the valid access token given > HTTP 200 - OK #  
+2021-06-03 13:44:22.3496 | INFO | Authenticate - POST | https://localhost/api/authenticate/refreshToken # User JWT Current access token has been refreshed > HTTP 200 - OK #  
+2021-06-03 13:44:22.4136 | INFO | Category - GET | https://localhost/api/category # Categories have been retrieved OK #  
+2021-06-03 13:45:21.0352 | INFO | Authenticate - POST | https://localhost/api/authenticate/refreshToken # User found from the valid access token given > HTTP 200 - OK #  
+2021-06-03 13:45:21.1146 | INFO | Authenticate - POST | https://localhost/api/authenticate/refreshToken # User JWT Current access token has been refreshed > HTTP 200 - OK #  
+2021-06-03 13:45:21.2824 | INFO | Restaurant - POST | https://localhost/api/restaurant # Restaurant Marutama Ramen has been created with category successfully > HTTP 200 - OK #  
+2021-06-03 13:45:21.3771 | INFO | Authenticate - POST | https://localhost/api/authenticate/refreshToken # User found from the valid access token given > HTTP 200 - OK #  
+2021-06-03 13:45:21.4545 | INFO | Authenticate - POST | https://localhost/api/authenticate/refreshToken # User JWT Current access token has been refreshed > HTTP 200 - OK #  
+2021-06-03 13:45:21.5798 | INFO | Authenticate - POST | https://localhost/api/authenticate/refreshToken # User found from the valid access token given > HTTP 200 - OK #  
+2021-06-03 13:45:21.5998 | INFO | Authenticate - POST | https://localhost/api/authenticate/refreshToken # User JWT Current access token has been refreshed > HTTP 200 - OK #  
+2021-06-03 13:45:21.6378 | INFO | Category - GET | https://localhost/api/category # Categories have been retrieved OK #  
+2021-06-03 13:45:24.5841 | INFO | Authenticate - POST | https://localhost/api/authenticate/refreshToken # User found from the valid access token given > HTTP 200 - OK #  
+2021-06-03 13:45:24.6951 | INFO | Authenticate - POST | https://localhost/api/authenticate/refreshToken # User JWT Current access token has been refreshed > HTTP 200 - OK #  
+2021-06-03 13:45:24.9168 | INFO | Category - GET | https://localhost/api/category # Categories have been retrieved OK #  
+2021-06-03 13:45:58.5982 | INFO | Authenticate - POST | https://localhost/api/authenticate/refreshToken # User found from the valid access token given > HTTP 200 - OK #  
+2021-06-03 13:45:58.6293 | INFO | Authenticate - POST | https://localhost/api/authenticate/refreshToken # User JWT Current access token has been refreshed > HTTP 200 - OK #  
+2021-06-03 13:45:58.7942 | INFO | Restaurant - POST | https://localhost/api/restaurant # Restaurant Gogigo Korean BBQ PJ has been created with category successfully > HTTP 200 - OK #  
+2021-06-03 13:45:58.8499 | INFO | Authenticate - POST | https://localhost/api/authenticate/refreshToken # User found from the valid access token given > HTTP 200 - OK #  
+2021-06-03 13:45:58.8725 | INFO | Authenticate - POST | https://localhost/api/authenticate/refreshToken # User JWT Current access token has been refreshed > HTTP 200 - OK #  
+2021-06-03 13:45:58.9675 | INFO | Authenticate - POST | https://localhost/api/authenticate/refreshToken # User found from the valid access token given > HTTP 200 - OK #  
+2021-06-03 13:45:58.9813 | INFO | Authenticate - POST | https://localhost/api/authenticate/refreshToken # User JWT Current access token has been refreshed > HTTP 200 - OK #  
+2021-06-03 13:45:59.0138 | INFO | Category - GET | https://localhost/api/category # Categories have been retrieved OK #  
+2021-06-03 14:25:50.4920 | DEBUG |  -  |  # init main #  
+2021-06-03 14:26:10.1216 | INFO |  -  |  # Application started. Press Ctrl+C to shut down. #  
+2021-06-03 14:26:10.1415 | INFO |  -  |  # Hosting environment: Development #  
+2021-06-03 14:26:10.1575 | INFO |  -  |  # Content root path: C:\Users\MIS\source\repos\Restaurant Reservation Website\RestaurantReservation.Backend\RestaurantReservation.Api #  
+2021-06-03 14:26:39.6559 | INFO | Authenticate - POST | https://localhost/api/authenticate/login # User refresh token has been created > HTTP 200 - OK #  
+2021-06-03 14:26:43.9643 | INFO | Authenticate - POST | https://localhost/api/authenticate/refreshToken # User found from the valid access token given > HTTP 200 - OK #  
+2021-06-03 14:26:44.0357 | INFO | Authenticate - POST | https://localhost/api/authenticate/refreshToken # User JWT Current access token has been refreshed > HTTP 200 - OK #  
+2021-06-03 14:26:44.1887 | INFO | Authenticate - POST | https://localhost/api/authenticate/refreshToken # User found from the valid access token given > HTTP 200 - OK #  
+2021-06-03 14:26:44.2037 | INFO | Authenticate - POST | https://localhost/api/authenticate/refreshToken # User JWT Current access token has been refreshed > HTTP 200 - OK #  
+2021-06-03 14:26:44.2733 | INFO | Category - GET | https://localhost/api/category # Categories have been retrieved OK #  
+2021-06-03 14:26:56.6682 | INFO | Authenticate - POST | https://localhost/api/authenticate/refreshToken # User found from the valid access token given > HTTP 200 - OK #  
+2021-06-03 14:26:56.6924 | INFO | Authenticate - POST | https://localhost/api/authenticate/refreshToken # User JWT Current access token has been refreshed > HTTP 200 - OK #  
+2021-06-03 14:26:56.9592 | INFO | Authenticate - POST | https://localhost/api/authenticate/refreshToken # User found from the valid access token given > HTTP 200 - OK #  
+2021-06-03 14:26:56.9684 | INFO | Authenticate - POST | https://localhost/api/authenticate/refreshToken # User JWT Current access token has been refreshed > HTTP 200 - OK #  
+2021-06-03 14:26:57.0003 | INFO | Schedule - GET | https://localhost/api/schedule/All/2 # Restaurant schedules have been retrieved OK #  
+2021-06-03 14:26:59.6750 | INFO | Authenticate - POST | https://localhost/api/authenticate/refreshToken # User found from the valid access token given > HTTP 200 - OK #  
+2021-06-03 14:26:59.6982 | INFO | Authenticate - POST | https://localhost/api/authenticate/refreshToken # User JWT Current access token has been refreshed > HTTP 200 - OK #  
+2021-06-03 14:26:59.7500 | INFO | Authenticate - POST | https://localhost/api/authenticate/refreshToken # User found from the valid access token given > HTTP 200 - OK #  
+2021-06-03 14:26:59.8507 | INFO | Authenticate - POST | https://localhost/api/authenticate/refreshToken # User JWT Current access token has been refreshed > HTTP 200 - OK #  
+2021-06-03 14:29:20.2086 | INFO | Authenticate - POST | https://localhost/api/authenticate/refreshToken # User found from the valid access token given > HTTP 200 - OK #  
+2021-06-03 14:29:20.2723 | INFO | Authenticate - POST | https://localhost/api/authenticate/refreshToken # User JWT Current access token has been refreshed > HTTP 200 - OK #  
+2021-06-03 14:29:20.7769 | INFO | Promotion - POST | https://localhost/api/promotion # Promotion 6.6 Promotion has been created with ID 1 > HTTP 200 - OK #  
+2021-06-03 14:29:20.9930 | INFO | Promotion - POST | https://localhost/api/promotion # New Promotion 6.6 Promotion with ID has been sent the email and update the email status 1 > HTTP 200 - OK #  
+2021-06-03 14:29:21.1411 | INFO | Authenticate - POST | https://localhost/api/authenticate/refreshToken # User found from the valid access token given > HTTP 200 - OK #  
+2021-06-03 14:29:21.1723 | INFO | Authenticate - POST | https://localhost/api/authenticate/refreshToken # User JWT Current access token has been refreshed > HTTP 200 - OK #  
+2021-06-03 14:29:21.3740 | INFO | Authenticate - POST | https://localhost/api/authenticate/refreshToken # User found from the valid access token given > HTTP 200 - OK #  
+2021-06-03 14:29:21.3980 | INFO | Authenticate - POST | https://localhost/api/authenticate/refreshToken # User JWT Current access token has been refreshed > HTTP 200 - OK #  
+2021-06-03 14:29:21.4489 | INFO | Schedule - GET | https://localhost/api/schedule/All/2 # Restaurant schedules have been retrieved OK #  
+2021-06-03 14:32:39.9776 | DEBUG |  -  |  # init main #  
+2021-06-03 14:32:55.3049 | INFO |  -  |  # Application started. Press Ctrl+C to shut down. #  
+2021-06-03 14:32:55.3390 | INFO |  -  |  # Hosting environment: Development #  
+2021-06-03 14:32:55.3585 | INFO |  -  |  # Content root path: C:\Users\MIS\source\repos\Restaurant Reservation Website\RestaurantReservation.Backend\RestaurantReservation.Api #  
+2021-06-03 14:32:55.3906 | ERROR |  -  |  # An exception occurred while iterating over the results of a query for context type 'RestaurantReservation.Infrastructure.Data.DatabaseContext'.
+System.InvalidOperationException: Invalid attempt to call CheckDataIsReady when reader is closed.
+   at Microsoft.Data.SqlClient.SqlDataReader.CheckDataIsReady(Int32 columnIndex, Boolean allowPartiallyReadColumn, Boolean permitAsync, String methodName)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryReadColumn(Int32 i, Boolean setTimeout, Boolean allowPartiallyReadColumn)
+   at Microsoft.Data.SqlClient.SqlDataReader.ReadColumn(Int32 i, Boolean setTimeout, Boolean allowPartiallyReadColumn)
+   at Microsoft.Data.SqlClient.SqlDataReader.GetInt64(Int32 i)
+   at lambda_method(Closure , QueryContext , DbDataReader , ResultContext , Int32[] , ResultCoordinator )
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.AsyncEnumerator.MoveNextAsync() # 
+ EXCEPTION OCCURRED:System.InvalidOperationException: Invalid attempt to call CheckDataIsReady when reader is closed.
+   at Microsoft.Data.SqlClient.SqlDataReader.CheckDataIsReady(Int32 columnIndex, Boolean allowPartiallyReadColumn, Boolean permitAsync, String methodName)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryReadColumn(Int32 i, Boolean setTimeout, Boolean allowPartiallyReadColumn)
+   at Microsoft.Data.SqlClient.SqlDataReader.ReadColumn(Int32 i, Boolean setTimeout, Boolean allowPartiallyReadColumn)
+   at Microsoft.Data.SqlClient.SqlDataReader.GetInt64(Int32 i)
+   at lambda_method(Closure , QueryContext , DbDataReader , ResultContext , Int32[] , ResultCoordinator )
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+2021-06-03 14:32:56.3297 | ERROR |  -  |  # Error validating the promotion email sent status. # 
+ EXCEPTION OCCURRED:System.InvalidOperationException: Invalid attempt to call CheckDataIsReady when reader is closed.
+   at Microsoft.Data.SqlClient.SqlDataReader.CheckDataIsReady(Int32 columnIndex, Boolean allowPartiallyReadColumn, Boolean permitAsync, String methodName)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryReadColumn(Int32 i, Boolean setTimeout, Boolean allowPartiallyReadColumn)
+   at Microsoft.Data.SqlClient.SqlDataReader.ReadColumn(Int32 i, Boolean setTimeout, Boolean allowPartiallyReadColumn)
+   at Microsoft.Data.SqlClient.SqlDataReader.GetInt64(Int32 i)
+   at lambda_method(Closure , QueryContext , DbDataReader , ResultContext , Int32[] , ResultCoordinator )
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at RestaurantReservation.Infrastructure.Repositories.PromotionRepository.GetAllPendingPromotionEmail() in C:\Users\MIS\source\repos\Restaurant Reservation Website\RestaurantReservation.Backend\RestaurantReservation.Infrastructure\Repositories\PromotionRepository.cs:line 33
+   at RestaurantReservation.Core.Services.PromotionService.GetAllPendingPromotionEmail() in C:\Users\MIS\source\repos\Restaurant Reservation Website\RestaurantReservation.Backend\RestaurantReservation.Core\Services\PromotionService.cs:line 29
+   at RestaurantReservation.Infrastructure.Data.PromotionEmail.CheckSentStatus() in C:\Users\MIS\source\repos\Restaurant Reservation Website\RestaurantReservation.Backend\RestaurantReservation.Infrastructure\Data\PromotionEmail.cs:line 29
+2021-06-03 14:47:29.0458 | DEBUG |  -  |  # init main #  
+2021-06-03 14:47:44.8344 | INFO |  -  |  # Application started. Press Ctrl+C to shut down. #  
+2021-06-03 14:47:44.8544 | INFO |  -  |  # Hosting environment: Development #  
+2021-06-03 14:47:44.8415 | ERROR |  -  |  # An exception occurred while iterating over the results of a query for context type 'RestaurantReservation.Infrastructure.Data.DatabaseContext'.
+System.InvalidOperationException: Invalid attempt to call CheckDataIsReady when reader is closed.
+   at Microsoft.Data.SqlClient.SqlDataReader.CheckDataIsReady(Int32 columnIndex, Boolean allowPartiallyReadColumn, Boolean permitAsync, String methodName)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryReadColumn(Int32 i, Boolean setTimeout, Boolean allowPartiallyReadColumn)
+   at Microsoft.Data.SqlClient.SqlDataReader.ReadColumn(Int32 i, Boolean setTimeout, Boolean allowPartiallyReadColumn)
+   at Microsoft.Data.SqlClient.SqlDataReader.GetInt64(Int32 i)
+   at lambda_method(Closure , QueryContext , DbDataReader , ResultContext , Int32[] , ResultCoordinator )
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.AsyncEnumerator.MoveNextAsync() # 
+ EXCEPTION OCCURRED:System.InvalidOperationException: Invalid attempt to call CheckDataIsReady when reader is closed.
+   at Microsoft.Data.SqlClient.SqlDataReader.CheckDataIsReady(Int32 columnIndex, Boolean allowPartiallyReadColumn, Boolean permitAsync, String methodName)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryReadColumn(Int32 i, Boolean setTimeout, Boolean allowPartiallyReadColumn)
+   at Microsoft.Data.SqlClient.SqlDataReader.ReadColumn(Int32 i, Boolean setTimeout, Boolean allowPartiallyReadColumn)
+   at Microsoft.Data.SqlClient.SqlDataReader.GetInt64(Int32 i)
+   at lambda_method(Closure , QueryContext , DbDataReader , ResultContext , Int32[] , ResultCoordinator )
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+2021-06-03 14:47:44.8544 | INFO |  -  |  # Content root path: C:\Users\MIS\source\repos\Restaurant Reservation Website\RestaurantReservation.Backend\RestaurantReservation.Api #  
+2021-06-03 14:47:57.5924 | ERROR |  -  |  # Error validating the promotion email sent status. # 
+ EXCEPTION OCCURRED:System.InvalidOperationException: Invalid attempt to call CheckDataIsReady when reader is closed.
+   at Microsoft.Data.SqlClient.SqlDataReader.CheckDataIsReady(Int32 columnIndex, Boolean allowPartiallyReadColumn, Boolean permitAsync, String methodName)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryReadColumn(Int32 i, Boolean setTimeout, Boolean allowPartiallyReadColumn)
+   at Microsoft.Data.SqlClient.SqlDataReader.ReadColumn(Int32 i, Boolean setTimeout, Boolean allowPartiallyReadColumn)
+   at Microsoft.Data.SqlClient.SqlDataReader.GetInt64(Int32 i)
+   at lambda_method(Closure , QueryContext , DbDataReader , ResultContext , Int32[] , ResultCoordinator )
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at RestaurantReservation.Infrastructure.Repositories.PromotionRepository.GetAllPendingPromotionEmail() in C:\Users\MIS\source\repos\Restaurant Reservation Website\RestaurantReservation.Backend\RestaurantReservation.Infrastructure\Repositories\PromotionRepository.cs:line 33
+   at RestaurantReservation.Core.Services.PromotionService.GetAllPendingPromotionEmail() in C:\Users\MIS\source\repos\Restaurant Reservation Website\RestaurantReservation.Backend\RestaurantReservation.Core\Services\PromotionService.cs:line 29
+   at RestaurantReservation.Infrastructure.Data.PromotionEmail.CheckSentStatus() in C:\Users\MIS\source\repos\Restaurant Reservation Website\RestaurantReservation.Backend\RestaurantReservation.Infrastructure\Data\PromotionEmail.cs:line 29
+2021-06-03 15:01:38.1592 | DEBUG |  -  |  # init main #  
+2021-06-03 15:01:44.9198 | INFO |  -  |  # Promotion email status has been checked > HTTP 200 - OK #  
+2021-06-03 15:01:45.2691 | INFO |  -  |  # Application started. Press Ctrl+C to shut down. #  
+2021-06-03 15:01:45.4989 | INFO |  -  |  # Hosting environment: Development #  
+2021-06-03 15:01:45.6881 | INFO |  -  |  # Content root path: C:\Users\MIS\source\repos\Restaurant Reservation Website\RestaurantReservation.Backend\RestaurantReservation.Api #  
+2021-06-03 15:03:04.6753 | DEBUG |  -  |  # init main #  
+2021-06-03 15:03:19.0987 | INFO |  -  |  # Promotion email status has been checked > HTTP 200 - OK #  
+2021-06-03 15:03:19.2700 | INFO |  -  |  # Application started. Press Ctrl+C to shut down. #  
+2021-06-03 15:03:19.6431 | INFO |  -  |  # Hosting environment: Development #  
+2021-06-03 15:03:19.6606 | INFO |  -  |  # Content root path: C:\Users\MIS\source\repos\Restaurant Reservation Website\RestaurantReservation.Backend\RestaurantReservation.Api #  
+2021-06-03 15:04:03.5498 | DEBUG |  -  |  # init main #  
+2021-06-03 15:04:11.1993 | INFO |  -  |  # Promotion email status has been checked > HTTP 200 - OK #  
+2021-06-03 15:04:12.0562 | INFO |  -  |  # Application started. Press Ctrl+C to shut down. #  
+2021-06-03 15:04:12.1142 | INFO |  -  |  # Hosting environment: Development #  
+2021-06-03 15:04:12.1340 | INFO |  -  |  # Content root path: C:\Users\MIS\source\repos\Restaurant Reservation Website\RestaurantReservation.Backend\RestaurantReservation.Api #  
+2021-06-03 15:35:24.6750 | DEBUG |  -  |  # init main #  
+2021-06-03 15:37:22.1943 | DEBUG |  -  |  # init main #  
+2021-06-03 15:37:52.6702 | INFO |  -  |  # Promotion email status has been checked > HTTP 200 - OK #  
+2021-06-03 15:37:53.7078 | INFO |  -  |  # Application started. Press Ctrl+C to shut down. #  
+2021-06-03 15:37:53.8936 | INFO |  -  |  # Hosting environment: Development #  
+2021-06-03 15:37:53.9488 | INFO |  -  |  # Content root path: C:\Users\MIS\source\repos\Restaurant Reservation Website\RestaurantReservation.Backend\RestaurantReservation.Api #  
+2021-06-03 15:41:09.5368 | DEBUG |  -  |  # init main #  
+2021-06-03 15:41:15.9619 | INFO |  -  |  # Promotion email status has been checked > HTTP 200 - OK #  
+2021-06-03 15:41:16.1950 | INFO |  -  |  # Application started. Press Ctrl+C to shut down. #  
+2021-06-03 15:41:16.5854 | INFO |  -  |  # Hosting environment: Development #  
+2021-06-03 15:41:16.7691 | INFO |  -  |  # Content root path: C:\Users\MIS\source\repos\Restaurant Reservation Website\RestaurantReservation.Backend\RestaurantReservation.Api #  
+2021-06-03 15:44:41.4445 | DEBUG |  -  |  # init main #  
+2021-06-03 15:44:46.8669 | INFO |  -  |  # Promotion email status has been checked > HTTP 200 - OK #  
+2021-06-03 15:44:47.4326 | INFO |  -  |  # Application started. Press Ctrl+C to shut down. #  
+2021-06-03 15:44:47.4770 | INFO |  -  |  # Hosting environment: Development #  
+2021-06-03 15:44:47.4869 | INFO |  -  |  # Content root path: C:\Users\MIS\source\repos\Restaurant Reservation Website\RestaurantReservation.Backend\RestaurantReservation.Api #  
+2021-06-03 15:48:26.9705 | DEBUG |  -  |  # init main #  
+2021-06-03 15:48:33.6195 | INFO |  -  |  # Promotion email status has been checked > HTTP 200 - OK #  
+2021-06-03 15:48:33.7987 | INFO |  -  |  # Application started. Press Ctrl+C to shut down. #  
+2021-06-03 15:48:34.0126 | INFO |  -  |  # Hosting environment: Development #  
+2021-06-03 15:48:34.0425 | INFO |  -  |  # Content root path: C:\Users\MIS\source\repos\Restaurant Reservation Website\RestaurantReservation.Backend\RestaurantReservation.Api #  
+2021-06-03 15:51:03.3360 | INFO | Authenticate - POST | https://localhost/api/authenticate/register # User member1 has been created with role as Member > HTTP 200 - OK #  
+2021-06-03 15:51:27.1986 | INFO | Authenticate - POST | https://localhost/api/authenticate/register # User member2 has been created with role as Member > HTTP 200 - OK #  
+2021-06-03 15:51:36.5818 | INFO | Authenticate - POST | https://localhost/api/authenticate/login # User refresh token has been created > HTTP 200 - OK #  
+2021-06-03 15:51:38.5203 | INFO | Authenticate - POST | https://localhost/api/authenticate/refreshToken # User found from the valid access token given > HTTP 200 - OK #  
+2021-06-03 15:51:38.5742 | INFO | Authenticate - POST | https://localhost/api/authenticate/refreshToken # User JWT Current access token has been refreshed > HTTP 200 - OK #  
+2021-06-03 15:51:38.7510 | INFO | User - GET | https://localhost/api/user/info/98a3df5a-a07e-4ff8-aae3-c7c970a7da10 # User with ID 98a3df5a-a07e-4ff8-aae3-c7c970a7da10 have been retrieved OK #  
+2021-06-03 15:51:48.4462 | INFO | User - PUT | https://localhost/api/user # User with ID 98a3df5a-a07e-4ff8-aae3-c7c970a7da10 update profile successfully OK #  
+2021-06-03 15:51:48.4934 | INFO | Authenticate - POST | https://localhost/api/authenticate/refreshToken # User found from the valid access token given > HTTP 200 - OK #  
+2021-06-03 15:51:48.5073 | INFO | Authenticate - POST | https://localhost/api/authenticate/refreshToken # User JWT Current access token has been refreshed > HTTP 200 - OK #  
+2021-06-03 15:51:48.5438 | INFO | User - GET | https://localhost/api/user/info/98a3df5a-a07e-4ff8-aae3-c7c970a7da10 # User with ID 98a3df5a-a07e-4ff8-aae3-c7c970a7da10 have been retrieved OK #  
+2021-06-03 15:52:04.5630 | INFO | Authenticate - POST | https://localhost/api/authenticate/login # User refresh token has been created > HTTP 200 - OK #  
+2021-06-03 15:52:07.7676 | INFO | Authenticate - POST | https://localhost/api/authenticate/refreshToken # User found from the valid access token given > HTTP 200 - OK #  
+2021-06-03 15:52:07.7951 | INFO | Authenticate - POST | https://localhost/api/authenticate/refreshToken # User JWT Current access token has been refreshed > HTTP 200 - OK #  
+2021-06-03 15:52:07.8484 | INFO | User - GET | https://localhost/api/user/info/65ffbc94-4163-4ca0-8ee3-3f9e5f4fd731 # User with ID 65ffbc94-4163-4ca0-8ee3-3f9e5f4fd731 have been retrieved OK #  
+2021-06-03 15:52:16.4300 | INFO | User - PUT | https://localhost/api/user # User with ID 65ffbc94-4163-4ca0-8ee3-3f9e5f4fd731 update profile successfully OK #  
+2021-06-03 15:52:16.5205 | INFO | Authenticate - POST | https://localhost/api/authenticate/refreshToken # User found from the valid access token given > HTTP 200 - OK #  
+2021-06-03 15:52:16.5348 | INFO | Authenticate - POST | https://localhost/api/authenticate/refreshToken # User JWT Current access token has been refreshed > HTTP 200 - OK #  
+2021-06-03 15:52:16.5726 | INFO | User - GET | https://localhost/api/user/info/65ffbc94-4163-4ca0-8ee3-3f9e5f4fd731 # User with ID 65ffbc94-4163-4ca0-8ee3-3f9e5f4fd731 have been retrieved OK #  
+2021-06-03 15:52:20.3906 | INFO | Authenticate - POST | https://localhost/api/authenticate/refreshToken # User found from the valid access token given > HTTP 200 - OK #  
+2021-06-03 15:52:20.4170 | INFO | Authenticate - POST | https://localhost/api/authenticate/refreshToken # User JWT Current access token has been refreshed > HTTP 200 - OK #  
+2021-06-03 15:52:20.4663 | INFO | User - GET | https://localhost/api/user/info/65ffbc94-4163-4ca0-8ee3-3f9e5f4fd731 # User with ID 65ffbc94-4163-4ca0-8ee3-3f9e5f4fd731 have been retrieved OK #  
+2021-06-03 15:53:06.5149 | DEBUG |  -  |  # init main #  
+2021-06-03 15:53:13.5307 | INFO |  -  |  # Promotion email status has been checked > HTTP 200 - OK #  
+2021-06-03 15:53:13.6853 | INFO |  -  |  # Application started. Press Ctrl+C to shut down. #  
+2021-06-03 15:53:13.8424 | INFO |  -  |  # Hosting environment: Development #  
+2021-06-03 15:53:13.8688 | INFO |  -  |  # Content root path: C:\Users\MIS\source\repos\Restaurant Reservation Website\RestaurantReservation.Backend\RestaurantReservation.Api #  

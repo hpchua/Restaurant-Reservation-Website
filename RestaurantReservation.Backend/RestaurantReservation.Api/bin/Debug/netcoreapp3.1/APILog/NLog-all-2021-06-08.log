@@ -1,0 +1,73 @@
+2021-06-08 15:12:12.3481 | DEBUG |  -  |  # init main #  
+2021-06-08 15:12:19.8553 | INFO |  -  |  # Promotion email status has been checked > HTTP 200 - OK #  
+2021-06-08 15:12:20.4454 | INFO |  -  |  # Application started. Press Ctrl+C to shut down. #  
+2021-06-08 15:12:20.4928 | INFO |  -  |  # Hosting environment: Development #  
+2021-06-08 15:12:20.5056 | INFO |  -  |  # Content root path: C:\Users\MIS\source\repos\Restaurant Reservation Website\RestaurantReservation.Backend\RestaurantReservation.Api #  
+2021-06-08 15:14:05.8535 | INFO | Authenticate - POST | https://localhost/api/authenticate/login # User refresh token has been created > HTTP 200 - OK #  
+2021-06-08 15:14:09.5118 | INFO | Authenticate - POST | https://localhost/api/authenticate/refreshToken # User found from the valid access token given > HTTP 200 - OK #  
+2021-06-08 15:14:09.5552 | INFO | Authenticate - POST | https://localhost/api/authenticate/refreshToken # User JWT Current access token has been refreshed > HTTP 200 - OK #  
+2021-06-08 15:14:09.6403 | INFO | Authenticate - POST | https://localhost/api/authenticate/refreshToken # User found from the valid access token given > HTTP 200 - OK #  
+2021-06-08 15:14:09.6508 | INFO | Authenticate - POST | https://localhost/api/authenticate/refreshToken # User JWT Current access token has been refreshed > HTTP 200 - OK #  
+2021-06-08 15:14:09.6940 | INFO | Category - GET | https://localhost/api/category # Categories have been retrieved OK #  
+2021-06-08 15:14:13.8056 | INFO | Authenticate - POST | https://localhost/api/authenticate/refreshToken # User found from the valid access token given > HTTP 200 - OK #  
+2021-06-08 15:14:13.8495 | INFO | Authenticate - POST | https://localhost/api/authenticate/refreshToken # User JWT Current access token has been refreshed > HTTP 200 - OK #  
+2021-06-08 15:14:14.1128 | INFO | Authenticate - POST | https://localhost/api/authenticate/refreshToken # User found from the valid access token given > HTTP 200 - OK #  
+2021-06-08 15:14:14.1263 | INFO | Authenticate - POST | https://localhost/api/authenticate/refreshToken # User JWT Current access token has been refreshed > HTTP 200 - OK #  
+2021-06-08 15:14:14.1600 | INFO | Schedule - GET | https://localhost/api/schedule/All/1 # Restaurant schedules have been retrieved OK #  
+2021-06-08 15:14:17.4722 | INFO | Authenticate - POST | https://localhost/api/authenticate/refreshToken # User found from the valid access token given > HTTP 200 - OK #  
+2021-06-08 15:14:17.4961 | INFO | Authenticate - POST | https://localhost/api/authenticate/refreshToken # User JWT Current access token has been refreshed > HTTP 200 - OK #  
+2021-06-08 15:14:17.5369 | INFO | Authenticate - POST | https://localhost/api/authenticate/refreshToken # User found from the valid access token given > HTTP 200 - OK #  
+2021-06-08 15:14:17.5809 | INFO | Authenticate - POST | https://localhost/api/authenticate/refreshToken # User JWT Current access token has been refreshed > HTTP 200 - OK #  
+2021-06-08 15:14:38.5502 | INFO | Authenticate - POST | https://localhost/api/authenticate/refreshToken # User found from the valid access token given > HTTP 200 - OK #  
+2021-06-08 15:14:38.5740 | INFO | Authenticate - POST | https://localhost/api/authenticate/refreshToken # User JWT Current access token has been refreshed > HTTP 200 - OK #  
+2021-06-08 15:14:38.8048 | INFO | Authenticate - POST | https://localhost/api/authenticate/refreshToken # User found from the valid access token given > HTTP 200 - OK #  
+2021-06-08 15:14:38.8144 | INFO | Authenticate - POST | https://localhost/api/authenticate/refreshToken # User JWT Current access token has been refreshed > HTTP 200 - OK #  
+2021-06-08 15:14:38.8758 | INFO | Authenticate - POST | https://localhost/api/authenticate/refreshToken # User found from the valid access token given > HTTP 200 - OK #  
+2021-06-08 15:14:38.8864 | INFO | Authenticate - POST | https://localhost/api/authenticate/refreshToken # User JWT Current access token has been refreshed > HTTP 200 - OK #  
+2021-06-08 15:14:38.9095 | INFO | Schedule - GET | https://localhost/api/schedule/All/1 # Restaurant schedules have been retrieved OK #  
+2021-06-08 15:14:41.1820 | INFO | Authenticate - POST | https://localhost/api/authenticate/refreshToken # User found from the valid access token given > HTTP 200 - OK #  
+2021-06-08 15:14:41.2162 | INFO | Authenticate - POST | https://localhost/api/authenticate/refreshToken # User JWT Current access token has been refreshed > HTTP 200 - OK #  
+2021-06-08 15:14:41.2491 | INFO | Authenticate - POST | https://localhost/api/authenticate/refreshToken # User found from the valid access token given > HTTP 200 - OK #  
+2021-06-08 15:14:41.2876 | INFO | Authenticate - POST | https://localhost/api/authenticate/refreshToken # User JWT Current access token has been refreshed > HTTP 200 - OK #  
+2021-06-08 15:14:58.5287 | INFO | Authenticate - POST | https://localhost/api/authenticate/refreshToken # User found from the valid access token given > HTTP 200 - OK #  
+2021-06-08 15:14:58.5494 | INFO | Authenticate - POST | https://localhost/api/authenticate/refreshToken # User JWT Current access token has been refreshed > HTTP 200 - OK #  
+2021-06-08 15:14:58.6615 | INFO | Authenticate - POST | https://localhost/api/authenticate/refreshToken # User found from the valid access token given > HTTP 200 - OK #  
+2021-06-08 15:14:58.6820 | INFO | Authenticate - POST | https://localhost/api/authenticate/refreshToken # User JWT Current access token has been refreshed > HTTP 200 - OK #  
+2021-06-08 15:14:58.7659 | INFO | Authenticate - POST | https://localhost/api/authenticate/refreshToken # User found from the valid access token given > HTTP 200 - OK #  
+2021-06-08 15:14:58.7659 | INFO | Authenticate - POST | https://localhost/api/authenticate/refreshToken # User JWT Current access token has been refreshed > HTTP 200 - OK #  
+2021-06-08 15:14:58.7953 | INFO | Schedule - GET | https://localhost/api/schedule/All/1 # Restaurant schedules have been retrieved OK #  
+2021-06-08 15:15:02.7384 | INFO | Authenticate - POST | https://localhost/api/authenticate/refreshToken # User found from the valid access token given > HTTP 200 - OK #  
+2021-06-08 15:15:02.7619 | INFO | Authenticate - POST | https://localhost/api/authenticate/refreshToken # User JWT Current access token has been refreshed > HTTP 200 - OK #  
+2021-06-08 15:15:02.7992 | INFO | Authenticate - POST | https://localhost/api/authenticate/refreshToken # User found from the valid access token given > HTTP 200 - OK #  
+2021-06-08 15:15:02.8367 | INFO | Authenticate - POST | https://localhost/api/authenticate/refreshToken # User JWT Current access token has been refreshed > HTTP 200 - OK #  
+2021-06-08 15:16:09.4072 | INFO | Authenticate - POST | https://localhost/api/authenticate/refreshToken # User found from the valid access token given > HTTP 200 - OK #  
+2021-06-08 15:16:09.4565 | INFO | Authenticate - POST | https://localhost/api/authenticate/refreshToken # User JWT Current access token has been refreshed > HTTP 200 - OK #  
+2021-06-08 15:16:09.6363 | INFO | Promotion - POST | https://localhost/api/promotion # Promotion Happy June Promotion has been created with ID 2 > HTTP 200 - OK #  
+2021-06-08 15:16:09.6996 | INFO | Promotion - POST | https://localhost/api/promotion # New Promotion Happy June Promotion with ID has been sent the email and update the email status 2 > HTTP 200 - OK #  
+2021-06-08 15:16:09.7381 | INFO | Authenticate - POST | https://localhost/api/authenticate/refreshToken # User found from the valid access token given > HTTP 200 - OK #  
+2021-06-08 15:16:09.7523 | INFO | Authenticate - POST | https://localhost/api/authenticate/refreshToken # User JWT Current access token has been refreshed > HTTP 200 - OK #  
+2021-06-08 15:16:09.8104 | INFO | Authenticate - POST | https://localhost/api/authenticate/refreshToken # User found from the valid access token given > HTTP 200 - OK #  
+2021-06-08 15:16:09.8104 | INFO | Authenticate - POST | https://localhost/api/authenticate/refreshToken # User JWT Current access token has been refreshed > HTTP 200 - OK #  
+2021-06-08 15:16:09.8363 | INFO | Schedule - GET | https://localhost/api/schedule/All/1 # Restaurant schedules have been retrieved OK #  
+2021-06-08 22:05:25.0771 | DEBUG |  -  |  # init main #  
+2021-06-08 22:05:31.0337 | INFO |  -  |  # Promotion email status has been checked > HTTP 200 - OK #  
+2021-06-08 22:05:31.1121 | INFO |  -  |  # Application started. Press Ctrl+C to shut down. #  
+2021-06-08 22:05:31.1811 | INFO |  -  |  # Hosting environment: Development #  
+2021-06-08 22:05:31.1811 | INFO |  -  |  # Content root path: C:\Users\MIS\source\repos\Restaurant Reservation Website\RestaurantReservation.Backend\RestaurantReservation.Api #  
+2021-06-08 22:07:25.3341 | INFO | Authenticate - POST | https://localhost/api/authenticate/login # User refresh token has been created > HTTP 200 - OK #  
+2021-06-08 22:07:29.6445 | INFO | Authenticate - POST | https://localhost/api/authenticate/refreshToken # User found from the valid access token given > HTTP 200 - OK #  
+2021-06-08 22:07:29.6852 | INFO | Authenticate - POST | https://localhost/api/authenticate/refreshToken # User JWT Current access token has been refreshed > HTTP 200 - OK #  
+2021-06-08 22:07:29.9389 | INFO | Authenticate - POST | https://localhost/api/authenticate/refreshToken # User found from the valid access token given > HTTP 200 - OK #  
+2021-06-08 22:07:29.9525 | INFO | Authenticate - POST | https://localhost/api/authenticate/refreshToken # User JWT Current access token has been refreshed > HTTP 200 - OK #  
+2021-06-08 22:07:30.0100 | INFO | Schedule - GET | https://localhost/api/schedule/All/1 # Restaurant schedules have been retrieved OK #  
+2021-06-08 22:08:01.4352 | INFO | Authenticate - POST | https://localhost/api/authenticate/refreshToken # User found from the valid access token given > HTTP 200 - OK #  
+2021-06-08 22:08:01.4966 | INFO | Authenticate - POST | https://localhost/api/authenticate/refreshToken # User JWT Current access token has been refreshed > HTTP 200 - OK #  
+2021-06-08 22:08:01.5758 | INFO | Schedule - GET | https://localhost/api/schedule/1 # Schedule of ID 1 and relevant restaurant info have been retrieved OK #  
+2021-06-08 22:08:01.6066 | INFO | Authenticate - POST | https://localhost/api/authenticate/refreshToken # User found from the valid access token given > HTTP 200 - OK #  
+2021-06-08 22:08:01.6217 | INFO | Authenticate - POST | https://localhost/api/authenticate/refreshToken # User JWT Current access token has been refreshed > HTTP 200 - OK #  
+2021-06-08 22:08:01.7532 | INFO | Booking - POST | https://localhost/api/booking # Member RestaurantReservation.Core.ViewModels.Members.MakeBookingVM new booking has been made and sent email has been created with booking ID 1 > HTTP 200 - OK #  
+2021-06-08 22:08:01.7781 | INFO | Authenticate - POST | https://localhost/api/authenticate/refreshToken # User found from the valid access token given > HTTP 200 - OK #  
+2021-06-08 22:08:01.7781 | INFO | Authenticate - POST | https://localhost/api/authenticate/refreshToken # User JWT Current access token has been refreshed > HTTP 200 - OK #  
+2021-06-08 22:08:01.8472 | INFO | Authenticate - POST | https://localhost/api/authenticate/refreshToken # User found from the valid access token given > HTTP 200 - OK #  
+2021-06-08 22:08:01.8584 | INFO | Authenticate - POST | https://localhost/api/authenticate/refreshToken # User JWT Current access token has been refreshed > HTTP 200 - OK #  
+2021-06-08 22:08:01.8802 | INFO | Schedule - GET | https://localhost/api/schedule/All/1 # Restaurant schedules have been retrieved OK #  

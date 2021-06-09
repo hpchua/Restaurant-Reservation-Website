@@ -1,0 +1,3775 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "Restaurant Reservation API v1",
+    "description": "Restaurant Reservation API",
+    "version": "v1"
+  },
+  "paths": {
+    "/api/Authenticate/Login": {
+      "post": {
+        "tags": [
+          "Authenticate"
+        ],
+        "summary": "Verify the combination of username and password to grant user access to access Restaurant Reservation System.",
+        "operationId": "Login",
+        "requestBody": {
+          "description": "Provides the necessary username and password combination for authentication",
+          "content": {
+            "application/json-patch+json; v=1.0": {
+              "schema": {
+                "$ref": "#/components/schemas/LoginVM"
+              }
+            },
+            "application/json; v=1.0": {
+              "schema": {
+                "$ref": "#/components/schemas/LoginVM"
+              }
+            },
+            "text/json; v=1.0": {
+              "schema": {
+                "$ref": "#/components/schemas/LoginVM"
+              }
+            },
+            "application/*+json; v=1.0": {
+              "schema": {
+                "$ref": "#/components/schemas/LoginVM"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Returns the user account successfully login message",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AuthenticationResult"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Error Retrieving user info from database",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": false
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Authenticate/RefreshToken": {
+      "post": {
+        "tags": [
+          "Authenticate"
+        ],
+        "summary": "Refresh User JWT Access Token When accessing the resources everytime.",
+        "operationId": "RefreshToken",
+        "requestBody": {
+          "description": "Provides the user's current JWT access token and refresh token to compare database one",
+          "content": {
+            "application/json-patch+json; v=1.0": {
+              "schema": {
+                "$ref": "#/components/schemas/RefreshRequest"
+              }
+            },
+            "application/json; v=1.0": {
+              "schema": {
+                "$ref": "#/components/schemas/RefreshRequest"
+              }
+            },
+            "text/json; v=1.0": {
+              "schema": {
+                "$ref": "#/components/schemas/RefreshRequest"
+              }
+            },
+            "application/*+json; v=1.0": {
+              "schema": {
+                "$ref": "#/components/schemas/RefreshRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Returns the user latest JWT access token",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserToken"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Error Retrieving user refresh token from database",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": false
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Authenticate/Register": {
+      "post": {
+        "tags": [
+          "Authenticate"
+        ],
+        "summary": "Take user registration info input to register a new account",
+        "operationId": "Register",
+        "requestBody": {
+          "description": "Provide necessary information for registering a new user in the database",
+          "content": {
+            "application/json-patch+json; v=1.0": {
+              "schema": {
+                "$ref": "#/components/schemas/RegisterVM"
+              }
+            },
+            "application/json; v=1.0": {
+              "schema": {
+                "$ref": "#/components/schemas/RegisterVM"
+              }
+            },
+            "text/json; v=1.0": {
+              "schema": {
+                "$ref": "#/components/schemas/RegisterVM"
+              }
+            },
+            "application/*+json; v=1.0": {
+              "schema": {
+                "$ref": "#/components/schemas/RegisterVM"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Returns the user account successfully created message",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AuthenticationResult"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Error Adding user registration info into database",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": false
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Authenticate/ForgotPassword/{email}": {
+      "get": {
+        "tags": [
+          "Authenticate"
+        ],
+        "summary": "Accepts an email input from user to send email with URL link for change password purposes.",
+        "operationId": "ForgotPassword",
+        "parameters": [
+          {
+            "name": "email",
+            "in": "path",
+            "description": "Email Address",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "description": "Email Address",
+              "nullable": true
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "A Boolean response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "boolean"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Error sending email wiht URL to the user",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": false
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Authenticate/ResetPassword": {
+      "post": {
+        "tags": [
+          "Authenticate"
+        ],
+        "summary": "A combination of Reset Password Token + User's Email Address and Updated Password",
+        "operationId": "ResetPassword",
+        "requestBody": {
+          "description": "ResetPasswordVM",
+          "content": {
+            "application/json-patch+json; v=1.0": {
+              "schema": {
+                "$ref": "#/components/schemas/ResetPasswordVM"
+              }
+            },
+            "application/json; v=1.0": {
+              "schema": {
+                "$ref": "#/components/schemas/ResetPasswordVM"
+              }
+            },
+            "text/json; v=1.0": {
+              "schema": {
+                "$ref": "#/components/schemas/ResetPasswordVM"
+              }
+            },
+            "application/*+json; v=1.0": {
+              "schema": {
+                "$ref": "#/components/schemas/ResetPasswordVM"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "A Boolean response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "boolean"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Error updating user's account password",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": false
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Booking/Admin/ListCount": {
+      "get": {
+        "tags": [
+          "Booking"
+        ],
+        "summary": "Retrive the total number of members' pending reservation in database.",
+        "operationId": "AdminGetCount",
+        "responses": {
+          "200": {
+            "description": "Number of members' pending reservation record",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "integer",
+                  "format": "int32"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Error Retrieving number of members' pending reservation record",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": false
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Booking/Admin/{status}": {
+      "get": {
+        "tags": [
+          "Booking"
+        ],
+        "summary": "Get all members' bookings of a specific status.",
+        "operationId": "GetAllBookingsOfStatus",
+        "parameters": [
+          {
+            "name": "status",
+            "in": "path",
+            "description": "Booking status, e.g. Pending, Expired, Complete",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "description": "Booking status, e.g. Pending, Expired, Complete",
+              "nullable": true
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "All members' booking records",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Booking"
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Error Retrieving members' booking records from database",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": false
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        },
+        "security": [
+          {
+            "Bearer": [ ]
+          }
+        ]
+      }
+    },
+    "/api/Booking/Details/BookingNo/{bookingNo}": {
+      "get": {
+        "tags": [
+          "Booking"
+        ],
+        "summary": "Retrieve a specific booking details based on the Booking Number given.",
+        "operationId": "GetByBookingNo",
+        "parameters": [
+          {
+            "name": "bookingNo",
+            "in": "path",
+            "description": "Booking Number",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "description": "Booking Number",
+              "nullable": true
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "BookingDetailVM object that contains booking details",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BookingDetailVM"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": false
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Error Retrieving booking detail info from database",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": false
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "400": {
+            "description": "Booking Details Not Found"
+          }
+        },
+        "security": [
+          {
+            "Bearer": [ ]
+          }
+        ]
+      }
+    },
+    "/api/Booking/Member/{userID}/{status}": {
+      "get": {
+        "tags": [
+          "Booking"
+        ],
+        "summary": "Get all bookings of a specific status for a specific user.",
+        "operationId": "GetAllBookingsByUserID",
+        "parameters": [
+          {
+            "name": "userID",
+            "in": "path",
+            "description": "User ID",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "description": "User ID",
+              "nullable": true
+            }
+          },
+          {
+            "name": "status",
+            "in": "path",
+            "description": "Order Status, eg. Pending, Complete, Expired",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "description": "Order Status, eg. Pending, Complete, Expired",
+              "nullable": true
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "A list of BookingHistoryVM object that contains specific member's booking details",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BookingHistoryVM"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Error Retrieving booking detail info from database",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": false
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        },
+        "security": [
+          {
+            "Bearer": [ ]
+          }
+        ]
+      }
+    },
+    "/api/Booking": {
+      "post": {
+        "tags": [
+          "Booking"
+        ],
+        "summary": "Add a new member booking to the database. This checks for number of seat avaiable for each session also.",
+        "operationId": "Add",
+        "requestBody": {
+          "description": "MakeBookingVM object",
+          "content": {
+            "application/json-patch+json; v=1.0": {
+              "schema": {
+                "$ref": "#/components/schemas/MakeBookingVM"
+              }
+            },
+            "application/json; v=1.0": {
+              "schema": {
+                "$ref": "#/components/schemas/MakeBookingVM"
+              }
+            },
+            "text/json; v=1.0": {
+              "schema": {
+                "$ref": "#/components/schemas/MakeBookingVM"
+              }
+            },
+            "application/*+json; v=1.0": {
+              "schema": {
+                "$ref": "#/components/schemas/MakeBookingVM"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "New Booking Object",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Booking"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Error Adding a member booking information into database",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": false
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        },
+        "security": [
+          {
+            "Bearer": [ ]
+          }
+        ]
+      }
+    },
+    "/api/Booking/{bookingID}": {
+      "put": {
+        "tags": [
+          "Booking"
+        ],
+        "summary": "Update an existing member's booking in the database.",
+        "operationId": "Update",
+        "parameters": [
+          {
+            "name": "bookingID",
+            "in": "path",
+            "description": "Booking ID",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "description": "Booking ID",
+              "format": "int64"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "Booking Object Information",
+          "content": {
+            "application/json-patch+json; v=1.0": {
+              "schema": {
+                "$ref": "#/components/schemas/Booking"
+              }
+            },
+            "application/json; v=1.0": {
+              "schema": {
+                "$ref": "#/components/schemas/Booking"
+              }
+            },
+            "text/json; v=1.0": {
+              "schema": {
+                "$ref": "#/components/schemas/Booking"
+              }
+            },
+            "application/*+json; v=1.0": {
+              "schema": {
+                "$ref": "#/components/schemas/Booking"
+              }
+            }
+          }
+        },
+        "responses": {
+          "204": {
+            "description": "Deleting category successfully",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": false
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid Booking ID message",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": false
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "No record found based on Booking ID given",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": false
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Error Updating a Booking object information from database",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": false
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        },
+        "security": [
+          {
+            "Bearer": [ ]
+          }
+        ]
+      }
+    },
+    "/api/Category/Count": {
+      "get": {
+        "tags": [
+          "Category"
+        ],
+        "summary": "Retrive the total number of category in database.",
+        "operationId": "GetCategoryCount",
+        "responses": {
+          "200": {
+            "description": "Number of category record",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "integer",
+                  "format": "int32"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Error Retrieving number of category record",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": false
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Category": {
+      "get": {
+        "tags": [
+          "Category"
+        ],
+        "summary": "Get all existing categories from the database.",
+        "operationId": "GetAll",
+        "responses": {
+          "200": {
+            "description": "A list of category",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Category"
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Error Retrieving categories info from database",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": false
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        },
+        "security": [
+          {
+            "Bearer": [ ]
+          }
+        ]
+      },
+      "post": {
+        "tags": [
+          "Category"
+        ],
+        "summary": "Add a new category to the database. This checks for duplicate category name.",
+        "operationId": "Add",
+        "requestBody": {
+          "description": "Category object",
+          "content": {
+            "application/json-patch+json; v=1.0": {
+              "schema": {
+                "$ref": "#/components/schemas/Category"
+              }
+            },
+            "application/json; v=1.0": {
+              "schema": {
+                "$ref": "#/components/schemas/Category"
+              }
+            },
+            "text/json; v=1.0": {
+              "schema": {
+                "$ref": "#/components/schemas/Category"
+              }
+            },
+            "application/*+json; v=1.0": {
+              "schema": {
+                "$ref": "#/components/schemas/Category"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "A Boolean response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "boolean"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Error Adding a category object information into database",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": false
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        },
+        "security": [
+          {
+            "Bearer": [ ]
+          }
+        ]
+      }
+    },
+    "/api/Category/{id}": {
+      "get": {
+        "tags": [
+          "Category"
+        ],
+        "summary": "Retrieve a specific category information based on the Category ID given.",
+        "operationId": "Get",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Category ID",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "description": "Category ID",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "A category",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Category"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": false
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Error Retrieving a category info from database",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": false
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        },
+        "security": [
+          {
+            "Bearer": [ ]
+          }
+        ]
+      },
+      "put": {
+        "tags": [
+          "Category"
+        ],
+        "summary": "Update an existing category in the database. This checks for duplicate category name.",
+        "operationId": "Update",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Category ID",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "description": "Category ID",
+              "format": "int64"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "Category Object",
+          "content": {
+            "application/json-patch+json; v=1.0": {
+              "schema": {
+                "$ref": "#/components/schemas/Category"
+              }
+            },
+            "application/json; v=1.0": {
+              "schema": {
+                "$ref": "#/components/schemas/Category"
+              }
+            },
+            "text/json; v=1.0": {
+              "schema": {
+                "$ref": "#/components/schemas/Category"
+              }
+            },
+            "application/*+json; v=1.0": {
+              "schema": {
+                "$ref": "#/components/schemas/Category"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Updated Category object",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Category"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid Category ID or Category name exists message",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": false
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Category Version Conflict message",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": false
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Error Updating a Category object information from database",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": false
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        },
+        "security": [
+          {
+            "Bearer": [ ]
+          }
+        ]
+      }
+    },
+    "/api/Category/{userId}/{id}": {
+      "delete": {
+        "tags": [
+          "Category"
+        ],
+        "summary": "Remove an existing category information from database.",
+        "operationId": "Delete",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Category ID",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "description": "Category ID",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "userID",
+            "in": "path",
+            "description": "User ID",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "description": "User ID",
+              "nullable": true
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "Deleting category successfully",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": false
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Category record not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": false
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Error Deleting a category object information from database",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": false
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        },
+        "security": [
+          {
+            "Bearer": [ ]
+          }
+        ]
+      }
+    },
+    "/api/Promotion/{id}": {
+      "get": {
+        "tags": [
+          "Promotion"
+        ],
+        "summary": "Retrieve a specific restaurant Promotion information based on the Promotion ID given.",
+        "operationId": "Get",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Promotion ID",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "description": "Promotion ID",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "A restaurant Promotion object",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RestaurantPromotionVM"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": false
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Error Retrieving a restaurant Promotion info from database",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": false
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        },
+        "security": [
+          {
+            "Bearer": [ ]
+          }
+        ]
+      },
+      "put": {
+        "tags": [
+          "Promotion"
+        ],
+        "summary": "Update an existing restaurant Promotion info in the database. This checks for duplicate name also.",
+        "operationId": "Update",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Promotion ID",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "description": "Promotion ID",
+              "format": "int64"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "Updated Promotion Info",
+          "content": {
+            "application/json-patch+json; v=1.0": {
+              "schema": {
+                "$ref": "#/components/schemas/Promotion"
+              }
+            },
+            "application/json; v=1.0": {
+              "schema": {
+                "$ref": "#/components/schemas/Promotion"
+              }
+            },
+            "text/json; v=1.0": {
+              "schema": {
+                "$ref": "#/components/schemas/Promotion"
+              }
+            },
+            "application/*+json; v=1.0": {
+              "schema": {
+                "$ref": "#/components/schemas/Promotion"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Updated Promotion object",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Promotion"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid Promotion ID or Promotion Name exists message",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": false
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Category Version Conflict message",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": false
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Error Updating a Promotion object information from database",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": false
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        },
+        "security": [
+          {
+            "Bearer": [ ]
+          }
+        ]
+      }
+    },
+    "/api/Promotion/Check/{id}": {
+      "get": {
+        "tags": [
+          "Promotion"
+        ],
+        "summary": "Retrieve a specific restaurant Promotion information based on the Promotion ID given.",
+        "operationId": "CheckExistingByID",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Promotion ID",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "description": "Promotion ID",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "A restaurant Promotion object",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RestaurantPromotionVM"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": false
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Error Retrieving a restaurant Promotion info from database",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": false
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        },
+        "security": [
+          {
+            "Bearer": [ ]
+          }
+        ]
+      }
+    },
+    "/api/Promotion": {
+      "post": {
+        "tags": [
+          "Promotion"
+        ],
+        "summary": "Add a new promotion for a restaurant to the database. This checks for duplicate promotions name.",
+        "operationId": "Add",
+        "requestBody": {
+          "description": "Promotion object",
+          "content": {
+            "application/json-patch+json; v=1.0": {
+              "schema": {
+                "$ref": "#/components/schemas/Promotion"
+              }
+            },
+            "application/json; v=1.0": {
+              "schema": {
+                "$ref": "#/components/schemas/Promotion"
+              }
+            },
+            "text/json; v=1.0": {
+              "schema": {
+                "$ref": "#/components/schemas/Promotion"
+              }
+            },
+            "application/*+json; v=1.0": {
+              "schema": {
+                "$ref": "#/components/schemas/Promotion"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "A Boolean response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "boolean"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Error Adding a promotions object information into database",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": false
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        },
+        "security": [
+          {
+            "Bearer": [ ]
+          }
+        ]
+      }
+    },
+    "/api/Promotion/{userId}/{id}": {
+      "delete": {
+        "tags": [
+          "Promotion"
+        ],
+        "summary": "Remove an existing promotion information from database.",
+        "operationId": "Delete",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Promotion ID",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "description": "Promotion ID",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "userID",
+            "in": "path",
+            "description": "User ID",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "description": "User ID",
+              "nullable": true
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "Deleting Promotion Result",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": false
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Promotion record not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": false
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Error Deleting a Promotion object information from database",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": false
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        },
+        "security": [
+          {
+            "Bearer": [ ]
+          }
+        ]
+      }
+    },
+    "/api/Promotion/PushEmail/{id}": {
+      "get": {
+        "tags": [
+          "Promotion"
+        ],
+        "summary": "Push Email to the Member Subscriber based on Promotion ID given.",
+        "operationId": "PushEmail",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Promotion ID",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "description": "Promotion ID",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "A Boolean response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "boolean"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Promotion record not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": false
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        },
+        "security": [
+          {
+            "Bearer": [ ]
+          }
+        ]
+      }
+    },
+    "/api/Restaurant/Count": {
+      "get": {
+        "tags": [
+          "Restaurant"
+        ],
+        "summary": "Retrive the total number of restaurant in database.",
+        "operationId": "GetRestaurantCount",
+        "responses": {
+          "200": {
+            "description": "Number of restaurant record",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "integer",
+                  "format": "int32"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Error Retrieving number of restaurant record",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": false
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Restaurant": {
+      "get": {
+        "tags": [
+          "Restaurant"
+        ],
+        "summary": "Get all existing restaurants from the database.",
+        "operationId": "GetAll",
+        "responses": {
+          "200": {
+            "description": "A list of restaurant with category",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/RestaurantCategoryVM"
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Error Retrieving restaurants info from database",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": false
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Restaurant"
+        ],
+        "summary": "Add a new restaurant (under which category) to the database. This checks for duplicate category name.",
+        "operationId": "Add",
+        "requestBody": {
+          "description": "RestaurantCategoryVM object",
+          "content": {
+            "application/json-patch+json; v=1.0": {
+              "schema": {
+                "$ref": "#/components/schemas/RestaurantCategoryVM"
+              }
+            },
+            "application/json; v=1.0": {
+              "schema": {
+                "$ref": "#/components/schemas/RestaurantCategoryVM"
+              }
+            },
+            "text/json; v=1.0": {
+              "schema": {
+                "$ref": "#/components/schemas/RestaurantCategoryVM"
+              }
+            },
+            "application/*+json; v=1.0": {
+              "schema": {
+                "$ref": "#/components/schemas/RestaurantCategoryVM"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "A Boolean response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "boolean"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Error Adding a category object information into database",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": false
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        },
+        "security": [
+          {
+            "Bearer": [ ]
+          }
+        ]
+      }
+    },
+    "/api/Restaurant/{id}/{ScheduleStatus}/{PromotionStatus}": {
+      "get": {
+        "tags": [
+          "Restaurant"
+        ],
+        "summary": "Retrieve a specific restaurant with the categories, schedules and promotion information based on the Restaurant ID given.",
+        "operationId": "Get",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Restaurant ID",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "description": "Restaurant ID",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "ScheduleStatus",
+            "in": "path",
+            "description": "Schedule Status Filter eg: All, Full, Available",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "description": "Schedule Status Filter eg: All, Full, Available",
+              "nullable": true
+            }
+          },
+          {
+            "name": "PromotionStatus",
+            "in": "path",
+            "description": "Promotion Filter eg: All, Available, Unavailable",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "description": "Promotion Filter eg: All, Available, Unavailable",
+              "nullable": true
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "A restaurant with categories, schedules and promotions",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RestaurantCategorySchedulePromtionVM"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": false
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Error Retrieving a restaurant info from database",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": false
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        },
+        "security": [
+          {
+            "Bearer": [ ]
+          }
+        ]
+      }
+    },
+    "/api/Restaurant/EditInfo/{id}": {
+      "get": {
+        "tags": [
+          "Restaurant"
+        ],
+        "summary": "Retrieve a specific restaurant with the categories and schedules information based on the Restaurant ID given.",
+        "operationId": "GetEditInfoByID",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Restaurant ID",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "description": "Restaurant ID",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "A restaurant with categories",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RestaurantCategorySchedulePromtionVM"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": false
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Error Retrieving a restaurant info from database",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": false
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        },
+        "security": [
+          {
+            "Bearer": [ ]
+          }
+        ]
+      }
+    },
+    "/api/Restaurant/{id}": {
+      "put": {
+        "tags": [
+          "Restaurant"
+        ],
+        "summary": "Update an existing restaurant in the database. This checks for duplicate restaurant name.",
+        "operationId": "Update",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Restaurant ID",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "description": "Restaurant ID",
+              "format": "int64"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "RestaurantCategoryVM Object",
+          "content": {
+            "application/json-patch+json; v=1.0": {
+              "schema": {
+                "$ref": "#/components/schemas/RestaurantCategoryVM"
+              }
+            },
+            "application/json; v=1.0": {
+              "schema": {
+                "$ref": "#/components/schemas/RestaurantCategoryVM"
+              }
+            },
+            "text/json; v=1.0": {
+              "schema": {
+                "$ref": "#/components/schemas/RestaurantCategoryVM"
+              }
+            },
+            "application/*+json; v=1.0": {
+              "schema": {
+                "$ref": "#/components/schemas/RestaurantCategoryVM"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Updated Restaurant object",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Category"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid Restaurant ID or Restaurant name exists message",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": false
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Category Version Conflict message",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": false
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Error Updating a Restaurant object information from database",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": false
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        },
+        "security": [
+          {
+            "Bearer": [ ]
+          }
+        ]
+      }
+    },
+    "/api/Restaurant/{userId}/{id}": {
+      "delete": {
+        "tags": [
+          "Restaurant"
+        ],
+        "summary": "Remove an existing restaurant information from database.",
+        "operationId": "Delete",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Restaurant ID",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "description": "Restaurant ID",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "userID",
+            "in": "path",
+            "description": "User ID",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "description": "User ID",
+              "nullable": true
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "Updating Restaurant Status Result",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": false
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Restaurant record not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": false
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Error Deleting a Restaurant object information from database",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": false
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        },
+        "security": [
+          {
+            "Bearer": [ ]
+          }
+        ]
+      }
+    },
+    "/api/Restaurant/Testing/{id}": {
+      "delete": {
+        "tags": [
+          "Restaurant"
+        ],
+        "summary": "Remove an existing restaurant information from database, for testing",
+        "operationId": "Delete",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Restaurant ID",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "description": "Restaurant ID",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "Deleting Restaurant Success Result",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": false
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Restaurant record not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": false
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Error Deleting a Restaurant object information from database",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": false
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        },
+        "security": [
+          {
+            "Bearer": [ ]
+          }
+        ]
+      }
+    },
+    "/api/Schedule/Count/{restaurantID}": {
+      "get": {
+        "tags": [
+          "Schedule"
+        ],
+        "summary": "Retrive the total number of schedule of a restaurant in database.",
+        "operationId": "GetCount",
+        "parameters": [
+          {
+            "name": "restaurantID",
+            "in": "path",
+            "description": "Restaurant ID",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "description": "Restaurant ID",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Number of schedule of a restaurant record",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "integer",
+                  "format": "int32"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Error Retrieving number of schedule of a restaurant record",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": false
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Schedule/All/{id}": {
+      "get": {
+        "tags": [
+          "Schedule"
+        ],
+        "summary": "Get all existing restaurant schedules from the database for populating drop down list purpose based on Restaurant ID given.",
+        "operationId": "GetAll",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Restaurant ID",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "description": "Restaurant ID",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "A list of restaurant schedules",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/RestaurantSchedule"
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Error Retrieving restaurant schedules from database",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": false
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        },
+        "security": [
+          {
+            "Bearer": [ ]
+          }
+        ]
+      }
+    },
+    "/api/Schedule/{id}": {
+      "get": {
+        "tags": [
+          "Schedule"
+        ],
+        "summary": "Retrieve a specific restaurant schedule information based on the Schedule ID given.",
+        "operationId": "Get",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Schedule ID",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "description": "Schedule ID",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "A restaurant schedule object",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RestaurantCategorySchedulePromtionVM"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": false
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Error Retrieving a restaurant schedule info from database",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": false
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        },
+        "security": [
+          {
+            "Bearer": [ ]
+          }
+        ]
+      },
+      "put": {
+        "tags": [
+          "Schedule"
+        ],
+        "summary": "Update an existing restaurant schedule info in the database. This checks for duplicate start time also.",
+        "operationId": "Update",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Schedule ID",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "description": "Schedule ID",
+              "format": "int64"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "RestaurantCategoryVM Object",
+          "content": {
+            "application/json-patch+json; v=1.0": {
+              "schema": {
+                "$ref": "#/components/schemas/RestaurantSchedule"
+              }
+            },
+            "application/json; v=1.0": {
+              "schema": {
+                "$ref": "#/components/schemas/RestaurantSchedule"
+              }
+            },
+            "text/json; v=1.0": {
+              "schema": {
+                "$ref": "#/components/schemas/RestaurantSchedule"
+              }
+            },
+            "application/*+json; v=1.0": {
+              "schema": {
+                "$ref": "#/components/schemas/RestaurantSchedule"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Updated Schedule object",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RestaurantSchedule"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid Schedule ID or Schedule Start Time exists message",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": false
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Category Version Conflict message",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": false
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Error Updating a Schedule object information from database",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": false
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        },
+        "security": [
+          {
+            "Bearer": [ ]
+          }
+        ]
+      }
+    },
+    "/api/Schedule": {
+      "post": {
+        "tags": [
+          "Schedule"
+        ],
+        "summary": "Add a new schedule for a restaurant to the database. This also check for duplicate session start time.",
+        "operationId": "Add",
+        "requestBody": {
+          "description": "restaurantSchedule object",
+          "content": {
+            "application/json-patch+json; v=1.0": {
+              "schema": {
+                "$ref": "#/components/schemas/RestaurantSchedule"
+              }
+            },
+            "application/json; v=1.0": {
+              "schema": {
+                "$ref": "#/components/schemas/RestaurantSchedule"
+              }
+            },
+            "text/json; v=1.0": {
+              "schema": {
+                "$ref": "#/components/schemas/RestaurantSchedule"
+              }
+            },
+            "application/*+json; v=1.0": {
+              "schema": {
+                "$ref": "#/components/schemas/RestaurantSchedule"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RestaurantSchedule"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Error Adding a schedule object information into database",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": false
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "204": {
+            "description": "No content"
+          }
+        },
+        "security": [
+          {
+            "Bearer": [ ]
+          }
+        ]
+      }
+    },
+    "/api/Schedule/{userId}/{status}/{id}": {
+      "delete": {
+        "tags": [
+          "Schedule"
+        ],
+        "summary": "Remove an existing schedule information from database.",
+        "operationId": "Delete",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Schedule ID",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "description": "Schedule ID",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "userID",
+            "in": "path",
+            "description": "User ID",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "description": "User ID",
+              "nullable": true
+            }
+          },
+          {
+            "name": "status",
+            "in": "path",
+            "description": "Status Value Eg: Avaialble(1), Unavailable(4)",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "description": "Status Value Eg: Avaialble(1), Unavailable(4)",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "Updating Restaurant Status Result",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": false
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Restaurant record not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": false
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Error Deleting a Schedule object information from database",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": false
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        },
+        "security": [
+          {
+            "Bearer": [ ]
+          }
+        ]
+      }
+    },
+    "/api/Schedule/Testing/{id}": {
+      "delete": {
+        "tags": [
+          "Schedule"
+        ],
+        "summary": "Remove an existing restaurant schedule information from database, for testing",
+        "operationId": "Delete",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Schedule ID",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "description": "Schedule ID",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "Updating Restaurant schedule successfully Result",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": false
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Restaurant schedule record not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": false
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Error Deleting a Restaurant schedule object information from database",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": false
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        },
+        "security": [
+          {
+            "Bearer": [ ]
+          }
+        ]
+      }
+    },
+    "/api/User/{role}": {
+      "get": {
+        "tags": [
+          "User"
+        ],
+        "summary": "Get all existing users info from the database based on the role given.",
+        "operationId": "GetAll",
+        "parameters": [
+          {
+            "name": "role",
+            "in": "path",
+            "description": "User Role string, e.g. Admin and Member",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "description": "User Role string, e.g. Admin and Member",
+              "nullable": true
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "A list of users",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Category"
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Error Retrieving users info from database",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": false
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        },
+        "security": [
+          {
+            "Bearer": [ ]
+          }
+        ]
+      }
+    },
+    "/api/User/Info/{userID}": {
+      "get": {
+        "tags": [
+          "User"
+        ],
+        "summary": "Retrieve a specific user details based on the user ID given.",
+        "operationId": "Get",
+        "parameters": [
+          {
+            "name": "userID",
+            "in": "path",
+            "description": "User ID",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "description": "User ID",
+              "nullable": true
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "A specific user",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Category"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": false
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Error Retrieving a user info from database",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": false
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        },
+        "security": [
+          {
+            "Bearer": [ ]
+          }
+        ]
+      }
+    },
+    "/api/User/Check/{email}": {
+      "get": {
+        "tags": [
+          "User"
+        ],
+        "summary": "A validation of User's Email Address Exists in the database",
+        "operationId": "CheckExistingEmail",
+        "parameters": [
+          {
+            "name": "email",
+            "in": "path",
+            "description": "User's Email Address",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "description": "User's Email Address",
+              "nullable": true
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "An Application User result",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApplicationUser"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Error retrieving user's email address",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": false
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/User/ChangePassword": {
+      "post": {
+        "tags": [
+          "User"
+        ],
+        "summary": "Accepts a combination of user ID, current password and new password for password change.",
+        "operationId": "ChangePassword",
+        "requestBody": {
+          "description": "ChangePasswordVM object",
+          "content": {
+            "application/json-patch+json; v=1.0": {
+              "schema": {
+                "$ref": "#/components/schemas/ChangePasswordVM"
+              }
+            },
+            "application/json; v=1.0": {
+              "schema": {
+                "$ref": "#/components/schemas/ChangePasswordVM"
+              }
+            },
+            "text/json; v=1.0": {
+              "schema": {
+                "$ref": "#/components/schemas/ChangePasswordVM"
+              }
+            },
+            "application/*+json; v=1.0": {
+              "schema": {
+                "$ref": "#/components/schemas/ChangePasswordVM"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Returns boolean object",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "boolean"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Error Changing User's Password",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": false
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        },
+        "security": [
+          {
+            "Bearer": [ ]
+          }
+        ]
+      }
+    },
+    "/api/User": {
+      "put": {
+        "tags": [
+          "User"
+        ],
+        "summary": "Update an existing user information in the database.",
+        "operationId": "Update",
+        "requestBody": {
+          "description": "ApplicationUser Object",
+          "content": {
+            "application/json-patch+json; v=1.0": {
+              "schema": {
+                "$ref": "#/components/schemas/ProfileVM"
+              }
+            },
+            "application/json; v=1.0": {
+              "schema": {
+                "$ref": "#/components/schemas/ProfileVM"
+              }
+            },
+            "text/json; v=1.0": {
+              "schema": {
+                "$ref": "#/components/schemas/ProfileVM"
+              }
+            },
+            "application/*+json; v=1.0": {
+              "schema": {
+                "$ref": "#/components/schemas/ProfileVM"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "A Boolean response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "boolean"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Invalid user ID",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": false
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Error sending email wiht URL to the user",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": false
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        },
+        "security": [
+          {
+            "Bearer": [ ]
+          }
+        ]
+      }
+    },
+    "/api/User/{userId}": {
+      "delete": {
+        "tags": [
+          "User"
+        ],
+        "summary": "Remove an existing member registered details from database.",
+        "operationId": "Delete",
+        "parameters": [
+          {
+            "name": "userID",
+            "in": "path",
+            "description": "User ID",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "description": "User ID",
+              "nullable": true
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "Deleting user information successfully",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": false
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "User record not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": false
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Error Deleting a user object information from database",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": false
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        },
+        "security": [
+          {
+            "Bearer": [ ]
+          }
+        ]
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "LoginVM": {
+        "required": [
+          "password",
+          "username"
+        ],
+        "type": "object",
+        "properties": {
+          "username": {
+            "type": "string"
+          },
+          "password": {
+            "type": "string"
+          },
+          "rememberMe": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "ApplicationUser": {
+        "required": [
+          "name"
+        ],
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "joinedDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "role": {
+            "type": "string",
+            "nullable": true
+          },
+          "isSubscriber": {
+            "type": "boolean"
+          },
+          "id": {
+            "type": "string",
+            "nullable": true
+          },
+          "userName": {
+            "type": "string",
+            "nullable": true
+          },
+          "normalizedUserName": {
+            "type": "string",
+            "nullable": true
+          },
+          "email": {
+            "type": "string",
+            "nullable": true
+          },
+          "normalizedEmail": {
+            "type": "string",
+            "nullable": true
+          },
+          "emailConfirmed": {
+            "type": "boolean"
+          },
+          "passwordHash": {
+            "type": "string",
+            "nullable": true
+          },
+          "securityStamp": {
+            "type": "string",
+            "nullable": true
+          },
+          "concurrencyStamp": {
+            "type": "string",
+            "nullable": true
+          },
+          "phoneNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "phoneNumberConfirmed": {
+            "type": "boolean"
+          },
+          "twoFactorEnabled": {
+            "type": "boolean"
+          },
+          "lockoutEnd": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "lockoutEnabled": {
+            "type": "boolean"
+          },
+          "accessFailedCount": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "AuthenticationResult": {
+        "type": "object",
+        "properties": {
+          "applicationUser": {
+            "$ref": "#/components/schemas/ApplicationUser"
+          },
+          "statusCode": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "message": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "nullable": true
+          },
+          "token": {
+            "type": "string",
+            "nullable": true
+          },
+          "refreshToken": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "RefreshRequest": {
+        "type": "object",
+        "properties": {
+          "accessToken": {
+            "type": "string",
+            "nullable": true
+          },
+          "refreshToken": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "UserToken": {
+        "type": "object",
+        "properties": {
+          "applicationUser": {
+            "$ref": "#/components/schemas/ApplicationUser"
+          },
+          "token": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "RegisterVM": {
+        "required": [
+          "confirmPassword",
+          "email",
+          "name",
+          "password",
+          "phoneNumber",
+          "username"
+        ],
+        "type": "object",
+        "properties": {
+          "username": {
+            "type": "string"
+          },
+          "email": {
+            "type": "string",
+            "format": "email"
+          },
+          "password": {
+            "type": "string",
+            "format": "password"
+          },
+          "confirmPassword": {
+            "type": "string",
+            "format": "password"
+          },
+          "name": {
+            "type": "string"
+          },
+          "phoneNumber": {
+            "type": "string",
+            "format": "tel"
+          },
+          "role": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ResetPasswordVM": {
+        "required": [
+          "confirmPassword"
+        ],
+        "type": "object",
+        "properties": {
+          "email": {
+            "type": "string",
+            "nullable": true
+          },
+          "token": {
+            "type": "string",
+            "nullable": true
+          },
+          "password": {
+            "type": "string",
+            "format": "password",
+            "nullable": true
+          },
+          "confirmPassword": {
+            "type": "string",
+            "format": "password"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Booking": {
+        "type": "object",
+        "properties": {
+          "bookingID": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "userID": {
+            "type": "string",
+            "nullable": true
+          },
+          "applicationUser": {
+            "$ref": "#/components/schemas/ApplicationUser"
+          },
+          "bookingDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "checkIn": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "checkOut": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "bookingNo": {
+            "maxLength": 50,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "bookingStatus": {
+            "maxLength": 20,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "fullName": {
+            "maxLength": 50,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "phoneNo": {
+            "maxLength": 20,
+            "minLength": 0,
+            "type": "string",
+            "format": "tel",
+            "nullable": true
+          },
+          "editedBy": {
+            "maxLength": 20,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "editedDate": {
+            "type": "string",
+            "format": "date-time"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Restaurant": {
+        "required": [
+          "address",
+          "isAvailable",
+          "name"
+        ],
+        "type": "object",
+        "properties": {
+          "restaurantID": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "name": {
+            "maxLength": 50,
+            "type": "string"
+          },
+          "operatingHour": {
+            "type": "string",
+            "nullable": true
+          },
+          "workingDay": {
+            "maxLength": 20,
+            "type": "string",
+            "nullable": true
+          },
+          "selectedWorkingDay": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "startWorkingTime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "endWorkingTime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "imageUrl": {
+            "maxLength": 500,
+            "type": "string",
+            "nullable": true
+          },
+          "address": {
+            "maxLength": 100,
+            "type": "string"
+          },
+          "isAvailable": {
+            "type": "boolean"
+          },
+          "createdBy": {
+            "maxLength": 80,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "createdDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "editedBy": {
+            "maxLength": 80,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "editedDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "rowVersion": {
+            "type": "string",
+            "format": "byte",
+            "nullable": true
+          },
+          "versionNo": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "RestaurantSchedule": {
+        "required": [
+          "capacity",
+          "endTime",
+          "restaurantID",
+          "scheduleDate",
+          "startTime"
+        ],
+        "type": "object",
+        "properties": {
+          "scheduleID": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "restaurantID": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "restaurant": {
+            "$ref": "#/components/schemas/Restaurant"
+          },
+          "scheduleDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "startTime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "endTime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "capacity": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "createdBy": {
+            "maxLength": 20,
+            "type": "string",
+            "nullable": true
+          },
+          "createdDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "editedBy": {
+            "maxLength": 20,
+            "type": "string",
+            "nullable": true
+          },
+          "editedDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "rowVersion": {
+            "type": "string",
+            "format": "byte",
+            "nullable": true
+          },
+          "versionNo": {
+            "type": "string",
+            "nullable": true
+          },
+          "availableSeat": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "status": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "BookingDetail": {
+        "required": [
+          "bookingID",
+          "scheduleID"
+        ],
+        "type": "object",
+        "properties": {
+          "bookingDetailID": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "bookingID": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "booking": {
+            "$ref": "#/components/schemas/Booking"
+          },
+          "scheduleID": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "restaurantSchedule": {
+            "$ref": "#/components/schemas/RestaurantSchedule"
+          },
+          "pax": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "BookingDetailVM": {
+        "type": "object",
+        "properties": {
+          "booking": {
+            "$ref": "#/components/schemas/Booking"
+          },
+          "bookingDetail": {
+            "$ref": "#/components/schemas/BookingDetail"
+          }
+        },
+        "additionalProperties": false
+      },
+      "BookingHistoryVM": {
+        "type": "object",
+        "properties": {
+          "bookings": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Booking"
+            },
+            "nullable": true
+          },
+          "bookingDetails": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/BookingDetail"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "MakeBookingVM": {
+        "type": "object",
+        "properties": {
+          "booking": {
+            "$ref": "#/components/schemas/Booking"
+          },
+          "scheduleID": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "pax": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Category": {
+        "required": [
+          "name"
+        ],
+        "type": "object",
+        "properties": {
+          "categoryID": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "name": {
+            "maxLength": 20,
+            "type": "string"
+          },
+          "createdBy": {
+            "maxLength": 20,
+            "type": "string",
+            "nullable": true
+          },
+          "createdDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "editedBy": {
+            "maxLength": 20,
+            "type": "string",
+            "nullable": true
+          },
+          "editedDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "versionNo": {
+            "type": "string",
+            "nullable": true
+          },
+          "rowVersion": {
+            "type": "string",
+            "format": "byte",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Promotion": {
+        "required": [
+          "content",
+          "description",
+          "endDate",
+          "isAvailable",
+          "name",
+          "restaurantID",
+          "startDate"
+        ],
+        "type": "object",
+        "properties": {
+          "promotionID": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "restaurantID": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "restaurant": {
+            "$ref": "#/components/schemas/Restaurant"
+          },
+          "name": {
+            "maxLength": 100,
+            "type": "string"
+          },
+          "description": {
+            "maxLength": 200,
+            "type": "string"
+          },
+          "content": {
+            "maxLength": 300,
+            "type": "string"
+          },
+          "type": {
+            "maxLength": 10,
+            "type": "string",
+            "nullable": true
+          },
+          "isAvailable": {
+            "type": "boolean"
+          },
+          "startDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "endDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "createdBy": {
+            "maxLength": 20,
+            "type": "string",
+            "nullable": true
+          },
+          "createdDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "editedBy": {
+            "maxLength": 20,
+            "type": "string",
+            "nullable": true
+          },
+          "editedDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "rowVersion": {
+            "type": "string",
+            "format": "byte",
+            "nullable": true
+          },
+          "versionNo": {
+            "type": "string",
+            "nullable": true
+          },
+          "isEmailCreatedSent": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "RestaurantPromotionVM": {
+        "type": "object",
+        "properties": {
+          "restaurantID": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "restaurantName": {
+            "type": "string",
+            "nullable": true
+          },
+          "restaurantWorkingDay": {
+            "type": "string",
+            "nullable": true
+          },
+          "startWorkingTime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "endWorkingTime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "promotion": {
+            "$ref": "#/components/schemas/Promotion"
+          },
+          "selectedType": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "RestaurantCategoryVM": {
+        "required": [
+          "categoryIds"
+        ],
+        "type": "object",
+        "properties": {
+          "restaurant": {
+            "$ref": "#/components/schemas/Restaurant"
+          },
+          "categories": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "nullable": true
+          },
+          "categoryIds": {
+            "minLength": 1,
+            "type": "array",
+            "items": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        },
+        "additionalProperties": false
+      },
+      "RestaurantCategorySchedulePromtionVM": {
+        "type": "object",
+        "properties": {
+          "restaurant": {
+            "$ref": "#/components/schemas/Restaurant"
+          },
+          "categories": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "nullable": true
+          },
+          "categoryIds": {
+            "type": "array",
+            "items": {
+              "type": "integer",
+              "format": "int64"
+            },
+            "nullable": true
+          },
+          "restaurantSchedules": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/RestaurantSchedule"
+            },
+            "nullable": true
+          },
+          "memberRestaurantSchedules": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/RestaurantSchedule"
+            },
+            "nullable": true
+          },
+          "promotions": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Promotion"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ChangePasswordVM": {
+        "required": [
+          "confirmNewPassword",
+          "currentPassword",
+          "newPassword"
+        ],
+        "type": "object",
+        "properties": {
+          "userID": {
+            "type": "string",
+            "nullable": true
+          },
+          "currentPassword": {
+            "type": "string",
+            "format": "password"
+          },
+          "newPassword": {
+            "minLength": 6,
+            "type": "string",
+            "format": "password"
+          },
+          "confirmNewPassword": {
+            "type": "string",
+            "format": "password"
+          }
+        },
+        "additionalProperties": false
+      },
+      "ProfileVM": {
+        "required": [
+          "email",
+          "name",
+          "phoneNumber"
+        ],
+        "type": "object",
+        "properties": {
+          "userID": {
+            "type": "string",
+            "nullable": true
+          },
+          "username": {
+            "type": "string",
+            "nullable": true
+          },
+          "name": {
+            "type": "string"
+          },
+          "phoneNumber": {
+            "type": "string",
+            "format": "tel"
+          },
+          "email": {
+            "type": "string",
+            "format": "email"
+          },
+          "subscribe": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "securitySchemes": {
+      "Bearer": {
+        "type": "apiKey",
+        "description": "JWT Authorization header using the Bearer scheme. \r\n\r\n Enter 'Bearer' [space] and then your token in the text input below.\r\n\r\nExample: Bearer 12345abcdef",
+        "name": "Authorization",
+        "in": "header"
+      }
+    }
+  }
+}
