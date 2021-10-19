@@ -1,6 +1,6 @@
 # Restaurant Reservation System
 
-A simple website created with ASP. Net Core 3.1, C # and MS SQL Server allow members to book restaurants online.
+A simple website created with **ASP. Net Core 3.1**, **C#** and **MS SQL Server** allow members to book restaurants online.
 
 ## Table of contents
 * [**General Info**](#general-info)
